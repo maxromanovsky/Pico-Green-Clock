@@ -152,8 +152,6 @@
 
 \* ================================================================== */
 
-
-
 /* ================================================================== *\
       NOTE: Your comments - if they are constructive - are welcome:
                          astlouys@gmail.com
@@ -225,8 +223,6 @@
     release of new firmware for the Pico-RGB-Matrix...
 \* ================================================================== */
 
-
-
 /* $TITLE=Clock configuration or options. */
 /* $PAGE */
 /* ================================================================== *\
@@ -240,130 +236,126 @@
 #define RELEASE_VERSION
 
 /* Firmware version. */
-#define FIRMWARE_VERSION    "5.00"
+#define FIRMWARE_VERSION "5.01"
 
 /* Specify the file containing the remote control protocol to be used. */
-#define REMOTE_FILENAME  "memorex.cpp"
+#define REMOTE_FILENAME "memorex.cpp"
 
 /* Specify the filename of calendar events to merge with this version of firmware. */
 #ifdef RELEASE_VERSION
-  #define CALENDAR_FILENAME  "CalendarEventsGeneric.cpp"
+#define CALENDAR_FILENAME "CalendarEventsGeneric.cpp"
 #else
-  #define CALENDAR_FILENAME  "CalendarEventsAndre.cpp"
+#define CALENDAR_FILENAME "CalendarEventsAndre.cpp"
 #endif
 
 /* Silence period request unit (in minutes). Needs remote control. */
-#define SILENCE_PERIOD_UNIT     30
+#define SILENCE_PERIOD_UNIT 30
 
 /* Select the language for data display. */
 #ifdef RELEASE_VERSION
-  #define DEFAULT_LANGUAGE  ENGLISH   // choices for now are FRENCH and ENGLISH.
+#define DEFAULT_LANGUAGE ENGLISH // choices for now are FRENCH and ENGLISH.
 #else
-  #define DEFAULT_LANGUAGE FRENCH
+#define DEFAULT_LANGUAGE FRENCH
 #endif
 
 /* If NO_SOUND is defined below (uncommented), it allows turning OFF >>> ALL SOUNDS <<<.
    (For example, during development phase, if your wife is sleeping while you work late in the night as was my case - smile). */
 #ifndef RELEASE_VERSION
-  // #define NO_SOUND
+// #define NO_SOUND
 #endif
 
 /* Night light default values. "AUTO" is based on ambient light reading to turn night light On or Off. */
-#define NIGHT_LIGHT_DEFAULT    NIGHT_LIGHT_AUTO   // choices are NIGHT_LIGHT_OFF / NIGHT_LIGHT_ON / NIGHT_LIGHT_NIGHT / NIGHT_LIGHT_AUTO
-#define NIGHT_LIGHT_TIME_ON    21   // if "NIGHT_LIGHT_NIGHT", LEDs will turn On  at this time (in the evening).
-#define NIGHT_LIGHT_TIME_OFF    8   // if "NIGHT_LIGHT_NIGHT", LEDs will turn Off at this time (in the morning).
+#define NIGHT_LIGHT_DEFAULT NIGHT_LIGHT_ON // choices are NIGHT_LIGHT_OFF / NIGHT_LIGHT_ON / NIGHT_LIGHT_NIGHT / NIGHT_LIGHT_AUTO
+#define NIGHT_LIGHT_TIME_ON 21             // if "NIGHT_LIGHT_NIGHT", LEDs will turn On  at this time (in the evening).
+#define NIGHT_LIGHT_TIME_OFF 8             // if "NIGHT_LIGHT_NIGHT", LEDs will turn Off at this time (in the morning).
 
 /* Hourly chime default values. */
-#define CHIME_DEFAULT   CHIME_DAY   // choices are CHIME_OFF / CHIME_ON / CHIME_DAY
-#define CHIME_TIME_ON           9   // if "CHIME_DAY", "hourly chime" and "calendar event" will sound beginning at this time (in the morning).
-#define CHIME_TIME_OFF         21   // if "CHIME_DAY", "hourly chime" and "calendar event" will sound for the last time at this time (in the evening).
+#define CHIME_DEFAULT CHIME_DAY // choices are CHIME_OFF / CHIME_ON / CHIME_DAY
+#define CHIME_TIME_ON 9         // if "CHIME_DAY", "hourly chime" and "calendar event" will sound beginning at this time (in the morning).
+#define CHIME_TIME_OFF 21       // if "CHIME_DAY", "hourly chime" and "calendar event" will sound for the last time at this time (in the evening).
 /* NOTE: See also revision history above about "night time workers" support for hourly chime. */
 
 /* Support for an optional passive piezo / buzzer. This piezo must be provided by user and is not included with the Green Clock.
    It allows variable frequency sounds on the clock. */
-#define PASSIVE_PIEZO_SUPPORT       // if a passive piezo buzzer has been installed by user.
+// #define PASSIVE_PIEZO_SUPPORT       // if a passive piezo buzzer has been installed by user.
 
 /* Support of an optional (external) temperature and humidity sensor (DHT22) or temperature, humidity and barometric pressure sensor (BME280)
    to read and display those parameters. The sensors must be bought and installed by user. They are not included with the Pico Green Clock.
    >>> WARNING <<< See text in the user guide about DHT22. */
-#define DHT22_SUPPORT                 // if a DHT22 outside temperature and humidity sensor has been installed by user.
-#define BME280_SUPPORT                // if a BME280 outside temperature, humidity and barometric pressure sensor has been installed by user.
+// #define DHT22_SUPPORT  // if a DHT22 outside temperature and humidity sensor has been installed by user.
+// #define BME280_SUPPORT // if a BME280 outside temperature, humidity and barometric pressure sensor has been installed by user.
 
 /* Support of an optional remote control to interact with the clock remotely, for example when the clock
    is out of reach. There is no remote control provided with the clock. It must be bought by the user.
    Current support is for a Memorex remote control, model MCR 5221 that I had readily available. If another
    brand of remote control is to be used, user will have to decode its protocol and implement it in the Green Clock firmware.
    (a file similar to "memorex.cpp" must be created to support the new remote control). */
-#define IR_SUPPORT                  // if an infrared sensor (VS1838B-type) has been installed by the user and IR protocol analyzed and implemented.
+// #define IR_SUPPORT // if an infrared sensor (VS1838B-type) has been installed by the user and IR protocol analyzed and implemented.
 
 /* Determine if date scrolling will be enable by default when the clock starts. */
-#define SCROLL_DEFAULT    FLAG_ON   // choices are FLAG_ON / FLAG_OFF
+#define SCROLL_DEFAULT FLAG_ON // choices are FLAG_ON / FLAG_OFF
 
 /* Scroll one dot to the left every such milliseconds (100 is a good start point. lower = faster). */
-#define SCROLL_DOT_TIME        90   // this is a UINT8 (must be between 0 and 255).
+#define SCROLL_DOT_TIME 90 // this is a UINT8 (must be between 0 and 255).
 
 /* Date, temperature and power supply voltage will scroll at this frequency
    (in minutes - we must leave enough time for the previous scrolling to complete). */
-#define SCROLL_PERIOD_MINUTE    5
+#define SCROLL_PERIOD_MINUTE 5
 
 /* Default temperature unit to display on the clock. */
-#define TEMPERATURE_DEFAULT CELSIUS  // choices are CELSIUS and FAHRENHEIT.
+#define TEMPERATURE_DEFAULT CELSIUS // choices are CELSIUS and FAHRENHEIT.
 
 /* Flag to include test code in the executable (conditional compile).
    Tests can be run before falling in normal clock mode.
    Commenting out the #define below will exclude test code and make the executable smaller. */
 #ifndef RELEASE_VERSION
-  // #define TEST_CODE
+// #define TEST_CODE
 #endif
 
 /* Time will be displayed in 24-hours format by default. */
-#define TIME_DISPLAY_DEFAULT    H24  // choices are H12 and H24.
+#define TIME_DISPLAY_DEFAULT H24 // choices are H12 and H24.
 
 /* Exit setup mode after this period of inactivity (in seconds). So, this is a "time-out" value (in seconds).
    (for "clock setup", "alarm setup" or "timer setup"). */
-#define TIME_OUT_PERIOD          20
+#define TIME_OUT_PERIOD 20
 
 /* For active buzzer integrated in Pico Green Clock. Number of "tones" for each "sound pack" (first level of repetition). */
-#define TONE_ALARM0_REPEAT_1     10
-#define TONE_ALARM1_REPEAT_1      5
-#define TONE_CHIME_REPEAT_1       2
-#define TONE_EVENT_REPEAT_1       5
-#define TONE_KEYCLICK_REPEAT_1    1
-#define TONE_TIMER_REPEAT_1       8
+#define TONE_ALARM0_REPEAT_1 10
+#define TONE_ALARM1_REPEAT_1 5
+#define TONE_CHIME_REPEAT_1 2
+#define TONE_EVENT_REPEAT_1 5
+#define TONE_KEYCLICK_REPEAT_1 1
+#define TONE_TIMER_REPEAT_1 8
 
 /* For active buzzer integrated in Pico Green Clock.
    Number of times the "sound pack" above will repeat itself for each tone type (second level of repetition).
    for example, if TONE_CHIME_REPEAT_1 is set to 3 and TONE_CHIME_REPEAT_2 is set to 2, we will hear:
    beep-beep-beep..........beep-beep-beep (three beeps, twice). */
-#define TONE_ALARM0_REPEAT_2      2
-#define TONE_ALARM1_REPEAT_2      3
-#define TONE_CHIME_REPEAT_2       3
-#define TONE_EVENT_REPEAT_2       3
-#define TONE_KEYCLICK_REPEAT_2    1
-#define TONE_TIMER_REPEAT_2       2
+#define TONE_ALARM0_REPEAT_2 2
+#define TONE_ALARM1_REPEAT_2 3
+#define TONE_CHIME_REPEAT_2 3
+#define TONE_EVENT_REPEAT_2 3
+#define TONE_KEYCLICK_REPEAT_2 1
+#define TONE_TIMER_REPEAT_2 2
 
 /* For active buzzer integrated in Pico Green Clock.
    Time duration for different tone types (in milliseconds). This is the time of each sound inside one "sound pack".
    The time between consecutive sound packs is 4 times this value (the ".........." in the example above). */
-#define TONE_ALARM0_DURATION     40  // when sounding an alarm 0.
-#define TONE_ALARM1_DURATION     60  // when sounding an alarm 1.
-#define TONE_CHIME_DURATION      50  // when sounding an hourly chime.
-#define TONE_EVENT_DURATION     100  // when scrolling a calendar event.
-#define TONE_KEYCLICK_DURATION    7  // when pressing a button ("keyclick").
-#define TONE_TIMER_DURATION      60  // when count-down timer reaches 00m00s.
+#define TONE_ALARM0_DURATION 40  // when sounding an alarm 0.
+#define TONE_ALARM1_DURATION 60  // when sounding an alarm 1.
+#define TONE_CHIME_DURATION 50   // when sounding an hourly chime.
+#define TONE_EVENT_DURATION 100  // when scrolling a calendar event.
+#define TONE_KEYCLICK_DURATION 7 // when pressing a button ("keyclick").
+#define TONE_TIMER_DURATION 60   // when count-down timer reaches 00m00s.
 
 /* Flag to handle automatically the daylight saving time.
    Since the moment to adjust time may be different depending in which country we are,
    more options could be added without disrupting algorithms already implemented. */
-#define DAYLIGHT_SAVING_TIME   DST_NORTH_AMERICA  // choices for now are DST_NONE and DST_NORTH_AMERICA.
+#define DAYLIGHT_SAVING_TIME DST_NONE // choices for now are DST_NONE and DST_NORTH_AMERICA.
 
 /* ================================================================== *\
             ===== END OF CLOCK CONFIGURATION OR OPTIONS =====
 \* ================================================================== */
-
-
-
-
 
 /* $TITLE=Definitions and include files. */
 /* $PAGE */
@@ -371,75 +363,70 @@
                     Definitions and include files
                        (in alphabetical order)
 \* ------------------------------------------------------------------ */
-#define CELSIUS                0x00
-#define CHIME_DAY              0x02         // hourly chime is ON during defined daily hours (between CHIME_TIME_ON and CHIME_TIME_OFF).
-#define CHIME_OFF              0x00         // hourly chime is OFF.
-#define CHIME_ON               0x01         // hourly chime is ON.
-#define DISPLAY_BUFFER_SIZE    248          // size of framebuffer.
-#define FAHRENHEIT             !CELSIUS     // temperature unit to display.
-#define FALSE                  0x00
-#define FLAG_OFF               0x00         // flag is OFF.
-#define FLAG_ON                0xFF         // flag is ON.
-#define H12                    FLAG_OFF     // 12-hours time format.
-#define H24                    FLAG_ON      // 24-hours time format.
-#define MAX_EVENTS             50           // maximum number of "calendar events" that can be programmed in flash memory of the Pico.
-#define MAX_READINGS           500          // maximum number of "readings" when receiving data from DHT22 or from IR remote control (one reading for each logic level).
-#define MAX_SCROLL_QUEUE       75           // maximum number of messages in the scroll buffer queue (big enough for MAX_EVENTS defined for the same day + a few date scrolls).
-#define MAX_SOUND_QUEUE        800          // maximum number of "sounds" in the sound queue.
-#define NIGHT_LIGHT_AUTO       0x03         // night light will turn on when ambient light is low enough
-#define NIGHT_LIGHT_NIGHT      0x02         // night light On between NightLightTimeOn and NightLightTimeOff.
-#define NIGHT_LIGHT_OFF        0x00         // night light always Off.
-#define NIGHT_LIGHT_ON         0x01         // night light always On.
-#define TIMER_COUNT_DOWN       0x01         // timer mode is "count down".
-#define TIMER_COUNT_UP         0x02         // timer mode is "count up".
-#define TIMER_OFF              0x00         // timer is currently OFF.
-#define TRUE                   0x01
-
+#define CELSIUS 0x00
+#define CHIME_DAY 0x02          // hourly chime is ON during defined daily hours (between CHIME_TIME_ON and CHIME_TIME_OFF).
+#define CHIME_OFF 0x00          // hourly chime is OFF.
+#define CHIME_ON 0x01           // hourly chime is ON.
+#define DISPLAY_BUFFER_SIZE 248 // size of framebuffer.
+#define FAHRENHEIT !CELSIUS     // temperature unit to display.
+#define FALSE 0x00
+#define FLAG_OFF 0x00          // flag is OFF.
+#define FLAG_ON 0xFF           // flag is ON.
+#define H12 FLAG_OFF           // 12-hours time format.
+#define H24 FLAG_ON            // 24-hours time format.
+#define MAX_EVENTS 50          // maximum number of "calendar events" that can be programmed in flash memory of the Pico.
+#define MAX_READINGS 500       // maximum number of "readings" when receiving data from DHT22 or from IR remote control (one reading for each logic level).
+#define MAX_SCROLL_QUEUE 75    // maximum number of messages in the scroll buffer queue (big enough for MAX_EVENTS defined for the same day + a few date scrolls).
+#define MAX_SOUND_QUEUE 800    // maximum number of "sounds" in the sound queue.
+#define NIGHT_LIGHT_AUTO 0x03  // night light will turn on when ambient light is low enough
+#define NIGHT_LIGHT_NIGHT 0x02 // night light On between NightLightTimeOn and NightLightTimeOff.
+#define NIGHT_LIGHT_OFF 0x00   // night light always Off.
+#define NIGHT_LIGHT_ON 0x01    // night light always On.
+#define TIMER_COUNT_DOWN 0x01  // timer mode is "count down".
+#define TIMER_COUNT_UP 0x02    // timer mode is "count up".
+#define TIMER_OFF 0x00         // timer is currently OFF.
+#define TRUE 0x01
 
 /* Language and locals used. */
-#define LANGUAGE_LO_LIMIT      0x00
-#define ENGLISH                0x01
-#define FRENCH                 0x02
-#define SPANISH                0x03        // just a placeholder for now. Spanish is not implemented yet.
-#define LANGUAGE_HI_LIMIT      0x04
-
+#define LANGUAGE_LO_LIMIT 0x00
+#define ENGLISH 0x01
+#define FRENCH 0x02
+#define SPANISH 0x03 // just a placeholder for now. Spanish is not implemented yet.
+#define LANGUAGE_HI_LIMIT 0x04
 
 /* DAYLIGHT_SAVING_TIME choices are as below for now: */
-#define DST_LO_LIMIT           0  // to make the logic easier in the firmware.
-#define DST_NONE               0  // there is no "Daylight Saving Time" in user's country.
-#define DST_NORTH_AMERICA      1  // daylight saving time in user's country is similar to what it is in North America.
-#define DST_HI_LIMIT           2  // to make the logic easier in the firmware.
+#define DST_LO_LIMIT 0      // to make the logic easier in the firmware.
+#define DST_NONE 0          // there is no "Daylight Saving Time" in user's country.
+#define DST_NORTH_AMERICA 1 // daylight saving time in user's country is similar to what it is in North America.
+#define DST_HI_LIMIT 2      // to make the logic easier in the firmware.
 /* Add choices here and search for "DST_" in the code to add the specific algorithm. */
 
-
 /* Tone types definitions. */
-#define TONE_ALARM0_TYPE       0x01         // for clock "alarm 0" (when an alarm is set).
-#define TONE_ALARM1_TYPE       0x02         // for clock "alarm 1" (when an alarm is set).
-#define TONE_CHIME_TYPE        0x03         // for clock "hourly chime" (when option is turned on).
-#define TONE_EVENT_TYPE        0x04         // for "calendar event".
-#define TONE_KEYCLICK_TYPE     0x05         // for "keyclick" event (when pressing a clock button).
-#define TONE_TIMER_TYPE        0x06         // for "count-down" timer (no alarm on the count-up timer).
-
+#define TONE_ALARM0_TYPE 0x01   // for clock "alarm 0" (when an alarm is set).
+#define TONE_ALARM1_TYPE 0x02   // for clock "alarm 1" (when an alarm is set).
+#define TONE_CHIME_TYPE 0x03    // for clock "hourly chime" (when option is turned on).
+#define TONE_EVENT_TYPE 0x04    // for "calendar event".
+#define TONE_KEYCLICK_TYPE 0x05 // for "keyclick" event (when pressing a clock button).
+#define TONE_TIMER_TYPE 0x06    // for "count-down" timer (no alarm on the count-up timer).
 
 /* Clock mode definitions. */
-#define MODE_LO_LIMIT          0x00
-#define MODE_UNDEFINED         0x00         // mode is currently undefined.
-#define MODE_ALARM_SETUP       0x01         // user is setting up an alarm.
-#define MODE_CLOCK_SETUP       0x02         // user is setting up clock parameters.
-#define MODE_SCROLLING         0x03         // clock is scrolling data on the display.
-#define MODE_SHOW_TIME         0x04         // clock is displaying time.
-#define MODE_SHOW_VOLTAGE      0x05         // clock is displaying power supply voltage.
-#define MODE_TEST              0x06         // clock is in test mode (to disable automatic clock behaviors on the display).
-#define MODE_TIMER_SETUP       0x07         // user is setting up a timer.
-#define MODE_DISPLAY           0x08         // generic display mode used with IR remote control.
-#define MODE_HI_LIMIT          0x09
-
+#define MODE_LO_LIMIT 0x00
+#define MODE_UNDEFINED 0x00    // mode is currently undefined.
+#define MODE_ALARM_SETUP 0x01  // user is setting up an alarm.
+#define MODE_CLOCK_SETUP 0x02  // user is setting up clock parameters.
+#define MODE_SCROLLING 0x03    // clock is scrolling data on the display.
+#define MODE_SHOW_TIME 0x04    // clock is displaying time.
+#define MODE_SHOW_VOLTAGE 0x05 // clock is displaying power supply voltage.
+#define MODE_TEST 0x06         // clock is in test mode (to disable automatic clock behaviors on the display).
+#define MODE_TIMER_SETUP 0x07  // user is setting up a timer.
+#define MODE_DISPLAY 0x08      // generic display mode used with IR remote control.
+#define MODE_HI_LIMIT 0x09
 
 /* Bitmasks for sections of code to be debugged through UART display (values can be or'ed together). */
-#define DEBUG_NONE             0x0000000000000000
-#define DEBUG_BME280           0x0000000000000001
-#define DEBUG_BRIGHTNESS       0x0000000000000002
-#define DEBUG_CHIME            0x0000000000000004
+#define DEBUG_NONE 0x0000000000000000
+#define DEBUG_BME280 0x0000000000000001
+#define DEBUG_BRIGHTNESS 0x0000000000000002
+#define DEBUG_CHIME 0x0000000000000004
 // #define DEBUG_?????            0x0000000000000008
 // #define DEBUG_?????            0x0000000000000010
 // #define DEBUG_?????            0x0000000000000020
@@ -456,166 +443,152 @@
 // etc...
 
 /* "Display modes" used with remote control. */
-#define DISPLAY_LO_LIMIT       0x00
-#define DISPLAY_TIME           0x01
-#define DISPLAY_DATE           0x02
-#define DISPLAY_DST            0x03
-#define DISPLAY_BEEP           0x04
-#define DISPLAY_SCROLLING      0x05
-#define DISPLAY_TEMP_UNIT      0x06
-#define DISPLAY_LANGUAGE       0x07
-#define DISPLAY_TIME_FORMAT    0x08
-#define DISPLAY_HOURLY_CHIME   0x09
-#define DISPLAY_NIGHT_LIGHT    0x0A
-#define DISPLAY_DIM            0x0B
-#define DISPLAY_HI_LIMIT       0x0C
-
+#define DISPLAY_LO_LIMIT 0x00
+#define DISPLAY_TIME 0x01
+#define DISPLAY_DATE 0x02
+#define DISPLAY_DST 0x03
+#define DISPLAY_BEEP 0x04
+#define DISPLAY_SCROLLING 0x05
+#define DISPLAY_TEMP_UNIT 0x06
+#define DISPLAY_LANGUAGE 0x07
+#define DISPLAY_TIME_FORMAT 0x08
+#define DISPLAY_HOURLY_CHIME 0x09
+#define DISPLAY_NIGHT_LIGHT 0x0A
+#define DISPLAY_DIM 0x0B
+#define DISPLAY_HI_LIMIT 0x0C
 
 /* Tags that can be used in process_scroll() function. */
-#define TAG_ALARM              0xFF         // tag used to display current alarm parameters (for both alarm 0 and alarm 1).
-#define TAG_AMBIENT_LIGHT      0xFE         // tag used to scroll current ambient light.
-#define TAG_BME280_DEVICE_ID   0xFD         // tag used to scroll the BME280 device id (should be 0x60 for a "real" BME280).
-#define TAG_DATE               0xFC         // tag used to scroll current date, temperature and power supply voltage.
-#define TAG_DEBUG              0xFB         // tag used to scroll variables for debug purposes, even inside ISR.
-#define TAG_DST                0xFA         // tag used to scroll daylight saving time ("DST") status on clock display.
-#define TAG_EXT_TEMP           0xF9         // tag used to display outside temperature and relative humidity.
-#define TAG_FIRMWARE_VERSION   0xF8         // tag used to display Pico Green Clock firmware version.
-#define TAG_PICO_TEMP          0xF7         // tag used to display Pico internal temperature.
-#define TAG_PICO_UNIQUE_ID     0xF6         // tag used to display Pico (flash) unique ID.
-#define TAG_QUEUE              0xF5         // tag used to display "Head", "Tail", and "Tag" of currently used scroll queue (for debugging purposes).
-#define TAG_TEMPERATURE        0xF4         // tag used to display ambient temperature.
-#define TAG_VOLTAGE            0xF3         // tag used to display power supply voltage.
-
+#define TAG_ALARM 0xFF            // tag used to display current alarm parameters (for both alarm 0 and alarm 1).
+#define TAG_AMBIENT_LIGHT 0xFE    // tag used to scroll current ambient light.
+#define TAG_BME280_DEVICE_ID 0xFD // tag used to scroll the BME280 device id (should be 0x60 for a "real" BME280).
+#define TAG_DATE 0xFC             // tag used to scroll current date, temperature and power supply voltage.
+#define TAG_DEBUG 0xFB            // tag used to scroll variables for debug purposes, even inside ISR.
+#define TAG_DST 0xFA              // tag used to scroll daylight saving time ("DST") status on clock display.
+#define TAG_EXT_TEMP 0xF9         // tag used to display outside temperature and relative humidity.
+#define TAG_FIRMWARE_VERSION 0xF8 // tag used to display Pico Green Clock firmware version.
+#define TAG_PICO_TEMP 0xF7        // tag used to display Pico internal temperature.
+#define TAG_PICO_UNIQUE_ID 0xF6   // tag used to display Pico (flash) unique ID.
+#define TAG_QUEUE 0xF5            // tag used to display "Head", "Tail", and "Tag" of currently used scroll queue (for debugging purposes).
+#define TAG_TEMPERATURE 0xF4      // tag used to display ambient temperature.
+#define TAG_VOLTAGE 0xF3          // tag used to display power supply voltage.
 
 /* DayOfWeek definitions. */
-#define MON                    0x01         // Monday
-#define TUE                    0x02         // Tuesday
-#define WED                    0x03         // Wednesday
-#define THU                    0x04         // Thursday
-#define FRI                    0x05         // Friday
-#define SAT                    0x06         // Saturday
-#define SUN                    0x07         // Sunday
-
+#define MON 0x01 // Monday
+#define TUE 0x02 // Tuesday
+#define WED 0x03 // Wednesday
+#define THU 0x04 // Thursday
+#define FRI 0x05 // Friday
+#define SAT 0x06 // Saturday
+#define SUN 0x07 // Sunday
 
 /* Month definitions. */
-#define JAN                     1           // January
-#define FEB                     2           // February
-#define MAR                     3           // March
-#define APR                     4           // April
-#define MAY                     5           // May
-#define JUN                     6           // June
-#define JUL                     7           // July
-#define AUG                     8           // August
-#define SEP                     9           // September
-#define OCT                    10           // October
-#define NOV                    11           // November
-#define DEC                    12           // December
-
-
+#define JAN 1  // January
+#define FEB 2  // February
+#define MAR 3  // March
+#define APR 4  // April
+#define MAY 5  // May
+#define JUN 6  // June
+#define JUL 7  // July
+#define AUG 8  // August
+#define SEP 9  // September
+#define OCT 10 // October
+#define NOV 11 // November
+#define DEC 12 // December
 
 /* NOTE: Clock setup step definitions are kept as variables and can be seen in the variables section below. */
 
 /* Setup source definitions. */
-#define SETUP_SOURCE_NONE      0x00
-#define SETUP_SOURCE_ALARM     0x01
-#define SETUP_SOURCE_CLOCK     0x02
-#define SETUP_SOURCE_TIMER     0x03
-
+#define SETUP_SOURCE_NONE 0x00
+#define SETUP_SOURCE_ALARM 0x01
+#define SETUP_SOURCE_CLOCK 0x02
+#define SETUP_SOURCE_TIMER 0x03
 
 /* Alarm setup steps definitions. */
-#define SETUP_ALARM_LO_LIMIT   0x00
-#define SETUP_ALARM_NUMBER     0x01
-#define SETUP_ALARM_ON_OFF     0x02
-#define SETUP_ALARM_HOUR       0x03
-#define SETUP_ALARM_MINUTE     0x04
-#define SETUP_ALARM_DAY        0x05
-#define SETUP_ALARM_HI_LIMIT   0x06
-
+#define SETUP_ALARM_LO_LIMIT 0x00
+#define SETUP_ALARM_NUMBER 0x01
+#define SETUP_ALARM_ON_OFF 0x02
+#define SETUP_ALARM_HOUR 0x03
+#define SETUP_ALARM_MINUTE 0x04
+#define SETUP_ALARM_DAY 0x05
+#define SETUP_ALARM_HI_LIMIT 0x06
 
 /* Timer setup steps definitions. */
-#define SETUP_TIMER_LO_LIMIT   0x00
-#define SETUP_TIMER_UP_DOWN    0x01
-#define SETUP_TIMER_MINUTE     0x02
-#define SETUP_TIMER_SECOND     0x03
-#define SETUP_TIMER_READY      0x04
-#define SETUP_TIMER_HI_LIMIT   0x05
-
-
+#define SETUP_TIMER_LO_LIMIT 0x00
+#define SETUP_TIMER_UP_DOWN 0x01
+#define SETUP_TIMER_MINUTE 0x02
+#define SETUP_TIMER_SECOND 0x03
+#define SETUP_TIMER_READY 0x04
+#define SETUP_TIMER_HI_LIMIT 0x05
 
 /* List or commands available to remote control. */
 #ifdef IR_SUPPORT
-#define IR_LO_LIMIT                  0x00
-#define IR_BUTTON_TOP_QUICK          0x01
-#define IR_BUTTON_TOP_LONG           0x02
-#define IR_BUTTON_MIDDLE_QUICK       0x03
-#define IR_BUTTON_MIDDLE_LONG        0x04
-#define IR_BUTTON_BOTTOM_QUICK       0x05
-#define IR_BUTTON_BOTTOM_LONG        0x06
-#define IR_DICE_ROLLING              0x07
-#define IR_DISPLAY_AMBIENT_LIGHT     0x08
-#define IR_DISPLAY_EVENTS_THIS_WEEK  0x09
-#define IR_DISPLAY_EVENTS_TODAY      0x0A
-#define IR_DISPLAY_GENERIC           0x0B
-#define IR_DISPLAY_OUTSIDE_TEMP      0x0C
-#define IR_DISPLAY_SECOND            0x0D
-#define IR_FULL_TEST                 0x0E
-#define IR_SILENCE_PERIOD            0x0F
-#define IR_HI_LIMIT                  0x10
+#define IR_LO_LIMIT 0x00
+#define IR_BUTTON_TOP_QUICK 0x01
+#define IR_BUTTON_TOP_LONG 0x02
+#define IR_BUTTON_MIDDLE_QUICK 0x03
+#define IR_BUTTON_MIDDLE_LONG 0x04
+#define IR_BUTTON_BOTTOM_QUICK 0x05
+#define IR_BUTTON_BOTTOM_LONG 0x06
+#define IR_DICE_ROLLING 0x07
+#define IR_DISPLAY_AMBIENT_LIGHT 0x08
+#define IR_DISPLAY_EVENTS_THIS_WEEK 0x09
+#define IR_DISPLAY_EVENTS_TODAY 0x0A
+#define IR_DISPLAY_GENERIC 0x0B
+#define IR_DISPLAY_OUTSIDE_TEMP 0x0C
+#define IR_DISPLAY_SECOND 0x0D
+#define IR_FULL_TEST 0x0E
+#define IR_SILENCE_PERIOD 0x0F
+#define IR_HI_LIMIT 0x10
 #endif
-
-
 
 /* Music notes definitions. */
 #ifdef PASSIVE_PIEZO_SUPPORT
-#define SILENT            0
-#define DO_a            262
-#define DO_DIESE_a      277
-#define RE_a            294
-#define RE_DIESE_a      311
-#define MI_a            330
-#define FA_a            349
-#define FA_DIESE_a      370
-#define SOL_a           392
-#define SOL_DIESE_a     415
-#define LA_a            440
-#define LA_DIESE_a      466
-#define SI_a            494
-#define DO_b            523
-#define DO_DIESE_b      554
-#define RE_b            587
-#define RE_DIESE_b      622
-#define MI_b            659
-#define FA_b            699
-#define FA_DIESE_b      740
-#define SOL_b           784
-#define SOL_DIESE_b     831
-#define LA_b            880
-#define LA_DIESE_b      932
-#define SI_b            988
-#define DO_c           1047
-#define DO_DIESE_c     1109
-#define RE_c           1175
-#define RE_DIESE_c     1245
-#define MI_c           1319
-#define FA_c           1397
-#define FA_DIESE_c     1480
-#define SOL_c          1568
-#define SOL_DIESE_c    1661
-#define LA_c           1760
-#define LA_DIESE_c     1865
-#define SI_c           1976
-
+#define SILENT 0
+#define DO_a 262
+#define DO_DIESE_a 277
+#define RE_a 294
+#define RE_DIESE_a 311
+#define MI_a 330
+#define FA_a 349
+#define FA_DIESE_a 370
+#define SOL_a 392
+#define SOL_DIESE_a 415
+#define LA_a 440
+#define LA_DIESE_a 466
+#define SI_a 494
+#define DO_b 523
+#define DO_DIESE_b 554
+#define RE_b 587
+#define RE_DIESE_b 622
+#define MI_b 659
+#define FA_b 699
+#define FA_DIESE_b 740
+#define SOL_b 784
+#define SOL_DIESE_b 831
+#define LA_b 880
+#define LA_DIESE_b 932
+#define SI_b 988
+#define DO_c 1047
+#define DO_DIESE_c 1109
+#define RE_c 1175
+#define RE_DIESE_c 1245
+#define MI_c 1319
+#define FA_c 1397
+#define FA_DIESE_c 1480
+#define SOL_c 1568
+#define SOL_DIESE_c 1661
+#define LA_c 1760
+#define LA_DIESE_c 1865
+#define SI_c 1976
 
 /* Jingle definitions. */
-#define JINGLE_LO_LIMIT              0x00
-#define JINGLE_BIRTHDAY              0x01
-#define JINGLE_ENCOUNTER             0x02
-#define JINGLE_FETE                  0x03
-#define JINGLE_RACING                0x04
-#define JINGLE_HI_LIMIT              0x05
+#define JINGLE_LO_LIMIT 0x00
+#define JINGLE_BIRTHDAY 0x01
+#define JINGLE_ENCOUNTER 0x02
+#define JINGLE_FETE 0x03
+#define JINGLE_RACING 0x04
+#define JINGLE_HI_LIMIT 0x05
 #endif
-
-
 
 /* Include files. */
 #include "bitmap.h"
@@ -638,16 +611,12 @@
 #include "stdio.h"
 #include "stdlib.h"
 
-
-
-typedef unsigned int UINT;  // machine optimized.
-typedef uint8_t  UINT8;
+typedef unsigned int UINT; // machine optimized.
+typedef uint8_t UINT8;
 typedef uint16_t UINT16;
 typedef uint32_t UINT32;
 typedef uint64_t UINT64;
 typedef unsigned char UCHAR;
-
-
 
 /* Clock setup step definitions. */
 /* They are not categorized as #define since there is a difference in the
@@ -655,29 +624,27 @@ typedef unsigned char UCHAR;
    English and it appears to be the easiest way to handle this difference.
    "HI_LIMIT" remains a "#define" since it is used as an initialization
    parameter for a vector. */
-#define SETUP_CLOCK_LO_LIMIT       0x00
-UINT8 SETUP_NONE                 = 0x00;
-UINT8 SETUP_HOUR                 = 0x01;
-UINT8 SETUP_MINUTE               = 0x02;
-UINT8 SETUP_MONTH                = 0x03;
-UINT8 SETUP_DAY_OF_MONTH         = 0x04;
-UINT8 SETUP_YEAR                 = 0x05;
-UINT8 SETUP_DST                  = 0x06;
-UINT8 SETUP_KEYCLICK             = 0x07;
-UINT8 SETUP_SCROLLING            = 0x08;
-UINT8 SETUP_TEMP_UNIT            = 0x09;
-UINT8 SETUP_LANGUAGE             = 0x0A;
-UINT8 SETUP_TIME_FORMAT          = 0x0B;
-UINT8 SETUP_HOURLY_CHIME         = 0x0C;
-UINT8 SETUP_CHIME_TIME_ON        = 0x0D;
-UINT8 SETUP_CHIME_TIME_OFF       = 0x0E;
-UINT8 SETUP_NIGHT_LIGHT          = 0x0F;
-UINT8 SETUP_NIGHT_LIGHT_TIME_ON  = 0x10;
+#define SETUP_CLOCK_LO_LIMIT 0x00
+UINT8 SETUP_NONE = 0x00;
+UINT8 SETUP_HOUR = 0x01;
+UINT8 SETUP_MINUTE = 0x02;
+UINT8 SETUP_MONTH = 0x03;
+UINT8 SETUP_DAY_OF_MONTH = 0x04;
+UINT8 SETUP_YEAR = 0x05;
+UINT8 SETUP_DST = 0x06;
+UINT8 SETUP_KEYCLICK = 0x07;
+UINT8 SETUP_SCROLLING = 0x08;
+UINT8 SETUP_TEMP_UNIT = 0x09;
+UINT8 SETUP_LANGUAGE = 0x0A;
+UINT8 SETUP_TIME_FORMAT = 0x0B;
+UINT8 SETUP_HOURLY_CHIME = 0x0C;
+UINT8 SETUP_CHIME_TIME_ON = 0x0D;
+UINT8 SETUP_CHIME_TIME_OFF = 0x0E;
+UINT8 SETUP_NIGHT_LIGHT = 0x0F;
+UINT8 SETUP_NIGHT_LIGHT_TIME_ON = 0x10;
 UINT8 SETUP_NIGHT_LIGHT_TIME_OFF = 0x11;
-UINT8 SETUP_AUTO_BRIGHT          = 0x12;
-#define SETUP_CLOCK_HI_LIMIT       0x13
-
-
+UINT8 SETUP_AUTO_BRIGHT = 0x12;
+#define SETUP_CLOCK_HI_LIMIT 0x13
 
 /* $TITLE=Calendar events. */
 /* $PAGE */
@@ -703,19 +670,14 @@ UINT8 SETUP_AUTO_BRIGHT          = 0x12;
 \* ------------------------------------------------------------------ */
 struct event
 {
-  UINT8  Day;
-  UINT8  Month;
+  UINT8 Day;
+  UINT8 Month;
   UINT16 Jingle;
-  UCHAR  Description[41];
+  UCHAR Description[41];
 };
-
 
 /* Events to scroll on clock display at specific dates. */
 #include CALENDAR_FILENAME
-
-
-
-
 
 struct alarm
 {
@@ -726,25 +688,23 @@ struct alarm
   UINT8 Day;
 };
 
-
 struct sound
 {
   UINT16 Freq;
   UINT16 MSec;
 };
 
-
 #ifdef BME280_SUPPORT
 /* BME280 calibration parameters computed from data written in the device. */
 struct bme280_calib_param
 {
   /* Temperature-related parameters. */
-  UINT16  DigT1;
+  UINT16 DigT1;
   int16_t DigT2;
   int16_t DigT3;
-  
+
   /* Pressure-related parameters. */
-  UINT16  DigP1;
+  UINT16 DigP1;
   int16_t DigP2;
   int16_t DigP3;
   int16_t DigP4;
@@ -755,26 +715,22 @@ struct bme280_calib_param
   int16_t DigP9;
 
   /* Humidity-related parameters. */
-  UCHAR   DigH1;
+  UCHAR DigH1;
   int16_t DigH2;
-  UCHAR   DigH3;
+  UCHAR DigH3;
   int16_t DigH4;
   int16_t DigH5;
-  char    DigH6;
+  char DigH6;
 
   /* Return values. */
   float TemperatureC;
   float TemperatureF;
   float Humidity;
   float Pressure;
-  float Altitude;  // not trusted value.
-  float Humidex;   // wrong value for now.
+  float Altitude; // not trusted value.
+  float Humidex;  // wrong value for now.
 };
 #endif
-
-
-
-
 
 /* $TITLE=Global variables declaration / definition. */
 /* $PAGE */
@@ -785,173 +741,163 @@ struct bme280_calib_param
          variable whenever possible. This could be a way to improve
          the code in future releases...
 \* ------------------------------------------------------------------ */
-UCHAR Level[MAX_READINGS];                    // current logic level of remote control signal ('L', 'H', or 'X' if undefined).
+UCHAR Level[MAX_READINGS]; // current logic level of remote control signal ('L', 'H', or 'X' if undefined).
 
-UINT16 AdcCount                 = 0;          // cumulative milliseconds before reading power supply voltage.
-UINT64 AverageLightLevel        = 500;        // relative ambient light value (for LED display auto-brightness clock feature). Assume average on entry.
-UINT8  AlarmNumber              = 0;
+UINT16 AdcCount = 0;            // cumulative milliseconds before reading power supply voltage.
+UINT64 AverageLightLevel = 500; // relative ambient light value (for LED display auto-brightness clock feature). Assume average on entry.
+UINT8 AlarmNumber = 0;
 
-UINT8  Bme280CalibData[42];                   // calibration data for the specific BME280 used (stored in BME280's non-volatile memory).
-UINT64 Bme280Errors             = 0;          // cumulative number of errors while trying to read BME280 sensor.
-UINT64 Bme280Readings           = 0;          // cumulative number of reads from BME280.
-UINT16 BottomKeyPressTime       = 0;          // keep track of the time the Down ("Bottom") key is pressed.
+UINT8 Bme280CalibData[42];     // calibration data for the specific BME280 used (stored in BME280's non-volatile memory).
+UINT64 Bme280Errors = 0;       // cumulative number of errors while trying to read BME280 sensor.
+UINT64 Bme280Readings = 0;     // cumulative number of reads from BME280.
+UINT16 BottomKeyPressTime = 0; // keep track of the time the Down ("Bottom") key is pressed.
 
-UINT16 ChannelLevel;                          // PWM-related variable.
-UINT8  ChimeTimeOff             = CHIME_TIME_OFF;  // hourly chime will be heard at this hour for the last time in the evening.
-UINT8  ChimeTimeOffDisplay      = CHIME_TIME_OFF;  // variable formatted to display in 12-hours or 24-hours format.
-UINT8  ChimeTimeOn              = CHIME_TIME_ON;   // hourly chime will begin at this hour.
-UINT8  ChimeTimeOnDisplay       = CHIME_TIME_ON;   // variable formatted to display in 12-hours or 24-hours format.
-UINT8  RowScanNumber;
-UINT8  CurrentClockMode         = MODE_UNDEFINED;  // current clock mode.
-UINT8  CurrentDayOfMonth;
-UINT8  CurrentHour;
-UINT8  CurrentHourSetting       = 0;          // hours read and written to the RTC IC.
-UINT8  CurrentMinute;
-UINT8  CurrentMinuteSetting     = 0;          // minutes setting from / to real time clock IC.
-UINT8  CurrentMonth;
-UINT8  CurrentYearCentile       = 20;         // assume we are in years 20xx (could be changed in clock setup, but will revert to 20 at each power-up).
-UINT8  CurrentYearLowPart;                    // lowest two digits of the year (battery backed-up).
+UINT16 ChannelLevel;                        // PWM-related variable.
+UINT8 ChimeTimeOff = CHIME_TIME_OFF;        // hourly chime will be heard at this hour for the last time in the evening.
+UINT8 ChimeTimeOffDisplay = CHIME_TIME_OFF; // variable formatted to display in 12-hours or 24-hours format.
+UINT8 ChimeTimeOn = CHIME_TIME_ON;          // hourly chime will begin at this hour.
+UINT8 ChimeTimeOnDisplay = CHIME_TIME_ON;   // variable formatted to display in 12-hours or 24-hours format.
+UINT8 RowScanNumber;
+UINT8 CurrentClockMode = MODE_UNDEFINED; // current clock mode.
+UINT8 CurrentDayOfMonth;
+UINT8 CurrentHour;
+UINT8 CurrentHourSetting = 0; // hours read and written to the RTC IC.
+UINT8 CurrentMinute;
+UINT8 CurrentMinuteSetting = 0; // minutes setting from / to real time clock IC.
+UINT8 CurrentMonth;
+UINT8 CurrentYearCentile = 20; // assume we are in years 20xx (could be changed in clock setup, but will revert to 20 at each power-up).
+UINT8 CurrentYearLowPart;      // lowest two digits of the year (battery backed-up).
 
-UCHAR  DaylightSavingTime = DAYLIGHT_SAVING_TIME;  // specifies how to handle the daylight saving time (see clock options above).
-UINT64 DebugBitMask             = DEBUG_NONE; // bitmask of code sections to be debugged through UART display (see definitions of DEBUG sections above).
-UINT64 DhtErrors                = 0;          // cumulate number of errors while receiving DHT packets (for statistic purposes).
-UINT64 DhtReadings              = 0;          // cumulate total number of reads from DHT22.
-UCHAR  DisplayBuffer[DISPLAY_BUFFER_SIZE];    // framebuffer containing the bitmap of the string to be displayed / scrolled on clock display.
-UINT16 DotBlinkCount;                         // cumulate milliseconds to blink the two "middle dots".
+UCHAR DaylightSavingTime = DAYLIGHT_SAVING_TIME; // specifies how to handle the daylight saving time (see clock options above).
+UINT64 DebugBitMask = DEBUG_NONE;                // bitmask of code sections to be debugged through UART display (see definitions of DEBUG sections above).
+UINT64 DhtErrors = 0;                            // cumulate number of errors while receiving DHT packets (for statistic purposes).
+UINT64 DhtReadings = 0;                          // cumulate total number of reads from DHT22.
+UCHAR DisplayBuffer[DISPLAY_BUFFER_SIZE];        // framebuffer containing the bitmap of the string to be displayed / scrolled on clock display.
+UINT16 DotBlinkCount;                            // cumulate milliseconds to blink the two "middle dots".
 
-UINT64 FinalValue[MAX_READINGS];              // final timer value when receiving edge change from remote control.
-UINT8  FlagAdcLightTime         = FLAG_OFF;
-UINT8  FlagAlarmBeeping         = FLAG_OFF;   // flag indicating an alarm is sounding.
-UINT8  FlagAlarmEnable          = FLAG_OFF;   // flag indicating alarm is ON (either alarm 1 or alarm 2).
-UINT8  FlagAutoBrightness       = FLAG_ON;    // flag indicating we are in "Auto Brightness" mode.
-UINT8  FlagSetTimer             = FLAG_OFF;   // user pressed the "up" (Middle) button.
-UINT8  FlagChimeDone            = FLAG_OFF;   // indicates that hourly chime has already been triggered for current hour.
-UINT8  FlagDayLightSavingTime   = FLAG_OFF;   // flag indicating we are in "daylight saving time" mode.
-UINT8  FlagFlashing[20]         = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};  // bitmap to logically "and" with a character for blinking.
-UINT8  FlagIdleCheck            = FLAG_OFF;   // if ON, we keep track of idle time to eventually declare a time-out.
-UINT8  FlagKeyclick             = FLAG_OFF;   // flag for keyclick ("button-press" tone)
-UINT8  FlagScrollData           = FLAG_OFF;   // time has come to scroll data on the display.
-UINT8  FlagScrollEnable         = SCROLL_DEFAULT;  // flag indicating the clock will scroll the date and temperature at regular intervals on the display.
-UINT8  FlagScrollStart          = FLAG_OFF;   // flag indicating it is time to start scrolling.
-UINT8  FlagSetAlarm             = FLAG_OFF;   // flag indicating we are in alarm setup mode.
-UINT8  FlagSetTimerCountDown    = FLAG_OFF;   // flag indicating the count down timer is active.
-UINT8  FlagSetTimerCountUp      = FLAG_OFF;   // flag indicating count up timer is active.
-UINT8  FlagSetClock             = FLAG_OFF;   // user has pressed the "Set" (top) button to enter clock setup mode.
-UINT8  FlagSetupAlarm[SETUP_ALARM_HI_LIMIT];
-UINT8  FlagSetupClock[SETUP_CLOCK_HI_LIMIT];
-UINT8  FlagSetupTimer[SETUP_TIMER_HI_LIMIT];
-UINT8  FlagSetupRTC             = FLAG_OFF;   // flag indicating time must be programmed in the real-time clock IC.
-UINT8  FlagTimerCountDownEnd    = FLAG_OFF;   // flag indicating the count down timer reached final count (0m00s).
-UINT8  FlagTone                 = FLAG_OFF;   // flag indicating there is a tone sounding.
-UINT8  FlagToneOn               = FLAG_OFF;   // flag indicating it is time to make a tone.
-UINT8  FlagUpdateTime           = FLAG_OFF;   // flag indicating it is time to refresh the time on the clock display.
-UINT16 FlashingCount            = 0;          // cumulate number of milliseconds before blinking clock display.
+UINT64 FinalValue[MAX_READINGS]; // final timer value when receiving edge change from remote control.
+UINT8 FlagAdcLightTime = FLAG_OFF;
+UINT8 FlagAlarmBeeping = FLAG_OFF;                                                                                                                 // flag indicating an alarm is sounding.
+UINT8 FlagAlarmEnable = FLAG_OFF;                                                                                                                  // flag indicating alarm is ON (either alarm 1 or alarm 2).
+UINT8 FlagAutoBrightness = FLAG_ON;                                                                                                                // flag indicating we are in "Auto Brightness" mode.
+UINT8 FlagSetTimer = FLAG_OFF;                                                                                                                     // user pressed the "up" (Middle) button.
+UINT8 FlagChimeDone = FLAG_OFF;                                                                                                                    // indicates that hourly chime has already been triggered for current hour.
+UINT8 FlagDayLightSavingTime = FLAG_OFF;                                                                                                           // flag indicating we are in "daylight saving time" mode.
+UINT8 FlagFlashing[20] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF}; // bitmap to logically "and" with a character for blinking.
+UINT8 FlagIdleCheck = FLAG_OFF;                                                                                                                    // if ON, we keep track of idle time to eventually declare a time-out.
+UINT8 FlagKeyclick = FLAG_OFF;                                                                                                                     // flag for keyclick ("button-press" tone)
+UINT8 FlagScrollData = FLAG_OFF;                                                                                                                   // time has come to scroll data on the display.
+UINT8 FlagScrollEnable = SCROLL_DEFAULT;                                                                                                           // flag indicating the clock will scroll the date and temperature at regular intervals on the display.
+UINT8 FlagScrollStart = FLAG_OFF;                                                                                                                  // flag indicating it is time to start scrolling.
+UINT8 FlagSetAlarm = FLAG_OFF;                                                                                                                     // flag indicating we are in alarm setup mode.
+UINT8 FlagSetTimerCountDown = FLAG_OFF;                                                                                                            // flag indicating the count down timer is active.
+UINT8 FlagSetTimerCountUp = FLAG_OFF;                                                                                                              // flag indicating count up timer is active.
+UINT8 FlagSetClock = FLAG_OFF;                                                                                                                     // user has pressed the "Set" (top) button to enter clock setup mode.
+UINT8 FlagSetupAlarm[SETUP_ALARM_HI_LIMIT];
+UINT8 FlagSetupClock[SETUP_CLOCK_HI_LIMIT];
+UINT8 FlagSetupTimer[SETUP_TIMER_HI_LIMIT];
+UINT8 FlagSetupRTC = FLAG_OFF;          // flag indicating time must be programmed in the real-time clock IC.
+UINT8 FlagTimerCountDownEnd = FLAG_OFF; // flag indicating the count down timer reached final count (0m00s).
+UINT8 FlagTone = FLAG_OFF;              // flag indicating there is a tone sounding.
+UINT8 FlagToneOn = FLAG_OFF;            // flag indicating it is time to make a tone.
+UINT8 FlagUpdateTime = FLAG_OFF;        // flag indicating it is time to refresh the time on the clock display.
+UINT16 FlashingCount = 0;               // cumulate number of milliseconds before blinking clock display.
 
-UCHAR GetAddHigh                = 0x11;
-UCHAR GetAddLow                 = 0x12;
+UCHAR GetAddHigh = 0x11;
+UCHAR GetAddLow = 0x12;
 
-UINT8 HourlyChimeMode           = CHIME_DEFAULT;  // chime mode (Off / On / Day).
+UINT8 HourlyChimeMode = CHIME_DEFAULT; // chime mode (Off / On / Day).
 
-UINT8  IdleNumberOfSeconds;                   // keep track of the number of seconds the system has been idle.
-UINT64 InitialValue[MAX_READINGS];            // initial timer value when receiving edge change from remote control.
-UINT16 IrStepCount              = 0;          // number of "events" received from IR remote control in current stream.
+UINT8 IdleNumberOfSeconds;         // keep track of the number of seconds the system has been idle.
+UINT64 InitialValue[MAX_READINGS]; // initial timer value when receiving edge change from remote control.
+UINT16 IrStepCount = 0;            // number of "events" received from IR remote control in current stream.
 
-UINT8 Language                  = DEFAULT_LANGUAGE;     // language used for data display (including date scrolling).
-UINT8 LevelChange[MAX_READINGS];                        // logic level when communicating with DHT22.
-UINT8 LightSetting              = 0;
+UINT8 Language = DEFAULT_LANGUAGE; // language used for data display (including date scrolling).
+UINT8 LevelChange[MAX_READINGS];   // logic level when communicating with DHT22.
+UINT8 LightSetting = 0;
 
-UINT16 MiddleKeyPressTime       = 0;          // keep track of the time the Up ("Middle") key is pressed.
-UINT8  MonthDays[2][12]         = {{31,29,31,30,31,30,31,31,30,31,30,31},   // number of days in a month - "leap" year.
-                                   {31,28,31,30,31,30,31,31,30,31,30,31}};  // number of days in a month - "normal" year.
+UINT16 MiddleKeyPressTime = 0;                                               // keep track of the time the Up ("Middle") key is pressed.
+UINT8 MonthDays[2][12] = {{31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31},  // number of days in a month - "leap" year.
+                          {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}}; // number of days in a month - "normal" year.
 
-UINT8 NightLightMode            = NIGHT_LIGHT_DEFAULT;  // night light mode (On / Off / Auto / Night).
-UINT8 NightLightTimeOff         = NIGHT_LIGHT_TIME_OFF; // default night light time off.
-UINT8 NightLightTimeOffDisplay;                         // to adapt to 12 or 24-hours time format.
-UINT8 NightLightTimeOn          = NIGHT_LIGHT_TIME_ON;  // default night light time on.
-UINT8 NightLightTimeOnDisplay;                          // to adapt to 12 or 24-hours time format.
+UINT8 NightLightMode = NIGHT_LIGHT_DEFAULT;     // night light mode (On / Off / Auto / Night).
+UINT8 NightLightTimeOff = NIGHT_LIGHT_TIME_OFF; // default night light time off.
+UINT8 NightLightTimeOffDisplay;                 // to adapt to 12 or 24-hours time format.
+UINT8 NightLightTimeOn = NIGHT_LIGHT_TIME_ON;   // default night light time on.
+UINT8 NightLightTimeOnDisplay;                  // to adapt to 12 or 24-hours time format.
 
 UINT16 PwmChannelNumber;
 UINT16 PwmSliceNumber;
 
-UINT64 ResultValue[MAX_READINGS];             // duration of this logic level (Low or High) in the signal received from remote control.
+UINT64 ResultValue[MAX_READINGS]; // duration of this logic level (Low or High) in the signal received from remote control.
 
-UINT8  ScrollDotCount           = 0;          // keep track of "how many dots to the left" remain to be scrolled.
-UINT8  ScrollQueue[MAX_SCROLL_QUEUE];         // circular buffer containing the tag of the next messages to be scrolled.
-UINT8  ScrollQueueHead;                       // head of circular buffer.
-UINT8  ScrollQueueTail;                       // tail of circular buffer.
-UINT8  ScrollSecondCounter      = 0;          // keep track of number of seconds to reach time-to-scroll.
-UINT8  ScrollStartCount         = 0;          // count the number of milliseconds before scrolling one more dot position to the left.
-UINT8  SecondCounter            = 0;          // cumulate the number of seconds before minute change.
-UINT8  SetupSource = SETUP_SOURCE_NONE;       // indicate the source of current setup activities (alarm, clock or timer).
-UINT8  SetupStep                = 0;          // indicate the setup step we are through the clock setup, alarm setup, or timer setup.
-UINT16 SilencePeriod            = 0;          // temporarily turn off most sounds from the clock.
-volatile UINT16 SoundQueueHead;               // head of sound circular buffer.
-volatile UINT16 SoundQueueTail;               // tail of sound circular buffer.
-UINT32 SystemClock;                           // PWM-related variable.
+UINT8 ScrollDotCount = 0;              // keep track of "how many dots to the left" remain to be scrolled.
+UINT8 ScrollQueue[MAX_SCROLL_QUEUE];   // circular buffer containing the tag of the next messages to be scrolled.
+UINT8 ScrollQueueHead;                 // head of circular buffer.
+UINT8 ScrollQueueTail;                 // tail of circular buffer.
+UINT8 ScrollSecondCounter = 0;         // keep track of number of seconds to reach time-to-scroll.
+UINT8 ScrollStartCount = 0;            // count the number of milliseconds before scrolling one more dot position to the left.
+UINT8 SecondCounter = 0;               // cumulate the number of seconds before minute change.
+UINT8 SetupSource = SETUP_SOURCE_NONE; // indicate the source of current setup activities (alarm, clock or timer).
+UINT8 SetupStep = 0;                   // indicate the setup step we are through the clock setup, alarm setup, or timer setup.
+UINT16 SilencePeriod = 0;              // temporarily turn off most sounds from the clock.
+volatile UINT16 SoundQueueHead;        // head of sound circular buffer.
+volatile UINT16 SoundQueueTail;        // tail of sound circular buffer.
+UINT32 SystemClock;                    // PWM-related variable.
 
-UCHAR  TemperaturePart1;                      // current temperature value, decimal part (before the decimal dot)   - Not for the DHT22.
-UCHAR  TemperaturePart2;                      // current temperature value, fractional part (after the decimal dot) - Not for the DHT22.
-UINT8  TemperatureUnit          = TEMPERATURE_DEFAULT;   // CELSIUS or FAHRENHEIT default value (see clock options above).
-UINT8  TimeDisplayMode          = TIME_DISPLAY_DEFAULT;  // H24 or H12 default value (see clock options above).
-UINT8  TimerMinutes             = 0;
-UINT8  TimerMode                = TIMER_OFF;  // timer mode (0 = Off / 1 = Count down / 2 = Count up).
-UINT8  TimerSeconds             = 0;
-UINT8  TimerShowCount           = 0;          // in case we want to refresh timer display less often than every second.
-UINT8  TimerShowSecond          = 0;
-UINT64 TimerValue[MAX_READINGS];              // time stamp used while decoding DHT22 data.
-UINT8  ToneMSecCounter          = 0;          // cumulate number of milliseconds for tone duration.
-UINT8  ToneRepeatCount          = 0;          // number of "tones" to sound for different events.
-UINT8  ToneType;                              // determine the type of "tone" we are sounding.
-UINT16 TopKeyPressTime          = 0;          // keep track of the time the Set ("Top") key is pressed.
+UCHAR TemperaturePart1;                       // current temperature value, decimal part (before the decimal dot)   - Not for the DHT22.
+UCHAR TemperaturePart2;                       // current temperature value, fractional part (after the decimal dot) - Not for the DHT22.
+UINT8 TemperatureUnit = TEMPERATURE_DEFAULT;  // CELSIUS or FAHRENHEIT default value (see clock options above).
+UINT8 TimeDisplayMode = TIME_DISPLAY_DEFAULT; // H24 or H12 default value (see clock options above).
+UINT8 TimerMinutes = 0;
+UINT8 TimerMode = TIMER_OFF; // timer mode (0 = Off / 1 = Count down / 2 = Count up).
+UINT8 TimerSeconds = 0;
+UINT8 TimerShowCount = 0; // in case we want to refresh timer display less often than every second.
+UINT8 TimerShowSecond = 0;
+UINT64 TimerValue[MAX_READINGS]; // time stamp used while decoding DHT22 data.
+UINT8 ToneMSecCounter = 0;       // cumulate number of milliseconds for tone duration.
+UINT8 ToneRepeatCount = 0;       // number of "tones" to sound for different events.
+UINT8 ToneType;                  // determine the type of "tone" we are sounding.
+UINT16 TopKeyPressTime = 0;      // keep track of the time the Set ("Top") key is pressed.
 
-UINT8 UpId                      = 0;
+UINT8 UpId = 0;
 
-UINT16 Year4Digits;                           // year in 4-digits format.
+UINT16 Year4Digits; // year in 4-digits format.
 
 TIME_RTC Time_RTC;
 
-semaphore_t SemSync;                          // semaphore used to synchronize minutes and seconds display with double dots blinking.
+semaphore_t SemSync; // semaphore used to synchronize minutes and seconds display with double dots blinking.
 
-uart_inst_t *Uart;                            // Pico's UART used to serially transfer debug data to a VT100-type monitor or to a PC.
-
-
-
-
+uart_inst_t *Uart; // Pico's UART used to serially transfer debug data to a VT100-type monitor or to a PC.
 
 UCHAR MonthName[3][13][10] =
-{
-  {{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {} },
-  {{}, {"January"}, {"February"}, {"March"}, {"April"}, {"May"}, {"June"}, {"July"},    {"August"}, {"September"}, {"October"}, {"November"}, {"December"} },
-  {{}, {"Janvier"}, {"Fevrier"},  {"Mars"},  {"Avril"}, {"Mai"}, {"Juin"}, {"Juillet"}, {"Aout"},   {"Septembre"}, {"Octobre"}, {"Novembre"}, {"Decembre"} }
-};
-
+    {
+        {{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}},
+        {{}, {"January"}, {"February"}, {"March"}, {"April"}, {"May"}, {"June"}, {"July"}, {"August"}, {"September"}, {"October"}, {"November"}, {"December"}},
+        {{}, {"Janvier"}, {"Fevrier"}, {"Mars"}, {"Avril"}, {"Mai"}, {"Juin"}, {"Juillet"}, {"Aout"}, {"Septembre"}, {"Octobre"}, {"Novembre"}, {"Decembre"}}};
 
 UCHAR ShortMonth[3][13][4] =
-{
-  {{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {} },
-  {{}, {"JAN"}, {"FEB"}, {"MAR"}, {"APR"}, {"MAY"}, {"JUN"}, {"JUL"}, {"AUG"}, {"SEP"}, {"OCT"}, {"NOV"}, {"DEC"} },
-  {{}, {"JAN"}, {"FEV"}, {"MAR"}, {"AVR"}, {"MAI"}, {"JUN"}, {"JUL"}, {"AOU"}, {"SEP"}, {"OCT"}, {"NOV"}, {"DEC"} }
-};
-
+    {
+        {{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}},
+        {{}, {"JAN"}, {"FEB"}, {"MAR"}, {"APR"}, {"MAY"}, {"JUN"}, {"JUL"}, {"AUG"}, {"SEP"}, {"OCT"}, {"NOV"}, {"DEC"}},
+        {{}, {"JAN"}, {"FEV"}, {"MAR"}, {"AVR"}, {"MAI"}, {"JUN"}, {"JUL"}, {"AOU"}, {"SEP"}, {"OCT"}, {"NOV"}, {"DEC"}}};
 
 UCHAR DayName[3][8][10] =
-{
-  {{}, {}, {}, {}, {}, {}, {}, {} },
-  {{}, {"Monday"}, {"Tuesday"}, {"Wednesday"}, {"Thursday"}, {"Friday"},   {"Saturday"}, {"Sunday"}   },
-  {{}, {"Lundi"},  {"Mardi"},   {"Mercredi"},  {"Jeudi"},    {"Vendredi"}, {"Samedi"},   {"Dimanche"} }
-};
+    {
+        {{}, {}, {}, {}, {}, {}, {}, {}},
+        {{}, {"Monday"}, {"Tuesday"}, {"Wednesday"}, {"Thursday"}, {"Friday"}, {"Saturday"}, {"Sunday"}},
+        {{}, {"Lundi"}, {"Mardi"}, {"Mercredi"}, {"Jeudi"}, {"Vendredi"}, {"Samedi"}, {"Dimanche"}}};
 
-
-struct alarm Alarm[2];  // current settings for alarm 0 and alarm 1.
+struct alarm Alarm[2]; // current settings for alarm 0 and alarm 1.
+#ifdef BME280_SUPPORT
 struct bme280_calib_param Bme280CalibParam;
+#endif
+
 struct sound SoundQueue[MAX_SOUND_QUEUE];
 struct repeating_timer Timer50uSec;
 
-
 /* Uncomment and modify value below until you get (or you remove) the error message to get an idea of approximate remaining RAM available. */
 // UINT8 RemainingRam[231930];
-
-
 
 /* $TITLE=Function prototypes. */
 /* $PAGE */
@@ -1101,9 +1047,7 @@ bool timer_callback_us(struct repeating_timer *Timer50uSec);
 void tone(UINT16 MilliSeconds);
 
 /* Send a string to a VT101 monitor or PC screen through Pico's UART (for debugging purposes). */
-void uart_send(uart_inst_t *Uart, UINT LineNumber, UCHAR* String);
-
-
+void uart_send(uart_inst_t *Uart, UINT LineNumber, UCHAR *String);
 
 /* ------------------------------------------------------------------ *\
                   BME280-related function prototypes
@@ -1140,8 +1084,6 @@ UINT8 bme280_read_status(void);
 UINT32 bme280_read_unique_id(void);
 #endif
 
-
-
 /* ------------------------------------------------------------------ *\
                    DHT22-related function prototypes
 \* ------------------------------------------------------------------ */
@@ -1149,8 +1091,6 @@ UINT32 bme280_read_unique_id(void);
 /* Read the temperature from external DHT22. */
 UINT8 read_dht22(float *Temperature, float *Humidity);
 #endif
-
-
 
 /* ------------------------------------------------------------------ *\
                  IR sensor-related function prototypes
@@ -1166,14 +1106,10 @@ gpio_irq_callback_t isr_signal_trap(UINT8 gpio, UINT32 Events);
 void process_ir_command(UINT64 IrCommand);
 #endif
 
-
-
 #ifdef TEST_CODE
-  /* Perform different tests on Pico Green Clock (to be used for testing and / or debugging). */
-  void test_zone(UINT8 TestType);
+/* Perform different tests on Pico Green Clock (to be used for testing and / or debugging). */
+void test_zone(UINT8 TestType);
 #endif
-
-
 
 /* $TITLE=Main program entry point. */
 /* $PAGE */
@@ -1187,9 +1123,9 @@ int main(void)
   UINT8 Dum1Initial;
   UINT8 Dum1Max;
   UINT8 Dum1UInt8;
-  UINT8 IrCommand;            // command received from remote control.
+  UINT8 IrCommand; // command received from remote control.
   UINT8 Loop1UInt8;
-  UINT8 SundayCounter;        // used to find daylight saving time status.
+  UINT8 SundayCounter; // used to find daylight saving time status.
 
   UINT16 Loop1UInt16;
 
@@ -1204,18 +1140,14 @@ int main(void)
   struct repeating_timer Timer50MSec;
   struct repeating_timer TimerSec;
 
-
-
   /* Add accents to some French characters. */
-  MonthName[FRENCH][FEB][1]  = (UCHAR)31;  // accent aigu sur fevrier.
-  MonthName[FRENCH][DEC][1]  = (UCHAR)31;  // accent aigu sur decembre.
-  MonthName[FRENCH][AUG][2]  = (UCHAR)30;  // accent circonflexe sur aout.
-  
-  ShortMonth[FRENCH][FEB][1] = (UCHAR)31;  // accent aigu sur FEV.
-  ShortMonth[FRENCH][AUG][2] = (UCHAR)30;  // accent circonflexe sur AOU.
-  ShortMonth[FRENCH][DEC][1] = (UCHAR)31;  // accent aigu sur DEC.
+  MonthName[FRENCH][FEB][1] = (UCHAR)31; // accent aigu sur fevrier.
+  MonthName[FRENCH][DEC][1] = (UCHAR)31; // accent aigu sur decembre.
+  MonthName[FRENCH][AUG][2] = (UCHAR)30; // accent circonflexe sur aout.
 
-
+  ShortMonth[FRENCH][FEB][1] = (UCHAR)31; // accent aigu sur FEV.
+  ShortMonth[FRENCH][AUG][2] = (UCHAR)30; // accent circonflexe sur AOU.
+  ShortMonth[FRENCH][DEC][1] = (UCHAR)31; // accent aigu sur DEC.
 
   /* ---------------------------------------------------------------- *\
     WARNING: This is for debugging purposes and may have significant
@@ -1235,8 +1167,6 @@ int main(void)
   // DebugBitMask = DEBUG_BRIGHTNESS + DEBUG_BME280 + DEBUG_CHIME;
   DebugBitMask = DEBUG_NONE;
 #endif
-
-
 
   /* ---------------------------------------------------------------- *\
                    Initialize PWM-related variables
@@ -1258,46 +1188,38 @@ int main(void)
   /* Slow the clock down to 1 MHz. */
   pwm_set_clkdiv(PwmSliceNumber, ClockDivider);
 
-
-
   /* ---------------------------------------------------------------- *\
             Seed random number generator (for dice rolling).
   \* ---------------------------------------------------------------- */
   srand(time_us_64());
 
-
-
-    /* ---------------------------------------------------------------- *\
-      Initialize all required GPIO ports of the Raspberry Pi Pico.
-  \* ---------------------------------------------------------------- */
+  /* ---------------------------------------------------------------- *\
+    Initialize all required GPIO ports of the Raspberry Pi Pico.
+\* ---------------------------------------------------------------- */
   init_gpio();
-
-
 
   /* Read the real-time clock IC. */
   Time_RTC = Read_RTC();
 
-  Time_RTC.seconds    = Time_RTC.seconds    & 0x7F;
-  Time_RTC.minutes    = Time_RTC.minutes    & 0x7F;
-  Time_RTC.hour       = Time_RTC.hour       & 0x3F;
-  Time_RTC.dayofweek  = Time_RTC.dayofweek  & 0x07;
+  Time_RTC.seconds = Time_RTC.seconds & 0x7F;
+  Time_RTC.minutes = Time_RTC.minutes & 0x7F;
+  Time_RTC.hour = Time_RTC.hour & 0x3F;
+  Time_RTC.dayofweek = Time_RTC.dayofweek & 0x07;
   Time_RTC.dayofmonth = Time_RTC.dayofmonth & 0x3F;
-  Time_RTC.month      = Time_RTC.month      & 0x1F;
+  Time_RTC.month = Time_RTC.month & 0x1F;
 
-  CurrentHourSetting  = bcd_to_byte(Time_RTC.hour);
-  CurrentMinute       = bcd_to_byte(Time_RTC.minutes);
-  CurrentDayOfMonth   = bcd_to_byte(Time_RTC.dayofmonth);
-  CurrentMonth        = bcd_to_byte(Time_RTC.month);
-  CurrentYearLowPart  = bcd_to_byte(Time_RTC.year);
-
-
+  CurrentHourSetting = bcd_to_byte(Time_RTC.hour);
+  CurrentMinute = bcd_to_byte(Time_RTC.minutes);
+  CurrentDayOfMonth = bcd_to_byte(Time_RTC.dayofmonth);
+  CurrentMonth = bcd_to_byte(Time_RTC.month);
+  CurrentYearLowPart = bcd_to_byte(Time_RTC.year);
 
   /* If user requested any section to be debugged through Pico's UART, send a time stamp to the log screen. */
   if (DebugBitMask)
   {
     sprintf(String, "cls");
     uart_send(uart1, __LINE__, String);
-  
+
     sprintf(String, "home");
     uart_send(uart1, __LINE__, String);
 
@@ -1313,21 +1235,21 @@ int main(void)
       {
         switch (1 << Loop1UInt8)
         {
-          case DEBUG_BME280:
-            uart_send(uart1, __LINE__, "- BME280 temperature sensor\r");
+        case DEBUG_BME280:
+          uart_send(uart1, __LINE__, "- BME280 temperature sensor\r");
           break;
 
-          case DEBUG_BRIGHTNESS:
-            uart_send(uart1, __LINE__, "- LED matrix auto brightness\r");
+        case DEBUG_BRIGHTNESS:
+          uart_send(uart1, __LINE__, "- LED matrix auto brightness\r");
           break;
 
-          case DEBUG_CHIME:
-            uart_send(uart1, __LINE__, "- Hourly chime algorithm\r");
+        case DEBUG_CHIME:
+          uart_send(uart1, __LINE__, "- Hourly chime algorithm\r");
           break;
 
-          default:
-            sprintf(String, "- Section #%u\r", Loop1UInt8);
-            uart_send(uart1, __LINE__, String);
+        default:
+          sprintf(String, "- Section #%u\r", Loop1UInt8);
+          uart_send(uart1, __LINE__, String);
           break;
         }
       }
@@ -1335,24 +1257,18 @@ int main(void)
     uart_send(uart1, __LINE__, "\r\r\r");
   }
 
-
-
   /* ---------------------------------------------------------------- *\
          Turn On Green Clock's white LEDs (night light) on entry.
   \* ---------------------------------------------------------------- */
   IndicatorButtonLightsOn;
 
-
-
   /* ---------------------------------------------------------------- *\
                   Initialize scroll queue on entry.
   \* ---------------------------------------------------------------- */
   for (Loop1UInt8 = 0; Loop1UInt8 < MAX_SCROLL_QUEUE; ++Loop1UInt8)
-    ScrollQueue[Loop1UInt8] = 0xAA;  // let's put 0xAA since 0x00 corresponds to calendar event number 0.
+    ScrollQueue[Loop1UInt8] = 0xAA; // let's put 0xAA since 0x00 corresponds to calendar event number 0.
   ScrollQueueHead = 0;
   ScrollQueueTail = 0;
-
-
 
   /* ---------------------------------------------------------------- *\
                    Initialize sound queue on entry.
@@ -1368,8 +1284,6 @@ int main(void)
   SoundQueueHead = 0;
   SoundQueueTail = 0;
 
-
-
   /* ---------------------------------------------------------------- *\
                  Initialize FlagSetupXxx[] on entry.
   \* ---------------------------------------------------------------- */
@@ -1382,18 +1296,14 @@ int main(void)
   for (Loop1UInt8 = SETUP_NONE; Loop1UInt8 < SETUP_TIMER_HI_LIMIT; ++Loop1UInt8)
     FlagSetupTimer[Loop1UInt8] = FLAG_OFF;
 
-
-
   /* ---------------------------------------------------------------- *\
           "Setup order" in French is different than in English.
   \* ---------------------------------------------------------------- */
   if (Language == FRENCH)
   {
-    SETUP_DAY_OF_MONTH   = 0x03;
-    SETUP_MONTH          = 0x04;
+    SETUP_DAY_OF_MONTH = 0x03;
+    SETUP_MONTH = 0x04;
   }
-
-
 
   /* ---------------------------------------------------------------- *\
          Retrieve current alarm parameters from RTC IC on entry.
@@ -1402,19 +1312,17 @@ int main(void)
   byte_data();
 
   /* Assign current parameters as default values for alarm 0... */
-  Alarm[0].FlagStatus = FLAG_OFF;  // set alarm OFF on entry.
-  Alarm[0].Day        = ByteData[DS3231_REG_A1D] & 0x0F;
-  Alarm[0].Hour       = ByteData[DS3231_REG_A1H];
-  Alarm[0].Minute     = ByteData[DS3231_REG_A1M];
-  Alarm[0].Second     = ByteData[DS3231_REG_A1S];
+  Alarm[0].FlagStatus = FLAG_OFF; // set alarm OFF on entry.
+  Alarm[0].Day = ByteData[DS3231_REG_A1D] & 0x0F;
+  Alarm[0].Hour = ByteData[DS3231_REG_A1H];
+  Alarm[0].Minute = ByteData[DS3231_REG_A1M];
+  Alarm[0].Second = ByteData[DS3231_REG_A1S];
 
   /* ... and also for alarm 1. */
-  Alarm[1].FlagStatus = FLAG_OFF;  // set alarm OFF on entry.
-  Alarm[1].Day        = ByteData[DS3231_REG_A2D] & 0x0F;
-  Alarm[1].Hour       = ByteData[DS3231_REG_A2H];
-  Alarm[1].Minute     = ByteData[DS3231_REG_A2M];
-
-
+  Alarm[1].FlagStatus = FLAG_OFF; // set alarm OFF on entry.
+  Alarm[1].Day = ByteData[DS3231_REG_A2D] & 0x0F;
+  Alarm[1].Hour = ByteData[DS3231_REG_A2H];
+  Alarm[1].Minute = ByteData[DS3231_REG_A2M];
 
   /* ---------------------------------------------------------------- *\
                  Initialize semaphore to synchronize
@@ -1429,9 +1337,7 @@ int main(void)
            in the sem_init() function if the first action taken in
            the code is to release the semaphore.
   \* ---------------------------------------------------------------- */
-  sem_init(&SemSync,  1, 1);
-
-
+  sem_init(&SemSync, 1, 1);
 
   /* ---------------------------------------------------------------- *\
                      Initialize callback functions.
@@ -1446,8 +1352,6 @@ int main(void)
   /* Initialize sound callback function (50 milliseconds period). */
   add_repeating_timer_ms(50, sound_callback_ms, NULL, &Timer50MSec);
 #endif
-
-
 
 #ifdef TEST_CODE
   /* ---------------------------------------------------------------- *\
@@ -1480,8 +1384,6 @@ int main(void)
   \* ---------------------------------------------------------------- */
 #endif
 
-
-
   /* Test active buzzer... Four short tones to indicate we are entering the main Green Clock firmware. */
   tone(10);
   sleep_ms(100);
@@ -1492,22 +1394,16 @@ int main(void)
   tone(10);
   sleep_ms(300);
 
-
-
   /* ---------------------------------------------------------------- *\
                       Test clock LED matrix.
   \* ---------------------------------------------------------------- */
   matrix_test();
-
-
 
   /* ---------------------------------------------------------------- *\
            Make some pixel animation on entry (just for fun).
   \* ---------------------------------------------------------------- */
   pixel_twinkling(3);
   clear_framebuffer(0);
-
-
 
   /* ---------------------------------------------------------------- *\
              Turn on selected temperature indicator on entry.
@@ -1523,27 +1419,23 @@ int main(void)
     IndicatorFrnhtOff;
   }
 
-
-
   /* ---------------------------------------------------------------- *\
            Turn on appropriate Hourly chime indicator on entry.
   \* ---------------------------------------------------------------- */
   switch (HourlyChimeMode)
   {
-    case (CHIME_OFF):
-      IndicatorHourlyChimeOff;
+  case (CHIME_OFF):
+    IndicatorHourlyChimeOff;
     break;
 
-    case (CHIME_ON):
-      IndicatorHourlyChimeOn;
+  case (CHIME_ON):
+    IndicatorHourlyChimeOn;
     break;
 
-    case (CHIME_DAY):
-      IndicatorHourlyChimeDay;
+  case (CHIME_DAY):
+    IndicatorHourlyChimeDay;
     break;
   }
-
-
 
   /* ---------------------------------------------------------------- *\
       Check if "Move On" (scrolling) indicator should be turned on
@@ -1551,9 +1443,8 @@ int main(void)
          at compile time). This can also be changed in the clock
                      configuration at run time.
   \* ---------------------------------------------------------------- */
-  if (FlagScrollEnable == FLAG_ON) IndicatorScrollOn;
-
-
+  if (FlagScrollEnable == FLAG_ON)
+    IndicatorScrollOn;
 
   /* ------------------------------------------------------------------------------------------------------------------------ *\
                                                  DAYLIGHT SAVING TIME SUPPORT
@@ -1570,25 +1461,20 @@ int main(void)
     /* Assume we are not during "Daylight Saving Time" on entry... */
     FlagDayLightSavingTime = FLAG_OFF;
 
-
     /* ...then, check if our assumption is correct... */
     /* Read the real-time clock IC DS3231. */
     Time_RTC = Read_RTC();
 
-
     /* Convert to binary values. */
-    CurrentHour         = bcd_to_byte(Time_RTC.hour);
-    CurrentMinute       = bcd_to_byte(Time_RTC.minutes);
-    CurrentDayOfMonth   = bcd_to_byte(Time_RTC.dayofmonth);
-    CurrentMonth        = bcd_to_byte(Time_RTC.month);
-    Year4Digits         = 2000 + bcd_to_byte(Time_RTC.year);
-
+    CurrentHour = bcd_to_byte(Time_RTC.hour);
+    CurrentMinute = bcd_to_byte(Time_RTC.minutes);
+    CurrentDayOfMonth = bcd_to_byte(Time_RTC.dayofmonth);
+    CurrentMonth = bcd_to_byte(Time_RTC.month);
+    Year4Digits = 2000 + bcd_to_byte(Time_RTC.year);
 
     /* Between (and including) April and October, we must be in "Daylight Saving Time". */
     if ((CurrentMonth >= APR) && (CurrentMonth <= OCT))
       FlagDayLightSavingTime = FLAG_ON;
-
-
 
     /* -------------------------------------------------------------- *\
                    If we are in March or November,
@@ -1608,18 +1494,14 @@ int main(void)
         }
       }
 
-
       /* If we are "passed" the second Sunday of March, then we must be in Daylight Saving Time. */
       if ((SundayCounter > 2) || ((SundayCounter == 2) && (get_weekday(Year4Digits, CurrentMonth, CurrentDayOfMonth) != SUN)))
         FlagDayLightSavingTime = FLAG_ON;
-
 
       /* If we are "at" the second Sunday of March, then it depends what time it is... */
       if ((SundayCounter == 2) && (get_weekday(Year4Digits, CurrentMonth, CurrentDayOfMonth) == SUN) && (CurrentHour > 2))
         FlagDayLightSavingTime = FLAG_ON;
     }
-
-
 
     /* -------------------------------------------------------------- *\
         Then, check the case if we are near the "November" boundary.
@@ -1635,11 +1517,9 @@ int main(void)
           ++SundayCounter;
       }
 
-
       /* If we are before the first Sunday of November, then we must be in Daylight Saving Time. */
       if (SundayCounter == 0)
         FlagDayLightSavingTime = FLAG_ON;
-
 
       /* If we are "at" the first Sunday of November, it depends what time it is... */
       if ((SundayCounter == 1) && (get_weekday(Year4Digits, CurrentMonth, CurrentDayOfMonth) == SUN))
@@ -1651,20 +1531,14 @@ int main(void)
                                                 End of daylight saving time section
   \* ------------------------------------------------------------------------------------------------------------------------ */
 
-
-
   /* Clear framebuffer on entry. */
   clear_framebuffer(0);
-
-
 
   /* ---------------------------------------------------------------- *\
                         Scroll firmware version.
   \* ---------------------------------------------------------------- */
   sprintf(String, "Pico Green Clock - Firmware Version %s", FIRMWARE_VERSION);
   scroll_string(24, String);
-
-
 
   /* ---------------------------------------------------------------- *\
         Special message if sound has been cut-off at compile-time.
@@ -1678,8 +1552,6 @@ int main(void)
     scroll_string(24, "ATTENTION - PAS DE SON");
 #endif
 
-
-
   /* ---------------------------------------------------------------- *\
            Special message if some debug options are selected.
   \* ---------------------------------------------------------------- */
@@ -1691,8 +1563,6 @@ int main(void)
     if (Language == FRENCH)
       scroll_string(24, "ATTENTION - DES OPTIONS DEBUG SONT ACTIVEES");
   }
-
-
 
 #ifdef BME280_SUPPORT
   /* ---------------------------------------------------------------- *\
@@ -1709,30 +1579,29 @@ int main(void)
     Dum1UInt8 = bme280_read_device_id();
     switch (Dum1UInt8)
     {
-      case 0x60:
-        scroll_string(24, "BME280 device ID: 0x60");
+    case 0x60:
+      scroll_string(24, "BME280 device ID: 0x60");
       break;
 
-      case 0x56:
-      case 0x57:
-        sprintf(String, "BMP280 device ID: 0x%2.2X (sample production units)", Dum1UInt8);
-        scroll_string(24, String);
-        scroll_string(24, "Your device seems not to be a true BME280");
+    case 0x56:
+    case 0x57:
+      sprintf(String, "BMP280 device ID: 0x%2.2X (sample production units)", Dum1UInt8);
+      scroll_string(24, String);
+      scroll_string(24, "Your device seems not to be a true BME280");
       break;
 
-      case 0x58:
-        scroll_string(24, "BMP280 device ID: 0x58 (mass production units)");
-        scroll_string(24, "Your device seems not to be a true BME280");
+    case 0x58:
+      scroll_string(24, "BMP280 device ID: 0x58 (mass production units)");
+      scroll_string(24, "Your device seems not to be a true BME280");
       break;
 
-      default:
-        sprintf(String, "Unrecognized BME280 device ID: 0x%2.2X", Dum1UInt8);
-        scroll_string(24, String);
-        scroll_string(24, "Your device seems not to be a true BME280");
+    default:
+      sprintf(String, "Unrecognized BME280 device ID: 0x%2.2X", Dum1UInt8);
+      scroll_string(24, String);
+      scroll_string(24, "Your device seems not to be a true BME280");
       break;
     }
 
-  
     /* Read BME280 unique id ("serial number" of the specific device used). */
     Bme280UniqueId = bme280_read_unique_id();
     sprintf(String, "BME280 Unique ID: %4.4X %4.4X", ((Bme280UniqueId & 0xFFFF0000) >> 16), Bme280UniqueId & 0xFFFF);
@@ -1740,13 +1609,11 @@ int main(void)
 
     /* Read calibration data of the specific device used (written in BME280's non volatile memory). */
     bme280_read_calib_data();
-    
+
     /* Compute calibration parameters from calibration data. */
     bme280_compute_calib_param();
   }
 #endif
-
-
 
   /* ---------------------------------------------------------------- *\
                   Validate communication with DHT22.
@@ -1757,17 +1624,13 @@ int main(void)
     scroll_string(24, "Error while trying to communicate with DHT22");
   }
 #endif
- 
- 
- 
-   /* ---------------------------------------------------------------- *\
-                     Scroll Pico unique identifier
-            NOTE: Scroll queue will be processed when entering
-                      the main program loop below.
-  \* ---------------------------------------------------------------- */
+
+  /* ---------------------------------------------------------------- *\
+                    Scroll Pico unique identifier
+           NOTE: Scroll queue will be processed when entering
+                     the main program loop below.
+ \* ---------------------------------------------------------------- */
   scroll_queue(TAG_PICO_UNIQUE_ID);
-
-
 
   /* ---------------------------------------------------------------- *\
               Scroll daylight saving time status on power up.
@@ -1776,16 +1639,12 @@ int main(void)
   \* ---------------------------------------------------------------- */
   scroll_queue(TAG_DST);
 
-
-
   /* ---------------------------------------------------------------- *\
               Scroll power supply voltage value on power up.
            NOTE: Scroll queue will be processed when entering
                       the main program loop below.
   \* ---------------------------------------------------------------- */
   scroll_queue(TAG_VOLTAGE);
-
-
 
   /* ---------------------------------------------------------------- *\
                     Scroll Pico internal temperature.
@@ -1794,24 +1653,22 @@ int main(void)
   \* ---------------------------------------------------------------- */
   scroll_queue(TAG_PICO_TEMP);
 
-
-
+#ifdef PASSIVE_PIEZO_SUPPORT
   /* ---------------------------------------------------------------- *\
                        Test passive buzzer.
   \* ---------------------------------------------------------------- */
-  sound_queue(SILENT, 2000);  // short silence after pixel twinkling.
+  sound_queue(SILENT, 2000); // short silence after pixel twinkling.
   play_jingle(JINGLE_RACING);
-  sound_queue(SILENT, 3000);  // short silence between jingles.
+  sound_queue(SILENT, 3000); // short silence between jingles.
   play_jingle(JINGLE_BIRTHDAY);
   sound_queue(SILENT, 3000);
   play_jingle(JINGLE_FETE);
   sound_queue(SILENT, 3000);
-
-
+#endif
 
   /* Configure the GPIO associated to the three push-buttons of the clock in "input" mode. */
-  gpio_set_dir(SET_BUTTON,  GPIO_IN);
-  gpio_set_dir(UP_BUTTON,   GPIO_IN);
+  gpio_set_dir(SET_BUTTON, GPIO_IN);
+  gpio_set_dir(UP_BUTTON, GPIO_IN);
   gpio_set_dir(DOWN_BUTTON, GPIO_IN);
 
   /* Setup a pull-up on those three GPIOs. */
@@ -1819,15 +1676,11 @@ int main(void)
   gpio_pull_up(UP_BUTTON);
   gpio_pull_up(DOWN_BUTTON);
 
-
-
 #ifdef IR_SUPPORT
   /* Initialize interrupt handler to capture remote control infrared commands. */
   gpio_set_irq_enabled_with_callback(IR_RX, GPIO_IRQ_EDGE_FALL | GPIO_IRQ_EDGE_RISE, true, (gpio_irq_callback_t)&isr_signal_trap);
   IrStepCount = 0;
 #endif
-
-
 
   /* Main program loop... will loop forever. */
   while (TRUE)
@@ -1835,32 +1688,26 @@ int main(void)
     /* If user pressed the "Setup" (top) button (detected in the call-back function), proceed with clock setup. */
     if (FlagSetClock == FLAG_ON)
     {
-      FlagIdleCheck = FLAG_ON;   // keep track of inactive (idle) time to eventually declare a time-out.
-      setup_clock_frame();       // display clock template and current values.
-      FlagSetClock  = FLAG_OFF;  // reset clock setup mode flag after this pass.
+      FlagIdleCheck = FLAG_ON; // keep track of inactive (idle) time to eventually declare a time-out.
+      setup_clock_frame();     // display clock template and current values.
+      FlagSetClock = FLAG_OFF; // reset clock setup mode flag after this pass.
     }
-
-
 
     /* If we just entered the "Alarm" setup mode (detected in the call-back function), proceed with alarm setup. */
     if (FlagSetAlarm == FLAG_ON)
     {
-      FlagIdleCheck  = FLAG_ON;   // keep track of inactive (idle) time to eventually declare a time-out.
-      setup_alarm_frame();        // display alarm template and current values.
-      FlagSetAlarm   = FLAG_OFF;  // reset alarm setup mode flag after this pass.
+      FlagIdleCheck = FLAG_ON; // keep track of inactive (idle) time to eventually declare a time-out.
+      setup_alarm_frame();     // display alarm template and current values.
+      FlagSetAlarm = FLAG_OFF; // reset alarm setup mode flag after this pass.
     }
-
-
 
     /* If we just entered the "Timer" setup mode (detected in the call-back function), proceed with timer setup. */
     if (FlagSetTimer == FLAG_ON)
     {
-      FlagIdleCheck = FLAG_ON;   // keep track of inactive (idle) time to eventually declare a time-out.
-      setup_timer_frame();       // display timer template and current values.
-      FlagSetTimer  = FLAG_OFF;  // reset timer setup mode after this pass.
+      FlagIdleCheck = FLAG_ON; // keep track of inactive (idle) time to eventually declare a time-out.
+      setup_timer_frame();     // display timer template and current values.
+      FlagSetTimer = FLAG_OFF; // reset timer setup mode after this pass.
     }
-
-
 
     /* Check if it is time to update time display on the clock. */
     if ((FlagUpdateTime == FLAG_ON) && (ScrollDotCount == 0))
@@ -1869,27 +1716,23 @@ int main(void)
       FlagUpdateTime = FLAG_OFF;
     }
 
-
-
     /* If a tag has been inserted in the scroll queue, process it. */
     if (ScrollQueueHead != ScrollQueueTail)
     {
       process_scroll_queue();
     }
 
-
-
 #ifdef IR_SUPPORT
     /* If infrared remote control support is enable,
        Check if data has been received by infrared sensor. */
     if (IrStepCount != 0)
     {
-      sleep_ms(250);  // make sure all IR burst has been received.
+      sleep_ms(250); // make sure all IR burst has been received.
 
       if ((decode_ir_command(FLAG_OFF, &IrCommand) == 0) && (IrCommand != IR_LO_LIMIT) && (IrCommand < IR_HI_LIMIT))
       {
         /* Process IR command only if it has been received / decoded without error. */
-        IdleNumberOfSeconds = 0;  // reset the number of seconds the system has been idle.
+        IdleNumberOfSeconds = 0; // reset the number of seconds the system has been idle.
 
         process_ir_command(IrCommand);
       }
@@ -1897,10 +1740,6 @@ int main(void)
 #endif
   }
 }
-
-
-
-
 
 /* $TITLE=adc_show() */
 /* $PAGE */
@@ -1916,10 +1755,9 @@ void adc_show_count(void)
 
   static UINT16 AmbientLightMSecCounter;
   static UINT64 CumulativeLightLevel;
-  static UINT16 LightLevel[12] = {550, 550, 550, 550, 550, 550, 550, 550, 550, 550, 550, 550};  // assume average ambient light on entry.
-  static UINT NextCell;  // point to next member of circular buffer to be read.
-  
-  
+  static UINT16 LightLevel[12] = {550, 550, 550, 550, 550, 550, 550, 550, 550, 550, 550, 550}; // assume average ambient light on entry.
+  static UINT NextCell;                                                                        // point to next member of circular buffer to be read.
+
   /* If the clock has been setup for automatic ambient light detection, get ambient light value from Pico's analog-to-digital converter. */
   if (FlagAutoBrightness == FLAG_ON)
   {
@@ -1930,16 +1768,16 @@ void adc_show_count(void)
     {
       /* Compute the average ambient light level for the last five seconds (5000 milliseconds). */
       AmbientLightMSecCounter = 0;
-      LightLevel[NextCell++]  = CumulativeLightLevel / 5000;
-      if (NextCell >= 12) NextCell = 0;
-      CumulativeLightLevel    = 0;
+      LightLevel[NextCell++] = CumulativeLightLevel / 5000;
+      if (NextCell >= 12)
+        NextCell = 0;
+      CumulativeLightLevel = 0;
 
-      
       /* Compute average ambient light level for the last minute. */
       for (Loop1UInt = 0; Loop1UInt < 12; ++Loop1UInt)
         CumulativeLightLevel += LightLevel[Loop1UInt];
 
-      AverageLightLevel    = (CumulativeLightLevel / 12);
+      AverageLightLevel = (CumulativeLightLevel / 12);
       CumulativeLightLevel = 0;
     }
   }
@@ -1947,11 +1785,7 @@ void adc_show_count(void)
   return;
 }
 
-
-
-
-
-#ifdef BME280_SUPPORT 
+#ifdef BME280_SUPPORT
 /* $TITLE=bme280_compute_calib_param() */
 /* $PAGE */
 /* ------------------------------------------------------------------ *\
@@ -1964,25 +1798,19 @@ UINT8 bme280_compute_calib_param()
 
   UINT16 Dum1UInt16;
 
-  
   if (DebugBitMask & DEBUG_BME280)
   {
     uart_send(uart1, __LINE__, "bme280_compute_calib_param(Entering)\r\r");
   }
 
-
-
-  
   /* Compute calibration parameters for temperature. */
-  Bme280CalibParam.DigT1 = (UINT16) (Bme280CalibData[0] + (Bme280CalibData[1] << 8));
+  Bme280CalibParam.DigT1 = (UINT16)(Bme280CalibData[0] + (Bme280CalibData[1] << 8));
   Bme280CalibParam.DigT2 = (int16_t)(Bme280CalibData[2] + (Bme280CalibData[3] << 8));
   Bme280CalibParam.DigT3 = (int16_t)(Bme280CalibData[4] + (Bme280CalibData[5] << 8));
- 
-
 
   /* Compute calibration parameters for pressure. */
-  Bme280CalibParam.DigP1 = (UINT16) (Bme280CalibData[6]  + (Bme280CalibData[7]  << 8));
-  Bme280CalibParam.DigP2 = (int16_t)((Bme280CalibData[8]  + (Bme280CalibData[9]  << 8)) & 0xFFFF);
+  Bme280CalibParam.DigP1 = (UINT16)(Bme280CalibData[6] + (Bme280CalibData[7] << 8));
+  Bme280CalibParam.DigP2 = (int16_t)((Bme280CalibData[8] + (Bme280CalibData[9] << 8)) & 0xFFFF);
 
   Dum1UInt16 = (((Bme280CalibData[11] << 8) & 0xFF00) + Bme280CalibData[10]);
   Bme280CalibParam.DigP3 = (int16_t)Dum1UInt16;
@@ -2013,76 +1841,68 @@ UINT8 bme280_compute_calib_param()
   Bme280CalibParam.DigH5 = (int16_t)((Bme280CalibData[31] << 4) + ((Bme280CalibData[30] & 0xF0) >> 4));
   Bme280CalibParam.DigH6 = (char)Bme280CalibData[32];
 
-  
-
   if (DebugBitMask & DEBUG_BME280)
   {
     uart_send(uart1, __LINE__, "Temperature:\r");
     sprintf(String, "DigT1: %4.4X   %7u\r", Bme280CalibParam.DigT1, Bme280CalibParam.DigT1);
     uart_send(uart1, __LINE__, String);
-   
+
     sprintf(String, "DigT2: %4.4X   %7d\r", Bme280CalibParam.DigT2, Bme280CalibParam.DigT2);
     uart_send(uart1, __LINE__, String);
-   
+
     sprintf(String, "DigT3: %4.4X   %7d\r\r\r", Bme280CalibParam.DigT3, Bme280CalibParam.DigT3);
     uart_send(uart1, __LINE__, String);
-   
 
-  
     uart_send(uart1, __LINE__, "Pressure:\r");
     sprintf(String, "DigP1: %4.4X   %7u\r", Bme280CalibParam.DigP1, Bme280CalibParam.DigP1);
     uart_send(uart1, __LINE__, String);
-   
+
     sprintf(String, "DigP2: %4.4X   %7d\r", (Bme280CalibParam.DigP2 & 0xFFFF), Bme280CalibParam.DigP2);
     uart_send(uart1, __LINE__, String);
-   
+
     sprintf(String, "DigP3: %4.4X   %7d\r", Bme280CalibParam.DigP3, Bme280CalibParam.DigP3);
     uart_send(uart1, __LINE__, String);
-   
+
     sprintf(String, "DigP4: %4.4X   %7d\r", Bme280CalibParam.DigP4, Bme280CalibParam.DigP4);
     uart_send(uart1, __LINE__, String);
-   
+
     sprintf(String, "DigP5: %4.4X   %7d\r", Bme280CalibParam.DigP5, Bme280CalibParam.DigP5);
     uart_send(uart1, __LINE__, String);
-   
+
     sprintf(String, "DigP6: %4.4X   %7d\r", (Bme280CalibParam.DigP6 & 0xFFFF), Bme280CalibParam.DigP6);
     uart_send(uart1, __LINE__, String);
-   
+
     sprintf(String, "DigP7: %4.4X   %7d\r", Bme280CalibParam.DigP7, Bme280CalibParam.DigP7);
     uart_send(uart1, __LINE__, String);
-   
+
     sprintf(String, "DigP8: %4.4X   %7d\r", (Bme280CalibParam.DigP8 & 0xFFFF), Bme280CalibParam.DigP8);
     uart_send(uart1, __LINE__, String);
-   
+
     sprintf(String, "DigP9: %4.4X   %7d\r\r\r", Bme280CalibParam.DigP9, Bme280CalibParam.DigP9);
     uart_send(uart1, __LINE__, String);
-
-  
 
     uart_send(uart1, __LINE__, "Humidity:\r");
     sprintf(String, "DigH1: 0x%2.2X   %7u\r", Bme280CalibParam.DigH1, Bme280CalibParam.DigH1);
     uart_send(uart1, __LINE__, String);
-   
+
     sprintf(String, "DigH2: %4.4X   %7d\r", Bme280CalibParam.DigH2, Bme280CalibParam.DigH2);
     uart_send(uart1, __LINE__, String);
-   
+
     sprintf(String, "DigH3: 0x%2.2X   %7u\r", Bme280CalibParam.DigH3, Bme280CalibParam.DigH3);
     uart_send(uart1, __LINE__, String);
-   
+
     sprintf(String, "DigH4: %4.4X   %7d\r", Bme280CalibParam.DigH4, Bme280CalibParam.DigH4);
     uart_send(uart1, __LINE__, String);
-   
+
     sprintf(String, "DigH5: %4.4X   %7d\r", Bme280CalibParam.DigH5, Bme280CalibParam.DigH5);
     uart_send(uart1, __LINE__, String);
-   
+
     sprintf(String, "DigH6: 0x%2.2X   %7d\r\r\r\r\r", Bme280CalibParam.DigH6, Bme280CalibParam.DigH6);
     uart_send(uart1, __LINE__, String);
   }
 
   return 0;
 }
-
-
 
 /* $TITLE=bme280_get_temp() */
 /* $PAGE */
@@ -2094,16 +1914,16 @@ UINT8 bme280_get_temp(void)
 {
   UCHAR String[64];
 
-  UINT16  Dum1UInt16;
+  UINT16 Dum1UInt16;
   int16_t Dum1Int16;
-  UINT8   HumParam;
-  UINT8   Loop1UInt8;
-  UINT8   Loop2UInt8;
-  UINT8   Buffer[8];
-  
-  UINT32  ReturnCode;
-  UINT32  ReturnCode1;
-  UINT32  ReturnCode2;
+  UINT8 HumParam;
+  UINT8 Loop1UInt8;
+  UINT8 Loop2UInt8;
+  UINT8 Buffer[8];
+
+  UINT32 ReturnCode;
+  UINT32 ReturnCode1;
+  UINT32 ReturnCode2;
 
   int32_t Dum1Int32;
   int32_t Dum2Int32;
@@ -2121,41 +1941,37 @@ UINT8 bme280_get_temp(void)
   float Dum1Float;
   float DewPoint;
 
-
   /* One more temperature reading from BME280. */
   ++Bme280Readings;
-
 
   if (DebugBitMask & DEBUG_BME280)
   {
     uart_send(uart1, __LINE__, "bme280_get_temp(Entering)\r\r");
   }
 
-
   /* -------------------- Force a BME280 reading -------------------- */
   /* --- and oversampling for temperature and barometric pressure --- */
   /* Bits 1 and 0: BME280 sensor mode.  00 = sleep mode; 01, 10 = forced mode; 11 = normal mode.
      Bits 4, 3, 2: oversampling for barometric pressure data.
      Bits 7, 6, 5: oversampling for temperature data.
-     Note: 0b101 = oversampling X 16; 0b100 = oversampling X 8; 0b011 = oversampling X 4; 
+     Note: 0b101 = oversampling X 16; 0b100 = oversampling X 8; 0b011 = oversampling X 4;
            0b010 = oversampling X 2;  0b001 = oversampling X 1; 0b000 = skip oversampling. */
   Buffer[0] = BME280_REGISTER_CTRL_MEAS;
-  Buffer[1] = 0b00100000   // temperature oversampling X 1
-            + 0b00000100   // pressure oversampling X 1
-            + 0b00000001;  // BME280 in "force" mode
-
+  Buffer[1] = 0b00100000    // temperature oversampling X 1
+              + 0b00000100  // pressure oversampling X 1
+              + 0b00000001; // BME280 in "force" mode
 
   /* Send address of the BME280's ctrl_meas, while checking for an eventual error code. */
-  Buffer[1] = 0x24;  // sleep mode
+  Buffer[1] = 0x24; // sleep mode
   ReturnCode = i2c_write_blocking(I2C_PORT, BME280_ADDRESS, Buffer, 2, true);
   sleep_ms(300);
-  Buffer[1] = 0x25;  // force mode
+  Buffer[1] = 0x25; // force mode
   ReturnCode = i2c_write_blocking(I2C_PORT, BME280_ADDRESS, Buffer, 2, true);
   sleep_ms(300);
-  Buffer[1] = 0x24;  // sleep mode
+  Buffer[1] = 0x24; // sleep mode
   ReturnCode = i2c_write_blocking(I2C_PORT, BME280_ADDRESS, Buffer, 2, true);
   sleep_ms(300);
-  Buffer[1] = 0x25;  // force mode
+  Buffer[1] = 0x25; // force mode
   ReturnCode = i2c_write_blocking(I2C_PORT, BME280_ADDRESS, Buffer, 2, true);
   sleep_ms(300);
   if (ReturnCode == PICO_ERROR_GENERIC)
@@ -2164,19 +1980,16 @@ UINT8 bme280_get_temp(void)
 
     return 0xFF;
   }
-  
-  
+
   /* Next, read temperature, humidity and barometric pressure raw data.
      Give some time to the device to complete operation
      (for some reason, the "status" register doesn't seem to indicate a pending operation) . */
   bme280_read_registers(Buffer);
 
-
-
   /* Compute raw values. */
   RawPress = ((Buffer[0] << 12) + (Buffer[1] << 4) + ((Buffer[2] & 0xF0) >> 4));
-  RawTemp  = ((Buffer[3] << 12) + (Buffer[4] << 4) + ((Buffer[5] & 0xF0) >> 4));
-  RawHum   = ((Buffer[6] << 8) + Buffer[7]);
+  RawTemp = ((Buffer[3] << 12) + (Buffer[4] << 4) + ((Buffer[5] & 0xF0) >> 4));
+  RawHum = ((Buffer[6] << 8) + Buffer[7]);
 
   if (DebugBitMask & DEBUG_BME280)
   {
@@ -2190,11 +2003,9 @@ UINT8 bme280_get_temp(void)
     uart_send(uart1, __LINE__, String);
   }
 
-
-
   /* Compute actual temperature. */
-  Dum1Int32  = ((((RawTemp >> 3) - ((int32_t)Bme280CalibParam.DigT1 << 1))) * ((int32_t)Bme280CalibParam.DigT2)) >> 11;
-  Dum2Int32  = (((((RawTemp >> 4) - ((int32_t)Bme280CalibParam.DigT1)) * ((RawTemp >> 4) - ((int32_t)Bme280CalibParam.DigT1))) >> 12) * ((int32_t)Bme280CalibParam.DigT3)) >> 14;
+  Dum1Int32 = ((((RawTemp >> 3) - ((int32_t)Bme280CalibParam.DigT1 << 1))) * ((int32_t)Bme280CalibParam.DigT2)) >> 11;
+  Dum2Int32 = (((((RawTemp >> 4) - ((int32_t)Bme280CalibParam.DigT1)) * ((RawTemp >> 4) - ((int32_t)Bme280CalibParam.DigT1))) >> 12) * ((int32_t)Bme280CalibParam.DigT3)) >> 14;
   TempFactor = Dum1Int32 + Dum2Int32;
   Bme280CalibParam.TemperatureC = ((TempFactor * 5 + 128) >> 8) / 100.0;
   Bme280CalibParam.TemperatureF = ((Bme280CalibParam.TemperatureC * 9) / 5.0) + 32;
@@ -2204,14 +2015,18 @@ UINT8 bme280_get_temp(void)
     uart_send(uart1, __LINE__, String);
   }
 
-
-
   /* Compute actual relative humidity. */
   FinalHum = (TempFactor - ((int32_t)76800));
   FinalHum = (((((RawHum << 14) - (((int32_t)Bme280CalibParam.DigH4) << 20) - (((int32_t)Bme280CalibParam.DigH5) * FinalHum)) +
-                ((int32_t)16384)) >> 15) * (((((((FinalHum * ((int32_t)Bme280CalibParam.DigH6)) >> 10) *
-               (((FinalHum * ((int32_t)Bme280CalibParam.DigH3)) >> 11) + ((int32_t)32768))) >> 10) + ((int32_t)2097152)) *
-                ((int32_t)Bme280CalibParam.DigH2) + 8192) >> 14));
+                ((int32_t)16384)) >>
+               15) *
+              (((((((FinalHum * ((int32_t)Bme280CalibParam.DigH6)) >> 10) *
+                   (((FinalHum * ((int32_t)Bme280CalibParam.DigH3)) >> 11) + ((int32_t)32768))) >>
+                  10) +
+                 ((int32_t)2097152)) *
+                    ((int32_t)Bme280CalibParam.DigH2) +
+                8192) >>
+               14));
   FinalHum = (FinalHum - (((((FinalHum >> 15) * (FinalHum >> 15)) >> 7) * ((int32_t)Bme280CalibParam.DigH1)) >> 4));
   FinalHum = (FinalHum < 0 ? 0 : FinalHum);
   FinalHum = (FinalHum > 419430400 ? 419430400 : FinalHum);
@@ -2223,8 +2038,6 @@ UINT8 bme280_get_temp(void)
     uart_send(uart1, __LINE__, String);
   }
 
-
-
   /* Compute actual barometric pressure. */
   Dum1Int64 = ((int64_t)TempFactor) - 128000;
   Dum2Int64 = Dum1Int64 * Dum1Int64 * (int64_t)Bme280CalibParam.DigP6;
@@ -2232,11 +2045,12 @@ UINT8 bme280_get_temp(void)
   Dum2Int64 = Dum2Int64 + (((int64_t)Bme280CalibParam.DigP4) << 35);
   Dum1Int64 = ((Dum1Int64 * Dum1Int64 * (int64_t)Bme280CalibParam.DigP3) >> 8) + ((Dum1Int64 * (int64_t)Bme280CalibParam.DigP2) << 12);
   Dum1Int64 = (((((int64_t)1) << 47) + Dum1Int64)) * ((int64_t)Bme280CalibParam.DigP1) >> 33;
-  if (Dum1Int64 == 0) return 0; // to prevent a division by zero.
+  if (Dum1Int64 == 0)
+    return 0; // to prevent a division by zero.
   FinalPress = 1048576 - RawPress;
   FinalPress = (((FinalPress << 31) - Dum2Int64) * 3125) / Dum1Int64;
-  Dum1Int64  = (((int64_t)Bme280CalibParam.DigP9) * (FinalPress >> 13) * (FinalPress >> 13)) >> 25;
-  Dum2Int64  = (((int64_t)Bme280CalibParam.DigP8) * FinalPress) >> 19;
+  Dum1Int64 = (((int64_t)Bme280CalibParam.DigP9) * (FinalPress >> 13) * (FinalPress >> 13)) >> 25;
+  Dum2Int64 = (((int64_t)Bme280CalibParam.DigP8) * FinalPress) >> 19;
   FinalPress = (UINT32)((FinalPress + Dum1Int64 + Dum2Int64) >> 8) + (((int64_t)Bme280CalibParam.DigP7) << 4);
   Bme280CalibParam.Pressure = FinalPress / 25600.0;
   if (DebugBitMask & DEBUG_BME280)
@@ -2245,22 +2059,18 @@ UINT8 bme280_get_temp(void)
     uart_send(uart1, __LINE__, String);
   }
 
-  
-  
   /*** NOTE: Relative altitude may not be an interesting value to calculate since this value changes with
            normal and usual pressure changes due to atmospheric factors. ***/
   /*** Compute approximate altitude above sea level, based on atmospheric pressure and current temperature.
      NOTE: 1013.25 hPa is the standard pressure at sea level. ***
   Bme280CalibParam.Altitude = 44330.0 * (1.0 - pow(Bme280CalibParam.Pressure / 1013.25, 0.190294957));
-  
+
   if (DebugBitMask & DEBUG_BME280)
   {
     sprintf(String, "Altitude:       %4.3f - seems to vary too much with pressure change over time\r\r\r", Bme280CalibParam.Altitude);
     uart_send(uart1, __LINE__, String);
   }
   ***/
-
-
 
   /*** NOTE: Equation below to calculate the humidex factor is wrong. References about how to calculate this parameter are hard to
              find and not always accurate. This part will need to be reworked when trustful documentation is found on the subject. ***/
@@ -2287,13 +2097,9 @@ UINT8 bme280_get_temp(void)
     uart_send(uart1, __LINE__, String);
   }
   ***/
-  
+
   return 0;
 }
-
-
-
-
 
 /* $TITLE=bme280_init() */
 /* $PAGE */
@@ -2308,47 +2114,42 @@ UINT8 bme280_init(void)
 
   UINT32 ReturnCode;
 
-  
   if (DebugBitMask & DEBUG_BME280)
   {
     uart_send(uart1, __LINE__, "bme280_init(Entering)\r\r\r\r\r");
   }
 
-
   /* ---------------------- Reset the BME280. ----------------------- */
   Buffer[0] = BME280_REGISTER_RESET;
-  Buffer[1] = 0xB6;  // reset command.
+  Buffer[1] = 0xB6; // reset command.
 
   /* Send the soft reset command to the BME280's while checking for an eventual error code. */
-  if (i2c_write_blocking(I2C_PORT, BME280_ADDRESS, Buffer, 2, true)  == PICO_ERROR_GENERIC) return 0xFF;
-
-
+  if (i2c_write_blocking(I2C_PORT, BME280_ADDRESS, Buffer, 2, true) == PICO_ERROR_GENERIC)
+    return 0xFF;
 
   /* --------- Configure oversampling for humidity reading. --------- */
-  /* Note: 0b101 = oversampling X 16; 0b100 = oversampling X 8; 0b011 = oversampling X 4; 
+  /* Note: 0b101 = oversampling X 16; 0b100 = oversampling X 8; 0b011 = oversampling X 4;
            0b010 = oversampling X 2;  0b001 = oversampling X 1; 0b000 = skip oversampling. */
   Buffer[0] = BME280_REGISTER_CTRL_HUM;
   Buffer[1] = 0b00000001;
 
   /* Send the humidity oversampling configuration to the BME280's while checking for an eventual error code. */
-  if (i2c_write_blocking(I2C_PORT, BME280_ADDRESS, Buffer, 2, true)  == PICO_ERROR_GENERIC) return 0xFF;
-  
-
+  if (i2c_write_blocking(I2C_PORT, BME280_ADDRESS, Buffer, 2, true) == PICO_ERROR_GENERIC)
+    return 0xFF;
 
   /* ----------------- Configure BME280 sensor mode ----------------- */
   /* --- and oversampling for temperature and barometric pressure --- */
   /* Bits 1 and 0: BME280 sensor mode.  00 = sleep mode; 01, 10 = forced mode; 11 = normal mode.
      Bits 4, 3, 2: oversampling for barometric pressure data.
      Bits 7, 6, 5: oversampling for temperature data.
-     Note: 0b101 = oversampling X 16; 0b100 = oversampling X 8; 0b011 = oversampling X 4; 
+     Note: 0b101 = oversampling X 16; 0b100 = oversampling X 8; 0b011 = oversampling X 4;
            0b010 = oversampling X 2;  0b001 = oversampling X 1; 0b000 = skip oversampling. */
   Buffer[0] = BME280_REGISTER_CTRL_MEAS;
   Buffer[1] = 0b00100000 + 0b00000100 + 0x00000000;
 
   /* Send temperature and pressure oversampling configuration to the BME280's, along with "sleep mode". */
-  if (i2c_write_blocking(I2C_PORT, BME280_ADDRESS, Buffer, 2, true) == PICO_ERROR_GENERIC) return 0xFF;
-
-
+  if (i2c_write_blocking(I2C_PORT, BME280_ADDRESS, Buffer, 2, true) == PICO_ERROR_GENERIC)
+    return 0xFF;
 
   /* ---------------------- Set configuration ---------------------- */
   /* Bit 0: 0 for I2C protocol; 1 for SPI protocol.
@@ -2360,31 +2161,27 @@ UINT8 bme280_init(void)
 
   /* Send configuration parameters to the BME280's config register. */
   ReturnCode = i2c_write_blocking(I2C_PORT, BME280_ADDRESS, Buffer, 2, false);
-  if (ReturnCode == PICO_ERROR_GENERIC) return 0xFF;
-  
+  if (ReturnCode == PICO_ERROR_GENERIC)
+    return 0xFF;
+
   return 0;
 }
-
-
-
-
 
 /* $TITLE=bme280_read_all_registers() */
 /* $PAGE */
 /* ------------------------------------------------------------------ *\
                   Read all BME280 readable registers
-                except calibration data and device ID, 
+                except calibration data and device ID,
             which are supported by other specific functions.
 \* ------------------------------------------------------------------ */
 UINT8 bme280_read_all_registers()
 {
   UCHAR Buffer[13];
   UCHAR String[64];
-  
-  UINT8  Loop1UInt8;
+
+  UINT8 Loop1UInt8;
   UINT32 ReturnCode;
 
-  
   if (DebugBitMask & DEBUG_BME280)
   {
     uart_send(uart1, __LINE__, "bme280_read_all_registers(Entering)    ");
@@ -2393,10 +2190,10 @@ UINT8 bme280_read_all_registers()
   /* Give adress of the first BME280 register to read (lowest address). */
   Buffer[0] = BME280_REGISTER_CTRL_HUM;
 
-  i2c_write_blocking(I2C_PORT, BME280_ADDRESS, Buffer, 1,  true);
+  i2c_write_blocking(I2C_PORT, BME280_ADDRESS, Buffer, 1, true);
   ReturnCode = i2c_read_blocking(I2C_PORT, BME280_ADDRESS, Buffer, 13, false);
-  if (ReturnCode == PICO_ERROR_GENERIC) return 0xFF;
-  
+  if (ReturnCode == PICO_ERROR_GENERIC)
+    return 0xFF;
 
   if (DebugBitMask & DEBUG_BME280)
   {
@@ -2456,13 +2253,9 @@ UINT8 bme280_read_all_registers()
     sprintf(String, "hum_lsb:    %2.2X\r\r\r\r\r", Buffer[12]);
     uart_send(uart1, __LINE__, String);
   }
-  
+
   return 0;
 }
-
-
-
-
 
 /* $TITLE=bme280_read_calib_data() */
 /* $PAGE */
@@ -2473,11 +2266,10 @@ UINT8 bme280_read_calib_data()
 {
   UCHAR Buffer;
   UCHAR String[64];
-  
-  UINT8  Loop1UInt8;
+
+  UINT8 Loop1UInt8;
   UINT32 ReturnCode;
 
-  
   if (DebugBitMask & DEBUG_BME280)
   {
     uart_send(uart1, __LINE__, "bme280_read_calib_data(Entering)\r\r");
@@ -2489,15 +2281,12 @@ UINT8 bme280_read_calib_data()
   i2c_write_timeout_us(I2C_PORT, BME280_ADDRESS, &Buffer, 1, true, 10000000);
   ReturnCode = i2c_read_timeout_us(I2C_PORT, BME280_ADDRESS, Bme280CalibData, 26, false, 10000000);
 
-
-
   /* Read second chunk of BME280 calibration data. */
   Buffer = BME280_REGISTER_CALIB26;
 
   i2c_write_timeout_us(I2C_PORT, BME280_ADDRESS, &Buffer, 1, true, 10000000);
   ReturnCode = i2c_read_timeout_us(I2C_PORT, BME280_ADDRESS, &Bme280CalibData[26], 16, false, 10000000);
 
-  
   if (DebugBitMask & DEBUG_BME280)
   {
     /* Display calibration data to optional monitor connected via UART. */
@@ -2519,10 +2308,6 @@ UINT8 bme280_read_calib_data()
   return 0;
 }
 
-
-
-
-
 /* $TITLE=bme280_read_config() */
 /* $PAGE */
 /* ------------------------------------------------------------------ *\
@@ -2531,20 +2316,19 @@ UINT8 bme280_read_calib_data()
 UINT8 bme280_read_config(void)
 {
   UCHAR String[64];
-  
-  UINT8  Buffer;
+
+  UINT8 Buffer;
   UINT32 ReturnCode;
 
-  
   if (DebugBitMask & DEBUG_BME280)
   {
     uart_send(uart1, __LINE__, "bme280_read_config(Entering)           ");
   }
-  
+
   Buffer = BME280_REGISTER_CONFIG;
 
-  i2c_write_blocking(I2C_PORT, BME280_ADDRESS, &Buffer, 1,  true);
-  i2c_read_blocking( I2C_PORT, BME280_ADDRESS, &Buffer, 1, false);
+  i2c_write_blocking(I2C_PORT, BME280_ADDRESS, &Buffer, 1, true);
+  i2c_read_blocking(I2C_PORT, BME280_ADDRESS, &Buffer, 1, false);
 
   if (DebugBitMask & DEBUG_BME280)
   {
@@ -2555,26 +2339,21 @@ UINT8 bme280_read_config(void)
   return Buffer;
 }
 
-
-
-
-
 /* $TITLE=bme280_read_device_id() */
 /* $PAGE */
 /* ------------------------------------------------------------------ *\
                         Read BME280 device ID.
                 Must be 0x60 for a true Bosch BME280,
-                 or 0x56 and 0x57 for BMP280 samples 
+                 or 0x56 and 0x57 for BMP280 samples
               and 0x58 for BMP280 mass production units.
 \* ------------------------------------------------------------------ */
 UINT8 bme280_read_device_id(void)
 {
   UCHAR String[64];
-  
-  UINT8  Buffer;
+
+  UINT8 Buffer;
   UINT32 ReturnCode;
 
-  
   if (DebugBitMask & DEBUG_BME280)
   {
     uart_send(uart1, __LINE__, "bme280_read_device_id(Entering)         ");
@@ -2582,8 +2361,8 @@ UINT8 bme280_read_device_id(void)
 
   Buffer = BME280_REGISTER_ID;
 
-  i2c_write_timeout_us(I2C_PORT, BME280_ADDRESS, &Buffer, 1,  true, 10000000);
-  ReturnCode = i2c_read_timeout_us( I2C_PORT, BME280_ADDRESS, &Buffer, 1, false, 10000000);
+  i2c_write_timeout_us(I2C_PORT, BME280_ADDRESS, &Buffer, 1, true, 10000000);
+  ReturnCode = i2c_read_timeout_us(I2C_PORT, BME280_ADDRESS, &Buffer, 1, false, 10000000);
 
   if (DebugBitMask & DEBUG_BME280)
   {
@@ -2594,10 +2373,6 @@ UINT8 bme280_read_device_id(void)
   return Buffer;
 }
 
-
-
-
-
 /* $TITLE=bme280_read_registers() */
 /* $PAGE */
 /* ------------------------------------------------------------------ *\
@@ -2607,11 +2382,10 @@ UINT8 bme280_read_device_id(void)
 UINT8 bme280_read_registers(UINT8 *Buffer)
 {
   UCHAR String[64];
-  
-  UINT8  Loop1UInt8;
+
+  UINT8 Loop1UInt8;
   UINT32 ReturnCode;
 
-  
   /* Give adress of the first BME280 register to read (lowest address). */
   Buffer[0] = BME280_REGISTER_PRESS_MSB;
 
@@ -2622,19 +2396,18 @@ UINT8 bme280_read_registers(UINT8 *Buffer)
   }
 
   Loop1UInt8 = 0;
-  while(bme280_read_status() != 0)
+  while (bme280_read_status() != 0)
   {
     ++Loop1UInt8;
   }
 
-  i2c_write_blocking(I2C_PORT, BME280_ADDRESS, Buffer, 1,  true);
-  i2c_read_blocking (I2C_PORT, BME280_ADDRESS, Buffer, 8, false);
-
+  i2c_write_blocking(I2C_PORT, BME280_ADDRESS, Buffer, 1, true);
+  i2c_read_blocking(I2C_PORT, BME280_ADDRESS, Buffer, 8, false);
 
   if (DebugBitMask & DEBUG_BME280)
   {
     /* Display registers read from BME280. */
-    sprintf(String, "Registers:       (wait: %4u)          ", Loop1UInt8); 
+    sprintf(String, "Registers:       (wait: %4u)          ", Loop1UInt8);
     uart_send(uart1, __LINE__, String);
     for (Loop1UInt8 = 0; Loop1UInt8 < 8; ++Loop1UInt8)
     {
@@ -2647,10 +2420,6 @@ UINT8 bme280_read_registers(UINT8 *Buffer)
   return 0;
 }
 
-
-
-
-
 /* $TITLE=bme280_read_status() */
 /* $PAGE */
 /* ------------------------------------------------------------------ *\
@@ -2661,10 +2430,9 @@ UINT8 bme280_read_status(void)
 {
   UCHAR String[64];
 
-  UINT8  Buffer;
+  UINT8 Buffer;
   UINT32 ReturnCode;
 
-  
   if (DebugBitMask & DEBUG_BME280)
   {
     uart_send(uart1, __LINE__, "bme280_read_status(Entering)           ");
@@ -2672,8 +2440,8 @@ UINT8 bme280_read_status(void)
 
   Buffer = BME280_REGISTER_STATUS;
 
-  i2c_write_blocking(I2C_PORT, BME280_ADDRESS, &Buffer, 1,  true);
-  i2c_read_blocking (I2C_PORT, BME280_ADDRESS, &Buffer, 1, false);
+  i2c_write_blocking(I2C_PORT, BME280_ADDRESS, &Buffer, 1, true);
+  i2c_read_blocking(I2C_PORT, BME280_ADDRESS, &Buffer, 1, false);
 
   if (DebugBitMask & DEBUG_BME280)
   {
@@ -2685,10 +2453,6 @@ UINT8 bme280_read_status(void)
   return (Buffer & 0x9);
 }
 
-
-
-
-
 /* $TITLE=bme280_read_unique_id() */
 /* $PAGE */
 /* ------------------------------------------------------------------ *\
@@ -2697,28 +2461,26 @@ UINT8 bme280_read_status(void)
 UINT32 bme280_read_unique_id()
 {
   UCHAR String[64];
-  
-  UINT8  Buffer[4];
+
+  UINT8 Buffer[4];
   UINT32 ReturnCode;
   UINT32 UniqueId;
 
-  
   if (DebugBitMask & DEBUG_BME280)
   {
     uart_send(uart1, __LINE__, "bme280_read_unique_id(Entering)         ");
   }
 
-
   /* Give adress of the first BME280 register to read (lowest address). */
   Buffer[0] = BME280_REGISTER_UNIQUE_ID;
 
-  i2c_write_timeout_us(I2C_PORT, BME280_ADDRESS, Buffer, 1,  true, 10000000);
+  i2c_write_timeout_us(I2C_PORT, BME280_ADDRESS, Buffer, 1, true, 10000000);
   ReturnCode = i2c_read_timeout_us(I2C_PORT, BME280_ADDRESS, Buffer, 4, false, 10000000);
-  if (ReturnCode == PICO_ERROR_GENERIC) return 0xFF;
-  
+  if (ReturnCode == PICO_ERROR_GENERIC)
+    return 0xFF;
+
   UniqueId = ((((uint32_t)Buffer[3] + ((uint32_t)Buffer[2] << 8)) & 0x7FFFF) << 16) +
-              (((uint32_t)Buffer[1]) << 8) + (uint32_t)Buffer[0];
-  
+             (((uint32_t)Buffer[1]) << 8) + (uint32_t)Buffer[0];
 
   if (DebugBitMask & DEBUG_BME280)
   {
@@ -2729,9 +2491,6 @@ UINT32 bme280_read_unique_id()
   return UniqueId;
 }
 #endif
-
-
-
 
 /* $TITLE=clear_framebuffer() */
 /* $PAGE */
@@ -2747,14 +2506,10 @@ void clear_framebuffer(UINT8 StartColumn)
   {
     fill_display_buffer_4X7(StartColumn, ' ');
     StartColumn += 8;
-  }while (StartColumn < sizeof(DisplayBuffer));
+  } while (StartColumn < sizeof(DisplayBuffer));
 
   return;
 }
-
-
-
-
 
 /* $TITLE=convert_h24_to_h12() */
 /* $PAGE */
@@ -2766,8 +2521,6 @@ UINT8 convert_h24_to_h12(UINT8 Hour, UINT8 *AmFlag, UINT8 *PmFlag)
   UCHAR String[128];
 
   UINT8 Dum1UInt8;
-
-
 
   if (Hour == 0)
   {
@@ -2801,17 +2554,9 @@ UINT8 convert_h24_to_h12(UINT8 Hour, UINT8 *AmFlag, UINT8 *PmFlag)
   return Dum1UInt8;
 }
 
-
-
-
-
 #ifdef IR_SUPPORT
 #include REMOTE_FILENAME
 #endif
-
-
-
-
 
 /* $TITLE=date_stamp() */
 /* $PAGE */
@@ -2824,15 +2569,10 @@ void date_stamp(UCHAR *String)
 
   UINT Loop1UInt;
 
-
   sprintf(String, "[%2.2u-%s-%2.2u%2.2u %2.2u:%2.2u:%2.2u] - ", CurrentDayOfMonth, ShortMonth[Language][CurrentMonth], CurrentYearCentile, CurrentYearLowPart, CurrentHour, CurrentMinute, SecondCounter);
-  
+
   return;
 }
-
-
-
-
 
 /* $TITLE=display_voltage() */
 /* $PAGE */
@@ -2847,7 +2587,6 @@ void display_voltage(void)
 
   float Volts;
 
-
   CurrentClockMode = MODE_SHOW_VOLTAGE;
 
   /* gpio29 is used as adc to read power supply voltage. */
@@ -2859,24 +2598,19 @@ void display_voltage(void)
   /* Convert raw value to voltage value. */
   Volts = (3 * (AdcValue * 3.25f / 4096));
 
-  UINT8 Single_digit = (int) Volts;
-  UINT8 Decile       = (int)(Volts * 10)  % 10;
-  UINT8 Percentile   = (int)(Volts * 100) % 10;
-
+  UINT8 Single_digit = (int)Volts;
+  UINT8 Decile = (int)(Volts * 10) % 10;
+  UINT8 Percentile = (int)(Volts * 100) % 10;
 
   /* Display power supply voltage (2 digits after decimal). */
-  fill_display_buffer_4X7(0,  Single_digit + '0');
+  fill_display_buffer_4X7(0, Single_digit + '0');
   fill_display_buffer_4X7(5, '.');
-  fill_display_buffer_4X7(7,  Decile + '0');
+  fill_display_buffer_4X7(7, Decile + '0');
   fill_display_buffer_4X7(12, Percentile + '0');
   fill_display_buffer_4X7(17, 'V');
 
   return;
 }
-
-
-
-
 
 /* $TITLE=evaluate_blinking_time() */
 /* $PAGE */
@@ -2887,7 +2621,6 @@ void evaluate_blinking_time(void)
 {
   UCHAR String[256];
 
-
   /* Check if we are in setup mode (we usually need to blink while in this mode). */
   if (SetupStep != SETUP_NONE)
   {
@@ -2896,24 +2629,23 @@ void evaluate_blinking_time(void)
     if (FlashingCount == 500)
     {
       /* Toggle blink status every 500 milliseconds (half a second). */
-      FlashingCount = 0;  // reset flashing count for next pass.
-      FlagFlashing[SetupStep] = ~FlagFlashing[SetupStep];  // toggle from 0x00 to 0xFF and vice-versa
+      FlashingCount = 0;                                  // reset flashing count for next pass.
+      FlagFlashing[SetupStep] = ~FlagFlashing[SetupStep]; // toggle from 0x00 to 0xFF and vice-versa
 
       switch (SetupSource)
       {
-        case SETUP_SOURCE_ALARM:
-          FlagSetAlarm = FLAG_ON;
+      case SETUP_SOURCE_ALARM:
+        FlagSetAlarm = FLAG_ON;
         break;
 
-        case SETUP_SOURCE_CLOCK:
-          FlagSetClock = FLAG_ON;
+      case SETUP_SOURCE_CLOCK:
+        FlagSetClock = FLAG_ON;
         break;
 
-        case SETUP_SOURCE_TIMER:
-          FlagSetTimer = FLAG_ON;
+      case SETUP_SOURCE_TIMER:
+        FlagSetTimer = FLAG_ON;
         break;
       }
-
 
       /* If we are setting up alarm day-of-week, blink current selection. */
       if (CurrentClockMode == MODE_ALARM_SETUP)
@@ -2928,14 +2660,12 @@ void evaluate_blinking_time(void)
           else
           {
             /* Turn off day-of-week-indicator ("blink Off"). */
-            select_weekday(10);  // 10 is a special case for "turn them off all".
+            select_weekday(10); // 10 is a special case for "turn them off all".
           }
         }
       }
     }
   }
-
-
 
   /* While the clock is displayed, blink the top "middle dot" during the first 20 seconds, then the bottom
      "middle dot" during 20 to 40 seconds, and finally both "middle dots" between 40 and 59 seconds. */
@@ -2953,27 +2683,26 @@ void evaluate_blinking_time(void)
       if (SecondCounter < 20)
       {
         /* From 0 to 19 seconds, blink the top "middle dot". */
-        DisplayBuffer[11] &= 0xEF;  // slim ":" - top dot only.
+        DisplayBuffer[11] &= 0xEF; // slim ":" - top dot only.
 
         /* Make sure the other dot (bottom dot) is on. */
-        DisplayBuffer[13] |= 0x10;  // slim ":" - bottom dot only.
+        DisplayBuffer[13] |= 0x10; // slim ":" - bottom dot only.
       }
       else if (SecondCounter < 40)
       {
         /* From 20 to 39 seconds, blink the bottom "middle dot". */
-        DisplayBuffer[13] &= 0xEF;  // slim ":" - bottom dot only.
+        DisplayBuffer[13] &= 0xEF; // slim ":" - bottom dot only.
 
         /* Make sure the other dot (top dot) is on. */
-        DisplayBuffer[11] |= 0x10;  // slim ":" - top dot only.
+        DisplayBuffer[11] |= 0x10; // slim ":" - top dot only.
       }
       else
       {
         /* From 40 to 59 seconds, blink both "middle dots". */
-        DisplayBuffer[11] &= 0xEF;  // slim ":" - top dot only.
-        DisplayBuffer[13] &= 0xEF;  // slim ":" - bottom dot only.
+        DisplayBuffer[11] &= 0xEF; // slim ":" - top dot only.
+        DisplayBuffer[13] &= 0xEF; // slim ":" - bottom dot only.
       }
     }
-
 
     /* 1000 means "redraw the target dot(s)". */
     if (DotBlinkCount == 1000)
@@ -2985,30 +2714,26 @@ void evaluate_blinking_time(void)
       if (SecondCounter < 20)
       {
         /* From 0 to 19 seconds, blink the top "middle dot". */
-        DisplayBuffer[11] |= 0x10;  // slim ":" - top dot only.
+        DisplayBuffer[11] |= 0x10; // slim ":" - top dot only.
       }
       else if (SecondCounter < 40)
       {
         /* From 20 to 39 seconds, blink the bottom "middle dot". */
-        DisplayBuffer[13] |= 0x10;  // slim ":" - bottom dot only.
+        DisplayBuffer[13] |= 0x10; // slim ":" - bottom dot only.
       }
       else
       {
         /* From 40 to 59 seconds, blink both "middle dot". */
-        DisplayBuffer[11] |= 0x10;  // slim ":" - top dot.
-        DisplayBuffer[13] |= 0x10;  // slim ":" - bottom dot.
+        DisplayBuffer[11] |= 0x10; // slim ":" - top dot.
+        DisplayBuffer[13] |= 0x10; // slim ":" - bottom dot.
       }
 
-      DotBlinkCount = 0;  // reset DotBlinkCount
+      DotBlinkCount = 0; // reset DotBlinkCount
     }
   }
 
   return;
 }
-
-
-
-
 
 /* $TITLE=evaluate_keyclick_start_time() */
 /* $PAGE */
@@ -3020,17 +2745,13 @@ void evaluate_keyclick_start_time(void)
   if (FlagKeyclick == FLAG_ON)
   {
     gpio_put(BUZZ, 1);
-    FlagToneOn      = FLAG_ON;
-    ToneType        = TONE_KEYCLICK_TYPE;
-    ToneRepeatCount = 0;  // initialize repeat count when starting.
+    FlagToneOn = FLAG_ON;
+    ToneType = TONE_KEYCLICK_TYPE;
+    ToneRepeatCount = 0; // initialize repeat count when starting.
   }
 
   return;
 }
-
-
-
-
 
 /* $TITLE=evaluate_sound_stop_time() */
 /* $PAGE */
@@ -3045,7 +2766,6 @@ void evaluate_sound_stop_time(void)
 
   static UINT8 ToneRepeatCount2;
 
-
   /* If we're waiting for a level 2 pause, do not waste time. */
   if (CountDownPause != 0)
   {
@@ -3053,51 +2773,48 @@ void evaluate_sound_stop_time(void)
     return;
   }
 
-
-
   if (FlagToneOn == FLAG_ON)
   {
     ++ToneMSecCounter;
 
     /* Check if we reached the time duration for the sound (or the silence) for a TONE_ALARM0_TYPE. */
-    if ((ToneType == TONE_ALARM0_TYPE) && (ToneMSecCounter >= TONE_ALARM0_DURATION))  // number of milliseconds for alarm 0.
+    if ((ToneType == TONE_ALARM0_TYPE) && (ToneMSecCounter >= TONE_ALARM0_DURATION)) // number of milliseconds for alarm 0.
     {
       if (FlagPause == FLAG_ON)
       {
         /* Tone has already been paused, but there are more tones to play. */
         gpio_put(BUZZ, 1);
         FlagPause = FLAG_OFF;
-        ToneMSecCounter = 0;  // reset ToneMSecCounter.
+        ToneMSecCounter = 0; // reset ToneMSecCounter.
       }
       else
       {
         /* We reach the specified duration for this tone type, turn sound OFF. */
         gpio_put(BUZZ, 0);
         FlagPause = FLAG_ON;
-        ++ToneRepeatCount;    // one more "tone" played for this event type.
-        ToneMSecCounter = 0;  // reset ToneMSecCounter.
+        ++ToneRepeatCount;   // one more "tone" played for this event type.
+        ToneMSecCounter = 0; // reset ToneMSecCounter.
 
         if (ToneRepeatCount >= TONE_ALARM0_REPEAT_1)
         {
           /* We played all tones for this "sound pack". */
-          ToneRepeatCount = 0;         // reset ToneRepeatCount.
-          FlagToneOn      = FLAG_OFF;  // no more tone going on.
-          FlagPause       = FLAG_OFF;  // no more considered a pause.
-
+          ToneRepeatCount = 0;   // reset ToneRepeatCount.
+          FlagToneOn = FLAG_OFF; // no more tone going on.
+          FlagPause = FLAG_OFF;  // no more considered a pause.
 
           /* Check if there are more "sound packs" to generate. */
           if (TONE_ALARM0_REPEAT_2 != 0)
           {
             ++ToneRepeatCount2;
             FlagToneOn = FLAG_ON;
-            FlagPause  = FLAG_ON;
+            FlagPause = FLAG_ON;
             if (ToneRepeatCount2 >= TONE_ALARM0_REPEAT_2)
             {
               /* We played all "sound packs". */
-              ToneRepeatCount  = 0;         // reset ToneRepeatCount.
+              ToneRepeatCount = 0; // reset ToneRepeatCount.
               ToneRepeatCount2 = 0;
-              FlagToneOn       = FLAG_OFF;  // no more tone going on.
-              FlagPause        = FLAG_OFF;  // no more considered a pause.
+              FlagToneOn = FLAG_OFF; // no more tone going on.
+              FlagPause = FLAG_OFF;  // no more considered a pause.
             }
             else
             {
@@ -3113,52 +2830,49 @@ void evaluate_sound_stop_time(void)
       }
     }
 
-
-
     /* Check if we reached the time duration for the sound (or the silence) for a TONE_ALARM1_TYPE. */
-    if ((ToneType == TONE_ALARM1_TYPE) && (ToneMSecCounter >= TONE_ALARM1_DURATION))  // number of milliseconds for alarm 1.
+    if ((ToneType == TONE_ALARM1_TYPE) && (ToneMSecCounter >= TONE_ALARM1_DURATION)) // number of milliseconds for alarm 1.
     {
       if (FlagPause == FLAG_ON)
       {
         /* Tone has already been paused, but there are more tones to play. */
         gpio_put(BUZZ, 1);
         FlagPause = FLAG_OFF;
-        ToneMSecCounter = 0;  // reset ToneMSecCounter.
+        ToneMSecCounter = 0; // reset ToneMSecCounter.
       }
       else
       {
         /* We reach the specified duration for this tone type, turn sound OFF. */
         gpio_put(BUZZ, 0);
         FlagPause = FLAG_ON;
-        ++ToneRepeatCount;    // one more "tone" played for this event type.
-        ToneMSecCounter = 0;  // reset ToneMSecCounter.
+        ++ToneRepeatCount;   // one more "tone" played for this event type.
+        ToneMSecCounter = 0; // reset ToneMSecCounter.
 
         if (ToneRepeatCount >= TONE_ALARM1_REPEAT_1)
         {
           /* We played all tones for this "sound pack". */
-          ToneRepeatCount = 0;         // reset ToneRepeatCount.
-          FlagToneOn      = FLAG_OFF;  // no more tone going on.
-          FlagPause       = FLAG_OFF;  // no more considered a pause.
-
+          ToneRepeatCount = 0;   // reset ToneRepeatCount.
+          FlagToneOn = FLAG_OFF; // no more tone going on.
+          FlagPause = FLAG_OFF;  // no more considered a pause.
 
           /* Check if there are more "sound packs" to generate. */
           if (TONE_ALARM1_REPEAT_2 != 0)
           {
             ++ToneRepeatCount2;
             FlagToneOn = FLAG_ON;
-            FlagPause  = FLAG_ON;
+            FlagPause = FLAG_ON;
             if (ToneRepeatCount2 >= TONE_ALARM1_REPEAT_2)
             {
               /* We played all "sound packs". */
-              ToneRepeatCount  = 0;         // reset ToneRepeatCount.
+              ToneRepeatCount = 0; // reset ToneRepeatCount.
               ToneRepeatCount2 = 0;
-              FlagToneOn       = FLAG_OFF;  // no more tone going on.
-              FlagPause        = FLAG_OFF;  // no more considered a pause.
+              FlagToneOn = FLAG_OFF; // no more tone going on.
+              FlagPause = FLAG_OFF;  // no more considered a pause.
             }
             else
             {
               /* More "sound packs" to come. */
-              CountDownPause   = TONE_ALARM1_DURATION * 4;
+              CountDownPause = TONE_ALARM1_DURATION * 4;
             }
           }
         }
@@ -3169,51 +2883,49 @@ void evaluate_sound_stop_time(void)
       }
     }
 
-
-
     /* Check if we reached the time duration for the sound (or the silence) for a TONE_CHIME. */
-    if ((ToneType == TONE_CHIME_TYPE) && (ToneMSecCounter >= TONE_CHIME_DURATION))  // number of milliseconds for chime.
+    if ((ToneType == TONE_CHIME_TYPE) && (ToneMSecCounter >= TONE_CHIME_DURATION)) // number of milliseconds for chime.
     {
       if (FlagPause == FLAG_ON)
       {
         /* Tone has already been paused, but there are more tones to play. */
         gpio_put(BUZZ, 1);
         FlagPause = FLAG_OFF;
-        ToneMSecCounter = 0;  // reset ToneMSecCounter.
+        ToneMSecCounter = 0; // reset ToneMSecCounter.
       }
       else
       {
         /* We reach the specified duration for this tone type, turn sound OFF. */
         gpio_put(BUZZ, 0);
         FlagPause = FLAG_ON;
-        ++ToneRepeatCount;    // one more "tone" played for this event type.
-        ToneMSecCounter = 0;  // reset ToneMSecCounter.
+        ++ToneRepeatCount;   // one more "tone" played for this event type.
+        ToneMSecCounter = 0; // reset ToneMSecCounter.
 
         if (ToneRepeatCount >= TONE_CHIME_REPEAT_1)
         {
           /* We played all tones for this "sound pack". */
-          ToneRepeatCount = 0;         // reset ToneRepeatCount.
-          FlagToneOn      = FLAG_OFF;  // no more tone going on.
-          FlagPause       = FLAG_OFF;  // no more considered a pause.
+          ToneRepeatCount = 0;   // reset ToneRepeatCount.
+          FlagToneOn = FLAG_OFF; // no more tone going on.
+          FlagPause = FLAG_OFF;  // no more considered a pause.
 
           /* Check if there are more "sound packs" to generate. */
           if (TONE_CHIME_REPEAT_2 != 0)
           {
             ++ToneRepeatCount2;
             FlagToneOn = FLAG_ON;
-            FlagPause  = FLAG_ON;
+            FlagPause = FLAG_ON;
             if (ToneRepeatCount2 >= TONE_CHIME_REPEAT_2)
             {
               /* We played all "sound packs". */
-              ToneRepeatCount  = 0;         // reset ToneRepeatCount.
+              ToneRepeatCount = 0; // reset ToneRepeatCount.
               ToneRepeatCount2 = 0;
-              FlagToneOn       = FLAG_OFF;  // no more tone going on.
-              FlagPause        = FLAG_OFF;  // no more considered a pause.
+              FlagToneOn = FLAG_OFF; // no more tone going on.
+              FlagPause = FLAG_OFF;  // no more considered a pause.
             }
             else
             {
               /* More "sound packs" to come. */
-              CountDownPause   = TONE_CHIME_DURATION * 4;
+              CountDownPause = TONE_CHIME_DURATION * 4;
             }
           }
         }
@@ -3224,52 +2936,49 @@ void evaluate_sound_stop_time(void)
       }
     }
 
-
-
     /* Check if we reached the time duration for the sound (or the silence) for a TONE_EVENT. */
-    if ((ToneType == TONE_EVENT_TYPE) && (ToneMSecCounter >= TONE_EVENT_DURATION))  // number of milliseconds for a calendar event.
+    if ((ToneType == TONE_EVENT_TYPE) && (ToneMSecCounter >= TONE_EVENT_DURATION)) // number of milliseconds for a calendar event.
     {
       if (FlagPause == FLAG_ON)
       {
         /* Tone has already been paused, but there are more tones to play. */
         gpio_put(BUZZ, 1);
         FlagPause = FLAG_OFF;
-        ToneMSecCounter = 0;  // reset ToneMSecCounter.
+        ToneMSecCounter = 0; // reset ToneMSecCounter.
       }
       else
       {
         /* We reach the specified duration for this tone type, turn sound OFF. */
         gpio_put(BUZZ, 0);
         FlagPause = FLAG_ON;
-        ++ToneRepeatCount;    // one more "tone" played for this event type.
-        ToneMSecCounter = 0;  // reset ToneMSecCounter.
+        ++ToneRepeatCount;   // one more "tone" played for this event type.
+        ToneMSecCounter = 0; // reset ToneMSecCounter.
 
         if (ToneRepeatCount >= TONE_EVENT_REPEAT_1)
         {
           /* We played all tones for this "sound pack". */
-          ToneRepeatCount = 0;         // reset ToneRepeatCount.
-          FlagToneOn      = FLAG_OFF;  // no more tone going on.
-          FlagPause       = FLAG_OFF;  // no more considered a pause.
-
+          ToneRepeatCount = 0;   // reset ToneRepeatCount.
+          FlagToneOn = FLAG_OFF; // no more tone going on.
+          FlagPause = FLAG_OFF;  // no more considered a pause.
 
           /* Check if there are more "sound packs" to generate. */
           if (TONE_EVENT_REPEAT_2 != 0)
           {
             ++ToneRepeatCount2;
             FlagToneOn = FLAG_ON;
-            FlagPause  = FLAG_ON;
+            FlagPause = FLAG_ON;
             if (ToneRepeatCount2 >= TONE_EVENT_REPEAT_2)
             {
               /* We played all "sound packs". */
-              ToneRepeatCount  = 0;         // reset ToneRepeatCount.
+              ToneRepeatCount = 0; // reset ToneRepeatCount.
               ToneRepeatCount2 = 0;
-              FlagToneOn       = FLAG_OFF;  // no more tone going on.
-              FlagPause        = FLAG_OFF;  // no more considered a pause.
+              FlagToneOn = FLAG_OFF; // no more tone going on.
+              FlagPause = FLAG_OFF;  // no more considered a pause.
             }
             else
             {
               /* More "sound packs" to come. */
-              CountDownPause   = TONE_EVENT_DURATION * 4;
+              CountDownPause = TONE_EVENT_DURATION * 4;
             }
           }
         }
@@ -3280,52 +2989,49 @@ void evaluate_sound_stop_time(void)
       }
     }
 
-
-
     /* Check if we reached the time duration for the sound (or the silence) for a TONE_KEYCLICK. */
-    if ((ToneType == TONE_KEYCLICK_TYPE) && (ToneMSecCounter >= TONE_KEYCLICK_DURATION))  // number of milliseconds for keyclick.
+    if ((ToneType == TONE_KEYCLICK_TYPE) && (ToneMSecCounter >= TONE_KEYCLICK_DURATION)) // number of milliseconds for keyclick.
     {
       if (FlagPause == FLAG_ON)
       {
         /* Tone has already been paused previously, but there are more tones to play. */
         gpio_put(BUZZ, 1);
         FlagPause = FLAG_OFF;
-        ToneMSecCounter = 0;  // reset ToneMSecCounter.
+        ToneMSecCounter = 0; // reset ToneMSecCounter.
       }
       else
       {
         /* We reach the specified duration for this tone type, turn sound OFF. */
         gpio_put(BUZZ, 0);
         FlagPause = FLAG_ON;
-        ++ToneRepeatCount;    // one more "tone" played for this event type.
-        ToneMSecCounter = 0;  // reset ToneMSecCounter.
+        ++ToneRepeatCount;   // one more "tone" played for this event type.
+        ToneMSecCounter = 0; // reset ToneMSecCounter.
 
         if (ToneRepeatCount >= TONE_KEYCLICK_REPEAT_1)
         {
           /* We played all tones for this "sound pack". */
-          ToneRepeatCount = 0;         // reset ToneRepeatCount.
-          FlagToneOn      = FLAG_OFF;  // no more tone going on.
-          FlagPause       = FLAG_OFF;  // no more considered a pause.
-
+          ToneRepeatCount = 0;   // reset ToneRepeatCount.
+          FlagToneOn = FLAG_OFF; // no more tone going on.
+          FlagPause = FLAG_OFF;  // no more considered a pause.
 
           /* Check if there are more "sound packs" to generate. */
           if (TONE_KEYCLICK_REPEAT_2 != 0)
           {
             ++ToneRepeatCount2;
             FlagToneOn = FLAG_ON;
-            FlagPause  = FLAG_ON;
+            FlagPause = FLAG_ON;
             if (ToneRepeatCount2 >= TONE_KEYCLICK_REPEAT_2)
             {
               /* We played all "sound packs". */
-              ToneRepeatCount  = 0;         // reset ToneRepeatCount.
+              ToneRepeatCount = 0; // reset ToneRepeatCount.
               ToneRepeatCount2 = 0;
-              FlagToneOn       = FLAG_OFF;  // no more tone going on.
-              FlagPause        = FLAG_OFF;  // no more considered a pause.
+              FlagToneOn = FLAG_OFF; // no more tone going on.
+              FlagPause = FLAG_OFF;  // no more considered a pause.
             }
             else
             {
               /* More "sound packs" to come. */
-              CountDownPause   = TONE_KEYCLICK_DURATION * 4;
+              CountDownPause = TONE_KEYCLICK_DURATION * 4;
             }
           }
         }
@@ -3336,52 +3042,49 @@ void evaluate_sound_stop_time(void)
       }
     }
 
-
-
     /* Check if we reached the time duration for the sound (or the silence) for a TONE_TIMER. */
-    if ((ToneType == TONE_TIMER_TYPE) && (ToneMSecCounter >= TONE_TIMER_DURATION))  // number of milliseconds for timer.
+    if ((ToneType == TONE_TIMER_TYPE) && (ToneMSecCounter >= TONE_TIMER_DURATION)) // number of milliseconds for timer.
     {
       if (FlagPause == FLAG_ON)
       {
         /* Tone has already been paused previously, but there are more tones to play. */
         gpio_put(BUZZ, 1);
         FlagPause = FLAG_OFF;
-        ToneMSecCounter = 0;  // reset ToneMSecCounter.
+        ToneMSecCounter = 0; // reset ToneMSecCounter.
       }
       else
       {
         /* We reach the specified duration for this tone type, turn sound OFF. */
         gpio_put(BUZZ, 0);
         FlagPause = FLAG_ON;
-        ++ToneRepeatCount;    // one more "tone" played for this event type.
-        ToneMSecCounter = 0;  // reset ToneMSecCounter.
+        ++ToneRepeatCount;   // one more "tone" played for this event type.
+        ToneMSecCounter = 0; // reset ToneMSecCounter.
 
         if (ToneRepeatCount >= TONE_TIMER_REPEAT_1)
         {
           /* We played all tones for this "sound pack". */
-          ToneRepeatCount = 0;         // reset ToneRepeatCount.
-          FlagToneOn      = FLAG_OFF;  // no more tone going on.
-          FlagPause       = FLAG_OFF;  // no more considered a pause.
-
+          ToneRepeatCount = 0;   // reset ToneRepeatCount.
+          FlagToneOn = FLAG_OFF; // no more tone going on.
+          FlagPause = FLAG_OFF;  // no more considered a pause.
 
           /* Check if there are more "sound packs" to generate. */
           if (TONE_TIMER_REPEAT_2 != 0)
           {
             ++ToneRepeatCount2;
             FlagToneOn = FLAG_ON;
-            FlagPause  = FLAG_ON;
+            FlagPause = FLAG_ON;
             if (ToneRepeatCount2 >= TONE_TIMER_REPEAT_2)
             {
               /* We played all "sound packs". */
-              ToneRepeatCount  = 0;         // reset ToneRepeatCount.
+              ToneRepeatCount = 0; // reset ToneRepeatCount.
               ToneRepeatCount2 = 0;
-              FlagToneOn       = FLAG_OFF;  // no more tone going on.
-              FlagPause        = FLAG_OFF;  // no more considered a pause.
+              FlagToneOn = FLAG_OFF; // no more tone going on.
+              FlagPause = FLAG_OFF;  // no more considered a pause.
             }
             else
             {
               /* More "sound packs" to come. */
-              CountDownPause   = TONE_TIMER_DURATION * 4;
+              CountDownPause = TONE_TIMER_DURATION * 4;
             }
           }
         }
@@ -3395,10 +3098,6 @@ void evaluate_sound_stop_time(void)
 
   return;
 }
-
-
-
-
 
 /* $TITLE=evaluate_scroll_time() */
 /* $PAGE */
@@ -3415,8 +3114,6 @@ void evaluate_scroll_time(void)
     ++ScrollStartCount;
   }
 
-
-
   /* Check if we reached the delay before scrolling one more dot to the left. */
   if (ScrollStartCount == SCROLL_DOT_TIME)
   {
@@ -3424,25 +3121,21 @@ void evaluate_scroll_time(void)
     if (ScrollDotCount > 0)
     {
       /* There are more characters to scroll on the display. */
-      scroll_one_dot();  // scroll one more dot to the left on clock display.
-      --ScrollDotCount;  // one less dot to be scrolled on the display.
+      scroll_one_dot(); // scroll one more dot to the left on clock display.
+      --ScrollDotCount; // one less dot to be scrolled on the display.
     }
     else
     {
       fill_display_buffer_4X7(24, ' '); // blank the first "invisible column" at the right of the display buffer when done.
       FlagScrollStart = FLAG_OFF;       // reset scroll start flag when done.
-      FlagUpdateTime  = FLAG_ON;        // request a time update on the clock.
+      FlagUpdateTime = FLAG_ON;         // request a time update on the clock.
     }
 
-    ScrollStartCount = 0;  // reset the millisecond counter to wait for next dot scroll to the left.
+    ScrollStartCount = 0; // reset the millisecond counter to wait for next dot scroll to the left.
   }
 
   return;
 }
-
-
-
-
 
 /* $TITLE=fill_display_buffer_5X7() */
 /* $PAGE */
@@ -3464,24 +3157,20 @@ UINT16 fill_display_buffer_5X7(UINT8 Column, UINT8 AsciiCharacter)
   UINT16 TableOffset;
   UINT16 Width;
 
-
-
   /* If column number passed as an argument is out-of-bound, return DISPLAY_BUFFER_SIZE. */
-  if (ColumnPosition > (UINT16)DISPLAY_BUFFER_SIZE) return DISPLAY_BUFFER_SIZE;
-
+  if (ColumnPosition > (UINT16)DISPLAY_BUFFER_SIZE)
+    return DISPLAY_BUFFER_SIZE;
 
   /* First 2 columns are reserved for indicators. */
-  if (Column < 2) Column = 2;
+  if (Column < 2)
+    Column = 2;
 
-
-  SectionNumber   = Column / 8;
+  SectionNumber = Column / 8;
   ColumnInSection = Column % 8;
 
-
-
   /* Special handling of character 0x00 used to blink characters on the display. */
-  if (AsciiCharacter == 0x00) AsciiCharacter = 32;  // blank ("space") character.
-
+  if (AsciiCharacter == 0x00)
+    AsciiCharacter = 32; // blank ("space") character.
 
   /* Determine the digit bitmap corresponding to the character we want to display. */
   if ((AsciiCharacter >= 0x1E) && (AsciiCharacter <= 0x81))
@@ -3495,8 +3184,6 @@ UINT16 fill_display_buffer_5X7(UINT8 Column, UINT8 AsciiCharacter)
     TableOffset = (UINT16)((0x3F - 0x1E) * 7);
     Width = CharWidth[AsciiCharacter - 0x3F];
   }
-
-
 
   for (RowNumber = 1; RowNumber < 8; ++RowNumber)
   {
@@ -3516,10 +3203,6 @@ UINT16 fill_display_buffer_5X7(UINT8 Column, UINT8 AsciiCharacter)
 
   return Column + Width;
 }
-
-
-
-
 
 /* $TITLE=fill_display_buffer_4X7() */
 /* $PAGE */
@@ -3541,39 +3224,35 @@ void fill_display_buffer_4X7(UINT8 Column, UINT8 AsciiCharacter)
   UINT8 RowNumber;
   UINT8 SectionNumber;
 
-
-
-  Column         += DisplayOffset;  // first 2 columns are used by "indicators".
-  SectionNumber   = Column / 8;     // display is divided in sections of 8 columns.
-  ColumnInSection = Column % 8;     // determine the relative column number is the specific section.
-
+  Column += DisplayOffset;      // first 2 columns are used by "indicators".
+  SectionNumber = Column / 8;   // display is divided in sections of 8 columns.
+  ColumnInSection = Column % 8; // determine the relative column number is the specific section.
 
   /* Determine the character in the bitmap table corresponding to the ASCII character we want to display. */
   if ((AsciiCharacter >= 0x2D) && (AsciiCharacter <= 0x2D + 83))
     BitmapCharacter = AsciiCharacter - 0x2D;
-  else switch(AsciiCharacter)
-  {
-    case 0:                                   // ASCII value 0x00
+  else
+    switch (AsciiCharacter)
+    {
+    case 0: // ASCII value 0x00
       /* Special blank character when blinking. */
       BitmapCharacter = 46;
-    break;
+      break;
 
-    case 0x16:                                // ASCII value 0x16
+    case 0x16: // ASCII value 0x16
       /* Slim ":" */
       BitmapCharacter = 13;
-    break;
+      break;
 
-    case ' ':                                 // ASCII value 0x20
+    case ' ': // ASCII value 0x20
       /* Blank " " ("space") character. */
       BitmapCharacter = 46;
-    break;
+      break;
 
     default:
       /* Not a valid character, display symbol "?" */
       BitmapCharacter = 49;
-  }
-
-
+    }
 
   /* Then, transfer the bitmap to framebuffer. */
   for (RowNumber = 1; RowNumber < 8; ++RowNumber)
@@ -3595,10 +3274,6 @@ void fill_display_buffer_4X7(UINT8 Column, UINT8 AsciiCharacter)
   return;
 }
 
-
-
-
-
 /* $TITLE=get_ads() */
 /* $PAGE */
 /* ------------------------------------------------------------------ *\
@@ -3607,7 +3282,6 @@ void fill_display_buffer_4X7(UINT8 Column, UINT8 AsciiCharacter)
 UINT16 get_ads1015(void)
 {
   UINT16 Value;
-
 
   /* Select ADC input 0 (gpio 26) for reading ambient light. */
   adc_select_input(0);
@@ -3621,10 +3295,6 @@ UINT16 get_ads1015(void)
 
   return Value;
 }
-
-
-
-
 
 /* $TITLE=get_date_string() */
 /* $PAGE */
@@ -3642,54 +3312,47 @@ void get_date_string(UCHAR *String)
 
   UINT16 Loop1UInt16;
 
-
-
   /* Wipe string on entry. */
   for (Loop1UInt16 = 0; Loop1UInt16 < sizeof(String); ++Loop1UInt16)
     String[Loop1UInt16] = 0x00;
 
-
   /* Read the real-time clock IC DS3231. */
   Time_RTC = Read_RTC();
   DumDayOfMonth = bcd_to_byte(Time_RTC.dayofmonth);
-  DumMonth      = bcd_to_byte(Time_RTC.month);
-
+  DumMonth = bcd_to_byte(Time_RTC.month);
 
   if (Language == ENGLISH)
   {
     /* Day-of-week and month name. */
     sprintf(String, "%s %s", DayName[Language][Time_RTC.dayofweek], MonthName[Language][DumMonth]);
 
-
     /* Find suffix to add to day-of-month. */
     switch (DumDayOfMonth)
     {
-      case (1):
-      case (21):
-      case (31):
-        sprintf(Suffix, "st");
+    case (1):
+    case (21):
+    case (31):
+      sprintf(Suffix, "st");
       break;
 
-      case (2):
-      case (22):
-        sprintf(Suffix, "nd");
+    case (2):
+    case (22):
+      sprintf(Suffix, "nd");
       break;
 
-      case (3):
-      case (23):
-        sprintf(Suffix, "rd");
+    case (3):
+    case (23):
+      sprintf(Suffix, "rd");
       break;
 
-      default:
-        sprintf(Suffix, "th");
+    default:
+      sprintf(Suffix, "th");
       break;
     }
-
 
     /* DayOfMonth and its suffix, then the 4-digits year. */
     sprintf(&String[strlen(String)], " %X%s %2.2u%2.2u ", Time_RTC.dayofmonth, Suffix, CurrentYearCentile, CurrentYearLowPart);
   }
-
 
   if (Language == FRENCH)
   {
@@ -3698,10 +3361,9 @@ void get_date_string(UCHAR *String)
 
     /* Add Day-of-month. */
     if (Time_RTC.dayofmonth == 1)
-      sprintf(&String[strlen(String)], "%Xer ", Time_RTC.dayofmonth);  // premier du mois.
+      sprintf(&String[strlen(String)], "%Xer ", Time_RTC.dayofmonth); // premier du mois.
     else
-      sprintf(&String[strlen(String)], "%X ", Time_RTC.dayofmonth);    // autres dates.
-
+      sprintf(&String[strlen(String)], "%X ", Time_RTC.dayofmonth); // autres dates.
 
     /* Add month name. */
     sprintf(&String[strlen(String)], "%s ", MonthName[Language][DumMonth]);
@@ -3713,10 +3375,6 @@ void get_date_string(UCHAR *String)
   return;
 }
 
-
-
-
-
 /* $TITLE=get_month_days() */
 /* $PAGE */
 /* ------------------------------------------------------------------ *\
@@ -3727,45 +3385,89 @@ UINT8 get_month_days(UINT16 CurrentYear, UINT8 MonthNumber)
 {
   if (((CurrentYear % 4 == 0) && (CurrentYear % 100 != 0)) || (CurrentYear % 400 == 0))
   {
-    switch(MonthNumber)
+    switch (MonthNumber)
     {
-      case  1:return MonthDays[0][0]; break;
-      case  2:return MonthDays[0][1]; break;
-      case  3:return MonthDays[0][2]; break;
-      case  4:return MonthDays[0][3]; break;
-      case  5:return MonthDays[0][4]; break;
-      case  6:return MonthDays[0][5]; break;
-      case  7:return MonthDays[0][6]; break;
-      case  8:return MonthDays[0][7]; break;
-      case  9:return MonthDays[0][8]; break;
-      case 10:return MonthDays[0][9]; break;
-      case 11:return MonthDays[0][10];break;
-      case 12:return MonthDays[0][11];break;
+    case 1:
+      return MonthDays[0][0];
+      break;
+    case 2:
+      return MonthDays[0][1];
+      break;
+    case 3:
+      return MonthDays[0][2];
+      break;
+    case 4:
+      return MonthDays[0][3];
+      break;
+    case 5:
+      return MonthDays[0][4];
+      break;
+    case 6:
+      return MonthDays[0][5];
+      break;
+    case 7:
+      return MonthDays[0][6];
+      break;
+    case 8:
+      return MonthDays[0][7];
+      break;
+    case 9:
+      return MonthDays[0][8];
+      break;
+    case 10:
+      return MonthDays[0][9];
+      break;
+    case 11:
+      return MonthDays[0][10];
+      break;
+    case 12:
+      return MonthDays[0][11];
+      break;
     }
   }
   else
   {
-    switch(MonthNumber)
+    switch (MonthNumber)
     {
-      case  1:return MonthDays[1][0]; break;
-      case  2:return MonthDays[1][1]; break;
-      case  3:return MonthDays[1][2]; break;
-      case  4:return MonthDays[1][3]; break;
-      case  5:return MonthDays[1][4]; break;
-      case  6:return MonthDays[1][5]; break;
-      case  7:return MonthDays[1][6]; break;
-      case  8:return MonthDays[1][7]; break;
-      case  9:return MonthDays[1][8]; break;
-      case 10:return MonthDays[1][9]; break;
-      case 11:return MonthDays[1][10];break;
-      case 12:return MonthDays[1][11];break;
+    case 1:
+      return MonthDays[1][0];
+      break;
+    case 2:
+      return MonthDays[1][1];
+      break;
+    case 3:
+      return MonthDays[1][2];
+      break;
+    case 4:
+      return MonthDays[1][3];
+      break;
+    case 5:
+      return MonthDays[1][4];
+      break;
+    case 6:
+      return MonthDays[1][5];
+      break;
+    case 7:
+      return MonthDays[1][6];
+      break;
+    case 8:
+      return MonthDays[1][7];
+      break;
+    case 9:
+      return MonthDays[1][8];
+      break;
+    case 10:
+      return MonthDays[1][9];
+      break;
+    case 11:
+      return MonthDays[1][10];
+      break;
+    case 12:
+      return MonthDays[1][11];
+      break;
     }
   }
 }
-
-
-
-
 
 /* $TITLE=get_ambient_temperature() */
 /* $PAGE */
@@ -3776,20 +3478,15 @@ void get_ambient_temperature(void)
 {
   UCHAR start_tran[2] = {0x0E, 0x20};
 
-
-  i2c_write_blocking(I2C_PORT, DS3231_ADDRESS, start_tran,        2, FALSE);
-  i2c_write_blocking(I2C_PORT, DS3231_ADDRESS, &GetAddHigh,       1, TRUE);
-  i2c_read_blocking (I2C_PORT, DS3231_ADDRESS, &TemperaturePart1, 1, FALSE);
-  i2c_write_blocking(I2C_PORT, DS3231_ADDRESS, &GetAddLow,        1, TRUE);
-  i2c_read_blocking (I2C_PORT, DS3231_ADDRESS, &TemperaturePart2, 1, FALSE);
+  i2c_write_blocking(I2C_PORT, DS3231_ADDRESS, start_tran, 2, FALSE);
+  i2c_write_blocking(I2C_PORT, DS3231_ADDRESS, &GetAddHigh, 1, TRUE);
+  i2c_read_blocking(I2C_PORT, DS3231_ADDRESS, &TemperaturePart1, 1, FALSE);
+  i2c_write_blocking(I2C_PORT, DS3231_ADDRESS, &GetAddLow, 1, TRUE);
+  i2c_read_blocking(I2C_PORT, DS3231_ADDRESS, &TemperaturePart2, 1, FALSE);
   TemperaturePart2 = (TemperaturePart2 >> 6) * 25;
 
   return;
 }
-
-
-
-
 
 /* $TITLE=get_pico_temperature() */
 /* $PAGE */
@@ -3806,7 +3503,6 @@ void get_pico_temperature(UCHAR *String)
 
   float AdcVolts;
 
-
   adc_set_temp_sensor_enabled(1);
 
   /* Select Pico temperature to be internally connected to ADC. */
@@ -3818,31 +3514,26 @@ void get_pico_temperature(UCHAR *String)
   /* Convert ADC raw value to volts. Reference voltage (3.25 volts) should be measure if temperature seems erroneous. */
   AdcVolts = AdcValue * 3.25 / 4096;
 
-
   /* Generate string to be scrolled... while evaluating Pico internal temperature from voltage value. */
   if (TemperatureUnit == CELSIUS)
   {
     /* ...in Celsius. */
     sprintf(String, "Pico temp: %2.2f", (27 - ((AdcVolts - 0.706) / 0.001721)));
     Dum1UInt8 = strlen(String);
-    String[Dum1UInt8]     = (UCHAR)0x80;  // degree Celsius symbol.
-    String[Dum1UInt8 + 1] = (UCHAR)0x00;  // end-of-string.
+    String[Dum1UInt8] = (UCHAR)0x80;     // degree Celsius symbol.
+    String[Dum1UInt8 + 1] = (UCHAR)0x00; // end-of-string.
   }
   else
   {
     /* ...or in Fahrenheit. */
     sprintf(String, "Pico temp: %2.2f", (((27 - ((AdcVolts - 0.706) / 0.001721)) * 9 / 5) + 32));
     Dum1UInt8 = strlen(String);
-    String[Dum1UInt8]     = (UCHAR)0x81;  // degree Fahrenheit symbol.
-    String[Dum1UInt8 + 1] = (UCHAR)0x00;  // end-of-string.
+    String[Dum1UInt8] = (UCHAR)0x81;     // degree Fahrenheit symbol.
+    String[Dum1UInt8 + 1] = (UCHAR)0x00; // end-of-string.
   }
 
   return;
 }
-
-
-
-
 
 /* $TITLE=get_voltage() */
 /* $PAGE */
@@ -3858,7 +3549,6 @@ void get_voltage(UCHAR *Voltage)
 
   float Volts;
 
-
   /* gpio29 is used as adc to read power supply voltage. */
   adc_select_input(3);
 
@@ -3872,10 +3562,6 @@ void get_voltage(UCHAR *Voltage)
   return;
 }
 
-
-
-
-
 /* $TITLE=get_weekday() */
 /* $PAGE */
 /* ------------------------------------------------------------------ *\
@@ -3886,8 +3572,6 @@ UINT8 get_weekday(UINT16 year_cnt, UINT8 month_cnt, UINT8 date_cnt)
 {
   UINT8 weekday = 8;
 
-
-
   if (month_cnt == 1 || month_cnt == 2)
   {
     month_cnt += 12;
@@ -3896,21 +3580,31 @@ UINT8 get_weekday(UINT16 year_cnt, UINT8 month_cnt, UINT8 date_cnt)
 
   weekday = (date_cnt + 1 + 2 * month_cnt + 3 * (month_cnt + 1) / 5 + year_cnt + year_cnt / 4 - year_cnt / 100 + year_cnt / 400) % 7;
 
-  switch(weekday)
+  switch (weekday)
   {
-    case 0 : return 7; break;
-    case 1 : return 1; break;
-    case 2 : return 2; break;
-    case 3 : return 3; break;
-    case 4 : return 4; break;
-    case 5 : return 5; break;
-    case 6 : return 6; break;
+  case 0:
+    return 7;
+    break;
+  case 1:
+    return 1;
+    break;
+  case 2:
+    return 2;
+    break;
+  case 3:
+    return 3;
+    break;
+  case 4:
+    return 4;
+    break;
+  case 5:
+    return 5;
+    break;
+  case 6:
+    return 6;
+    break;
   }
 }
-
-
-
-
 
 /* $TITLE=init_gpio() */
 /* $PAGE */
@@ -3970,14 +3664,11 @@ int init_gpio(void)
   gpio_init(UP_BUTTON);
   gpio_init(DOWN_BUTTON);
 
-
-
   /* Initialize UART1 used to send information to a VT-101 type monitor mainly for debugging purposes. */
   uart_init(uart1, 38400);
   gpio_set_function(UART_RX_PIN, GPIO_FUNC_UART);
   gpio_set_function(UART_TX_PIN, GPIO_FUNC_UART);
   uart_set_format(uart1, 8, 1, UART_PARITY_NONE);
-
 
 /* If "NO_SOUND" is defined, absolutely no sound will be made by the clock. */
 #ifndef NO_SOUND
@@ -3985,12 +3676,11 @@ int init_gpio(void)
   gpio_init(BUZZ);
   gpio_set_dir(BUZZ, GPIO_OUT);
 
-#ifdef PASSIVE_PIEZO_SUPPORT  // Optional passive piezo to be provided by user.
+#ifdef PASSIVE_PIEZO_SUPPORT // Optional passive piezo to be provided by user.
   gpio_init(PPIEZO);
   gpio_set_function(PPIEZO, GPIO_FUNC_PWM);
 #endif
 #endif
-
 
 /* If user installed an infrared sensor (VS1838B) and support for a remote control. */
 #ifdef IR_SUPPORT
@@ -4004,47 +3694,40 @@ int init_gpio(void)
   gpio_pull_up(IR_RX);
 #endif
 
-
 /* If user installed a DHT22 external temperature and humidity sensor. */
 #ifdef DHT22_SUPPORT
   gpio_init(DHT22);
-  gpio_set_dir(DHT22, GPIO_OUT);  // While idle, keep the line as output.
-  gpio_put(DHT22, 1);             // Keep signal high while idle.
+  gpio_set_dir(DHT22, GPIO_OUT); // While idle, keep the line as output.
+  gpio_put(DHT22, 1);            // Keep signal high while idle.
 #endif
 
-  gpio_set_dir(A0,    GPIO_OUT);
-  gpio_set_dir(A1,    GPIO_OUT);
-  gpio_set_dir(A2,    GPIO_OUT);
-  gpio_set_dir(CLK,   GPIO_OUT);
-  gpio_set_dir(LE,    GPIO_OUT);
-  gpio_set_dir(OE,    GPIO_OUT);
-  gpio_set_dir(SDI,   GPIO_OUT);
-  gpio_set_dir(SQW,   GPIO_IN);
-
+  gpio_set_dir(A0, GPIO_OUT);
+  gpio_set_dir(A1, GPIO_OUT);
+  gpio_set_dir(A2, GPIO_OUT);
+  gpio_set_dir(CLK, GPIO_OUT);
+  gpio_set_dir(LE, GPIO_OUT);
+  gpio_set_dir(OE, GPIO_OUT);
+  gpio_set_dir(SDI, GPIO_OUT);
+  gpio_set_dir(SQW, GPIO_IN);
 
   /* Inter integrated circuit (I2C) protocol configuration (for DS3231 and optionally for BME280). Set baud rate to 100 kHz.
      Pico will default to "master". */
   i2c_init(I2C_PORT, 100000);
-  gpio_set_function(SDA, GPIO_FUNC_I2C);  // data line.
-  gpio_set_function(SCL, GPIO_FUNC_I2C);  // clock line.
+  gpio_set_function(SDA, GPIO_FUNC_I2C); // data line.
+  gpio_set_function(SCL, GPIO_FUNC_I2C); // clock line.
 
   gpio_pull_up(SDA);
   gpio_pull_up(SCL);
-
 
   /* Initialize Pico's Analog-to-digital (ADC) converter. */
   adc_init();
 
   /* Disable other functions for these gpio's since they will be used as ADC converter. */
-  adc_gpio_init(ADC_LIGHT);  // ambient light.
-  adc_gpio_init(ADC_VCC);    // power supply voltage.
+  adc_gpio_init(ADC_LIGHT); // ambient light.
+  adc_gpio_init(ADC_VCC);   // power supply voltage.
 
   return 0;
 }
-
-
-
-
 
 #ifdef IR_SUPPORT
 /* $TITLE=isr_signal_trap() */
@@ -4062,11 +3745,11 @@ gpio_irq_callback_t isr_signal_trap(UINT8 gpio, UINT32 Events)
       if (Events & GPIO_IRQ_EDGE_RISE)
       {
         /* IR line goes from Low to High. */
-        FinalValue[IrStepCount]   = time_us_64();  // this is the final timer value for current Low level.
-        ResultValue[IrStepCount]  = FinalValue[IrStepCount] - InitialValue[IrStepCount];  // calculate duration of current Low level.
-        Level[IrStepCount]        = 'L';  // identify  as Low level.
-        ++IrStepCount;                    // start next event.
-        InitialValue[IrStepCount] = time_us_64();  // this is also start timer of next High level.
+        FinalValue[IrStepCount] = time_us_64();                                         // this is the final timer value for current Low level.
+        ResultValue[IrStepCount] = FinalValue[IrStepCount] - InitialValue[IrStepCount]; // calculate duration of current Low level.
+        Level[IrStepCount] = 'L';                                                       // identify  as Low level.
+        ++IrStepCount;                                                                  // start next event.
+        InitialValue[IrStepCount] = time_us_64();                                       // this is also start timer of next High level.
       }
 
       if (Events & GPIO_IRQ_EDGE_FALL)
@@ -4074,21 +3757,17 @@ gpio_irq_callback_t isr_signal_trap(UINT8 gpio, UINT32 Events)
         if (IrStepCount > 0)
         {
           /* IR line goes from High to Low. */
-          FinalValue[IrStepCount]   = time_us_64();  // this is the final timer value for current High level.
-          ResultValue[IrStepCount]  = FinalValue[IrStepCount] - InitialValue[IrStepCount];  // calculate duration of current High level.
-          Level[IrStepCount]        = 'H';  // identify as High level.
-          ++IrStepCount;                    // start next event.
+          FinalValue[IrStepCount] = time_us_64();                                         // this is the final timer value for current High level.
+          ResultValue[IrStepCount] = FinalValue[IrStepCount] - InitialValue[IrStepCount]; // calculate duration of current High level.
+          Level[IrStepCount] = 'H';                                                       // identify as High level.
+          ++IrStepCount;                                                                  // start next event.
         }
-        InitialValue[IrStepCount] = time_us_64();  // this is also start timer of next Low level.
+        InitialValue[IrStepCount] = time_us_64(); // this is also start timer of next Low level.
       }
     }
   }
 }
 #endif
-
-
-
-
 
 /* ------------------------------------------------------------------ *\
               Test clock LED matrix, column-by-column,
@@ -4103,12 +3782,9 @@ void matrix_test(void)
 
   UINT64 StartTime;
 
-
-
   /* Wipe framebuffer on entry. */
   for (Loop1UInt8 = 0; Loop1UInt8 < DISPLAY_BUFFER_SIZE; ++Loop1UInt8)
     DisplayBuffer[Loop1UInt8] = 0x00;
-
 
   /* ---------------------- LED matrix test ------------------------- */
   /* Scan each section of clock display... */
@@ -4118,7 +3794,8 @@ void matrix_test(void)
     for (Column = 0; Column < 8; ++Column)
     {
       /* First two columns are used by indicators. */
-      if ((Section == 0) && (Column < 2)) continue;
+      if ((Section == 0) && (Column < 2))
+        continue;
 
       /* ...and turn on each row of each column of each section. */
       if (Section < 3)
@@ -4141,15 +3818,11 @@ void matrix_test(void)
     }
   }
 
-
-
   clear_framebuffer(0);
-
-
 
   /* ---------------------- Indicators test ------------------------- */
   DisplayBuffer[16] |= 1 << 6;
-  sleep_ms(2000);  // first delay longer so that user can watch indicators.
+  sleep_ms(2000); // first delay longer so that user can watch indicators.
   DisplayBuffer[16] |= 1 << 5;
   sleep_ms(650);
   DisplayBuffer[16] |= 1 << 3;
@@ -4176,7 +3849,6 @@ void matrix_test(void)
   sleep_ms(650);
   DisplayBuffer[0] |= 1 << 3;
   sleep_ms(650);
-
 
   DisplayBuffer[0] |= 1 << 0;
   sleep_ms(650);
@@ -4211,8 +3883,6 @@ void matrix_test(void)
   DisplayBuffer[7] |= 1 << 1;
   sleep_ms(1200);
 
-
-
   /* ---------------------- White LEDs test ------------------------- */
   for (Loop1UInt8 = 0; Loop1UInt8 < 5; ++Loop1UInt8)
   {
@@ -4232,10 +3902,6 @@ void matrix_test(void)
   return;
 }
 
-
-
-
-
 /* $TITLE=pixel_twinkling() */
 /* $PAGE */
 /* ------------------------------------------------------------------ *\
@@ -4252,28 +3918,25 @@ void pixel_twinkling(UINT16 Seconds)
 
   UINT64 StartTime;
 
-
-
   /* All pixels are Off on entry. Set their status accordingly. */
   for (DumFrame = 0; DumFrame < 24; ++DumFrame)
     for (DumBit = 0; DumBit < 8; ++DumBit)
       Status[DumFrame][DumBit] = 0;
 
-
+#ifdef PASSIVE_PIEZO_SUPPORT
   /* Make sure sounds do not begin before pixel twinkling. */
   sound_queue(SILENT, 350);
-
 
   /* Make random sounds while playing with pixels (50 msec per sound - one call-back duration). */
   for (Loop1UInt16 = 1; Loop1UInt16 < (Seconds * 1000 / 95); ++Loop1UInt16)
   {
     Frequency = (rand() % 7000) + 200;
-    
+
     /* Add a new quick sound in sound queue. If sound queue is full, stop adding sounds. */
     if (sound_queue(Frequency, 50) == MAX_SOUND_QUEUE)
       break;
   }
-
+#endif
 
   StartTime = time_us_64();
   while (time_us_64() < (StartTime + (1000000 * Seconds)))
@@ -4284,14 +3947,12 @@ void pixel_twinkling(UINT16 Seconds)
       DumFrame = rand() % 24;
     } while ((DumFrame == 0) || (DumFrame == 8) || (DumFrame == 16));
 
-
     /* Generate a bitnumber. */
     DumBit = rand() % 8;
 
     /* Exclude bit numbers that are reserved. */
     if ((DumFrame < 9) && ((DumBit == 0) || (DumBit == 1)))
       continue;
-
 
     /* Check status of generated bit and toggle it. */
     if (Status[DumFrame][DumBit] == 0)
@@ -4314,10 +3975,6 @@ void pixel_twinkling(UINT16 Seconds)
   return;
 }
 
-
-
-
-
 #ifdef PASSIVE_PIEZO_SUPPORT
 /* $TITLE=play_jingle() */
 /* $PAGE */
@@ -4338,28 +3995,28 @@ void play_jingle(UINT16 JingleNumber)
   {
     sound_queue(SOL_b, 200);
     sound_queue(SOL_b, 200);
-    sound_queue(LA_b,  400);
+    sound_queue(LA_b, 400);
     sound_queue(SOL_b, 400);
-    sound_queue(DO_c,  400);
-    sound_queue(SI_b,  800);
+    sound_queue(DO_c, 400);
+    sound_queue(SI_b, 800);
     sound_queue(SOL_b, 200);
     sound_queue(SOL_b, 200);
-    sound_queue(LA_b,  400);
+    sound_queue(LA_b, 400);
     sound_queue(SOL_b, 400);
-    sound_queue(RE_c,  400);
-    sound_queue(DO_c,  800);
+    sound_queue(RE_c, 400);
+    sound_queue(DO_c, 800);
     sound_queue(SOL_b, 200);
     sound_queue(SOL_b, 200);
     sound_queue(SOL_c, 400);
-    sound_queue(MI_c,  400);
-    sound_queue(DO_c,  400);
-    sound_queue(SI_b,  400);
-    sound_queue(LA_b,  800);
-    sound_queue(FA_c,  200);
-    sound_queue(FA_c,  200);
-    sound_queue(MI_c,  400);
-    sound_queue(DO_c,  400);
-    sound_queue(RE_c,  400);
+    sound_queue(MI_c, 400);
+    sound_queue(DO_c, 400);
+    sound_queue(SI_b, 400);
+    sound_queue(LA_b, 800);
+    sound_queue(FA_c, 200);
+    sound_queue(FA_c, 200);
+    sound_queue(MI_c, 400);
+    sound_queue(DO_c, 400);
+    sound_queue(RE_c, 400);
     sound_queue(DO_c, 1000);
   }
 
@@ -4367,29 +4024,29 @@ void play_jingle(UINT16 JingleNumber)
   {
     /* Close encounter of the third kind. */
     sound_queue(SOL_b, 600);
-    sound_queue(LA_b,  600);
-    sound_queue(FA_b,  600);
-    sound_queue(FA_a,  600);
-    sound_queue(DO_b,  800);
+    sound_queue(LA_b, 600);
+    sound_queue(FA_b, 600);
+    sound_queue(FA_a, 600);
+    sound_queue(DO_b, 800);
   }
 
   if (JingleNumber == JINGLE_FETE)
   {
     /* "Gens du pays". */
-    sound_queue(LA_b,  200);
+    sound_queue(LA_b, 200);
     sound_queue(SOL_b, 200);
-    sound_queue(FA_b,  200);
-    sound_queue(DO_c,  800);
-    sound_queue(LA_b,  200);
+    sound_queue(FA_b, 200);
+    sound_queue(DO_c, 800);
+    sound_queue(LA_b, 200);
     sound_queue(SOL_b, 200);
-    sound_queue(FA_b,  200);
-    sound_queue(RE_c,  800);
+    sound_queue(FA_b, 200);
+    sound_queue(RE_c, 800);
     sound_queue(SOL_b, 200);
     sound_queue(LA_DIESE_b, 200);
-    sound_queue(RE_c,  200);
-    sound_queue(DO_c,  600);
-    sound_queue(FA_b,  200);
-    sound_queue(LA_b,  600);
+    sound_queue(RE_c, 200);
+    sound_queue(DO_c, 600);
+    sound_queue(FA_b, 200);
+    sound_queue(LA_b, 600);
     sound_queue(SOL_b, 200);
     sound_queue(FA_b, 1600);
   }
@@ -4398,27 +4055,27 @@ void play_jingle(UINT16 JingleNumber)
   {
     /* "Horse racing" / "Call to post". */
     sound_queue(SOL_b, 200);
-    sound_queue(DO_c,  200);
-    sound_queue(MI_c,  200);
+    sound_queue(DO_c, 200);
+    sound_queue(MI_c, 200);
     sound_queue(SOL_c, 300);
     sound_queue(SOL_c, 100);
     sound_queue(SOL_c, 200);
-    sound_queue(MI_c,  300);
-    sound_queue(MI_c,  100);
-    sound_queue(MI_c,  200);
-    sound_queue(DO_c,  200);
-    sound_queue(MI_c,  200);
-    sound_queue(DO_c,  200);
+    sound_queue(MI_c, 300);
+    sound_queue(MI_c, 100);
+    sound_queue(MI_c, 200);
+    sound_queue(DO_c, 200);
+    sound_queue(MI_c, 200);
+    sound_queue(DO_c, 200);
     sound_queue(SOL_b, 800);
     sound_queue(SOL_b, 200);
-    sound_queue(DO_c,  200);
-    sound_queue(MI_c,  200);
+    sound_queue(DO_c, 200);
+    sound_queue(MI_c, 200);
     sound_queue(SOL_c, 300);
     sound_queue(SOL_c, 100);
     sound_queue(SOL_c, 200);
-    sound_queue(MI_c,  300);
-    sound_queue(MI_c,  100);
-    sound_queue(MI_c,  200);
+    sound_queue(MI_c, 300);
+    sound_queue(MI_c, 100);
+    sound_queue(MI_c, 200);
     sound_queue(SOL_b, 200);
     sound_queue(SOL_b, 200);
     sound_queue(SOL_b, 200);
@@ -4426,10 +4083,6 @@ void play_jingle(UINT16 JingleNumber)
   }
 }
 #endif
-
-
-
-
 
 #ifdef IR_SUPPORT
 /* $TITLE=process_ir_command() */
@@ -4477,8 +4130,6 @@ void process_ir_command(UINT64 IrCommand)
   float Temperature;
   float TemperatureF;
 
-
-
   /* Check if IrCommand is out-of-bound. */
   if ((IrCommand == IR_LO_LIMIT) || (IrCommand >= IR_HI_LIMIT))
   {
@@ -4487,197 +4138,173 @@ void process_ir_command(UINT64 IrCommand)
     return;
   }
 
-
-
-
-
   if (IrCommand == IR_BUTTON_TOP_QUICK)
   {
     // scroll_string(24, "Button 'Set': Top quick");
 
-    IdleNumberOfSeconds = 0;           // reset the number of seconds the system has been idle.
+    IdleNumberOfSeconds = 0; // reset the number of seconds the system has been idle.
 
     /* If we are already in a setup mode, perform housekeeping for current SetupStep and jump to next SetupStep. */
     switch (SetupSource)
     {
-      case SETUP_SOURCE_ALARM:
-        set_mode_out();
-        FlagSetAlarm = FLAG_ON;
-        ++SetupStep;
-        /* Cleanup will be done in setup_alarm_frame() when done. */
+    case SETUP_SOURCE_ALARM:
+      set_mode_out();
+      FlagSetAlarm = FLAG_ON;
+      ++SetupStep;
+      /* Cleanup will be done in setup_alarm_frame() when done. */
       break;
 
-      case SETUP_SOURCE_CLOCK:
-        set_mode_out();
-        FlagSetClock = FLAG_ON;
-        ++SetupStep;
-        /* Cleanup will be done in setup_clock_frame() when done. */
+    case SETUP_SOURCE_CLOCK:
+      set_mode_out();
+      FlagSetClock = FLAG_ON;
+      ++SetupStep;
+      /* Cleanup will be done in setup_clock_frame() when done. */
       break;
 
-      case SETUP_SOURCE_TIMER:
-        set_mode_out();
-        FlagSetTimer = FLAG_ON;
-        ++SetupStep;
-        /* Cleanup will be done in setup_timer_frame() when done. */
+    case SETUP_SOURCE_TIMER:
+      set_mode_out();
+      FlagSetTimer = FLAG_ON;
+      ++SetupStep;
+      /* Cleanup will be done in setup_timer_frame() when done. */
       break;
 
-      default:
-        /* If not already in a setup mode, "Set" button triggers entering in clock setup mode. */
-        FlagSetClock     = FLAG_ON;
-        SetupSource      = SETUP_SOURCE_CLOCK;
-        CurrentClockMode = MODE_CLOCK_SETUP;
-        IdleNumberOfSeconds = 0;  // reset the number of seconds the system has been idle.
-        ++SetupStep;
+    default:
+      /* If not already in a setup mode, "Set" button triggers entering in clock setup mode. */
+      FlagSetClock = FLAG_ON;
+      SetupSource = SETUP_SOURCE_CLOCK;
+      CurrentClockMode = MODE_CLOCK_SETUP;
+      IdleNumberOfSeconds = 0; // reset the number of seconds the system has been idle.
+      ++SetupStep;
       break;
     }
   }
-
-
-
-
 
   if (IrCommand == IR_BUTTON_TOP_LONG)
   {
     // scroll_string(24, "Button 'Random / Down': Top long");
 
-    IdleNumberOfSeconds = 0;           // reset the number of seconds the system has been idle.
-    set_mode_out();                    // housekeeping for previous data
+    IdleNumberOfSeconds = 0; // reset the number of seconds the system has been idle.
+    set_mode_out();          // housekeeping for previous data
 
     /* If we are not already in setup mode, enter alarm setup mode. */
-    FlagSetAlarm = FLAG_ON;            // enter alarm setup mode.
-    SetupSource  = SETUP_SOURCE_ALARM;
-    ++SetupStep;                       // process through all alarm setup steps.
+    FlagSetAlarm = FLAG_ON; // enter alarm setup mode.
+    SetupSource = SETUP_SOURCE_ALARM;
+    ++SetupStep; // process through all alarm setup steps.
   }
-
-
-
-
 
   if (IrCommand == IR_BUTTON_MIDDLE_QUICK)
   {
     // scroll_string(24, "Button 'Volume Up': Middle quick");
 
-    IdleNumberOfSeconds = 0;           // reset the number of seconds the system has been idle.
+    IdleNumberOfSeconds = 0; // reset the number of seconds the system has been idle.
 
     /* If we are already in a setup mode, perform housekeeping for current SetupStep and jump on to next SetupStep. */
     switch (SetupSource)
     {
-      case SETUP_SOURCE_ALARM:
-        setup_alarm_variables(FLAG_UP);  // perform alarm settings.
-        set_mode_out();                  // program RTC IC if required.
-        FlagSetAlarm = FLAG_ON;          // make sure main program loop displays new value.
+    case SETUP_SOURCE_ALARM:
+      setup_alarm_variables(FLAG_UP); // perform alarm settings.
+      set_mode_out();                 // program RTC IC if required.
+      FlagSetAlarm = FLAG_ON;         // make sure main program loop displays new value.
       break;
 
-      case SETUP_SOURCE_CLOCK:
-        setup_clock_variables(FLAG_UP);  // perform clock settings.
-        set_mode_out();                  // program RTC IC if required.
-        FlagSetClock = FLAG_ON;          // make sure main program loop displays new value.
+    case SETUP_SOURCE_CLOCK:
+      setup_clock_variables(FLAG_UP); // perform clock settings.
+      set_mode_out();                 // program RTC IC if required.
+      FlagSetClock = FLAG_ON;         // make sure main program loop displays new value.
       break;
 
-      case SETUP_SOURCE_TIMER:
-        setup_timer_variables(FLAG_UP);  // perform timer settings.
-        set_mode_out();                  // housekeeping.
-        FlagSetTimer = FLAG_ON;          // make sure main program loop displays new value.
+    case SETUP_SOURCE_TIMER:
+      setup_timer_variables(FLAG_UP); // perform timer settings.
+      set_mode_out();                 // housekeeping.
+      FlagSetTimer = FLAG_ON;         // make sure main program loop displays new value.
       break;
 
-      default:
-        /* NOTE: Temperature unit toggling has been transferred to the list of clock setup parameters. */
-        /* Temporarily toggle Night light On / Off. However, night light setting will return to its normal setting in the next seconds. */
-        Dum1UInt8 = (1 << 2) | (1 << 5);
-        if (DisplayBuffer[0] & Dum1UInt8)
-          IndicatorButtonLightsOff;
-        else
-          IndicatorButtonLightsOn;
+    default:
+      /* NOTE: Temperature unit toggling has been transferred to the list of clock setup parameters. */
+      /* Temporarily toggle Night light On / Off. However, night light setting will return to its normal setting in the next seconds. */
+      Dum1UInt8 = (1 << 2) | (1 << 5);
+      if (DisplayBuffer[0] & Dum1UInt8)
+        IndicatorButtonLightsOff;
+      else
+        IndicatorButtonLightsOn;
 
-        /* If a DHT22 or BME280 has been installed, display outside parameters. */
-        scroll_queue(TAG_EXT_TEMP);
+      /* If a DHT22 or BME280 has been installed, display outside parameters. */
+      scroll_queue(TAG_EXT_TEMP);
       break;
     }
   }
-
-
-
-
 
   if (IrCommand == IR_BUTTON_MIDDLE_LONG)
   {
     // scroll_string(24, "Button 'Repeat / Up': Middle long");
 
-    IdleNumberOfSeconds = 0;           // reset the number of seconds the system has been idle.
-    set_mode_out();                    // housekeeping for previous data
+    IdleNumberOfSeconds = 0; // reset the number of seconds the system has been idle.
+    set_mode_out();          // housekeeping for previous data
 
     /* If we are already in a setup mode, perform housekeeping for current SetupStep and jump on to next SetupStep. */
     switch (SetupSource)
     {
-      case SETUP_SOURCE_ALARM:
-      case SETUP_SOURCE_CLOCK:
-      case SETUP_SOURCE_TIMER:
-        /* If already is some setup mode, then no action. */
+    case SETUP_SOURCE_ALARM:
+    case SETUP_SOURCE_CLOCK:
+    case SETUP_SOURCE_TIMER:
+      /* If already is some setup mode, then no action. */
       break;
 
-      default:
-        /* If we're not already in a setup mode, long press on the "Up" button triggers timer setup mode. */
-        if (SetupStep == SETUP_NONE)
-        {
-          FlagSetTimer = FLAG_ON;
-          SetupSource  = SETUP_SOURCE_TIMER;
-          ++SetupStep;
-        }
+    default:
+      /* If we're not already in a setup mode, long press on the "Up" button triggers timer setup mode. */
+      if (SetupStep == SETUP_NONE)
+      {
+        FlagSetTimer = FLAG_ON;
+        SetupSource = SETUP_SOURCE_TIMER;
+        ++SetupStep;
+      }
       break;
     }
   }
-
-
-
-
 
   if (IrCommand == IR_BUTTON_BOTTOM_QUICK)
   {
     // scroll_string(24, "Button 'Volume Down': Bottom quick");
 
-    IdleNumberOfSeconds = 0;           // reset the number of seconds the system has been idle.
+    IdleNumberOfSeconds = 0; // reset the number of seconds the system has been idle.
 
     /* If we are already in a setup mode, perform housekeeping for current SetupStep and jump on to next SetupStep. */
     switch (SetupSource)
     {
-      case SETUP_SOURCE_ALARM:
-        setup_alarm_variables(FLAG_DOWN);  // perform alarm settings.
-        set_mode_out();
-        FlagSetAlarm = FLAG_ON;
+    case SETUP_SOURCE_ALARM:
+      setup_alarm_variables(FLAG_DOWN); // perform alarm settings.
+      set_mode_out();
+      FlagSetAlarm = FLAG_ON;
       break;
 
-      case SETUP_SOURCE_CLOCK:
-        setup_clock_variables(FLAG_DOWN);  // perform clock settings.
-        set_mode_out();
-        FlagSetClock = FLAG_ON;
+    case SETUP_SOURCE_CLOCK:
+      setup_clock_variables(FLAG_DOWN); // perform clock settings.
+      set_mode_out();
+      FlagSetClock = FLAG_ON;
       break;
 
-      case SETUP_SOURCE_TIMER:
-        setup_timer_variables(FLAG_DOWN);  // perform timer settings.
-        set_mode_out();
-        FlagSetTimer = FLAG_ON;
+    case SETUP_SOURCE_TIMER:
+      setup_timer_variables(FLAG_DOWN); // perform timer settings.
+      set_mode_out();
+      FlagSetTimer = FLAG_ON;
       break;
 
-      default:
-        /* NOTE: Clock display auto-brightness toggling has been added to the list of clock setup parameters.
-                 Leave a copy of this function here for quicker access if required. */
-        if (FlagAutoBrightness == FLAG_ON)
-        {
-          FlagAutoBrightness = FLAG_OFF;
-          IndicatorAutoLightOff;
-        }
-        else
-        {
-          FlagAutoBrightness = FLAG_ON;
-          IndicatorAutoLightOn;
-        }
+    default:
+      /* NOTE: Clock display auto-brightness toggling has been added to the list of clock setup parameters.
+               Leave a copy of this function here for quicker access if required. */
+      if (FlagAutoBrightness == FLAG_ON)
+      {
+        FlagAutoBrightness = FLAG_OFF;
+        IndicatorAutoLightOff;
+      }
+      else
+      {
+        FlagAutoBrightness = FLAG_ON;
+        IndicatorAutoLightOn;
+      }
       break;
     }
   }
-
-
-
-
 
   if (IrCommand == IR_BUTTON_BOTTOM_LONG)
   {
@@ -4686,21 +4313,17 @@ void process_ir_command(UINT64 IrCommand)
     /* If we are in a setup mode, "bottom button long" is used to get out of setup mode (emulate clock bottom button long press). */
     if (SetupSource != SETUP_SOURCE_NONE)
     {
-      IdleNumberOfSeconds = 0;           // reset the number of seconds the system has been idle.
-      set_mode_timeout();                // exit setup mode.
-      set_mode_out();                    // make required housekeeping.
-      SetupSource = SETUP_SOURCE_NONE;   // no more in setup mode.
-      SetupStep   = SETUP_NONE;          // reset SetupStep.
+      IdleNumberOfSeconds = 0;         // reset the number of seconds the system has been idle.
+      set_mode_timeout();              // exit setup mode.
+      set_mode_out();                  // make required housekeeping.
+      SetupSource = SETUP_SOURCE_NONE; // no more in setup mode.
+      SetupStep = SETUP_NONE;          // reset SetupStep.
     }
     else
     {
       scroll_queue(TAG_AMBIENT_LIGHT);
     }
   }
-
-
-
-
 
   if (IrCommand == IR_DICE_ROLLING)
   {
@@ -4709,208 +4332,203 @@ void process_ir_command(UINT64 IrCommand)
     /* Prevent time display. */
     CurrentClockMode = MODE_TEST;
 
-    IdleNumberOfSeconds = 0;           // reset the number of seconds the system has been idle.
+    IdleNumberOfSeconds = 0; // reset the number of seconds the system has been idle.
 
     /* Clear all PixelStatus on entry. */
     clear_framebuffer(0);
 
     /* Initialize the status of each pixel of the two dices (4 X 7 digits) to "blank" on entry. */
-    for (Loop1UInt8 = 0; Loop1UInt8 < 7; ++Loop1UInt8)  // scan each row
+    for (Loop1UInt8 = 0; Loop1UInt8 < 7; ++Loop1UInt8) // scan each row
     {
-      for (Loop2UInt8 = 0; Loop2UInt8 < 4; ++Loop2UInt8)  // scan each column
+      for (Loop2UInt8 = 0; Loop2UInt8 < 4; ++Loop2UInt8) // scan each column
       {
-        PixelStatus[0][Loop1UInt8][Loop2UInt8] = 0;  // each pixel of first digit is blank on entry.
-        PixelStatus[1][Loop1UInt8][Loop2UInt8] = 0;  // each pixel of second digit is blank on entry.
+        PixelStatus[0][Loop1UInt8][Loop2UInt8] = 0; // each pixel of first digit is blank on entry.
+        PixelStatus[1][Loop1UInt8][Loop2UInt8] = 0; // each pixel of second digit is blank on entry.
       }
     }
 
-
     /* For each dice, assign the DisplayBuffer number and bit number corresponding to each pixel. */
     /* First dice (first digit). */
-    PixelId[0][0][0][0] = 1;   // DisplayBuffer number
-    PixelId[0][0][0][1] = 6;   // bit number
+    PixelId[0][0][0][0] = 1; // DisplayBuffer number
+    PixelId[0][0][0][1] = 6; // bit number
 
-    PixelId[0][0][1][0] = 1;   // DisplayBuffer number
-    PixelId[0][0][1][1] = 7;   // bit number
+    PixelId[0][0][1][0] = 1; // DisplayBuffer number
+    PixelId[0][0][1][1] = 7; // bit number
 
-    PixelId[0][0][2][0] = 9;   // DisplayBuffer number
-    PixelId[0][0][2][1] = 0;   // bit number
+    PixelId[0][0][2][0] = 9; // DisplayBuffer number
+    PixelId[0][0][2][1] = 0; // bit number
 
-    PixelId[0][0][3][0] = 9;   // DisplayBuffer number
-    PixelId[0][0][3][1] = 1;   // bit number
+    PixelId[0][0][3][0] = 9; // DisplayBuffer number
+    PixelId[0][0][3][1] = 1; // bit number
 
-    PixelId[0][1][0][0] = 2;   // DisplayBuffer number
-    PixelId[0][1][0][1] = 6;   // bit number
+    PixelId[0][1][0][0] = 2; // DisplayBuffer number
+    PixelId[0][1][0][1] = 6; // bit number
 
-    PixelId[0][1][1][0] = 2;   // DisplayBuffer number
-    PixelId[0][1][1][1] = 7;   // bit number
+    PixelId[0][1][1][0] = 2; // DisplayBuffer number
+    PixelId[0][1][1][1] = 7; // bit number
 
-    PixelId[0][1][2][0] = 10;  // DisplayBuffer number
-    PixelId[0][1][2][1] = 0;   // bit number
+    PixelId[0][1][2][0] = 10; // DisplayBuffer number
+    PixelId[0][1][2][1] = 0;  // bit number
 
-    PixelId[0][1][3][0] = 10;  // DisplayBuffer number
-    PixelId[0][1][3][1] = 1;   // bit number
+    PixelId[0][1][3][0] = 10; // DisplayBuffer number
+    PixelId[0][1][3][1] = 1;  // bit number
 
-    PixelId[0][2][0][0] = 3;   // DisplayBuffer number
-    PixelId[0][2][0][1] = 6;   // bit number
+    PixelId[0][2][0][0] = 3; // DisplayBuffer number
+    PixelId[0][2][0][1] = 6; // bit number
 
-    PixelId[0][2][1][0] = 3;   // DisplayBuffer number
-    PixelId[0][2][1][1] = 7;   // bit number
+    PixelId[0][2][1][0] = 3; // DisplayBuffer number
+    PixelId[0][2][1][1] = 7; // bit number
 
-    PixelId[0][2][2][0] = 11;  // DisplayBuffer number
-    PixelId[0][2][2][1] = 0;   // bit number
+    PixelId[0][2][2][0] = 11; // DisplayBuffer number
+    PixelId[0][2][2][1] = 0;  // bit number
 
-    PixelId[0][2][3][0] = 11;  // DisplayBuffer number
-    PixelId[0][2][3][1] = 1;   // bit number
+    PixelId[0][2][3][0] = 11; // DisplayBuffer number
+    PixelId[0][2][3][1] = 1;  // bit number
 
-    PixelId[0][3][0][0] = 4;   // DisplayBuffer number
-    PixelId[0][3][0][1] = 6;   // bit number
+    PixelId[0][3][0][0] = 4; // DisplayBuffer number
+    PixelId[0][3][0][1] = 6; // bit number
 
-    PixelId[0][3][1][0] = 4;   // DisplayBuffer number
-    PixelId[0][3][1][1] = 7;   // bit number
+    PixelId[0][3][1][0] = 4; // DisplayBuffer number
+    PixelId[0][3][1][1] = 7; // bit number
 
-    PixelId[0][3][2][0] = 12;  // DisplayBuffer number
-    PixelId[0][3][2][1] = 0;   // bit number
+    PixelId[0][3][2][0] = 12; // DisplayBuffer number
+    PixelId[0][3][2][1] = 0;  // bit number
 
-    PixelId[0][3][3][0] = 12;  // DisplayBuffer number
-    PixelId[0][3][3][1] = 1;   // bit number
+    PixelId[0][3][3][0] = 12; // DisplayBuffer number
+    PixelId[0][3][3][1] = 1;  // bit number
 
-    PixelId[0][4][0][0] = 5;   // DisplayBuffer number
-    PixelId[0][4][0][1] = 6;   // bit number
+    PixelId[0][4][0][0] = 5; // DisplayBuffer number
+    PixelId[0][4][0][1] = 6; // bit number
 
-    PixelId[0][4][1][0] = 5;   // DisplayBuffer number
-    PixelId[0][4][1][1] = 7;   // bit number
+    PixelId[0][4][1][0] = 5; // DisplayBuffer number
+    PixelId[0][4][1][1] = 7; // bit number
 
-    PixelId[0][4][2][0] = 13;  // DisplayBuffer number
-    PixelId[0][4][2][1] = 0;   // bit number
+    PixelId[0][4][2][0] = 13; // DisplayBuffer number
+    PixelId[0][4][2][1] = 0;  // bit number
 
-    PixelId[0][4][3][0] = 13;  // DisplayBuffer number
-    PixelId[0][4][3][1] = 1;   // bit number
+    PixelId[0][4][3][0] = 13; // DisplayBuffer number
+    PixelId[0][4][3][1] = 1;  // bit number
 
-    PixelId[0][5][0][0] = 6;   // DisplayBuffer number
-    PixelId[0][5][0][1] = 6;   // bit number
+    PixelId[0][5][0][0] = 6; // DisplayBuffer number
+    PixelId[0][5][0][1] = 6; // bit number
 
-    PixelId[0][5][1][0] = 6;   // DisplayBuffer number
-    PixelId[0][5][1][1] = 7;   // bit number
+    PixelId[0][5][1][0] = 6; // DisplayBuffer number
+    PixelId[0][5][1][1] = 7; // bit number
 
-    PixelId[0][5][2][0] = 14;  // DisplayBuffer number
-    PixelId[0][5][2][1] = 0;   // bit number
+    PixelId[0][5][2][0] = 14; // DisplayBuffer number
+    PixelId[0][5][2][1] = 0;  // bit number
 
-    PixelId[0][5][3][0] = 14;  // DisplayBuffer number
-    PixelId[0][5][3][1] = 1;   // bit number
+    PixelId[0][5][3][0] = 14; // DisplayBuffer number
+    PixelId[0][5][3][1] = 1;  // bit number
 
-    PixelId[0][6][0][0] = 7;   // DisplayBuffer number
-    PixelId[0][6][0][1] = 6;   // bit number
+    PixelId[0][6][0][0] = 7; // DisplayBuffer number
+    PixelId[0][6][0][1] = 6; // bit number
 
-    PixelId[0][6][1][0] = 7;   // DisplayBuffer number
-    PixelId[0][6][1][1] = 7;   // bit number
+    PixelId[0][6][1][0] = 7; // DisplayBuffer number
+    PixelId[0][6][1][1] = 7; // bit number
 
-    PixelId[0][6][2][0] = 15;  // DisplayBuffer number
-    PixelId[0][6][2][1] = 0;   // bit number
+    PixelId[0][6][2][0] = 15; // DisplayBuffer number
+    PixelId[0][6][2][1] = 0;  // bit number
 
-    PixelId[0][6][3][0] = 15;  // DisplayBuffer number
-    PixelId[0][6][3][1] = 1;   // bit number
-
-
+    PixelId[0][6][3][0] = 15; // DisplayBuffer number
+    PixelId[0][6][3][1] = 1;  // bit number
 
     /* Second dice (second digit). */
-    PixelId[1][0][0][0] = 9;   // DisplayBuffer number
-    PixelId[1][0][0][1] = 7;   // bit number
+    PixelId[1][0][0][0] = 9; // DisplayBuffer number
+    PixelId[1][0][0][1] = 7; // bit number
 
-    PixelId[1][0][1][0] = 17;  // DisplayBuffer number
-    PixelId[1][0][1][1] = 0;   // bit number
+    PixelId[1][0][1][0] = 17; // DisplayBuffer number
+    PixelId[1][0][1][1] = 0;  // bit number
 
-    PixelId[1][0][2][0] = 17;  // DisplayBuffer number
-    PixelId[1][0][2][1] = 1;   // bit number
+    PixelId[1][0][2][0] = 17; // DisplayBuffer number
+    PixelId[1][0][2][1] = 1;  // bit number
 
-    PixelId[1][0][3][0] = 17;  // DisplayBuffer number
-    PixelId[1][0][3][1] = 2;   // bit number
+    PixelId[1][0][3][0] = 17; // DisplayBuffer number
+    PixelId[1][0][3][1] = 2;  // bit number
 
-    PixelId[1][1][0][0] = 10;  // DisplayBuffer number
-    PixelId[1][1][0][1] = 7;   // bit number
+    PixelId[1][1][0][0] = 10; // DisplayBuffer number
+    PixelId[1][1][0][1] = 7;  // bit number
 
-    PixelId[1][1][1][0] = 18;  // DisplayBuffer number
-    PixelId[1][1][1][1] = 0;   // bit number
+    PixelId[1][1][1][0] = 18; // DisplayBuffer number
+    PixelId[1][1][1][1] = 0;  // bit number
 
-    PixelId[1][1][2][0] = 18;  // DisplayBuffer number
-    PixelId[1][1][2][1] = 1;   // bit number
+    PixelId[1][1][2][0] = 18; // DisplayBuffer number
+    PixelId[1][1][2][1] = 1;  // bit number
 
-    PixelId[1][1][3][0] = 18;  // DisplayBuffer number
-    PixelId[1][1][3][1] = 2;   // bit number
+    PixelId[1][1][3][0] = 18; // DisplayBuffer number
+    PixelId[1][1][3][1] = 2;  // bit number
 
-    PixelId[1][2][0][0] = 11;  // DisplayBuffer number
-    PixelId[1][2][0][1] = 7;   // bit number
+    PixelId[1][2][0][0] = 11; // DisplayBuffer number
+    PixelId[1][2][0][1] = 7;  // bit number
 
-    PixelId[1][2][1][0] = 19;  // DisplayBuffer number
-    PixelId[1][2][1][1] = 0;   // bit number
+    PixelId[1][2][1][0] = 19; // DisplayBuffer number
+    PixelId[1][2][1][1] = 0;  // bit number
 
-    PixelId[1][2][2][0] = 19;  // DisplayBuffer number
-    PixelId[1][2][2][1] = 1;   // bit number
+    PixelId[1][2][2][0] = 19; // DisplayBuffer number
+    PixelId[1][2][2][1] = 1;  // bit number
 
-    PixelId[1][2][3][0] = 19;  // DisplayBuffer number
-    PixelId[1][2][3][1] = 2;   // bit number
+    PixelId[1][2][3][0] = 19; // DisplayBuffer number
+    PixelId[1][2][3][1] = 2;  // bit number
 
-    PixelId[1][3][0][0] = 12;  // DisplayBuffer number
-    PixelId[1][3][0][1] = 7;   // bit number
+    PixelId[1][3][0][0] = 12; // DisplayBuffer number
+    PixelId[1][3][0][1] = 7;  // bit number
 
-    PixelId[1][3][1][0] = 20;  // DisplayBuffer number
-    PixelId[1][3][1][1] = 0;   // bit number
+    PixelId[1][3][1][0] = 20; // DisplayBuffer number
+    PixelId[1][3][1][1] = 0;  // bit number
 
-    PixelId[1][3][2][0] = 20;  // DisplayBuffer number
-    PixelId[1][3][2][1] = 1;   // bit number
+    PixelId[1][3][2][0] = 20; // DisplayBuffer number
+    PixelId[1][3][2][1] = 1;  // bit number
 
-    PixelId[1][3][3][0] = 20;  // DisplayBuffer number
-    PixelId[1][3][3][1] = 2;   // bit number
+    PixelId[1][3][3][0] = 20; // DisplayBuffer number
+    PixelId[1][3][3][1] = 2;  // bit number
 
-    PixelId[1][4][0][0] = 13;  // DisplayBuffer number
-    PixelId[1][4][0][1] = 7;   // bit number
+    PixelId[1][4][0][0] = 13; // DisplayBuffer number
+    PixelId[1][4][0][1] = 7;  // bit number
 
-    PixelId[1][4][1][0] = 21;  // DisplayBuffer number
-    PixelId[1][4][1][1] = 0;   // bit number
+    PixelId[1][4][1][0] = 21; // DisplayBuffer number
+    PixelId[1][4][1][1] = 0;  // bit number
 
-    PixelId[1][4][2][0] = 21;  // DisplayBuffer number
-    PixelId[1][4][2][1] = 1;   // bit number
+    PixelId[1][4][2][0] = 21; // DisplayBuffer number
+    PixelId[1][4][2][1] = 1;  // bit number
 
-    PixelId[1][4][3][0] = 21;  // DisplayBuffer number
-    PixelId[1][4][3][1] = 2;   // bit number
+    PixelId[1][4][3][0] = 21; // DisplayBuffer number
+    PixelId[1][4][3][1] = 2;  // bit number
 
-    PixelId[1][5][0][0] = 14;  // DisplayBuffer number
-    PixelId[1][5][0][1] = 7;   // bit number
+    PixelId[1][5][0][0] = 14; // DisplayBuffer number
+    PixelId[1][5][0][1] = 7;  // bit number
 
-    PixelId[1][5][1][0] = 22;  // DisplayBuffer number
-    PixelId[1][5][1][1] = 0;   // bit number
+    PixelId[1][5][1][0] = 22; // DisplayBuffer number
+    PixelId[1][5][1][1] = 0;  // bit number
 
-    PixelId[1][5][2][0] = 22;  // DisplayBuffer number
-    PixelId[1][5][2][1] = 1;   // bit number
+    PixelId[1][5][2][0] = 22; // DisplayBuffer number
+    PixelId[1][5][2][1] = 1;  // bit number
 
-    PixelId[1][5][3][0] = 22;  // DisplayBuffer number
-    PixelId[1][5][3][1] = 2;   // bit number
+    PixelId[1][5][3][0] = 22; // DisplayBuffer number
+    PixelId[1][5][3][1] = 2;  // bit number
 
-    PixelId[1][6][0][0] = 15;  // DisplayBuffer number
-    PixelId[1][6][0][1] = 7;   // bit number
+    PixelId[1][6][0][0] = 15; // DisplayBuffer number
+    PixelId[1][6][0][1] = 7;  // bit number
 
-    PixelId[1][6][1][0] = 23;  // DisplayBuffer number
-    PixelId[1][6][1][1] = 0;   // bit number
+    PixelId[1][6][1][0] = 23; // DisplayBuffer number
+    PixelId[1][6][1][1] = 0;  // bit number
 
-    PixelId[1][6][2][0] = 23;  // DisplayBuffer number
-    PixelId[1][6][2][1] = 1;   // bit number
+    PixelId[1][6][2][0] = 23; // DisplayBuffer number
+    PixelId[1][6][2][1] = 1;  // bit number
 
-    PixelId[1][6][3][0] = 23;  // DisplayBuffer number
-    PixelId[1][6][3][1] = 2;   // bit number
+    PixelId[1][6][3][0] = 23; // DisplayBuffer number
+    PixelId[1][6][3][1] = 2;  // bit number
 
-    
     /* Turn on all pixels of both dices. */
-    for (Loop1UInt8 = 0; Loop1UInt8 < 2; ++Loop1UInt8)  // 2 dices (2 digits)
+    for (Loop1UInt8 = 0; Loop1UInt8 < 2; ++Loop1UInt8) // 2 dices (2 digits)
     {
-      for (DumRow = 0; DumRow < 7; ++DumRow)  // 7 rows
+      for (DumRow = 0; DumRow < 7; ++DumRow) // 7 rows
       {
-        for (DumColumn = 0; DumColumn < 4; ++DumColumn)  // 4 columns
+        for (DumColumn = 0; DumColumn < 4; ++DumColumn) // 4 columns
         {
           DisplayBuffer[PixelId[Loop1UInt8][DumRow][DumColumn][0]] |= (1 << PixelId[Loop1UInt8][DumRow][DumColumn][1]);
         }
       }
     }
-
 
     /* -------------------------------------------------------------- *\
                Check the quality of the random generator.
@@ -4956,8 +4574,7 @@ void process_ir_command(UINT64 IrCommand)
     sleep_ms(20000);
     \* -------------------------------------------------------------- */
 
-
-    /* Leave both digits On for a short while. */ 
+    /* Leave both digits On for a short while. */
     sleep_ms(200);
 
     /* Make sure random sounds do not begin before pixel twinkling. */
@@ -4967,12 +4584,11 @@ void process_ir_command(UINT64 IrCommand)
     for (Loop1UInt16 = 0; Loop1UInt16 < (2 * 1000 / 95); ++Loop1UInt16)
     {
       Frequency = (rand() % 7000) + 200;
-      
+
       /* If sound queue is full, do not try to put more sounds. */
       if (sound_queue(Frequency, 50) == MAX_SOUND_QUEUE)
         break;
     }
-
 
     /* Make random pixel animation on display. */
     StartTime = time_us_64();
@@ -4985,7 +4601,6 @@ void process_ir_command(UINT64 IrCommand)
 
         /* Generate a random column number for each dice. */
         DumColumn = rand() % 4;
-
 
         /* Check current status of generated pixel and toggle it. */
         if (PixelStatus[Loop1UInt8][DumRow][DumColumn] == 0)
@@ -5001,7 +4616,7 @@ void process_ir_command(UINT64 IrCommand)
           PixelStatus[Loop1UInt8][DumRow][DumColumn] = 0;
         }
       }
-      
+
       /* Short pause before next pixel action. */
       sleep_ms(2);
     }
@@ -5018,10 +4633,6 @@ void process_ir_command(UINT64 IrCommand)
     fill_display_buffer_4X7(13, 0x30 + Dum1UInt8);
   }
 
-
-
-
-
   if (IrCommand == IR_DISPLAY_OUTSIDE_TEMP)
   {
     // scroll_string(24, "Button 'CD door': Outside temperature");
@@ -5031,30 +4642,26 @@ void process_ir_command(UINT64 IrCommand)
     scroll_queue(TAG_PICO_TEMP);
   }
 
-
-
-
-
   if (IrCommand == IR_FULL_TEST)
   {
     // scroll_string(24, "Button 'Play / Pause': Full Pico Green Clock tests & demos");
 
-    CurrentClockMode = MODE_TEST;  // prevent double dots blinking.
+    CurrentClockMode = MODE_TEST; // prevent double dots blinking.
 
     /* If user requested "Full test", assume he wants to get rid of an eventual running SilencePeriod. */
     SilencePeriod = 0;
 
     /* Test passive buzzer. */
-    sound_queue(SILENT, 1000);  // quick silence before beginning jingles.
+    sound_queue(SILENT, 1000); // quick silence before beginning jingles.
 
     play_jingle(JINGLE_ENCOUNTER);
-    sound_queue(SILENT, 1500);  // quick silence between jingles.
+    sound_queue(SILENT, 1500); // quick silence between jingles.
 
     play_jingle(JINGLE_BIRTHDAY);
-    sound_queue(SILENT, 1500);  // quick silence between jingles.
+    sound_queue(SILENT, 1500); // quick silence between jingles.
 
     play_jingle(JINGLE_FETE);
-    sound_queue(SILENT, 1500);  // quick silence between jingles.
+    sound_queue(SILENT, 1500); // quick silence between jingles.
 
     play_jingle(JINGLE_RACING);
 
@@ -5072,32 +4679,28 @@ void process_ir_command(UINT64 IrCommand)
 
     /* Read calibration data of the specific device used (written in BME280's non volatile memory). */
     bme280_read_calib_data();
-    
+
     /* Compute calibration parameters from calibration data. */
     bme280_compute_calib_param();
 #endif
-    
+
     /* Scroll many items. */
-    scroll_queue(TAG_FIRMWARE_VERSION);  // firmware version number.
-    scroll_queue(TAG_PICO_UNIQUE_ID);    // Pico microcontroller unique ID ("serial number").
-    scroll_queue(TAG_TEMPERATURE);       // display ambient temperature.
-    scroll_queue(TAG_EXT_TEMP);          // outside parameters (if a DHT22 or a BME280 has been installed by user).
-    scroll_queue(TAG_PICO_TEMP);         // Pico microcontroller internal temperature.
-    scroll_queue(TAG_DST);               // daylight saving time mode / status.
-    scroll_queue(TAG_AMBIENT_LIGHT);     // current ambient light.
-    scroll_queue(TAG_VOLTAGE);           // power supply voltage.
-    scroll_queue(TAG_BME280_DEVICE_ID);  // BME280 device ID if one has been installed by user.
+    scroll_queue(TAG_FIRMWARE_VERSION); // firmware version number.
+    scroll_queue(TAG_PICO_UNIQUE_ID);   // Pico microcontroller unique ID ("serial number").
+    scroll_queue(TAG_TEMPERATURE);      // display ambient temperature.
+    scroll_queue(TAG_EXT_TEMP);         // outside parameters (if a DHT22 or a BME280 has been installed by user).
+    scroll_queue(TAG_PICO_TEMP);        // Pico microcontroller internal temperature.
+    scroll_queue(TAG_DST);              // daylight saving time mode / status.
+    scroll_queue(TAG_AMBIENT_LIGHT);    // current ambient light.
+    scroll_queue(TAG_VOLTAGE);          // power supply voltage.
+    scroll_queue(TAG_BME280_DEVICE_ID); // BME280 device ID if one has been installed by user.
 
     /* Test active buzzer. */
     gpio_put(BUZZ, 1);
-    FlagToneOn      = FLAG_ON;
-    ToneType        = TONE_EVENT_TYPE;
-    ToneRepeatCount = 0;  // initialize repeat count when starting
+    FlagToneOn = FLAG_ON;
+    ToneType = TONE_EVENT_TYPE;
+    ToneRepeatCount = 0; // initialize repeat count when starting
   }
-
-
-
-
 
   if (IrCommand == IR_SILENCE_PERIOD)
   {
@@ -5112,14 +4715,10 @@ void process_ir_command(UINT64 IrCommand)
     else if (Language == FRENCH)
     {
       sprintf(String, "Periode de silence: %u", (int)(SilencePeriod / 60));
-      String[1] = (UINT8)31;  // e accent aigu.
+      String[1] = (UINT8)31; // e accent aigu.
     }
     scroll_string(24, String);
   }
-
-
-
-
 
   if (IrCommand == IR_DISPLAY_GENERIC)
   {
@@ -5132,8 +4731,8 @@ void process_ir_command(UINT64 IrCommand)
       CurrentClockMode = MODE_DISPLAY;
 
       /* While in generic "MODE_DISPLAY", stop blinking both dots on the display and make sure they are steady On. */
-      DisplayBuffer[11] |= 0x10;  // slim ":" - top dot.
-      DisplayBuffer[13] |= 0x10;  // slim ":" - bottom dot.
+      DisplayBuffer[11] |= 0x10; // slim ":" - top dot.
+      DisplayBuffer[13] |= 0x10; // slim ":" - bottom dot.
     }
     else
     {
@@ -5162,287 +4761,280 @@ void process_ir_command(UINT64 IrCommand)
       // SETUP_CLOCK_HI_LIMIT       0x13
       switch (SetupStep)
       {
-        case (0x01):  // SETUP_HOUR
-          /* Hour, minute, seconds, day-of-month, month and year display. */
-          if (TimeDisplayMode == H12)
+      case (0x01): // SETUP_HOUR
+        /* Hour, minute, seconds, day-of-month, month and year display. */
+        if (TimeDisplayMode == H12)
+        {
+          Dum1UInt8 = convert_h24_to_h12(CurrentHour, &AmFlag, &PmFlag);
+          sprintf(String, "%u:%2.2u:%2.2u %s", Dum1UInt8, CurrentMinute, SecondCounter, AmFlag ? "AM" : "PM");
+          scroll_string(24, String);
+          get_date_string(String);
+          scroll_string(24, String);
+        }
+        else
+        {
+          sprintf(String, "%2.2u:%2.2u:%2.2u", CurrentHour, CurrentMinute, SecondCounter);
+          scroll_string(24, String);
+          get_date_string(String);
+          scroll_string(24, String);
+        }
+        break;
+
+      case (0x06): // SETUP_DST
+        /* Daylight saving time status. */
+        scroll_queue(TAG_DST);
+        break;
+
+      case (0x07): // SETUP_KEYCLICK
+        /* Beep (keyclick). */
+        if (Language == ENGLISH)
+        {
+          if (FlagKeyclick == FLAG_ON)
           {
-            Dum1UInt8 = convert_h24_to_h12(CurrentHour, &AmFlag, &PmFlag);
-            sprintf(String, "%u:%2.2u:%2.2u %s", Dum1UInt8, CurrentMinute, SecondCounter, AmFlag ? "AM" : "PM");
-            scroll_string(24, String);
-            get_date_string(String);
+            sprintf(String, "Keyclick On - Duration: %u ms Repeat1: %u Repeat2: %u", TONE_KEYCLICK_DURATION, TONE_KEYCLICK_REPEAT_1, TONE_KEYCLICK_REPEAT_2);
             scroll_string(24, String);
           }
           else
           {
-            sprintf(String, "%2.2u:%2.2u:%2.2u", CurrentHour, CurrentMinute, SecondCounter);
+            scroll_string(24, "Keyclick Off");
+          }
+        }
+
+        if (Language == FRENCH)
+        {
+          if (FlagKeyclick == FLAG_ON)
+          {
+            sprintf(String, "Keyclick On - Duree %u ms Repeat1: %u Repeat2: %u", TONE_KEYCLICK_DURATION, TONE_KEYCLICK_REPEAT_1, TONE_KEYCLICK_REPEAT_2);
+            String[17] = (UINT8)31; // e accent aigu.
             scroll_string(24, String);
-            get_date_string(String);
+          }
+          else
+          {
+            scroll_string(24, "Keyclick Off");
+          }
+        }
+        break;
+
+      case (0x08): // SETUP_SCROLLING
+        /* Display scroll. */
+        if (Language == ENGLISH)
+        {
+          if (FlagScrollEnable == FLAG_ON)
+          {
+            sprintf(String, "Scrolling On - Frequency: %u minutes Dot speed: %u msec.", SCROLL_PERIOD_MINUTE, SCROLL_DOT_TIME);
             scroll_string(24, String);
           }
+          else
+          {
+            scroll_string(24, "Scrolling Off.");
+          }
+        }
+
+        if (Language == FRENCH)
+        {
+          if (FlagScrollEnable == FLAG_ON)
+          {
+            sprintf(String, "Scrolling On - Periode: %u minutes Vitesse des dots: %u msec.", SCROLL_PERIOD_MINUTE, SCROLL_DOT_TIME);
+            String[16] = (UINT8)31; // e accent aigu.
+            scroll_string(24, String);
+          }
+          else
+          {
+            scroll_string(24, "Scrolling OFF.");
+          }
+        }
         break;
 
-        case (0x06):  // SETUP_DST
-          /* Daylight saving time status. */
-          scroll_queue(TAG_DST);
+      case (0x09): // SETUP_TEMP_UNIT
+        /* Temperature unit. */
+        if (Language == ENGLISH)
+        {
+          if (TemperatureUnit == CELSIUS)
+          {
+            scroll_string(24, "Temperature unit is Celsius");
+          }
+          else
+          {
+            scroll_string(24, "Temperature unit is Fahrenheit");
+          }
+        }
+
+        if (Language == FRENCH)
+        {
+          if (TemperatureUnit == CELSIUS)
+          {
+            sprintf(String, "Unite de temperature: Celsius");
+            String[4] = (UINT8)31;  // e accent aigu.
+            String[13] = (UINT8)31; // e accent aigu.
+            scroll_string(24, String);
+          }
+          else
+          {
+            sprintf(String, "Unite de temperature: Fahrenheit");
+            String[4] = (UINT8)31;  // e accent aigu.
+            String[13] = (UINT8)31; // e accent aigu.
+            scroll_string(24, String);
+          }
+        }
+        scroll_queue(TAG_TEMPERATURE);
+        scroll_queue(TAG_EXT_TEMP);
         break;
 
-        case (0x07): // SETUP_KEYCLICK
-          /* Beep (keyclick). */
-          if (Language == ENGLISH)
-          {
-            if (FlagKeyclick == FLAG_ON)
-            {
-              sprintf(String, "Keyclick On - Duration: %u ms Repeat1: %u Repeat2: %u", TONE_KEYCLICK_DURATION, TONE_KEYCLICK_REPEAT_1, TONE_KEYCLICK_REPEAT_2);
-              scroll_string(24, String);
-            }
-            else
-            {
-              scroll_string(24, "Keyclick Off");
-            }
-          }
+      case (0x0A): // SETUP_LANGUAGE
+        /* Language. */
+        if (Language == ENGLISH)
+          scroll_string(24, "Language is English");
 
-          if (Language == FRENCH)
-          {
-            if (FlagKeyclick == FLAG_ON)
-            {
-              sprintf(String, "Keyclick On - Duree %u ms Repeat1: %u Repeat2: %u", TONE_KEYCLICK_DURATION, TONE_KEYCLICK_REPEAT_1, TONE_KEYCLICK_REPEAT_2);
-              String[17] = (UINT8)31;  // e accent aigu.
-              scroll_string(24, String);
-            }
-            else
-            {
-              scroll_string(24, "Keyclick Off");
-            }
-          }
+        if (Language == FRENCH)
+          scroll_string(24, "La langue est le francais");
         break;
 
-        case (0x08):  // SETUP_SCROLLING
-          /* Display scroll. */
-          if (Language == ENGLISH)
+      case (0x0B): // SETUP_TIME_FORMAT
+        /* Time display format. */
+        if (Language == ENGLISH)
+        {
+          if (TimeDisplayMode == H12)
           {
-            if (FlagScrollEnable == FLAG_ON)
-            {
-              sprintf(String, "Scrolling On - Frequency: %u minutes Dot speed: %u msec.", SCROLL_PERIOD_MINUTE, SCROLL_DOT_TIME);
-              scroll_string(24, String);
-            }
-            else
-            {
-              scroll_string(24, "Scrolling Off.");
-            }
+            scroll_string(24, "Time display format: 12-hours");
           }
+          else
+          {
+            scroll_string(24, "Time display format: 24-hours");
+          }
+        }
 
-          if (Language == FRENCH)
+        if (Language == FRENCH)
+        {
+          if (TimeDisplayMode == H12)
           {
-            if (FlagScrollEnable == FLAG_ON)
-            {
-              sprintf(String, "Scrolling On - Periode: %u minutes Vitesse des dots: %u msec.", SCROLL_PERIOD_MINUTE, SCROLL_DOT_TIME);
-              String[16] = (UINT8)31;  // e accent aigu.
-              scroll_string(24, String);
-            }
-            else
-            {
-              scroll_string(24, "Scrolling OFF.");
-            }
+            scroll_string(24, "Format d'affichage de l'heure: 12 heures");
           }
+          else
+          {
+            scroll_string(24, "Format d'affichage de l'heure: 24 heures");
+          }
+        }
         break;
 
-        case (0x09):  // SETUP_TEMP_UNIT
-          /* Temperature unit. */
-          if (Language == ENGLISH)
+      case (0x0C): // SETUP_HOURLY_CHIME
+        /* Hourly chime. */
+        if (Language == ENGLISH)
+        {
+          if (HourlyChimeMode == CHIME_OFF)
           {
-            if (TemperatureUnit == CELSIUS)
-            {
-              scroll_string(24, "Temperature unit is Celsius");
-            }
-            else
-            {
-              scroll_string(24, "Temperature unit is Fahrenheit");
-            }
+            scroll_string(24, "Hourly chime is Off");
           }
-
-
-          if (Language == FRENCH)
+          else if (HourlyChimeMode == CHIME_ON)
           {
-            if (TemperatureUnit == CELSIUS)
-            {
-              sprintf(String, "Unite de temperature: Celsius");
-              String[4]  = (UINT8)31;  // e accent aigu.
-              String[13] = (UINT8)31;  // e accent aigu.
-              scroll_string(24, String);
-            }
-            else
-            {
-              sprintf(String, "Unite de temperature: Fahrenheit");
-              String[4]  = (UINT8)31;  // e accent aigu.
-              String[13] = (UINT8)31;  // e accent aigu.
-              scroll_string(24, String);
-            }
+            scroll_string(24, "Hourly chime is On");
           }
-          scroll_queue(TAG_TEMPERATURE);
-          scroll_queue(TAG_EXT_TEMP);
+          else if (HourlyChimeMode == CHIME_DAY)
+          {
+            sprintf(String, "Hourly chime is intermittent, from %u:00 to %u:00", ChimeTimeOn, ChimeTimeOff);
+            scroll_string(24, String);
+          }
+        }
+
+        if (Language == FRENCH)
+        {
+          if (HourlyChimeMode == CHIME_OFF)
+          {
+            scroll_string(24, "Le signal horaire est a Off");
+          }
+          else if (HourlyChimeMode == CHIME_ON)
+          {
+            scroll_string(24, "Le signal horaire est a On");
+          }
+          else if (HourlyChimeMode == CHIME_DAY)
+          {
+            sprintf(String, "Le signal horaire est intermittent, de %u:00 a %u:00", ChimeTimeOn, ChimeTimeOff);
+            scroll_string(24, String);
+          }
+        }
         break;
 
-        case (0x0A):  // SETUP_LANGUAGE
-          /* Language. */
-          if (Language == ENGLISH)
-            scroll_string(24, "Language is English");
+      case (0x0F): // SETUP_NIGHT_LIGHT
+        /* Night light. */
+        if (Language == ENGLISH)
+        {
+          if (NightLightMode == NIGHT_LIGHT_OFF)
+          {
+            scroll_string(24, "Night light is Off");
+          }
+          else if (NightLightMode == NIGHT_LIGHT_ON)
+          {
+            scroll_string(24, "Night light is On");
+          }
+          else if (NightLightMode == NIGHT_LIGHT_NIGHT)
+          {
+            sprintf(String, "Night light is intermittent, from %u:00 to %u:00", NightLightTimeOn, NightLightTimeOff);
+            scroll_string(24, String);
+          }
+          else if (NightLightMode == NIGHT_LIGHT_AUTO)
+          {
+            sprintf(String, "Night light is automatic");
+            scroll_string(24, String);
+          }
+        }
 
-          if (Language == FRENCH)
-            scroll_string(24, "La langue est le francais");
+        if (Language == FRENCH)
+        {
+          if (NightLightMode == NIGHT_LIGHT_OFF)
+          {
+            scroll_string(24, "La veilleuse de nuit est a Off");
+          }
+          else if (NightLightMode == NIGHT_LIGHT_ON)
+          {
+            scroll_string(24, "La veilleuse de nuit est a On");
+          }
+          else if (NightLightMode == NIGHT_LIGHT_NIGHT)
+          {
+            sprintf(String, "La veilleuse de nuit est intermittente, de %u:00 a %u:00", NightLightTimeOn, NightLightTimeOff);
+            scroll_string(24, String);
+          }
+          else if (NightLightMode == NIGHT_LIGHT_AUTO)
+          {
+            sprintf(String, "La veilleuse de nuit est automatique");
+            scroll_string(24, String);
+          }
+        }
         break;
 
-        case (0x0B):  // SETUP_TIME_FORMAT
-          /* Time display format. */
-          if (Language == ENGLISH)
+      case (0x12): // SETUP_AUTO_BRIGHT
+        /* Light level. */
+        if (Language == ENGLISH)
+        {
+          if (FlagAutoBrightness == FLAG_ON)
           {
-            if (TimeDisplayMode == H12)
-            {
-              scroll_string(24, "Time display format: 12-hours");
-            }
-            else
-            {
-              scroll_string(24, "Time display format: 24-hours");
-            }
+            sprintf(String, "Auto brightness is On, light level is %u", get_ads1015());
+            scroll_string(24, String);
           }
-
-          if (Language == FRENCH)
+          else
           {
-            if (TimeDisplayMode == H12)
-            {
-              scroll_string(24, "Format d'affichage de l'heure: 12 heures");
-            }
-            else
-            {
-              scroll_string(24, "Format d'affichage de l'heure: 24 heures");
-            }
+            scroll_string(24, "Auto brightness is Off");
           }
-        break;
+        }
 
-        case (0x0C):  // SETUP_HOURLY_CHIME
-          /* Hourly chime. */
-          if (Language == ENGLISH)
+        if (Language == FRENCH)
+        {
+          if (FlagAutoBrightness == FLAG_ON)
           {
-            if (HourlyChimeMode == CHIME_OFF)
-            {
-              scroll_string(24, "Hourly chime is Off");
-            }
-            else if (HourlyChimeMode == CHIME_ON)
-            {
-              scroll_string(24, "Hourly chime is On");
-            }
-            else if (HourlyChimeMode == CHIME_DAY)
-            {
-              sprintf(String, "Hourly chime is intermittent, from %u:00 to %u:00", ChimeTimeOn, ChimeTimeOff);
-              scroll_string(24, String);
-            }
+            sprintf(String, "Intensite automatique est a On, niveau d'eclairage est %u", get_ads1015());
+            String[8] = (UINT8)31;  // e accent aigu.
+            String[41] = (UINT8)31; // e accent aigu.
+            scroll_string(24, String);
           }
-
-
-          if (Language == FRENCH)
+          else
           {
-            if (HourlyChimeMode == CHIME_OFF)
-            {
-              scroll_string(24, "Le signal horaire est a Off");
-            }
-            else if (HourlyChimeMode == CHIME_ON)
-            {
-              scroll_string(24, "Le signal horaire est a On");
-            }
-            else if (HourlyChimeMode == CHIME_DAY)
-            {
-              sprintf(String, "Le signal horaire est intermittent, de %u:00 a %u:00", ChimeTimeOn, ChimeTimeOff);
-              scroll_string(24, String);
-            }
+            sprintf(String, "Intensite automatique est a Off");
+            String[8] = (UINT8)31; // e accent aigu.
+            scroll_string(24, String);
           }
-        break;
-
-        case (0x0F):  // SETUP_NIGHT_LIGHT
-          /* Night light. */
-          if (Language == ENGLISH)
-          {
-            if (NightLightMode == NIGHT_LIGHT_OFF)
-            {
-              scroll_string(24, "Night light is Off");
-            }
-            else if (NightLightMode == NIGHT_LIGHT_ON)
-            {
-              scroll_string(24, "Night light is On");
-            }
-            else if (NightLightMode == NIGHT_LIGHT_NIGHT)
-            {
-              sprintf(String, "Night light is intermittent, from %u:00 to %u:00", NightLightTimeOn, NightLightTimeOff);
-              scroll_string(24, String);
-            }
-            else if (NightLightMode == NIGHT_LIGHT_AUTO)
-            {
-              sprintf(String, "Night light is automatic");
-              scroll_string(24, String);
-            }
-          }
-
-
-          if (Language == FRENCH)
-          {
-            if (NightLightMode == NIGHT_LIGHT_OFF)
-            {
-              scroll_string(24, "La veilleuse de nuit est a Off");
-            }
-            else if (NightLightMode == NIGHT_LIGHT_ON)
-            {
-              scroll_string(24, "La veilleuse de nuit est a On");
-            }
-            else if (NightLightMode == NIGHT_LIGHT_NIGHT)
-            {
-              sprintf(String, "La veilleuse de nuit est intermittente, de %u:00 a %u:00", NightLightTimeOn, NightLightTimeOff);
-              scroll_string(24, String);
-            }
-            else if (NightLightMode == NIGHT_LIGHT_AUTO)
-            {
-              sprintf(String, "La veilleuse de nuit est automatique");
-              scroll_string(24, String);
-            }
-          }
-        break;
-
-        case (0x12):  // SETUP_AUTO_BRIGHT
-          /* Light level. */
-          if (Language == ENGLISH)
-          {
-            if (FlagAutoBrightness == FLAG_ON)
-            {
-              sprintf(String, "Auto brightness is On, light level is %u", get_ads1015());
-              scroll_string(24, String);
-            }
-            else
-            {
-              scroll_string(24, "Auto brightness is Off");
-            }
-          }
-
-          if (Language == FRENCH)
-          {
-            if (FlagAutoBrightness == FLAG_ON)
-            {
-              sprintf(String, "Intensite automatique est a On, niveau d'eclairage est %u", get_ads1015());
-              String[8]  = (UINT8)31;  // e accent aigu.
-              String[41] = (UINT8)31;  // e accent aigu.
-              scroll_string(24, String);
-            }
-            else
-            {
-              sprintf(String, "Intensite automatique est a Off");
-              String[8]  = (UINT8)31;  // e accent aigu.
-              scroll_string(24, String);
-            }
-          }
+        }
         break;
       }
     }
   }
-
-
-
-
 
   if (IrCommand == IR_DISPLAY_EVENTS_TODAY)
   {
@@ -5469,14 +5061,13 @@ void process_ir_command(UINT64 IrCommand)
     {
       if (Dum1UInt8 == 0)
         scroll_string(24, "No event for today");
+      else if (Dum1UInt8 == 1)
+        scroll_string(24, "1 event today");
       else
-        if (Dum1UInt8 == 1)
-          scroll_string(24, "1 event today");
-        else
-        {
-          sprintf(String, "%u events today", Dum1UInt8);
-          scroll_string(24, String);
-        }
+      {
+        sprintf(String, "%u events today", Dum1UInt8);
+        scroll_string(24, String);
+      }
     }
 
     if (Language == FRENCH)
@@ -5484,8 +5075,8 @@ void process_ir_command(UINT64 IrCommand)
       if (Dum1UInt8 == 0)
       {
         sprintf(String, "Aucun evenement aujourd'hui");
-        String[6] = (UCHAR)31;  // e accent aigu.
-        String[8] = (UCHAR)31;  // e accent aigu
+        String[6] = (UCHAR)31; // e accent aigu.
+        String[8] = (UCHAR)31; // e accent aigu
         scroll_string(24, String);
       }
       else
@@ -5493,24 +5084,20 @@ void process_ir_command(UINT64 IrCommand)
         if (Dum1UInt8 == 1)
         {
           sprintf(String, "1 evenement aujourd'hui");
-          String[2] = (UCHAR)31;  // e accent aigu.
-          String[4] = (UCHAR)31;  // e accent aigu
+          String[2] = (UCHAR)31; // e accent aigu.
+          String[4] = (UCHAR)31; // e accent aigu
           scroll_string(24, String);
         }
         else
         {
           sprintf(String, "%u evenements aujourd'hui", Dum1UInt8);
-          String[strlen(String) - 20] = (UCHAR)31;  // e accent aigu.
-          String[strlen(String) - 22] = (UCHAR)31;  // e accent aigu
+          String[strlen(String) - 20] = (UCHAR)31; // e accent aigu.
+          String[strlen(String) - 22] = (UCHAR)31; // e accent aigu
           scroll_string(24, String);
         }
       }
     }
   }
-
-
-
-
 
   if (IrCommand == IR_DISPLAY_EVENTS_THIS_WEEK)
   {
@@ -5522,9 +5109,8 @@ void process_ir_command(UINT64 IrCommand)
     if (Dum1UInt8 != SUN)
     {
       DumDayOfMonth = CurrentDayOfMonth;
-      DumMonth      = CurrentMonth;
-      DumYear       = Year4Digits;
-
+      DumMonth = CurrentMonth;
+      DumYear = Year4Digits;
 
       do
       {
@@ -5544,11 +5130,9 @@ void process_ir_command(UINT64 IrCommand)
       } while (Dum1UInt8 != SUN);
     }
 
-
     /* For debugging purposes - Display date of first day of the week (Sunday) that has been found. */
     // sprintf(String, "Week beginning:%u %s %u", DumDayOfMonth, MonthName[Language][DumMonth], DumYear);
     // scroll_string(24, String);
-
 
     /* And display all events for each of the next seven days, starting with this Sunday. */
     Dum1UInt8 = 0;
@@ -5611,8 +5195,8 @@ void process_ir_command(UINT64 IrCommand)
       if (Dum1UInt8 == 0)
       {
         sprintf(String, "Aucun evenement cette semaine");
-        String[6] = (UCHAR)31;  // e accent aigu.
-        String[8] = (UCHAR)31;  // e accent aigu
+        String[6] = (UCHAR)31; // e accent aigu.
+        String[8] = (UCHAR)31; // e accent aigu
         scroll_string(24, String);
       }
       else
@@ -5620,24 +5204,20 @@ void process_ir_command(UINT64 IrCommand)
         if (Dum1UInt8 == 1)
         {
           sprintf(String, "1 evenement cette semaine");
-          String[2] = (UCHAR)31;  // e accent aigu.
-          String[4] = (UCHAR)31;  // e accent aigu
+          String[2] = (UCHAR)31; // e accent aigu.
+          String[4] = (UCHAR)31; // e accent aigu
           scroll_string(24, String);
         }
         else
         {
           sprintf(String, "%u evenements cette semaine", Dum1UInt8);
-          String[strlen(String) - 22] = (UCHAR)31;  // e accent aigu.
-          String[strlen(String) - 24] = (UCHAR)31;  // e accent aigu
+          String[strlen(String) - 22] = (UCHAR)31; // e accent aigu.
+          String[strlen(String) - 24] = (UCHAR)31; // e accent aigu
           scroll_string(24, String);
         }
       }
     }
   }
-
-
-
-
 
   if (IrCommand == IR_DISPLAY_SECOND)
   {
@@ -5645,7 +5225,8 @@ void process_ir_command(UINT64 IrCommand)
 
     /* Wait till eventual current scrolling has completed. */
     while (ScrollDotCount)
-    {};
+    {
+    };
 
     /* Allow two middle dots blinking during minutes and seconds display. */
     CurrentClockMode = MODE_SHOW_TIME;
@@ -5665,24 +5246,20 @@ void process_ir_command(UINT64 IrCommand)
         Time_RTC.minutes = Time_RTC.minutes & 0x7F;
         Time_RTC.seconds = Time_RTC.seconds & 0x7F;
 
-        fill_display_buffer_4X7(0,  0x30 + Time_RTC.minutes / 16);
-        fill_display_buffer_4X7(5,  0x30 + Time_RTC.minutes % 16);
-        fill_display_buffer_4X7(10, 0x3A);  // slim ":"
+        fill_display_buffer_4X7(0, 0x30 + Time_RTC.minutes / 16);
+        fill_display_buffer_4X7(5, 0x30 + Time_RTC.minutes % 16);
+        fill_display_buffer_4X7(10, 0x3A); // slim ":"
         fill_display_buffer_4X7(12, 0x30 + Time_RTC.seconds / 16);
         fill_display_buffer_4X7(17, 0x30 + Time_RTC.seconds % 16);
       }
     }
 
-    FlagUpdateTime = FLAG_ON;  // request a time update when done with seconds display.
+    FlagUpdateTime = FLAG_ON; // request a time update when done with seconds display.
   }
 
   return;
 }
 #endif
-
-
-
-
 
 /* $TITLE=process_scroll_queue() */
 /* $PAGE */
@@ -5709,10 +5286,9 @@ void process_scroll_queue(void)
 
   pico_unique_board_id_t board_id;
 
-
   /* Check if for any reason, the function has been called while the queue is empty. */
-  if (ScrollQueueHead == ScrollQueueTail) return;
-
+  if (ScrollQueueHead == ScrollQueueTail)
+    return;
 
   while (ScrollQueueTail != ScrollQueueHead)
   {
@@ -5720,367 +5296,363 @@ void process_scroll_queue(void)
     // Head = ScrollQueueHead;
     // Tail = ScrollQueueTail;
 
-    Tag  = scroll_unqueue();
+    Tag = scroll_unqueue();
 
     /* NOTE: A special Calendar Event (with Description = "Debug") may be inserted in the bundle of calendar events.
              This specific case may be handled (see below) to display whatever information we want. If no Calendar Event
              exists with a description "Debug", this code will not interfere with normal clock usage. */
-    if (strcmp(CalendarEvent[Tag].Description, "Debug") == 0) Tag = TAG_ALARM;
-
-
+    if (strcmp(CalendarEvent[Tag].Description, "Debug") == 0)
+      Tag = TAG_ALARM;
 
     if (Tag < MAX_EVENTS)
     {
       /* We must scroll a calendar event. */
       scroll_string(24, CalendarEvent[Tag].Description);
       while (ScrollDotCount)
-        sleep_ms(100);  // waste time to let the time to complete scrolling.
+        sleep_ms(100); // waste time to let the time to complete scrolling.
     }
     else
     {
       /* Special cases. */
       switch (Tag)
       {
-        case (TAG_ALARM):
-          /* For debug purposes.
-             Display current alarm parameters. */
-          byte_data();  // read alarm parameters.
+      case (TAG_ALARM):
+        /* For debug purposes.
+           Display current alarm parameters. */
+        byte_data(); // read alarm parameters.
 
-          /* Display current parameters for alarm 0 and alarm 1. */
-          sprintf(String, "Alarm 0: %s Day %u  Hour %2.2u  Minute %2.2u  Second %2.2u   Alarm 1: %s Day %u  Hour %2.2u  Minute %2.2um",
-                  Alarm[0].FlagStatus ? "ON" : "OFF", (ByteData[DS3231_REG_A1D] & 0xFF), ByteData[DS3231_REG_A1H], ByteData[DS3231_REG_A1M], ByteData[DS3231_REG_A1S],
-                  Alarm[1].FlagStatus ? "ON" : "OFF", (ByteData[DS3231_REG_A2D] & 0xFF), ByteData[DS3231_REG_A2H], ByteData[DS3231_REG_A2M]);
-          scroll_string(24, String);
+        /* Display current parameters for alarm 0 and alarm 1. */
+        sprintf(String, "Alarm 0: %s Day %u  Hour %2.2u  Minute %2.2u  Second %2.2u   Alarm 1: %s Day %u  Hour %2.2u  Minute %2.2um",
+                Alarm[0].FlagStatus ? "ON" : "OFF", (ByteData[DS3231_REG_A1D] & 0xFF), ByteData[DS3231_REG_A1H], ByteData[DS3231_REG_A1M], ByteData[DS3231_REG_A1S],
+                Alarm[1].FlagStatus ? "ON" : "OFF", (ByteData[DS3231_REG_A2D] & 0xFF), ByteData[DS3231_REG_A2H], ByteData[DS3231_REG_A2M]);
+        scroll_string(24, String);
         break;
 
-        case (TAG_AMBIENT_LIGHT):
-          /* If we are not currently in setup mode, display ambient light. */
-          switch (Language)
-          {
-            case (FRENCH):
-              sprintf(String, "Luminosite: %u", get_ads1015());
-              String[9] = (UINT8)31;  // e accent aigu.
-              scroll_string(24, String);
-            break;
+      case (TAG_AMBIENT_LIGHT):
+        /* If we are not currently in setup mode, display ambient light. */
+        switch (Language)
+        {
+        case (FRENCH):
+          sprintf(String, "Luminosite: %u", get_ads1015());
+          String[9] = (UINT8)31; // e accent aigu.
+          scroll_string(24, String);
+          break;
 
-            case (ENGLISH):
-              sprintf(String, "Ambient light: %u", get_ads1015());
-              scroll_string(24, String);
-            break;
+        case (ENGLISH):
+          sprintf(String, "Ambient light: %u", get_ads1015());
+          scroll_string(24, String);
+          break;
+        }
+        break;
+
+#ifdef BME280_SUPPORT
+      case (TAG_BME280_DEVICE_ID):
+        Dum1UInt8 = bme280_read_device_id();
+        sprintf(String, "BME280 device ID: 0x%2.2X", Dum1UInt8);
+        scroll_string(24, String);
+        break;
+#endif
+      case (TAG_DATE):
+        /* Used to scroll the date on clock display. */
+        get_date_string(String);
+        scroll_string(24, String);
+        break;
+
+      case (TAG_DEBUG):
+        /* For debug purposes.
+           Display a few variables while implementing DST support. */
+        sprintf(String, "L: %2.2X  FSTDoM: %2.2X  FSTM: %2.2X", Language, FlagSetupClock[SETUP_DAY_OF_MONTH], FlagSetupClock[SETUP_MONTH]);
+        scroll_string(15, String);
+        break;
+
+      case (TAG_DST):
+        /* Display current daylight saving time setting.
+           No support = No DST support at all.
+           Inactive   = DST is supported, but we are not during DST period of the year.
+           Active     = DST is supported and we are during DST period of the year. */
+        switch (Language)
+        {
+        case (ENGLISH):
+          if (DAYLIGHT_SAVING_TIME == DST_NONE)
+          {
+            scroll_string(24, "No support for daylight saving time");
           }
-        break;
-
-        case (TAG_BME280_DEVICE_ID):
-          Dum1UInt8 = bme280_read_device_id();
-          sprintf(String, "BME280 device ID: 0x%2.2X", Dum1UInt8);
-          scroll_string(24, String);
-        break;
-
-        case (TAG_DATE):
-          /* Used to scroll the date on clock display. */
-          get_date_string(String);
-          scroll_string(24, String);
-        break;
-
-        case (TAG_DEBUG):
-          /* For debug purposes.
-             Display a few variables while implementing DST support. */
-          sprintf(String, "L: %2.2X  FSTDoM: %2.2X  FSTM: %2.2X", Language, FlagSetupClock[SETUP_DAY_OF_MONTH], FlagSetupClock[SETUP_MONTH]);
-          scroll_string(15, String);
-        break;
-
-        case (TAG_DST):
-          /* Display current daylight saving time setting.
-             No support = No DST support at all.
-             Inactive   = DST is supported, but we are not during DST period of the year.
-             Active     = DST is supported and we are during DST period of the year. */
-          switch (Language)
+          else
           {
-            case (ENGLISH):
-              if (DAYLIGHT_SAVING_TIME == DST_NONE)
-              {
-                scroll_string(24, "No support for daylight saving time");
-              }
-              else
-              {
-                /* Announce if Daily Saving Time ("DST") is currently active or inactive, depending of current date. */
-                if (FlagDayLightSavingTime == FLAG_ON)
-                  scroll_string(24, "Daylight saving time active");
-                else
-                  scroll_string(24, "Daylight saving time inactive");
-              }
-            break;
-
-            case (FRENCH):
-              if (DAYLIGHT_SAVING_TIME == DST_NONE)
-              {
-                sprintf(String, "Heure avancee non supportee");
-                String[11] = (UINT8)31;  // e accent aigu.
-                String[25] = (UINT8)31;  // e accent aigu.
-                scroll_string(24, String);
-              }
-              else
-              {
-                /* Announce if Daily Saving Time ("DST") is currently active or inactive, depending of current date. */
-                if (FlagDayLightSavingTime == FLAG_ON)
-                {
-                  sprintf(String, "Heure avancee active");
-                  String[11] = (UINT8)31;  // e accent aigu.
-                  scroll_string(24, String);
-                }
-                else
-                {
-                  sprintf(String, "Heure avancee inactive");
-                  String[11] = (UINT8)31;  // e accent aigu.
-                  scroll_string(24, String);
-                }
-              }
-            break;
-          }
-        break;
-
-        case (TAG_EXT_TEMP):
-          /* User must decide if external temp should be read from the DHT22 that he installed, or from the BME280 that he installed.
-             It may be useful to read the user guide about DHT22. It seems not to be reliable if the cable is more that a few inches long. */
-
-          
-          /* -------------------------------------------------------------------- *\
-             UNCOMMENT THIS BLOCK OF CODE TO READ OUTSIDE TEMPERATURE FROM BME280
-                  Read temperature, humidity and barometric pressure 
-                            from BME280 installed by user
-               and scroll them on clock display only if no error while reading.
-          \* -------------------------------------------------------------------- */
-          if (bme280_get_temp() == 0)
-          {
-            // Build-up the string to be scrolled, first with temperature...
-            if (TemperatureUnit == CELSIUS)
-            {
-              // ...in Celsius.
-              switch (Language)
-              {
-                case (ENGLISH):
-                  sprintf(String, "Out: %2.2f  Hum: %2.2f%%  Pressure: %4.2f hPa", Bme280CalibParam.TemperatureC, Bme280CalibParam.Humidity, Bme280CalibParam.Pressure);
-                  String[10] = (UCHAR)0x80;  // degree Celsius symbol.
-                break;
-
-                case (FRENCH):
-                  sprintf(String, "Ext: %2.2f  Hum: %2.2f%%  Pression: %4.2f hPa", Bme280CalibParam.TemperatureC, Bme280CalibParam.Humidity, Bme280CalibParam.Pressure);
-                  String[10] = (UCHAR)0x80;  // degree Celsius symbol.
-                break;
-              }
-            }
+            /* Announce if Daily Saving Time ("DST") is currently active or inactive, depending of current date. */
+            if (FlagDayLightSavingTime == FLAG_ON)
+              scroll_string(24, "Daylight saving time active");
             else
-            {
-              // ...or in Fahrenheit.
-              switch (Language)
-              {
-                case (ENGLISH):
-                  sprintf(String, "Out: %2.2f  Hum: %2.2f%%  Pressure: %4.2f hPa", Bme280CalibParam.TemperatureF, Bme280CalibParam.Humidity, Bme280CalibParam.Pressure);
-                  String[10] = (UCHAR)0x81;  // degree Fahrenheit symbol.
-                break;
-
-                case (FRENCH):
-                  sprintf(String, "Ext: %2.2f  Hum: %2.2f%%  Pression: %4.2f hPa", Bme280CalibParam.TemperatureF, Bme280CalibParam.Humidity, Bme280CalibParam.Pressure);
-                  String[1] = (UCHAR)0x81;  // degree Fahrenheit symbol.
-                break;
-              }
-            }
-            if (DebugBitMask & DEBUG_BME280)
-            {
-              uart_send(uart1, __LINE__, String);
-              uart_send(uart1, __LINE__, "\r");
-            }
-            scroll_string(24, String);
+              scroll_string(24, "Daylight saving time inactive");
           }
+          break;
 
-
-          /* For statistic purposes, display the cumulative number of errors while reading BME280 data. */
-          sprintf(String, " [%llu/%llu]", Bme280Errors, Bme280Readings);
-          if (DebugBitMask & DEBUG_BME280)
+        case (FRENCH):
+          if (DAYLIGHT_SAVING_TIME == DST_NONE)
           {
-            uart_send(uart1, __LINE__, String);
-            uart_send(uart1, __LINE__, "\r\r");
-          }
-          scroll_string(24, String);
-          /* ------------------------- END OF BLOCK ---------------------------- */
-          
-
-
-          /* ------------------------------------------------------------------- *\
-             UNCOMMENT THIS BLOCK OF CODE TO READ OUTSIDE TEMPERATURE FROM DHT22
-                    Read outside relative humidity and temperature
-                    from DHT22 installed by user and display them
-                       only if no error in the reading process.
-           *** --------------------------------------------------------------- ***
-          if (read_dht22(&Temperature, &Humidity) == 0)
-          {
-            // Build-up the string to be scrolled, first with temperature...
-            if (TemperatureUnit == CELSIUS)
-            {
-              // ...in Celsius.
-              switch (Language)
-              {
-                case (ENGLISH):
-                  sprintf(String, "Out temp: %2.2f  Hum: %2.2f%%", Temperature, Humidity);
-                  String[14] = (UCHAR)0x80;  // degree Celsius symbol.
-                break;
-
-                case (FRENCH):
-                  sprintf(String, "Temp ext: %2.2f  Hum: %2.2f%%", Temperature, Humidity);
-                  String[14] = (UCHAR)0x80;  // degree Celsius symbol.
-                break;
-              }
-            }
-            else
-            {
-              // ...or in Fahrenheit.
-              TemperatureF = ((Temperature * 9) / 5) + 32;  // convert from Celsius to Fahrenheit.
-              switch (Language)
-              {
-                case (ENGLISH):
-                  sprintf(String, "Out Temp: %2.2f  Hum: %2.2f%%", TemperatureF, Humidity);
-                  String[14] = (UCHAR)0x81;  // degree Fahrenheit symbol.
-                break;
-
-                case (FRENCH):
-                  sprintf(String, "Temp ext: %2.2f  Hum: %2.2f%%", TemperatureF, Humidity);
-                  String[14] = (UCHAR)0x81;  // degree Fahrenheit symbol.
-                break;
-              }
-            }
-            scroll_string(24, String);
-          }
-          
-
-          // For statistic purposes, display the cumulative number of errors while reading DHT data.
-          sprintf(String, " (%llu/%llu)", DhtErrors, DhtReadings);
-          scroll_string(24, String);
-          /* ------------------------- END OF BLOCK ---------------------------- */
-        break;
-
-        case (TAG_FIRMWARE_VERSION):
-          sprintf(String, "Pico Green Clock - Firmware Version %s", FIRMWARE_VERSION);
-          scroll_string(24, String);
-        break;
-
-        case (TAG_PICO_TEMP):
-          get_pico_temperature(String);
-          scroll_string(24, String);
-        break;
-
-        case (TAG_PICO_UNIQUE_ID):
-          pico_get_unique_board_id(&board_id);
-
-          sprintf(String, "Pico ID: ");
-          for (Loop1UInt8 = 0; Loop1UInt8 < PICO_UNIQUE_BOARD_ID_SIZE_BYTES; ++Loop1UInt8)
-          {
-            sprintf(&String[strlen(String)], "%2.2X", board_id.id[Loop1UInt8]);
-            if (Loop1UInt8 % 2)
-              sprintf(&String[strlen(String)], " ");
-          }
-
-          scroll_string(24, String);
-        break;
-
-        case (TAG_QUEUE):
-          /* For debug purposes.
-             Display all allocated scroll queue slots. */
-          if (ScrollQueueHead == ScrollQueueTail)
-          {
-            sprintf(String, "H%2.2u = T%2.2u - No element allocated...", ScrollQueueHead, ScrollQueueTail);
+            sprintf(String, "Heure avancee non supportee");
+            String[11] = (UINT8)31; // e accent aigu.
+            String[25] = (UINT8)31; // e accent aigu.
             scroll_string(24, String);
           }
           else
           {
-            Dum1UInt8 = ScrollQueueTail;
-            while (TRUE)
+            /* Announce if Daily Saving Time ("DST") is currently active or inactive, depending of current date. */
+            if (FlagDayLightSavingTime == FLAG_ON)
             {
-              sprintf(String, "(H%2.2u) T%2.2u E%2.2u", ScrollQueueHead, Dum1UInt8, ScrollQueue[Dum1UInt8]);
+              sprintf(String, "Heure avancee active");
+              String[11] = (UINT8)31; // e accent aigu.
               scroll_string(24, String);
-              ++Dum1UInt8;
-
-              /* If we reach out-of-bound, revert to 0. */
-              if (Dum1UInt8 > (MAX_SCROLL_QUEUE - 1))
-                Dum1UInt8 = 0;
-
-              /* If we scrolled all allocated slots. */
-              if (Dum1UInt8 == ScrollQueueHead)
-                break;
+            }
+            else
+            {
+              sprintf(String, "Heure avancee inactive");
+              String[11] = (UINT8)31; // e accent aigu.
+              scroll_string(24, String);
             }
           }
+          break;
+        }
         break;
 
-        case (TAG_TEMPERATURE):
-          /* ------------------------------------------------------------------- *\
-                  UNCOMMENT THIS BLOCK OF CODE TO READ AMBIENT TEMPERATURE
-                             FROM DS3231 REAL-TIME CLOCK IC
-                  Read ambient temperature from DS3231 real-time clock ic
-                           integrated in the Pico Green Clock 
-           * ------------------------------------------------------------------ *
-          get_ambient_temperature();  // read ambient temperature from DS3231.
-
-          // Write temperature to the string to be displayed...
+      case (TAG_EXT_TEMP):
+        /* User must decide if external temp should be read from the DHT22 that he installed, or from the BME280 that he installed.
+           It may be useful to read the user guide about DHT22. It seems not to be reliable if the cable is more that a few inches long. */
+#ifdef BME280_SUPPORT
+        /* -------------------------------------------------------------------- *\
+           UNCOMMENT THIS BLOCK OF CODE TO READ OUTSIDE TEMPERATURE FROM BME280
+                Read temperature, humidity and barometric pressure
+                          from BME280 installed by user
+             and scroll them on clock display only if no error while reading.
+        \* -------------------------------------------------------------------- */
+        if (bme280_get_temp() == 0)
+        {
+          // Build-up the string to be scrolled, first with temperature...
           if (TemperatureUnit == CELSIUS)
           {
             // ...in Celsius.
-            sprintf(String, "%u.%u", TemperaturePart1, TemperaturePart2);
-            Dum1UInt8 = strlen(String);
-            String[Dum1UInt8]     = (UCHAR)0x80;  // degree Celsius symbol.
-            String[Dum1UInt8 + 1] = (UCHAR)0x00;  // end-of-string.
+            switch (Language)
+            {
+            case (ENGLISH):
+              sprintf(String, "Out: %2.2f  Hum: %2.2f%%  Pressure: %4.2f hPa", Bme280CalibParam.TemperatureC, Bme280CalibParam.Humidity, Bme280CalibParam.Pressure);
+              String[10] = (UCHAR)0x80; // degree Celsius symbol.
+              break;
+
+            case (FRENCH):
+              sprintf(String, "Ext: %2.2f  Hum: %2.2f%%  Pression: %4.2f hPa", Bme280CalibParam.TemperatureC, Bme280CalibParam.Humidity, Bme280CalibParam.Pressure);
+              String[10] = (UCHAR)0x80; // degree Celsius symbol.
+              break;
+            }
           }
           else
           {
             // ...or in Fahrenheit.
-            TemperatureF = TemperaturePart1 * 9 / 5 + 32;  // convert from Celsius to Fahrenheit.
-            sprintf(String, " %2.2f", TemperatureF);
-            Dum1UInt8 = strlen(String);
-            String[Dum1UInt8]     = (UCHAR)0x81;  // degree Fahrenheit symbol.
-            String[Dum1UInt8 + 1] = (UCHAR)0x00;  // end-of-string.
+            switch (Language)
+            {
+            case (ENGLISH):
+              sprintf(String, "Out: %2.2f  Hum: %2.2f%%  Pressure: %4.2f hPa", Bme280CalibParam.TemperatureF, Bme280CalibParam.Humidity, Bme280CalibParam.Pressure);
+              String[10] = (UCHAR)0x81; // degree Fahrenheit symbol.
+              break;
+
+            case (FRENCH):
+              sprintf(String, "Ext: %2.2f  Hum: %2.2f%%  Pression: %4.2f hPa", Bme280CalibParam.TemperatureF, Bme280CalibParam.Humidity, Bme280CalibParam.Pressure);
+              String[1] = (UCHAR)0x81; // degree Fahrenheit symbol.
+              break;
+            }
           }
-          scroll_string(24, String);
-          * ------------------------ END OF BLOCK ---------------------------- */
-
-
-
-          /* ------------------------------------------------------------------- *\
-             UNCOMMENT THIS BLOCK OF CODE TO READ AMBIENT TEMPERATURE FROM DHT22
-                    Read ambient relative humidity and temperature
-                    from DHT22 installed by user and display them
-                       only if no error in the reading process.
-          \* ------------------------------------------------------------------ */
-          if (read_dht22(&Temperature, &Humidity) == 0)
+          if (DebugBitMask & DEBUG_BME280)
           {
-            // Build-up the string to be scrolled, first with temperature...
-            if (TemperatureUnit == CELSIUS)
-            {
-              // ...in Celsius.
-              sprintf(String, "%2.2f  Hum: %2.2f%%", Temperature, Humidity);
-              String[5] = (UCHAR)0x80;  // degree Celsius symbol.
-            }
-            else
-            {
-              // ...or in Fahrenheit.
-              TemperatureF = ((Temperature * 9) / 5) + 32;  // convert from Celsius to Fahrenheit.
-              sprintf(String, "%2.2f  Hum: %2.2f%%", TemperatureF, Humidity);
-              String[5] = (UCHAR)0x81;  // degree Fahrenheit symbol.
-            }
-            scroll_string(24, String);
+            uart_send(uart1, __LINE__, String);
+            uart_send(uart1, __LINE__, "\r");
           }
-
-          // For statistic purposes, display the cumulative number of errors while reading DHT data.
-          sprintf(String, " (%llu/%llu)", DhtErrors, DhtReadings);
           scroll_string(24, String);
-          /* ------------------------- END OF BLOCK ---------------------------- */
+        }
+
+        /* For statistic purposes, display the cumulative number of errors while reading BME280 data. */
+        sprintf(String, " [%llu/%llu]", Bme280Errors, Bme280Readings);
+        if (DebugBitMask & DEBUG_BME280)
+        {
+          uart_send(uart1, __LINE__, String);
+          uart_send(uart1, __LINE__, "\r\r");
+        }
+        scroll_string(24, String);
+        /* ------------------------- END OF BLOCK ---------------------------- */
+#endif
+        /* ------------------------------------------------------------------- *\
+           UNCOMMENT THIS BLOCK OF CODE TO READ OUTSIDE TEMPERATURE FROM DHT22
+                  Read outside relative humidity and temperature
+                  from DHT22 installed by user and display them
+                     only if no error in the reading process.
+         *** --------------------------------------------------------------- ***
+        if (read_dht22(&Temperature, &Humidity) == 0)
+        {
+          // Build-up the string to be scrolled, first with temperature...
+          if (TemperatureUnit == CELSIUS)
+          {
+            // ...in Celsius.
+            switch (Language)
+            {
+              case (ENGLISH):
+                sprintf(String, "Out temp: %2.2f  Hum: %2.2f%%", Temperature, Humidity);
+                String[14] = (UCHAR)0x80;  // degree Celsius symbol.
+              break;
+
+              case (FRENCH):
+                sprintf(String, "Temp ext: %2.2f  Hum: %2.2f%%", Temperature, Humidity);
+                String[14] = (UCHAR)0x80;  // degree Celsius symbol.
+              break;
+            }
+          }
+          else
+          {
+            // ...or in Fahrenheit.
+            TemperatureF = ((Temperature * 9) / 5) + 32;  // convert from Celsius to Fahrenheit.
+            switch (Language)
+            {
+              case (ENGLISH):
+                sprintf(String, "Out Temp: %2.2f  Hum: %2.2f%%", TemperatureF, Humidity);
+                String[14] = (UCHAR)0x81;  // degree Fahrenheit symbol.
+              break;
+
+              case (FRENCH):
+                sprintf(String, "Temp ext: %2.2f  Hum: %2.2f%%", TemperatureF, Humidity);
+                String[14] = (UCHAR)0x81;  // degree Fahrenheit symbol.
+              break;
+            }
+          }
+          scroll_string(24, String);
+        }
+
+
+        // For statistic purposes, display the cumulative number of errors while reading DHT data.
+        sprintf(String, " (%llu/%llu)", DhtErrors, DhtReadings);
+        scroll_string(24, String);
+        /* ------------------------- END OF BLOCK ---------------------------- */
         break;
 
-        case (TAG_VOLTAGE):
-          get_voltage(Voltage);
-          scroll_string(24, Voltage);
+      case (TAG_FIRMWARE_VERSION):
+        sprintf(String, "Pico Green Clock - Firmware Version %s", FIRMWARE_VERSION);
+        scroll_string(24, String);
         break;
 
-        default:
-          /* Out-of-bound, do nothing. */
-          return;
+      case (TAG_PICO_TEMP):
+        get_pico_temperature(String);
+        scroll_string(24, String);
+        break;
+
+      case (TAG_PICO_UNIQUE_ID):
+        pico_get_unique_board_id(&board_id);
+
+        sprintf(String, "Pico ID: ");
+        for (Loop1UInt8 = 0; Loop1UInt8 < PICO_UNIQUE_BOARD_ID_SIZE_BYTES; ++Loop1UInt8)
+        {
+          sprintf(&String[strlen(String)], "%2.2X", board_id.id[Loop1UInt8]);
+          if (Loop1UInt8 % 2)
+            sprintf(&String[strlen(String)], " ");
+        }
+
+        scroll_string(24, String);
+        break;
+
+      case (TAG_QUEUE):
+        /* For debug purposes.
+           Display all allocated scroll queue slots. */
+        if (ScrollQueueHead == ScrollQueueTail)
+        {
+          sprintf(String, "H%2.2u = T%2.2u - No element allocated...", ScrollQueueHead, ScrollQueueTail);
+          scroll_string(24, String);
+        }
+        else
+        {
+          Dum1UInt8 = ScrollQueueTail;
+          while (TRUE)
+          {
+            sprintf(String, "(H%2.2u) T%2.2u E%2.2u", ScrollQueueHead, Dum1UInt8, ScrollQueue[Dum1UInt8]);
+            scroll_string(24, String);
+            ++Dum1UInt8;
+
+            /* If we reach out-of-bound, revert to 0. */
+            if (Dum1UInt8 > (MAX_SCROLL_QUEUE - 1))
+              Dum1UInt8 = 0;
+
+            /* If we scrolled all allocated slots. */
+            if (Dum1UInt8 == ScrollQueueHead)
+              break;
+          }
+        }
+        break;
+
+      case (TAG_TEMPERATURE):
+        /* ------------------------------------------------------------------- *\
+                UNCOMMENT THIS BLOCK OF CODE TO READ AMBIENT TEMPERATURE
+                           FROM DS3231 REAL-TIME CLOCK IC
+                Read ambient temperature from DS3231 real-time clock ic
+                         integrated in the Pico Green Clock
+         * ------------------------------------------------------------------ *
+        get_ambient_temperature();  // read ambient temperature from DS3231.
+
+        // Write temperature to the string to be displayed...
+        if (TemperatureUnit == CELSIUS)
+        {
+          // ...in Celsius.
+          sprintf(String, "%u.%u", TemperaturePart1, TemperaturePart2);
+          Dum1UInt8 = strlen(String);
+          String[Dum1UInt8]     = (UCHAR)0x80;  // degree Celsius symbol.
+          String[Dum1UInt8 + 1] = (UCHAR)0x00;  // end-of-string.
+        }
+        else
+        {
+          // ...or in Fahrenheit.
+          TemperatureF = TemperaturePart1 * 9 / 5 + 32;  // convert from Celsius to Fahrenheit.
+          sprintf(String, " %2.2f", TemperatureF);
+          Dum1UInt8 = strlen(String);
+          String[Dum1UInt8]     = (UCHAR)0x81;  // degree Fahrenheit symbol.
+          String[Dum1UInt8 + 1] = (UCHAR)0x00;  // end-of-string.
+        }
+        scroll_string(24, String);
+        * ------------------------ END OF BLOCK ---------------------------- */
+
+#ifdef DHT22_SUPPORT
+        /* ------------------------------------------------------------------- *\
+           UNCOMMENT THIS BLOCK OF CODE TO READ AMBIENT TEMPERATURE FROM DHT22
+                  Read ambient relative humidity and temperature
+                  from DHT22 installed by user and display them
+                     only if no error in the reading process.
+        \* ------------------------------------------------------------------ */
+        if (read_dht22(&Temperature, &Humidity) == 0)
+        {
+          // Build-up the string to be scrolled, first with temperature...
+          if (TemperatureUnit == CELSIUS)
+          {
+            // ...in Celsius.
+            sprintf(String, "%2.2f  Hum: %2.2f%%", Temperature, Humidity);
+            String[5] = (UCHAR)0x80; // degree Celsius symbol.
+          }
+          else
+          {
+            // ...or in Fahrenheit.
+            TemperatureF = ((Temperature * 9) / 5) + 32; // convert from Celsius to Fahrenheit.
+            sprintf(String, "%2.2f  Hum: %2.2f%%", TemperatureF, Humidity);
+            String[5] = (UCHAR)0x81; // degree Fahrenheit symbol.
+          }
+          scroll_string(24, String);
+        }
+
+        // For statistic purposes, display the cumulative number of errors while reading DHT data.
+        sprintf(String, " (%llu/%llu)", DhtErrors, DhtReadings);
+        scroll_string(24, String);
+        /* ------------------------- END OF BLOCK ---------------------------- */
+#endif
+        break;
+
+      case (TAG_VOLTAGE):
+        get_voltage(Voltage);
+        scroll_string(24, Voltage);
+        break;
+
+      default:
+        /* Out-of-bound, do nothing. */
+        return;
         break;
       }
     }
@@ -6088,10 +5660,6 @@ void process_scroll_queue(void)
 
   return;
 }
-
-
-
-
 
 #ifdef DHT22_SUPPORT
 /* $TITLE=read_dht22() */
@@ -6122,12 +5690,9 @@ UINT8 read_dht22(float *Temperature, float *Humidity)
   UINT64 InitialTime;
   UINT64 FinalTime;
 
-
-
   /* Initializations. */
-  StepCount  = 0;
+  StepCount = 0;
   DataBuffer = 0;
-
 
   /* So far, line has been kept to a high level by the internal pull-up resistor. */
   gpio_set_dir(DHT22, GPIO_OUT);
@@ -6140,7 +5705,7 @@ UINT8 read_dht22(float *Temperature, float *Humidity)
   /* Reset variables before grabbing new data. */
   for (Loop1UInt16 = 0; Loop1UInt16 < MAX_READINGS; ++Loop1UInt16)
   {
-    TimerValue[Loop1UInt16]  = 0;
+    TimerValue[Loop1UInt16] = 0;
     LevelChange[Loop1UInt16] = 'X';
   }
 
@@ -6152,8 +5717,6 @@ UINT8 read_dht22(float *Temperature, float *Humidity)
 
   /* Put a pull-up resistor on the line. */
   gpio_pull_up(DHT22);
-
-
 
   /* ---------------------------------------------------------------- *\
   NOTE: Inside every "while" loop below, there is a time-out algorithm.
@@ -6170,23 +5733,19 @@ UINT8 read_dht22(float *Temperature, float *Humidity)
   InitialValue[StepCount] = time_us_64();
   while (gpio_get(DHT22) == 1)
   {
-    FinalValue[StepCount] = time_us_64();  // overwrite same variable until we get out of the while loop.
-    if ((FinalValue[StepCount] - InitialValue[StepCount]) > 100) break;  // time out.
+    FinalValue[StepCount] = time_us_64(); // overwrite same variable until we get out of the while loop.
+    if ((FinalValue[StepCount] - InitialValue[StepCount]) > 100)
+      break; // time out.
   }
-  Level[StepCount] = 1;                    // we will calculate below the length of this High level.
+  Level[StepCount] = 1; // we will calculate below the length of this High level.
   /* We get out of while loop when DHT22 sends the first "Get ready" signal (low level) or time-out. */
-
 
   /* If we never entered in the while loop above, we were already at a Low level. */
   if (FinalValue[StepCount] == 0)
-    FinalValue[StepCount] = time_us_64();  // to get an idea of the real duration of the delay for DHT22 to begin responding.
+    FinalValue[StepCount] = time_us_64(); // to get an idea of the real duration of the delay for DHT22 to begin responding.
 
   ResultValue[StepCount] = (FinalValue[StepCount] - InitialValue[StepCount]);
   ++StepCount;
-
-
-
-
 
   /* ---------------------------------------------------------------- *\
        Skip the first 80 microseconds "Get ready" signal received
@@ -6197,23 +5756,19 @@ UINT8 read_dht22(float *Temperature, float *Humidity)
   InitialValue[StepCount] = time_us_64();
   while (gpio_get(DHT22) == 0)
   {
-    FinalValue[StepCount] = time_us_64();  // overwrite same variable until we get out of the while loop.
-    if ((FinalValue[StepCount] - InitialValue[StepCount]) > 120) break;  // time out.
+    FinalValue[StepCount] = time_us_64(); // overwrite same variable until we get out of the while loop.
+    if ((FinalValue[StepCount] - InitialValue[StepCount]) > 120)
+      break; // time out.
   }
-  Level[StepCount] = 0;                    // we will calculate below the length of this High level.
+  Level[StepCount] = 0; // we will calculate below the length of this High level.
   /* We get out of while loop when DHT22 sends the second "Get ready" signal (high level) or time-out. */
-
 
   /* If we never entered in the while loop above, we were already at a high level. */
   if (FinalValue[StepCount] == 0)
-    FinalValue[StepCount] = time_us_64();  // to get an idea of the real duration of this 80 microseconds 1st "Get ready" signal.
+    FinalValue[StepCount] = time_us_64(); // to get an idea of the real duration of this 80 microseconds 1st "Get ready" signal.
 
   ResultValue[StepCount] = (FinalValue[StepCount] - InitialValue[StepCount]);
   ++StepCount;
-
-
-
-
 
   /* ---------------------------------------------------------------- *\
       Skip the second 80 microseconds "Get ready" signal received
@@ -6224,23 +5779,19 @@ UINT8 read_dht22(float *Temperature, float *Humidity)
   InitialValue[StepCount] = time_us_64();
   while (gpio_get(DHT22) == 1)
   {
-    FinalValue[StepCount] = time_us_64();  // overwrite same variable until we get out of the while loop.
-    if ((FinalValue[StepCount] - InitialValue[StepCount]) > 120) break;  // time out.
+    FinalValue[StepCount] = time_us_64(); // overwrite same variable until we get out of the while loop.
+    if ((FinalValue[StepCount] - InitialValue[StepCount]) > 120)
+      break; // time out.
   }
-  Level[StepCount] = 1;                    // we will calculate below the length of this low level.
+  Level[StepCount] = 1; // we will calculate below the length of this low level.
   /* We get out of while loop when DHT22 begins sending first data bit (low level) or time-out. */
-
 
   /* If we never entered in the while loop above, we were already at a low level. */
   if (FinalValue[StepCount] == 0)
-    FinalValue[StepCount] = time_us_64();  // to get an idea of the real duration of this 80 micro-seconds 2nd "Get ready" signal.
+    FinalValue[StepCount] = time_us_64(); // to get an idea of the real duration of this 80 micro-seconds 2nd "Get ready" signal.
 
   ResultValue[StepCount] = (FinalValue[StepCount] - InitialValue[StepCount]);
   ++StepCount;
-
-
-
-
 
   /* ---------------------------------------------------------------- *\
                 Now read the 40 bits (5 bytes X 8 bits).
@@ -6259,25 +5810,20 @@ UINT8 read_dht22(float *Temperature, float *Humidity)
     InitialValue[StepCount] = time_us_64();
     while (gpio_get(DHT22) == 0)
     {
-      FinalValue[StepCount] = time_us_64();  // overwrite same variable until we get out of "while" loop.
-      if ((FinalValue[StepCount] - InitialValue[StepCount]) > 80) break;  // time out.
+      FinalValue[StepCount] = time_us_64(); // overwrite same variable until we get out of "while" loop.
+      if ((FinalValue[StepCount] - InitialValue[StepCount]) > 80)
+        break; // time out.
     }
-    Level[StepCount] = 0;                // we will calculate below the length of this high level.
+    Level[StepCount] = 0; // we will calculate below the length of this high level.
     /* We get out of while loop when DHT22 begins sending second data bit (high level) or time-out. */
-
 
     /* If we never entered in the while loop above, we were already at a high level.
        If ever the case, we probably face an error. Checksum validation below will trap this situation. */
     if (FinalValue[StepCount] == 0)
       FinalValue[StepCount] = time_us_64();
 
-
     ResultValue[StepCount] = (FinalValue[StepCount] - InitialValue[StepCount]);
     ++StepCount;
-
-
-
-
 
     /* --------------------------------------------------------- *\
                    Receiving the second half bit.
@@ -6291,14 +5837,14 @@ UINT8 read_dht22(float *Temperature, float *Humidity)
     InitialValue[StepCount] = time_us_64();
     while (gpio_get(DHT22) == 1)
     {
-      FinalValue[StepCount] = time_us_64();  // overwrite same variable until we get out of "while" loop.
-      if ((FinalValue[StepCount] - InitialValue[StepCount]) > 35) break;  // time out after just later than "0" bit length.
+      FinalValue[StepCount] = time_us_64(); // overwrite same variable until we get out of "while" loop.
+      if ((FinalValue[StepCount] - InitialValue[StepCount]) > 35)
+        break; // time out after just later than "0" bit length.
     }
-    Level[StepCount] = 1;                    // we will calculate below the length of this high level.
+    Level[StepCount] = 1; // we will calculate below the length of this high level.
     /* NOTE: We get out of while loop either because:
              1) DHT22 is done sending second half of next bit for a "0" bit (26 microseconds) or
              2) DHT22 is sending the second half of a "1" bit (70 microseconds) and the loop timed-out. */
-
 
     /* If we never entered in the while loop above, we were already at a low level.
        If it is the case, we probably face an error. Checksum validation below will trap this situation. */
@@ -6307,8 +5853,6 @@ UINT8 read_dht22(float *Temperature, float *Humidity)
 
     ResultValue[StepCount] = (FinalValue[StepCount] - InitialValue[StepCount]);
     ++StepCount;
-
-
 
     /* --------------------------------------------------------- *\
                    Evaluate the bit just received.
@@ -6339,26 +5883,22 @@ UINT8 read_dht22(float *Temperature, float *Humidity)
     while (gpio_get(DHT22) == 1)
     {
       FinalTime = time_us_64();
-      if ((FinalTime - InitialTime) > 45) break;
+      if ((FinalTime - InitialTime) > 45)
+        break;
     }
   }
 
-
-
   /* Checksum validation. */
-  ++DhtReadings;  // one more reading from DHT22.
+  ++DhtReadings; // one more reading from DHT22.
   ComputedCheck = 0;
-
 
   /* Compute the checksum of data bytes received. */
   for (Loop1UInt16 = 0; Loop1UInt16 < 4; ++Loop1UInt16)
   {
     Value = ((DataBuffer >> (8 * Loop1UInt16)) & 0xFF);
     ComputedCheck += Value;
-    ComputedCheck &= 0xFF;  // when adding, may become more than 8 bits.
+    ComputedCheck &= 0xFF; // when adding, may become more than 8 bits.
   }
-
-
 
   /* Compare the computed checksum with the one received from DHT22 and return an error code in case of error. */
   if (ComputedCheck != Checksum)
@@ -6373,8 +5913,6 @@ UINT8 read_dht22(float *Temperature, float *Humidity)
     // sprintf(String, "Checksum= %2.2X VS %2.2X", ComputedCheck, Checksum);
     // scroll_string(24, String);
     /* End if debug section. */
-
-
 
     /*** Optionally display communication and timing information. ***
     Dum1UInt32 = 0;
@@ -6431,17 +5969,16 @@ UINT8 read_dht22(float *Temperature, float *Humidity)
     return 0xFF;
   }
 
-
   /* If no error, compute the temperature and relative humidity from received data. */
-  Byte[3] =  (DataBuffer        & 0xFF);
-  Byte[2] = ((DataBuffer >> 8)  & 0xFF);
+  Byte[3] = (DataBuffer & 0xFF);
+  Byte[2] = ((DataBuffer >> 8) & 0xFF);
   Byte[1] = ((DataBuffer >> 16) & 0xFF);
   Byte[0] = ((DataBuffer >> 24) & 0xFF);
 
-
   /* Decode temperature. */
   *Temperature = (float)((((Byte[2] & 0x7F) << 8) | Byte[3]) / 10.0);
-  if (Byte[2] & 0x80) *Temperature *= -1;
+  if (Byte[2] & 0x80)
+    *Temperature *= -1;
 
   /* Decode relative humidity. */
   *Humidity = (float)((((Byte[0] & 0x7F) << 8) | Byte[1]) / 10.0);
@@ -6449,10 +5986,6 @@ UINT8 read_dht22(float *Temperature, float *Humidity)
   return 0x00;
 }
 #endif
-
-
-
-
 
 /* $TITLE=reverse_bits() */
 /* $PAGE */
@@ -6476,10 +6009,6 @@ UINT8 reverse_bits(UINT8 InputByte)
   return (OutputByte >> 3);
 }
 
-
-
-
-
 /* $TITLE=scroll_one_dot() */
 /* $PAGE */
 /* ------------------------------------------------------------------ *\
@@ -6487,11 +6016,9 @@ UINT8 reverse_bits(UINT8 InputByte)
 \* ------------------------------------------------------------------ */
 void scroll_one_dot(void)
 {
-  UINT8 CharacterBuffer;  // buffer to temporarily hold a character (to keep track of "indicators" status).
-  UINT8 RowNumber;        // row number in the framebuffer.
-  UINT8 SectionNumber;    // section number in the framebuffer.
-
-
+  UINT8 CharacterBuffer; // buffer to temporarily hold a character (to keep track of "indicators" status).
+  UINT8 RowNumber;       // row number in the framebuffer.
+  UINT8 SectionNumber;   // section number in the framebuffer.
 
   /* ---------------------------------------------------------------- *\
                Scroll the framebuffer one dot to the left.
@@ -6499,7 +6026,7 @@ void scroll_one_dot(void)
   /* Scan the 7 rows of data. Row 0 is reserved for "indicators". */
   for (RowNumber = 1; RowNumber < 8; ++RowNumber)
   {
-    CharacterBuffer = DisplayBuffer[RowNumber] & 0x03;  // keep track of "indicators" status (first 2 bits).
+    CharacterBuffer = DisplayBuffer[RowNumber] & 0x03; // keep track of "indicators" status (first 2 bits).
 
     /* Scan all "sections" of the framebuffer. One section is 8 bits width. */
     for (SectionNumber = 0; SectionNumber < sizeof(DisplayBuffer) / 8; ++SectionNumber)
@@ -6510,15 +6037,11 @@ void scroll_one_dot(void)
       else
         DisplayBuffer[(SectionNumber * 8) + RowNumber] = DisplayBuffer[(SectionNumber * 8) + RowNumber] >> 1;
     }
-    DisplayBuffer[RowNumber] = (DisplayBuffer[RowNumber] & (~0x03)) | CharacterBuffer;  // restore the "indicators" status.
+    DisplayBuffer[RowNumber] = (DisplayBuffer[RowNumber] & (~0x03)) | CharacterBuffer; // restore the "indicators" status.
   }
 
   return;
 }
-
-
-
-
 
 /* $TITLE=scroll_queue() */
 /* $PAGE */
@@ -6530,8 +6053,6 @@ void scroll_one_dot(void)
 UINT8 scroll_queue(UINT8 Tag)
 {
   UINT8 Dum1UChar;
-
-
 
   /* Check if the circular buffer is full. */
   if (((ScrollQueueTail > 0) && (ScrollQueueHead == ScrollQueueTail - 1)) || ((ScrollQueueTail == 0) && (ScrollQueueHead == MAX_SCROLL_QUEUE - 1)))
@@ -6545,14 +6066,11 @@ UINT8 scroll_queue(UINT8 Tag)
   Dum1UChar = ScrollQueueHead;
   ++ScrollQueueHead;
 
-  if (ScrollQueueHead >= MAX_SCROLL_QUEUE) ScrollQueueHead = 0;  // revert to zero when reaching out-of-bound.
+  if (ScrollQueueHead >= MAX_SCROLL_QUEUE)
+    ScrollQueueHead = 0; // revert to zero when reaching out-of-bound.
 
   return 0x00;
 }
-
-
-
-
 
 /* $TITLE=scroll_queue_value() */
 /* $PAGE */
@@ -6565,7 +6083,6 @@ UINT8 scroll_queue(UINT8 Tag)
 UINT8 scroll_queue_value(UINT8 Tag, UCHAR *String)
 {
   static UINT8 EventNumber;
-
 
   /* NOTE: We overwrite a calendar event ("Description") with data of
            interest (variable, setting, marker, etc...) and then,
@@ -6587,10 +6104,6 @@ UINT8 scroll_queue_value(UINT8 Tag, UCHAR *String)
   return EventNumber;
 }
 
-
-
-
-
 /* $TITLE=scroll_string() */
 /* $PAGE */
 /* ------------------------------------------------------------------ *\
@@ -6600,8 +6113,6 @@ void scroll_string(UINT8 StartColumn, UCHAR *String)
 {
   UINT16 Loop1UInt;
 
-
-
   if (CurrentClockMode != MODE_SCROLLING)
   {
     /* Nothing scrolling on the screen... Clear framebuffer on entry. */
@@ -6609,7 +6120,7 @@ void scroll_string(UINT8 StartColumn, UCHAR *String)
 
     /* If no string is scrolling, use the start column specified. (The first two columns are used by LED indicators). */
     if (StartColumn == 0)
-      ScrollDotCount = 1;  // will be auto-incremented in the fill_display_buffer_5X7() function call.
+      ScrollDotCount = 1; // will be auto-incremented in the fill_display_buffer_5X7() function call.
     else
       ScrollDotCount = StartColumn;
   }
@@ -6618,7 +6129,7 @@ void scroll_string(UINT8 StartColumn, UCHAR *String)
     /* There is something currently scrolling. Append 2 spaces, then the new string. */
     for (Loop1UInt = 0; Loop1UInt < 2; ++Loop1UInt)
     {
-      if (ScrollDotCount >= (DISPLAY_BUFFER_SIZE - 9))  // make sure we have enough space to add spaces.
+      if (ScrollDotCount >= (DISPLAY_BUFFER_SIZE - 9)) // make sure we have enough space to add spaces.
       {
         /* We're approaching the end of the virtual framebuffer... wait a few seconds for the display buffer to be partly cleared. */
         sleep_ms(SCROLL_DOT_TIME * 20);
@@ -6630,27 +6141,22 @@ void scroll_string(UINT8 StartColumn, UCHAR *String)
     }
   }
 
-
   /* Insert the new string in the framebuffer. */
   for (Loop1UInt = 0; Loop1UInt < strlen(String); ++Loop1UInt)
   {
     while (ScrollDotCount >= (DISPLAY_BUFFER_SIZE - 6))
     {
       /* We are approaching the end of the framebuffer... wait a few seconds for the buffer to be partly cleared. */
-      sleep_ms(SCROLL_DOT_TIME * 6 * 10);  // wait for about 10 characters to be scrolled.
+      sleep_ms(SCROLL_DOT_TIME * 6 * 10); // wait for about 10 characters to be scrolled.
     }
     ScrollDotCount = fill_display_buffer_5X7(++ScrollDotCount, String[Loop1UInt]);
 
     CurrentClockMode = MODE_SCROLLING;
-    FlagScrollStart  = FLAG_ON;
+    FlagScrollStart = FLAG_ON;
   }
 
   return;
 }
-
-
-
-
 
 /* $TITLE=scroll_unqueue() */
 /* $PAGE */
@@ -6661,24 +6167,20 @@ UINT8 scroll_unqueue(void)
 {
   UINT8 Tag;
 
-
-
   /* Check if the scroll queue is empty. */
-  if (ScrollQueueHead == ScrollQueueTail) return MAX_EVENTS;
+  if (ScrollQueueHead == ScrollQueueTail)
+    return MAX_EVENTS;
 
   Tag = ScrollQueue[ScrollQueueTail];
   ScrollQueue[ScrollQueueTail] = 0xAA;
   ++ScrollQueueTail;
 
   /* If reaching out-of-bound, revert to zero. */
-  if (ScrollQueueTail >= MAX_SCROLL_QUEUE) ScrollQueueTail = 0;
+  if (ScrollQueueTail >= MAX_SCROLL_QUEUE)
+    ScrollQueueTail = 0;
 
   return Tag;
 }
-
-
-
-
 
 /* ------------------------------------------------------------------ *\
            Turn on clock indicator for selected day-of-week,
@@ -6687,24 +6189,84 @@ UINT8 scroll_unqueue(void)
 \* ------------------------------------------------------------------ */
 void select_weekday(UINT8 DayNumber)
 {
-  switch(DayNumber)
+  switch (DayNumber)
   {
-    case  0:IndicatorMondayOn; IndicatorTuesdayOff;IndicatorWednesdayOff;IndicatorThursdayOff;IndicatorFridayOff;IndicatorSaturdayOff;IndicatorSundayOff; break;
-    case  1:IndicatorMondayOff;IndicatorTuesdayOn; IndicatorWednesdayOff;IndicatorThursdayOff;IndicatorFridayOff;IndicatorSaturdayOff;IndicatorSundayOff; break;
-    case  2:IndicatorMondayOff;IndicatorTuesdayOff;IndicatorWednesdayOn; IndicatorThursdayOff;IndicatorFridayOff;IndicatorSaturdayOff;IndicatorSundayOff; break;
-    case  3:IndicatorMondayOff;IndicatorTuesdayOff;IndicatorWednesdayOff;IndicatorThursdayOn; IndicatorFridayOff;IndicatorSaturdayOff;IndicatorSundayOff; break;
-    case  4:IndicatorMondayOff;IndicatorTuesdayOff;IndicatorWednesdayOff;IndicatorThursdayOff;IndicatorFridayOn; IndicatorSaturdayOff;IndicatorSundayOff; break;
-    case  5:IndicatorMondayOff;IndicatorTuesdayOff;IndicatorWednesdayOff;IndicatorThursdayOff;IndicatorFridayOff;IndicatorSaturdayOn; IndicatorSundayOff; break;
-    case  6:IndicatorMondayOff;IndicatorTuesdayOff;IndicatorWednesdayOff;IndicatorThursdayOff;IndicatorFridayOff;IndicatorSaturdayOff;IndicatorSundayOn;  break;
-    case 10:IndicatorMondayOff;IndicatorTuesdayOff;IndicatorWednesdayOff;IndicatorThursdayOff;IndicatorFridayOff;IndicatorSaturdayOff;IndicatorSundayOff; break;
+  case 0:
+    IndicatorMondayOn;
+    IndicatorTuesdayOff;
+    IndicatorWednesdayOff;
+    IndicatorThursdayOff;
+    IndicatorFridayOff;
+    IndicatorSaturdayOff;
+    IndicatorSundayOff;
+    break;
+  case 1:
+    IndicatorMondayOff;
+    IndicatorTuesdayOn;
+    IndicatorWednesdayOff;
+    IndicatorThursdayOff;
+    IndicatorFridayOff;
+    IndicatorSaturdayOff;
+    IndicatorSundayOff;
+    break;
+  case 2:
+    IndicatorMondayOff;
+    IndicatorTuesdayOff;
+    IndicatorWednesdayOn;
+    IndicatorThursdayOff;
+    IndicatorFridayOff;
+    IndicatorSaturdayOff;
+    IndicatorSundayOff;
+    break;
+  case 3:
+    IndicatorMondayOff;
+    IndicatorTuesdayOff;
+    IndicatorWednesdayOff;
+    IndicatorThursdayOn;
+    IndicatorFridayOff;
+    IndicatorSaturdayOff;
+    IndicatorSundayOff;
+    break;
+  case 4:
+    IndicatorMondayOff;
+    IndicatorTuesdayOff;
+    IndicatorWednesdayOff;
+    IndicatorThursdayOff;
+    IndicatorFridayOn;
+    IndicatorSaturdayOff;
+    IndicatorSundayOff;
+    break;
+  case 5:
+    IndicatorMondayOff;
+    IndicatorTuesdayOff;
+    IndicatorWednesdayOff;
+    IndicatorThursdayOff;
+    IndicatorFridayOff;
+    IndicatorSaturdayOn;
+    IndicatorSundayOff;
+    break;
+  case 6:
+    IndicatorMondayOff;
+    IndicatorTuesdayOff;
+    IndicatorWednesdayOff;
+    IndicatorThursdayOff;
+    IndicatorFridayOff;
+    IndicatorSaturdayOff;
+    IndicatorSundayOn;
+    break;
+  case 10:
+    IndicatorMondayOff;
+    IndicatorTuesdayOff;
+    IndicatorWednesdayOff;
+    IndicatorThursdayOff;
+    IndicatorFridayOff;
+    IndicatorSaturdayOff;
+    IndicatorSundayOff;
+    break;
   }
 
   return;
 }
-
-
-
-
 
 /* $TITLE=send_data() */
 /* $PAGE */
@@ -6714,7 +6276,6 @@ void select_weekday(UINT8 DayNumber)
 void send_data(UINT8 Byte)
 {
   UINT8 Loop1UChar;
-
 
   for (Loop1UChar = 0; Loop1UChar < 8; ++Loop1UChar)
   {
@@ -6732,10 +6293,6 @@ void send_data(UINT8 Byte)
   return;
 }
 
-
-
-
-
 /* $TITLE=set_mode_out() */
 /* $PAGE */
 /* ------------------------------------------------------------------ *\
@@ -6745,14 +6302,11 @@ void set_mode_out(void)
 {
   UINT8 Loop1UInt8;
 
-
   if ((FlagSetupRTC == FLAG_ON) && (FlagSetupClock[SETUP_HOUR] == FLAG_ON))
     set_hour(CurrentHourSetting);
 
-
   if ((FlagSetupRTC == FLAG_ON) && (FlagSetupClock[SETUP_MINUTE] == FLAG_ON))
     set_minute(CurrentMinuteSetting);
-
 
   if ((FlagSetupRTC == FLAG_ON) && (FlagSetupClock[SETUP_MONTH] == FLAG_ON))
   {
@@ -6761,14 +6315,12 @@ void set_mode_out(void)
     select_weekday(get_weekday(Year4Digits, CurrentMonth, CurrentDayOfMonth) - 1);
   }
 
-
   if ((FlagSetupRTC == FLAG_ON) && (FlagSetupClock[SETUP_DAY_OF_MONTH] == FLAG_ON))
   {
     set_day_of_month(CurrentDayOfMonth);
     set_day_of_week(get_weekday(Year4Digits, CurrentMonth, CurrentDayOfMonth));
     select_weekday(get_weekday(Year4Digits, CurrentMonth, CurrentDayOfMonth) - 1);
   }
-
 
   if ((FlagSetupRTC == FLAG_ON) && (FlagSetupClock[SETUP_YEAR] == FLAG_ON))
   {
@@ -6777,10 +6329,7 @@ void set_mode_out(void)
     select_weekday(get_weekday(Year4Digits, CurrentMonth, CurrentDayOfMonth) - 1);
   }
 
-
   FlagFlashing[SetupStep] = 0xFF;
-
-
 
   /*** Check the purpose of this code chunk. ***
   if (FlagSetupAlarm[SETUP_ALARM_MINUTE] == FLAG_ON)
@@ -6789,7 +6338,6 @@ void set_mode_out(void)
     fill_display_buffer_4X7(18, (Alarm[AlarmNumber].Minute % 10 + '0') & FlagFlashing[4]);
   }
   ***/
-
 
   /*** Check the purpose of this code chunk. ***
   if ((FlagSetupTimer[SETUP_TIMER_UP_DOWN] == FLAG_ON) && (TimerMode == TIMER_OFF))
@@ -6800,12 +6348,9 @@ void set_mode_out(void)
   }
   ***/
 
-
-
-  IdleNumberOfSeconds   = 0;         // reset number of seconds the system has been idle.
-  FlagTone              = FLAG_OFF;  // reset flag tone.
-  FlagSetupRTC          = FLAG_OFF;  // reset flag indicating time settings have changed.
-
+  IdleNumberOfSeconds = 0; // reset number of seconds the system has been idle.
+  FlagTone = FLAG_OFF;     // reset flag tone.
+  FlagSetupRTC = FLAG_OFF; // reset flag indicating time settings have changed.
 
   /* Reset all alarm setup member flags. */
   for (Loop1UInt8 = SETUP_NONE; Loop1UInt8 < SETUP_ALARM_HI_LIMIT; ++Loop1UInt8)
@@ -6822,10 +6367,6 @@ void set_mode_out(void)
   return;
 }
 
-
-
-
-
 /* $TITLE=set_mode_timeout() */
 /* $PAGE */
 /* ------------------------------------------------------------------ *\
@@ -6833,20 +6374,16 @@ void set_mode_out(void)
 \* ------------------------------------------------------------------ */
 void set_mode_timeout(void)
 {
-  ScrollSecondCounter  = 0;             // reset number of seconds to reach time-to-scroll.
-  SetupSource          = SETUP_SOURCE_NONE;
-  FlagIdleCheck        = FLAG_OFF;
-  FlagSetAlarm         = FLAG_OFF;      // reset alarm setup mode flag when timed-out.
-  FlagSetClock         = FLAG_OFF;      // reset clock setup mode flag when timed-out.
-  FlagSetTimer         = FLAG_OFF;      // reset timer setup mode flag when timed-out.
-  FlagUpdateTime       = FLAG_ON;       // let's display current time on the clock, now.
+  ScrollSecondCounter = 0; // reset number of seconds to reach time-to-scroll.
+  SetupSource = SETUP_SOURCE_NONE;
+  FlagIdleCheck = FLAG_OFF;
+  FlagSetAlarm = FLAG_OFF;  // reset alarm setup mode flag when timed-out.
+  FlagSetClock = FLAG_OFF;  // reset clock setup mode flag when timed-out.
+  FlagSetTimer = FLAG_OFF;  // reset timer setup mode flag when timed-out.
+  FlagUpdateTime = FLAG_ON; // let's display current time on the clock, now.
 
   return;
 }
-
-
-
-
 
 /* $TITLE=setup_alarm_frame() */
 /* $PAGE */
@@ -6859,14 +6396,10 @@ void setup_alarm_frame(void)
 
   UINT8 AmFlag;
   UINT8 PmFlag;
-  UINT8 AlarmHourDisplay;  // to display alarm hour in 12 or 24-hours format.
+  UINT8 AlarmHourDisplay; // to display alarm hour in 12 or 24-hours format.
   UINT8 Loop1UInt8;
 
-
-
   CurrentClockMode = MODE_ALARM_SETUP;
-
-
 
   /* Check if current alarm setup step is either alarm number or alarm ON / OFF toggle. */
   if (SetupStep == SETUP_ALARM_NUMBER || SetupStep == SETUP_ALARM_ON_OFF)
@@ -6877,17 +6410,14 @@ void setup_alarm_frame(void)
       FlagSetupAlarm[SETUP_ALARM_NUMBER] = FLAG_ON;
     }
 
-
     /* Check if current alarm setup step is alarm ON / OFF toggling. */
     if (SetupStep == SETUP_ALARM_ON_OFF)
     {
       FlagSetupAlarm[SETUP_ALARM_ON_OFF] = FLAG_ON;
     }
 
-
     /* Display first digit on clock display ("A" for "Alarm"). */
     fill_display_buffer_4X7(0, 'A');
-
 
     if (AlarmNumber == 0)
     {
@@ -6900,10 +6430,8 @@ void setup_alarm_frame(void)
       fill_display_buffer_4X7(5, '2' & FlagFlashing[1]);
     }
 
-
     /* Display double dots as display separator. */
     fill_display_buffer_4X7(10, ':');
-
 
     fill_display_buffer_4X7(13, '0' & FlagFlashing[2]);
     if (Alarm[AlarmNumber].FlagStatus == FLAG_ON)
@@ -6917,12 +6445,9 @@ void setup_alarm_frame(void)
       fill_display_buffer_4X7(18, 'F' & FlagFlashing[2]);
     }
 
-
     /* Clean the non visible part of the display when done. */
     clear_framebuffer(26);
   }
-
-
 
   /* Check if current alarm setup step is either alarm hour setup or alarm minute setup. */
   if (SetupStep == SETUP_ALARM_HOUR || SetupStep == SETUP_ALARM_MINUTE)
@@ -6932,21 +6457,17 @@ void setup_alarm_frame(void)
       FlagSetupAlarm[SETUP_ALARM_HOUR] = FLAG_ON;
     }
 
-
-
     if (SetupStep == SETUP_ALARM_MINUTE)
     {
       FlagSetupAlarm[SETUP_ALARM_MINUTE] = FLAG_ON;
     }
 
-
-
     /* Display current alarm hour and minute on clock display. */
     if (TimeDisplayMode == H12)
     {
       AlarmHourDisplay = convert_h24_to_h12(Alarm[AlarmNumber].Hour, &AmFlag, &PmFlag);
-      (AmFlag == FLAG_ON) ? (DisplayBuffer[4] |=  (1 << 0)) : (DisplayBuffer[4] &= ~(1 << 0));
-      (PmFlag == FLAG_ON) ? (DisplayBuffer[4] |=  (1 << 1)) : (DisplayBuffer[4] &= ~(1 << 1));
+      (AmFlag == FLAG_ON) ? (DisplayBuffer[4] |= (1 << 0)) : (DisplayBuffer[4] &= ~(1 << 0));
+      (PmFlag == FLAG_ON) ? (DisplayBuffer[4] |= (1 << 1)) : (DisplayBuffer[4] &= ~(1 << 1));
     }
     else
     {
@@ -6967,20 +6488,16 @@ void setup_alarm_frame(void)
     fill_display_buffer_4X7(13, (Alarm[AlarmNumber].Minute / 10 + '0') & FlagFlashing[4]);
     fill_display_buffer_4X7(18, (Alarm[AlarmNumber].Minute % 10 + '0') & FlagFlashing[4]);
 
-
     /* Clean the non visible part of the display when done. */
     clear_framebuffer(26);
   }
 
-
-
   /* Check if current alarm setup step is alarm day-of-week setup. */
   if (SetupStep == SETUP_ALARM_DAY)
   {
-    FlagSetupAlarm[SETUP_ALARM_DAY] = FLAG_ON;  // flag indicating we are in "Alarm Day-of-week" setup step.
+    FlagSetupAlarm[SETUP_ALARM_DAY] = FLAG_ON; // flag indicating we are in "Alarm Day-of-week" setup step.
     /* Note: day-of-week indicator for alarm setting will blink in the funtion "evaluate_blinking_time()". */
   }
-
 
   /* Check if we are done with all alarm setting. */
   if (SetupStep >= SETUP_ALARM_HI_LIMIT)
@@ -6991,23 +6508,21 @@ void setup_alarm_frame(void)
       set_alarm1_clock(ALARM_MODE_HOUR_MIN_SEC_MATCHED, 00, Alarm[0].Minute, Alarm[0].Hour, Alarm[0].Day);
     }
 
-
     /* If alarm #2 is turned on, write it to the RTC IC. */
     if ((AlarmNumber == 1) && (Alarm[1].FlagStatus == FLAG_ON))
     {
       set_alarm2_clock(Alarm[1].Minute, Alarm[1].Hour, Alarm[1].Day);
     }
 
-
     /* Reset all related flags and variables when alarm setup is done. */
-    FlagSetAlarm          = FLAG_OFF;  // reset alarm setup flag when done.
-    FlagIdleCheck         = FLAG_OFF;  // no more checking for a timeout.
-    FlagTone              = FLAG_OFF;  // reset flag tone.
-    FlagUpdateTime        = FLAG_ON;   // it's now time to display time on clock display.
-    IdleNumberOfSeconds   = 0;         // reset the number of seconds the system has been idle.
-    ScrollSecondCounter   = 0;         // reset number of seconds to reach time-to-scroll (obsolete).
-    SetupSource           = SETUP_SOURCE_NONE;
-    SetupStep             = SETUP_NONE;
+    FlagSetAlarm = FLAG_OFF;  // reset alarm setup flag when done.
+    FlagIdleCheck = FLAG_OFF; // no more checking for a timeout.
+    FlagTone = FLAG_OFF;      // reset flag tone.
+    FlagUpdateTime = FLAG_ON; // it's now time to display time on clock display.
+    IdleNumberOfSeconds = 0;  // reset the number of seconds the system has been idle.
+    ScrollSecondCounter = 0;  // reset number of seconds to reach time-to-scroll (obsolete).
+    SetupSource = SETUP_SOURCE_NONE;
+    SetupStep = SETUP_NONE;
 
     /* Reset all alarm setup member flags. */
     for (Loop1UInt8 = SETUP_NONE; Loop1UInt8 < SETUP_ALARM_HI_LIMIT; ++Loop1UInt8)
@@ -7016,10 +6531,6 @@ void setup_alarm_frame(void)
 
   return;
 }
-
-
-
-
 
 /* $TITLE=setup_alarm_variables() */
 /* $PAGE */
@@ -7037,8 +6548,6 @@ void setup_alarm_variables(UINT8 FlagButtonSelect)
     else
       AlarmNumber = 0;
   }
-
-
 
   /* Toggle alarm ON / OFF. */
   if (FlagSetupAlarm[SETUP_ALARM_ON_OFF] == FLAG_ON)
@@ -7061,8 +6570,6 @@ void setup_alarm_variables(UINT8 FlagButtonSelect)
     }
   }
 
-
-
   /* Check if we are setting up "Alarm Hour". */
   if (FlagSetupAlarm[SETUP_ALARM_HOUR] == FLAG_ON)
   {
@@ -7070,17 +6577,17 @@ void setup_alarm_variables(UINT8 FlagButtonSelect)
     {
       /* User pressed the "Up" (middle) button while in "Alarm Hour" set mode. */
       ++Alarm[AlarmNumber].Hour;
-      if (Alarm[AlarmNumber].Hour == 24) Alarm[AlarmNumber].Hour = 0;  // reset to zero when reaching out-of-bound.
+      if (Alarm[AlarmNumber].Hour == 24)
+        Alarm[AlarmNumber].Hour = 0; // reset to zero when reaching out-of-bound.
     }
     else
     {
       /* User pressed the "Down" (bottom) button while in "Alarm Hour" set mode. */
       --Alarm[AlarmNumber].Hour;
-      if (Alarm[AlarmNumber].Hour == 255) Alarm[AlarmNumber].Hour = 23;  // reset to 23 when reaching out-of-bound.
+      if (Alarm[AlarmNumber].Hour == 255)
+        Alarm[AlarmNumber].Hour = 23; // reset to 23 when reaching out-of-bound.
     }
   }
-
-
 
   /* Check if we are setting up "Alarm Minute". */
   if (FlagSetupAlarm[SETUP_ALARM_MINUTE] == FLAG_ON)
@@ -7089,17 +6596,17 @@ void setup_alarm_variables(UINT8 FlagButtonSelect)
     {
       /* User pressed the "Up" (middle) button while in "Alarm Minute" set mode. */
       ++Alarm[AlarmNumber].Minute;
-      if (Alarm[AlarmNumber].Minute == 60) Alarm[AlarmNumber].Minute = 0;  // reset to zero when reaching out-of-bound.
+      if (Alarm[AlarmNumber].Minute == 60)
+        Alarm[AlarmNumber].Minute = 0; // reset to zero when reaching out-of-bound.
     }
     else
     {
       /* User pressed the "Down" (bottom) button while in "Alarm Minute" set mode. */
       --Alarm[AlarmNumber].Minute;
-      if (Alarm[AlarmNumber].Minute == 255) Alarm[AlarmNumber].Minute = 59;  // reset to 59 when reaching out-of-bound.
+      if (Alarm[AlarmNumber].Minute == 255)
+        Alarm[AlarmNumber].Minute = 59; // reset to 59 when reaching out-of-bound.
     }
   }
-
-
 
   /* Check if we are setting up "Alarm Day". */
   if (FlagSetupAlarm[SETUP_ALARM_DAY] == FLAG_ON)
@@ -7108,22 +6615,20 @@ void setup_alarm_variables(UINT8 FlagButtonSelect)
     {
       /* User pressed the "Up" (middle) button, proceed through all day-of-week. */
       ++Alarm[AlarmNumber].Day;
-      if (Alarm[AlarmNumber].Day == 8) Alarm[AlarmNumber].Day = 1;  // when reaching out-of-bound, revert to 1.
+      if (Alarm[AlarmNumber].Day == 8)
+        Alarm[AlarmNumber].Day = 1; // when reaching out-of-bound, revert to 1.
     }
     else
     {
       /* User presser the "Down" (bottom) button, proceed through all day-of-week. */
       --Alarm[AlarmNumber].Day;
-      if (Alarm[AlarmNumber].Day == 0) Alarm[AlarmNumber].Day = 7;  // when reaching out-of-bound, revert to 7.
+      if (Alarm[AlarmNumber].Day == 0)
+        Alarm[AlarmNumber].Day = 7; // when reaching out-of-bound, revert to 7.
     }
   }
 
   return;
 }
-
-
-
-
 
 /* $TITLE=setup_clock_frame() */
 /* $PAGE */
@@ -7139,27 +6644,21 @@ void setup_clock_frame(void)
   UINT8 Dum1UChar;
   UINT8 Loop1UInt8;
 
-
-
   /* Make sure the function has not been called by mistake. */
   if (SetupStep == SETUP_NONE)
     return;
 
-
   CurrentClockMode = MODE_CLOCK_SETUP;
-
 
   /* ---------------- Read the real-time clock IC. ------------------ */
   Time_RTC = Read_RTC();
 
-  Time_RTC.seconds    = Time_RTC.seconds    & 0x7F;
-  Time_RTC.minutes    = Time_RTC.minutes    & 0x7F;
-  Time_RTC.hour       = Time_RTC.hour       & 0x3F;
-  Time_RTC.dayofweek  = Time_RTC.dayofweek  & 0x07;
+  Time_RTC.seconds = Time_RTC.seconds & 0x7F;
+  Time_RTC.minutes = Time_RTC.minutes & 0x7F;
+  Time_RTC.hour = Time_RTC.hour & 0x3F;
+  Time_RTC.dayofweek = Time_RTC.dayofweek & 0x07;
   Time_RTC.dayofmonth = Time_RTC.dayofmonth & 0x3F;
-  Time_RTC.month      = Time_RTC.month      & 0x1F;
-
-
+  Time_RTC.month = Time_RTC.month & 0x1F;
 
   /* ------------------- Setup Hour and Minute ---------------------- */
   /* Setup "Hours" and "Minutes". */
@@ -7176,7 +6675,6 @@ void setup_clock_frame(void)
       FlagSetupClock[SETUP_HOUR] = FLAG_ON;
     }
 
-
     if (SetupStep == SETUP_MINUTE)
     {
       /* Setup "minutes". */
@@ -7188,12 +6686,11 @@ void setup_clock_frame(void)
       FlagSetupClock[SETUP_MINUTE] = FLAG_ON;
     }
 
-
     if (TimeDisplayMode == H12)
     {
       CurrentHour = convert_h24_to_h12(CurrentHourSetting, &AmFlag, &PmFlag);
-      (AmFlag == FLAG_ON) ? (DisplayBuffer[4] |=  (1 << 0)) : (DisplayBuffer[4] &= ~(1 << 0));
-      (PmFlag == FLAG_ON) ? (DisplayBuffer[4] |=  (1 << 1)) : (DisplayBuffer[4] &= ~(1 << 1));
+      (AmFlag == FLAG_ON) ? (DisplayBuffer[4] |= (1 << 0)) : (DisplayBuffer[4] &= ~(1 << 0));
+      (PmFlag == FLAG_ON) ? (DisplayBuffer[4] |= (1 << 1)) : (DisplayBuffer[4] &= ~(1 << 1));
     }
     else
     {
@@ -7210,12 +6707,10 @@ void setup_clock_frame(void)
       fill_display_buffer_4X7(0, (CurrentHour / 10 + '0') & FlagFlashing[SETUP_HOUR]);
 
     fill_display_buffer_4X7(5, (CurrentHour % 10 + '0') & FlagFlashing[SETUP_HOUR]);
-    fill_display_buffer_4X7(10, 0x3A);  // slim ":"
+    fill_display_buffer_4X7(10, 0x3A); // slim ":"
     fill_display_buffer_4X7(12, (CurrentMinute / 10 + '0') & FlagFlashing[SETUP_MINUTE]);
     fill_display_buffer_4X7(17, (CurrentMinute % 10 + '0') & FlagFlashing[SETUP_MINUTE]);
   }
-
-
 
   /* --------------- Setup Month and Day-of-month ------------------- */
   if ((SetupStep == SETUP_DAY_OF_MONTH) || (SetupStep == SETUP_MONTH))
@@ -7229,15 +6724,14 @@ void setup_clock_frame(void)
       CurrentDayOfMonth = Dum1UChar;
     }
 
-
     if (SetupStep == SETUP_DAY_OF_MONTH)
     {
       FlagSetupClock[SETUP_DAY_OF_MONTH] = FLAG_ON;
-      FlagSetupClock[SETUP_MONTH]        = FLAG_OFF;
+      FlagSetupClock[SETUP_MONTH] = FLAG_OFF;
     }
     else
     {
-      FlagSetupClock[SETUP_MONTH]        = FLAG_ON;
+      FlagSetupClock[SETUP_MONTH] = FLAG_ON;
       FlagSetupClock[SETUP_DAY_OF_MONTH] = FLAG_OFF;
     }
 
@@ -7262,8 +6756,6 @@ void setup_clock_frame(void)
     }
   }
 
-
-
   /* ------------------------- Setup Year --------------------------- */
   if (SetupStep == SETUP_YEAR)
   {
@@ -7276,10 +6768,8 @@ void setup_clock_frame(void)
     fill_display_buffer_4X7(5, CurrentYearCentile % 10 + 0x30);
     fill_display_buffer_4X7(10, ((CurrentYearLowPart / 10 + 0x30) & FlagFlashing[SETUP_YEAR]));
     fill_display_buffer_4X7(15, ((CurrentYearLowPart % 10 + 0x30) & FlagFlashing[SETUP_YEAR]));
-    fill_display_buffer_4X7(23,' ');
+    fill_display_buffer_4X7(23, ' ');
   }
-
-
 
   /* ------------------ Setup Daylight Saving Time ------------------ */
   if (SetupStep == SETUP_DST)
@@ -7288,19 +6778,19 @@ void setup_clock_frame(void)
     FlagSetupClock[SETUP_DST] = FLAG_ON;
 
     clear_framebuffer(0);
-    fill_display_buffer_5X7(2,  'D');
-    fill_display_buffer_5X7(8,  'S');
+    fill_display_buffer_5X7(2, 'D');
+    fill_display_buffer_5X7(8, 'S');
     fill_display_buffer_5X7(14, 'T');
 
     switch (DaylightSavingTime)
     {
-      default:
-      case (DST_NONE):
-        fill_display_buffer_4X7(18, ('0' & FlagFlashing[SETUP_DST]));
+    default:
+    case (DST_NONE):
+      fill_display_buffer_4X7(18, ('0' & FlagFlashing[SETUP_DST]));
       break;
 
-      case (DST_NORTH_AMERICA):
-        fill_display_buffer_4X7(18, ('1' & FlagFlashing[SETUP_DST]));
+    case (DST_NORTH_AMERICA):
+      fill_display_buffer_4X7(18, ('1' & FlagFlashing[SETUP_DST]));
       break;
     }
 
@@ -7308,14 +6798,11 @@ void setup_clock_frame(void)
     clear_framebuffer(26);
   }
 
-
-
   /* ----------------------- Setup Keyclick ------------------------- */
   if (SetupStep == SETUP_KEYCLICK)
   {
     /* Setup "Keyclick sound". */
     FlagSetupClock[SETUP_KEYCLICK] = FLAG_ON;
-
 
     /* Setup "keyclick" ON / OFF". */
     FlagTone = FLAG_ON;
@@ -7323,7 +6810,7 @@ void setup_clock_frame(void)
     fill_display_buffer_4X7(0, 'B');
     fill_display_buffer_4X7(5, 'P');
     fill_display_buffer_4X7(10, ':');
-    fill_display_buffer_4X7(12,('0' & FlagFlashing[SETUP_KEYCLICK]));
+    fill_display_buffer_4X7(12, ('0' & FlagFlashing[SETUP_KEYCLICK]));
 
     if (FlagKeyclick == FLAG_ON)
     {
@@ -7338,13 +6825,11 @@ void setup_clock_frame(void)
     clear_framebuffer(26);
   }
 
-
-
   /* ----------------------- Setup Scrolling ------------------------ */
   if (SetupStep == SETUP_SCROLLING)
   {
     /* Setup "Display Scrolling mode ON / OFF". */
-    FlagSetupClock[SETUP_SCROLLING] = FLAG_ON;  // indicate we are setting up display scroll.
+    FlagSetupClock[SETUP_SCROLLING] = FLAG_ON; // indicate we are setting up display scroll.
 
     fill_display_buffer_4X7(0, 'D');
     fill_display_buffer_4X7(5, 'S');
@@ -7364,19 +6849,17 @@ void setup_clock_frame(void)
     clear_framebuffer(26);
   }
 
-
-
   /* ----------------------- Temperature unit ----------------------- */
   if (SetupStep == SETUP_TEMP_UNIT)
   {
     /* Setup Temperature unit (Celsius or Fahrenheit. */
-    FlagSetupClock[SETUP_TEMP_UNIT] = FLAG_ON;  // indicate we are setting up temperature unit.
+    FlagSetupClock[SETUP_TEMP_UNIT] = FLAG_ON; // indicate we are setting up temperature unit.
 
     clear_framebuffer(0);
 
-    fill_display_buffer_5X7(2,  'T');
-    fill_display_buffer_5X7(8,  'U');
-    fill_display_buffer_4X7(12, 0x3A);  // slim ":"
+    fill_display_buffer_5X7(2, 'T');
+    fill_display_buffer_5X7(8, 'U');
+    fill_display_buffer_4X7(12, 0x3A); // slim ":"
 
     if (TemperatureUnit == CELSIUS)
     {
@@ -7391,8 +6874,6 @@ void setup_clock_frame(void)
     clear_framebuffer(26);
   }
 
-
-
   /* ------------------------ Setup Language ------------------------ */
   if (SetupStep == SETUP_LANGUAGE)
   {
@@ -7400,23 +6881,23 @@ void setup_clock_frame(void)
     FlagSetupClock[SETUP_LANGUAGE] = FLAG_ON;
 
     clear_framebuffer(0);
-    fill_display_buffer_5X7(2,  'L');
-    fill_display_buffer_5X7(7,  'G');
+    fill_display_buffer_5X7(2, 'L');
+    fill_display_buffer_5X7(7, 'G');
     fill_display_buffer_4X7(11, ':');
 
     switch (Language)
     {
-      default:
-      case (ENGLISH):
-        fill_display_buffer_5X7(15, ('E' & FlagFlashing[SETUP_LANGUAGE]));
+    default:
+    case (ENGLISH):
+      fill_display_buffer_5X7(15, ('E' & FlagFlashing[SETUP_LANGUAGE]));
       break;
 
-      case (FRENCH):
-        fill_display_buffer_5X7(15, ('F' & FlagFlashing[SETUP_LANGUAGE]));
+    case (FRENCH):
+      fill_display_buffer_5X7(15, ('F' & FlagFlashing[SETUP_LANGUAGE]));
       break;
 
-      case (SPANISH):
-        /* To be implemented. */
+    case (SPANISH):
+      /* To be implemented. */
       break;
     }
 
@@ -7424,22 +6905,20 @@ void setup_clock_frame(void)
     clear_framebuffer(26);
   }
 
-
-
   /* ------------------- Setup Time display mode -------------------- */
   if (SetupStep == SETUP_TIME_FORMAT)
   {
     /* Setup "Hour Display Mode" 24-hours / 12-hours toggling. */
     if (FlagSetupClock[SETUP_TIME_FORMAT] == FLAG_OFF)
     {
-      CurrentHourSetting   = bcd_to_byte(Time_RTC.hour);
-      CurrentMinute        = bcd_to_byte(Time_RTC.minutes);
+      CurrentHourSetting = bcd_to_byte(Time_RTC.hour);
+      CurrentMinute = bcd_to_byte(Time_RTC.minutes);
     }
 
     FlagSetupClock[SETUP_TIME_FORMAT] = FLAG_ON;
 
-    fill_display_buffer_4X7(0,  'H');
-    fill_display_buffer_4X7(5,  'D');
+    fill_display_buffer_4X7(0, 'H');
+    fill_display_buffer_4X7(5, 'D');
     fill_display_buffer_4X7(10, ':');
     if (TimeDisplayMode == H24)
     {
@@ -7458,16 +6937,14 @@ void setup_clock_frame(void)
     clear_framebuffer(23);
   }
 
-
-
   /* -------------------- Setup Hourly chime ------------------------ */
   if (SetupStep == SETUP_HOURLY_CHIME)
   {
     /* Setup "Hourly chime" (OFF / ON / Day). */
     FlagSetupClock[SETUP_HOURLY_CHIME] = FLAG_ON;
 
-    fill_display_buffer_4X7(0,  'H');
-    fill_display_buffer_4X7(5,  'C');
+    fill_display_buffer_4X7(0, 'H');
+    fill_display_buffer_4X7(5, 'C');
     fill_display_buffer_4X7(10, ':');
     fill_display_buffer_4X7(12, '0' & FlagFlashing[SETUP_HOURLY_CHIME]);
 
@@ -7494,26 +6971,23 @@ void setup_clock_frame(void)
     clear_framebuffer(26);
   }
 
-
-
   /* --------------------- Setup Chime time on ---------------------- */
   if (SetupStep == SETUP_CHIME_TIME_ON)
   {
     /* Setup Hourly chime time on (it is 9h00 by default). */
     FlagSetupClock[SETUP_CHIME_TIME_ON] = FLAG_ON;
 
-    fill_display_buffer_4X7(0,  'O');
-    fill_display_buffer_4X7(5,  'N');
+    fill_display_buffer_4X7(0, 'O');
+    fill_display_buffer_4X7(5, 'N');
     fill_display_buffer_4X7(10, ':');
-
 
     /* Check if we are in "24-hours" display mode or "12-hours" display mode.
        NOTE: Real-time clock IC keeps track of the clock in 24-hours format. */
     if (TimeDisplayMode == H12)
     {
       ChimeTimeOnDisplay = convert_h24_to_h12(ChimeTimeOn, &AmFlag, &PmFlag);
-      (AmFlag == FLAG_ON) ? (DisplayBuffer[4] |=  (1 << 0)) : (DisplayBuffer[4] &= ~(1 << 0));
-      (PmFlag == FLAG_ON) ? (DisplayBuffer[4] |=  (1 << 1)) : (DisplayBuffer[4] &= ~(1 << 1));
+      (AmFlag == FLAG_ON) ? (DisplayBuffer[4] |= (1 << 0)) : (DisplayBuffer[4] &= ~(1 << 0));
+      (PmFlag == FLAG_ON) ? (DisplayBuffer[4] |= (1 << 1)) : (DisplayBuffer[4] &= ~(1 << 1));
     }
     else
     {
@@ -7523,12 +6997,9 @@ void setup_clock_frame(void)
     fill_display_buffer_4X7(12, (0x30 + (ChimeTimeOnDisplay / 10)) & FlagFlashing[SETUP_CHIME_TIME_ON]);
     fill_display_buffer_4X7(17, (0x30 + (ChimeTimeOnDisplay % 10)) & FlagFlashing[SETUP_CHIME_TIME_ON]);
 
-
     /* Clear the clock framebuffer. */
     clear_framebuffer(26);
   }
-
-
 
   /* -------------------- Setup Chime time off ---------------------- */
   if (SetupStep == SETUP_CHIME_TIME_OFF)
@@ -7536,17 +7007,16 @@ void setup_clock_frame(void)
     /* Setup Hourly chime time off (it is 22h00 by default). */
     FlagSetupClock[SETUP_CHIME_TIME_OFF] = FLAG_ON;
 
-    fill_display_buffer_4X7(0,  'O');
-    fill_display_buffer_4X7(5,  'F');
+    fill_display_buffer_4X7(0, 'O');
+    fill_display_buffer_4X7(5, 'F');
     fill_display_buffer_4X7(10, ':');
-
 
     /* Check if we are in "24-hours" display mode or "12-hours" display mode. */
     if (TimeDisplayMode == H12)
     {
       ChimeTimeOffDisplay = convert_h24_to_h12(ChimeTimeOff, &AmFlag, &PmFlag);
-      (AmFlag == FLAG_ON) ? (DisplayBuffer[4] |=  (1 << 0)) : (DisplayBuffer[4] &= ~(1 << 0));
-      (PmFlag == FLAG_ON) ? (DisplayBuffer[4] |=  (1 << 1)) : (DisplayBuffer[4] &= ~(1 << 1));
+      (AmFlag == FLAG_ON) ? (DisplayBuffer[4] |= (1 << 0)) : (DisplayBuffer[4] &= ~(1 << 0));
+      (PmFlag == FLAG_ON) ? (DisplayBuffer[4] |= (1 << 1)) : (DisplayBuffer[4] &= ~(1 << 1));
     }
     else
     {
@@ -7560,8 +7030,6 @@ void setup_clock_frame(void)
     clear_framebuffer(26);
   }
 
-
-
   /* ---------------------- Setup Night light ----------------------- */
   if (SetupStep == SETUP_NIGHT_LIGHT)
   {
@@ -7570,9 +7038,9 @@ void setup_clock_frame(void)
 
     clear_framebuffer(0);
 
-    fill_display_buffer_5X7(2,  'N');
-    fill_display_buffer_5X7(8,  'L');
-    fill_display_buffer_4X7(11, 0x3A);  // slim ":"
+    fill_display_buffer_5X7(2, 'N');
+    fill_display_buffer_5X7(8, 'L');
+    fill_display_buffer_4X7(11, 0x3A); // slim ":"
 
     if (NightLightMode == NIGHT_LIGHT_OFF)
     {
@@ -7605,25 +7073,22 @@ void setup_clock_frame(void)
     clear_framebuffer(26);
   }
 
-
-
   /* ------------------ Setup Night light time on ------------------- */
   if (SetupStep == SETUP_NIGHT_LIGHT_TIME_ON)
   {
     /* Setup Night light time on (it is 21h00 by default). */
     FlagSetupClock[SETUP_NIGHT_LIGHT_TIME_ON] = FLAG_ON;
 
-    fill_display_buffer_4X7(0,  'O');
-    fill_display_buffer_4X7(5,  'N');
+    fill_display_buffer_4X7(0, 'O');
+    fill_display_buffer_4X7(5, 'N');
     fill_display_buffer_4X7(10, ':');
-
 
     /* Check if we are in "24-hours" display mode or "12-hours" display mode. */
     if (TimeDisplayMode == H12)
     {
       NightLightTimeOnDisplay = convert_h24_to_h12(NightLightTimeOn, &AmFlag, &PmFlag);
-      (AmFlag == FLAG_ON) ? (DisplayBuffer[4] |=  (1 << 0)) : (DisplayBuffer[4] &= ~(1 << 0));
-      (PmFlag == FLAG_ON) ? (DisplayBuffer[4] |=  (1 << 1)) : (DisplayBuffer[4] &= ~(1 << 1));
+      (AmFlag == FLAG_ON) ? (DisplayBuffer[4] |= (1 << 0)) : (DisplayBuffer[4] &= ~(1 << 0));
+      (PmFlag == FLAG_ON) ? (DisplayBuffer[4] |= (1 << 1)) : (DisplayBuffer[4] &= ~(1 << 1));
     }
     else
     {
@@ -7633,12 +7098,9 @@ void setup_clock_frame(void)
     fill_display_buffer_4X7(12, (0x30 + (NightLightTimeOnDisplay / 10)) & FlagFlashing[SETUP_NIGHT_LIGHT_TIME_ON]);
     fill_display_buffer_4X7(17, (0x30 + (NightLightTimeOnDisplay % 10)) & FlagFlashing[SETUP_NIGHT_LIGHT_TIME_ON]);
 
-
     /* Clear the clock framebuffer. */
     clear_framebuffer(26);
   }
-
-
 
   /* ----------------- Setup Night Light time off ------------------- */
   if (SetupStep == SETUP_NIGHT_LIGHT_TIME_OFF)
@@ -7646,17 +7108,16 @@ void setup_clock_frame(void)
     /* Setup Night light time off (it is 8h00 by default). */
     FlagSetupClock[SETUP_NIGHT_LIGHT_TIME_OFF] = FLAG_ON;
 
-    fill_display_buffer_4X7(0,  'O');
-    fill_display_buffer_4X7(5,  'F');
+    fill_display_buffer_4X7(0, 'O');
+    fill_display_buffer_4X7(5, 'F');
     fill_display_buffer_4X7(10, ':');
-
 
     /* Check if we are in "24-hours" display mode or "12-hours" display mode. */
     if (TimeDisplayMode == H12)
     {
       NightLightTimeOffDisplay = convert_h24_to_h12(NightLightTimeOff, &AmFlag, &PmFlag);
-      (AmFlag == FLAG_ON) ? (DisplayBuffer[4] |=  (1 << 0)) : (DisplayBuffer[4] &= ~(1 << 0));
-      (PmFlag == FLAG_ON) ? (DisplayBuffer[4] |=  (1 << 1)) : (DisplayBuffer[4] &= ~(1 << 1));
+      (AmFlag == FLAG_ON) ? (DisplayBuffer[4] |= (1 << 0)) : (DisplayBuffer[4] &= ~(1 << 0));
+      (PmFlag == FLAG_ON) ? (DisplayBuffer[4] |= (1 << 1)) : (DisplayBuffer[4] &= ~(1 << 1));
     }
     else
     {
@@ -7666,12 +7127,9 @@ void setup_clock_frame(void)
     fill_display_buffer_4X7(12, (0x30 + (NightLightTimeOffDisplay / 10)) & FlagFlashing[SETUP_NIGHT_LIGHT_TIME_OFF]);
     fill_display_buffer_4X7(17, (0x30 + (NightLightTimeOffDisplay % 10)) & FlagFlashing[SETUP_NIGHT_LIGHT_TIME_OFF]);
 
-
     /* Clear the clock framebuffer. */
     clear_framebuffer(26);
   }
-
-
 
   /* -------------------- Setup Auto brightness --------------------- */
   if (SetupStep == SETUP_AUTO_BRIGHT)
@@ -7681,25 +7139,23 @@ void setup_clock_frame(void)
 
     clear_framebuffer(0);
 
-    fill_display_buffer_5X7(2,  'D');
-    fill_display_buffer_5X7(8,  'I');
+    fill_display_buffer_5X7(2, 'D');
+    fill_display_buffer_5X7(8, 'I');
     fill_display_buffer_5X7(12, 'M');
 
     /* Clear the clock framebuffer. */
     clear_framebuffer(26);
   }
 
-
-
   if (SetupStep >= SETUP_CLOCK_HI_LIMIT)
   {
-    IdleNumberOfSeconds = 0;            // reset the number of seconds the system has been idle.
-    SetupSource         = SETUP_SOURCE_NONE;  // reset setup source when done.
-    SetupStep           = SETUP_NONE;   // reset SetupStep when done.
-    FlagIdleCheck       = FLAG_OFF;     // getting out of setup mode, no more watching for potential time-out.
-    FlagSetClock        = FLAG_OFF;     // getting out of clock setup mode.
-    FlagTone            = FLAG_OFF;     // reset flag tone.
-    FlagUpdateTime      = FLAG_ON;      // it's now time to update time display on the clock.
+    IdleNumberOfSeconds = 0;         // reset the number of seconds the system has been idle.
+    SetupSource = SETUP_SOURCE_NONE; // reset setup source when done.
+    SetupStep = SETUP_NONE;          // reset SetupStep when done.
+    FlagIdleCheck = FLAG_OFF;        // getting out of setup mode, no more watching for potential time-out.
+    FlagSetClock = FLAG_OFF;         // getting out of clock setup mode.
+    FlagTone = FLAG_OFF;             // reset flag tone.
+    FlagUpdateTime = FLAG_ON;        // it's now time to update time display on the clock.
 
     /* Reset all clock setup members before exiting. */
     for (Loop1UInt8 = SETUP_NONE; Loop1UInt8 < SETUP_CLOCK_HI_LIMIT; ++Loop1UInt8)
@@ -7708,10 +7164,6 @@ void setup_clock_frame(void)
 
   return;
 }
-
-
-
-
 
 /* $TITLE=setup_clock_variables() */
 /* $PAGE */
@@ -7724,16 +7176,14 @@ void setup_clock_variables(UINT8 FlagButtonSelect)
 
   UINT8 AmFlag;
   UINT8 PmFlag;
-  UINT8 Dum1UInt8;  // dummy variable.
-
-
+  UINT8 Dum1UInt8; // dummy variable.
 
   /* ---------------------- Hour setting ---------------------------- */
   /* Check if we are setting up the "Hour". */
   if (FlagSetupClock[SETUP_HOUR] == FLAG_ON)
   {
     /* We are setting up the "Hour". */
-    FlagSetupRTC = FLAG_ON;  // indicate that we must program the RTC IC.
+    FlagSetupRTC = FLAG_ON; // indicate that we must program the RTC IC.
 
     if (FlagButtonSelect == FLAG_UP)
     {
@@ -7741,7 +7191,8 @@ void setup_clock_variables(UINT8 FlagButtonSelect)
       ++CurrentHourSetting;
 
       /* If we pass 23 hours (out-of-bound), roll-back to 0. */
-      if (CurrentHourSetting == 24) CurrentHourSetting = 0;  // if out-of-bound, revert to 0.
+      if (CurrentHourSetting == 24)
+        CurrentHourSetting = 0; // if out-of-bound, revert to 0.
     }
     else
     {
@@ -7749,21 +7200,18 @@ void setup_clock_variables(UINT8 FlagButtonSelect)
       --CurrentHourSetting;
 
       /* If we go below zero (out-of-bound), set hour to 23. */
-      if (CurrentHourSetting == 255) CurrentHourSetting = 23;
+      if (CurrentHourSetting == 255)
+        CurrentHourSetting = 23;
     }
     CurrentHour = CurrentHourSetting;
   }
-
-
-
-
 
   /* ---------------------- Minute setting -------------------------- */
   /* Check if we are setting up the "Minute". */
   if (FlagSetupClock[SETUP_MINUTE] == FLAG_ON)
   {
     /* We are setting up the "Minute". */
-    FlagSetupRTC = FLAG_ON;  // indicate we must program the RTC IC.
+    FlagSetupRTC = FLAG_ON; // indicate we must program the RTC IC.
 
     if (FlagButtonSelect == FLAG_UP)
     {
@@ -7771,7 +7219,8 @@ void setup_clock_variables(UINT8 FlagButtonSelect)
       ++CurrentMinuteSetting;
 
       /* If we pass 59 minutes (out-of-bound), roll-back to 0. */
-      if (CurrentMinuteSetting == 60) CurrentMinuteSetting = 0;
+      if (CurrentMinuteSetting == 60)
+        CurrentMinuteSetting = 0;
     }
     else
     {
@@ -7779,20 +7228,17 @@ void setup_clock_variables(UINT8 FlagButtonSelect)
       --CurrentMinuteSetting;
 
       /* If we go below zero (out-of-bound), set minutes to 59. */
-      if (CurrentMinuteSetting == 255) CurrentMinuteSetting = 59;
+      if (CurrentMinuteSetting == 255)
+        CurrentMinuteSetting = 59;
     }
     CurrentMinute = CurrentMinuteSetting;
   }
-
-
-
-
 
   /* ------------------------- Month setting ------------------------ */
   if (FlagSetupClock[SETUP_MONTH] == FLAG_ON)
   {
     /* We are setting up the "Month". */
-    FlagSetupRTC = FLAG_ON;  // indicate we must program the RTC IC.
+    FlagSetupRTC = FLAG_ON; // indicate we must program the RTC IC.
 
     if (FlagButtonSelect == FLAG_UP)
     {
@@ -7800,7 +7246,8 @@ void setup_clock_variables(UINT8 FlagButtonSelect)
       ++CurrentMonth;
 
       /* If we pass 12 (out-of-bound), roll-back to 1. */
-      if (CurrentMonth == 13) CurrentMonth = 1;
+      if (CurrentMonth == 13)
+        CurrentMonth = 1;
     }
     else
     {
@@ -7808,9 +7255,9 @@ void setup_clock_variables(UINT8 FlagButtonSelect)
       --CurrentMonth;
 
       /* If we go below 1 (out-of-bound), set month to 12. */
-      if (CurrentMonth == 0) CurrentMonth = 12;
+      if (CurrentMonth == 0)
+        CurrentMonth = 12;
     }
-
 
     /* If we changed month, make sure day-of-month is compatible. First, make
        sure Year4Digits is correct before determining DayOfMonth (for leap years). */
@@ -7823,15 +7270,11 @@ void setup_clock_variables(UINT8 FlagButtonSelect)
     }
   }
 
-
-
-
-
   /* ------------------- Day-of-month setting ----------------------- */
   if (FlagSetupClock[SETUP_DAY_OF_MONTH] == FLAG_ON)
   {
     /* We are setting up day-of-month. */
-    FlagSetupRTC = FLAG_ON;  // indicate we must program the RTC IC.
+    FlagSetupRTC = FLAG_ON; // indicate we must program the RTC IC.
 
     /* Make sure Year4Digits is correct before determining maximum day-of-month (for leap years). */
     Year4Digits = (CurrentYearCentile * 100) + CurrentYearLowPart;
@@ -7860,15 +7303,11 @@ void setup_clock_variables(UINT8 FlagButtonSelect)
     }
   }
 
-
-
-
-
   /* ------------------------ Year setting -------------------------- */
   if (FlagSetupClock[SETUP_YEAR] == FLAG_ON)
   {
     /* We are setting up the "Year". */
-    FlagSetupRTC = FLAG_ON;  // indicate we must program the RTC IC.
+    FlagSetupRTC = FLAG_ON; // indicate we must program the RTC IC.
 
     if (FlagButtonSelect == FLAG_UP)
     {
@@ -7902,10 +7341,6 @@ void setup_clock_variables(UINT8 FlagButtonSelect)
     }
   }
 
-
-
-
-
   /* ----------------- Daylight Saving Time setting ----------------- */
   if (FlagSetupClock[SETUP_DST] == FLAG_ON)
   {
@@ -7914,19 +7349,17 @@ void setup_clock_variables(UINT8 FlagButtonSelect)
     if (FlagButtonSelect == FLAG_UP)
     {
       ++DaylightSavingTime;
-      if (DaylightSavingTime >= DST_HI_LIMIT) DaylightSavingTime = DST_NONE;
+      if (DaylightSavingTime >= DST_HI_LIMIT)
+        DaylightSavingTime = DST_NONE;
     }
     else
     {
       /* Must be "Button down". */
       --DaylightSavingTime;
-      if (DaylightSavingTime == 255) DaylightSavingTime = DST_HI_LIMIT - 1;
+      if (DaylightSavingTime == 255)
+        DaylightSavingTime = DST_HI_LIMIT - 1;
     }
   }
-
-
-
-
 
   /* ----------------------- Keyclick setting ----------------------- */
   /* Check if we are in "Keyclick" setup step. */
@@ -7947,16 +7380,12 @@ void setup_clock_variables(UINT8 FlagButtonSelect)
     evaluate_keyclick_start_time();
   }
 
-
-
-
-
   /* ------------------- Temperature unit setting ------------------- */
   /* Check if we are in "Celsius or Fahrenheit" setup step. */
   if (FlagSetupClock[SETUP_TEMP_UNIT] == FLAG_ON)
   {
     /* If we are in setup mode, in "Keyclick" setup step, toggle the flag. */
-    TemperatureUnit = !TemperatureUnit;  // toggle temperature unit.
+    TemperatureUnit = !TemperatureUnit; // toggle temperature unit.
     if (TemperatureUnit == CELSIUS)
     {
       IndicatorCelsiusOn;
@@ -7968,10 +7397,6 @@ void setup_clock_variables(UINT8 FlagButtonSelect)
       IndicatorCelsiusOff;
     }
   }
-
-
-
-
 
   /* ------------------------ Scroll setting ------------------------ */
   if (FlagSetupClock[SETUP_SCROLLING] == FLAG_ON)
@@ -7989,10 +7414,6 @@ void setup_clock_variables(UINT8 FlagButtonSelect)
     }
   }
 
-
-
-
-
   /* ---------------------- Language setting ------------------------ */
   if (FlagSetupClock[SETUP_LANGUAGE] == FLAG_ON)
   {
@@ -8001,33 +7422,30 @@ void setup_clock_variables(UINT8 FlagButtonSelect)
     if (FlagButtonSelect == FLAG_UP)
     {
       ++Language;
-      if (Language > FRENCH) Language = ENGLISH;
+      if (Language > FRENCH)
+        Language = ENGLISH;
     }
     else
     {
       /* Must be "Button down". */
       --Language;
-      if (Language < ENGLISH) Language = FRENCH;
+      if (Language < ENGLISH)
+        Language = FRENCH;
     }
-
 
     /* Setup order in French is different than in English. */
     if (Language == FRENCH)
     {
-      SETUP_DAY_OF_MONTH   = 0x03;
-      SETUP_MONTH          = 0x04;
+      SETUP_DAY_OF_MONTH = 0x03;
+      SETUP_MONTH = 0x04;
     }
 
     if (Language == ENGLISH)
     {
-      SETUP_MONTH          = 0x03;
-      SETUP_DAY_OF_MONTH   = 0x04;
+      SETUP_MONTH = 0x03;
+      SETUP_DAY_OF_MONTH = 0x04;
     }
   }
-
-
-
-
 
   /* --------------------- Time format setting ---------------------- */
   /* Select time display format (12-hours or 24-hours). */
@@ -8045,20 +7463,15 @@ void setup_clock_variables(UINT8 FlagButtonSelect)
       /* Change from 24-hours to 12-hours display mode. */
       TimeDisplayMode = H12;
 
-
       /* Adjust current hour and AM / PM indicators accordingly. */
       if (TimeDisplayMode == H12)
       {
         CurrentHour = convert_h24_to_h12(CurrentHourSetting, &AmFlag, &PmFlag);
-        (AmFlag == FLAG_ON) ? (DisplayBuffer[4] |=  (1 << 0)) : (DisplayBuffer[4] &= ~(1 << 0));
-        (PmFlag == FLAG_ON) ? (DisplayBuffer[4] |=  (1 << 1)) : (DisplayBuffer[4] &= ~(1 << 1));
+        (AmFlag == FLAG_ON) ? (DisplayBuffer[4] |= (1 << 0)) : (DisplayBuffer[4] &= ~(1 << 0));
+        (PmFlag == FLAG_ON) ? (DisplayBuffer[4] |= (1 << 1)) : (DisplayBuffer[4] &= ~(1 << 1));
       }
     }
   }
-
-
-
-
 
   /* --------------------- Hourly chime setting --------------------- */
   if (FlagSetupClock[SETUP_HOURLY_CHIME] == FLAG_ON)
@@ -8067,19 +7480,17 @@ void setup_clock_variables(UINT8 FlagButtonSelect)
     if (FlagButtonSelect == FLAG_UP)
     {
       ++HourlyChimeMode;
-      if (HourlyChimeMode > CHIME_DAY) HourlyChimeMode = CHIME_OFF;
+      if (HourlyChimeMode > CHIME_DAY)
+        HourlyChimeMode = CHIME_OFF;
     }
 
     if (FlagButtonSelect == FLAG_DOWN)
     {
       --HourlyChimeMode;
-      if (HourlyChimeMode == 255) HourlyChimeMode = CHIME_DAY;
+      if (HourlyChimeMode == 255)
+        HourlyChimeMode = CHIME_DAY;
     }
   }
-
-
-
-
 
   /* ------------------- Chime time on setting ---------------------- */
   /* Check if we are setting up the Chime time on */
@@ -8089,19 +7500,17 @@ void setup_clock_variables(UINT8 FlagButtonSelect)
     {
       /* User pressed the "Up" (middle) button while in Chime time on setup mode. */
       ++ChimeTimeOn;
-      if (ChimeTimeOn == 24) ChimeTimeOn = 0;  // if out-of-bound, revert to 0.
+      if (ChimeTimeOn == 24)
+        ChimeTimeOn = 0; // if out-of-bound, revert to 0.
     }
     else
     {
       /* User pressed the "Down" (bottom) button while in Chime time on setup mode. */
       --ChimeTimeOn;
-      if (ChimeTimeOn == 255) ChimeTimeOn = 23;  // if out-of-bound, revert to 23.
+      if (ChimeTimeOn == 255)
+        ChimeTimeOn = 23; // if out-of-bound, revert to 23.
     }
   }
-
-
-
-
 
   /* -------------------- Chime time off setting -------------------- */
   /* Check if we are setting up the Chime time off. */
@@ -8111,17 +7520,17 @@ void setup_clock_variables(UINT8 FlagButtonSelect)
     {
       /* User pressed the "Up" (middle) button while in Chime time off setup mode. */
       ++ChimeTimeOff;
-      if (ChimeTimeOff == 24) ChimeTimeOff = 0;  // if out-of-bound, revert to 0.
+      if (ChimeTimeOff == 24)
+        ChimeTimeOff = 0; // if out-of-bound, revert to 0.
     }
     else
     {
       /* User pressed the "Down" (bottom) button while in Chime time off setup mode. */
       --ChimeTimeOff;
-      if (ChimeTimeOff == 255) ChimeTimeOff = 23;  // if out-of-bound, revert to 23.
+      if (ChimeTimeOff == 255)
+        ChimeTimeOff = 23; // if out-of-bound, revert to 23.
     }
   }
-
-
 
   /* --------------------- Night light setting ---------------------- */
   if (FlagSetupClock[SETUP_NIGHT_LIGHT] == FLAG_ON)
@@ -8130,19 +7539,17 @@ void setup_clock_variables(UINT8 FlagButtonSelect)
     if (FlagButtonSelect == FLAG_UP)
     {
       ++NightLightMode;
-      if (NightLightMode > NIGHT_LIGHT_AUTO) NightLightMode = NIGHT_LIGHT_OFF;
+      if (NightLightMode > NIGHT_LIGHT_AUTO)
+        NightLightMode = NIGHT_LIGHT_OFF;
     }
 
     if (FlagButtonSelect == FLAG_DOWN)
     {
       --NightLightMode;
-      if (NightLightMode == 255) NightLightMode = NIGHT_LIGHT_AUTO;
+      if (NightLightMode == 255)
+        NightLightMode = NIGHT_LIGHT_AUTO;
     }
   }
-
-
-
-
 
   /* ----------------- Night light time on setting ------------------ */
   /* Check if we are setting up the Night light time on */
@@ -8152,17 +7559,17 @@ void setup_clock_variables(UINT8 FlagButtonSelect)
     {
       /* User pressed the "Up" (middle) button while in Night light time on setup mode. */
       ++NightLightTimeOn;
-      if (NightLightTimeOn == 24) NightLightTimeOn = 0;  // if out-of-bound, revert to 0.
+      if (NightLightTimeOn == 24)
+        NightLightTimeOn = 0; // if out-of-bound, revert to 0.
     }
     else
     {
       /* User pressed the "Down" (bottom) button while in Night light time on setup mode. */
       --NightLightTimeOn;
-      if (NightLightTimeOn == 255) NightLightTimeOn = 23;  // if out-of-bound, revert to 23.
+      if (NightLightTimeOn == 255)
+        NightLightTimeOn = 23; // if out-of-bound, revert to 23.
     }
   }
-
-
 
   /* ----------------- Night light time off setting ----------------- */
   /* Check if we are setting up the Night light time off. */
@@ -8172,17 +7579,17 @@ void setup_clock_variables(UINT8 FlagButtonSelect)
     {
       /* User pressed the "Up" (middle) button while in Night light time off setup mode. */
       ++NightLightTimeOff;
-      if (NightLightTimeOff == 24) NightLightTimeOff = 0;  // if out-of-bound, revert to 0.
+      if (NightLightTimeOff == 24)
+        NightLightTimeOff = 0; // if out-of-bound, revert to 0.
     }
     else
     {
       /* User pressed the "Down" (bottom) button while in Night light time off setup mode. */
       --NightLightTimeOff;
-      if (NightLightTimeOff == 255) NightLightTimeOff = 23;  // if out-of-bound, revert to 23.
+      if (NightLightTimeOff == 255)
+        NightLightTimeOff = 23; // if out-of-bound, revert to 23.
     }
   }
-
-
 
   /* ------------------------ Auto brightness ----------------------- */
   if (FlagSetupClock[SETUP_AUTO_BRIGHT] == FLAG_ON)
@@ -8205,8 +7612,6 @@ void setup_clock_variables(UINT8 FlagButtonSelect)
   return;
 }
 
-
-
 /* $TITLE=setup_timer_frame() */
 /* $PAGE */
 /* ------------------------------------------------------------------ *\
@@ -8216,10 +7621,7 @@ void setup_timer_frame(void)
 {
   UINT8 Loop1UInt8;
 
-
-
   CurrentClockMode = MODE_TIMER_SETUP;
-
 
   if (SetupStep == SETUP_TIMER_UP_DOWN)
   {
@@ -8229,7 +7631,6 @@ void setup_timer_frame(void)
     FlagSetupTimer[SETUP_TIMER_UP_DOWN] = FLAG_ON;
     fill_display_buffer_5X7(2, 'T');
     fill_display_buffer_5X7(8, 'M');
-
 
     if (TimerMode == TIMER_COUNT_UP)
     {
@@ -8275,7 +7676,7 @@ void setup_timer_frame(void)
         TimerSeconds = 0;
       }
 
-      IdleNumberOfSeconds = 0;          // reset the number of seconds the system has been idle.
+      IdleNumberOfSeconds = 0; // reset the number of seconds the system has been idle.
       FlagSetTimerCountUp = FLAG_ON;
       fill_display_buffer_4X7(0, TimerMinutes / 10 + '0');
       fill_display_buffer_4X7(5, TimerMinutes % 10 + '0');
@@ -8319,15 +7720,15 @@ void setup_timer_frame(void)
 
       /* Clear the clock framebuffer when done. */
       clear_framebuffer(26);
-      TimerShowSecond     = 0;
-      TimerShowCount      = 0;
+      TimerShowSecond = 0;
+      TimerShowCount = 0;
       FlagSetTimerCountUp = FLAG_OFF;
     }
   }
   else if ((SetupStep == SETUP_TIMER_READY) && (TimerMode == TIMER_COUNT_DOWN) && (FlagTimerCountDownEnd == FLAG_OFF))
   {
-    IdleNumberOfSeconds   = 0;            // reset the number of seconds the system has been idle.
-    FlagSetTimerCountDown = FLAG_ON;      // make count down timer active.
+    IdleNumberOfSeconds = 0;         // reset the number of seconds the system has been idle.
+    FlagSetTimerCountDown = FLAG_ON; // make count down timer active.
     fill_display_buffer_4X7(0, TimerMinutes / 10 + '0');
     fill_display_buffer_4X7(5, TimerMinutes % 10 + '0');
     fill_display_buffer_4X7(10, ':');
@@ -8343,23 +7744,21 @@ void setup_timer_frame(void)
     if (TimerMode == TIMER_COUNT_UP)
     {
       /* Timer is currently in "Count Up" mode. */
-      TimerMode       = TIMER_OFF;  // set timer OFF.
-      TimerMinutes    = 0;
-      TimerSeconds    = 0;
+      TimerMode = TIMER_OFF; // set timer OFF.
+      TimerMinutes = 0;
+      TimerSeconds = 0;
       IndicatorCountUpOff;
     }
 
-
-    IdleNumberOfSeconds  = 0;                  // reset the number of seconds the system has been idle.
-    UpId                 = 0;
-    ScrollSecondCounter  = 0;                  // reset number of seconds to reach time-to-scroll.
-    SetupStep            = SETUP_NONE;         // reset SetupStep for next pass.
-    SetupSource          = SETUP_SOURCE_NONE;  // exit timer setup mode.
-    FlagSetTimer         = FLAG_OFF;           // reset "up" button.
-    FlagIdleCheck        = FLAG_OFF;           // no more checking for an idle time-out.
-    FlagTone             = FLAG_OFF;           // reset flag tone.
-    FlagUpdateTime       = FLAG_ON;            // setup is over, it becomes time to display time.
-
+    IdleNumberOfSeconds = 0; // reset the number of seconds the system has been idle.
+    UpId = 0;
+    ScrollSecondCounter = 0;         // reset number of seconds to reach time-to-scroll.
+    SetupStep = SETUP_NONE;          // reset SetupStep for next pass.
+    SetupSource = SETUP_SOURCE_NONE; // exit timer setup mode.
+    FlagSetTimer = FLAG_OFF;         // reset "up" button.
+    FlagIdleCheck = FLAG_OFF;        // no more checking for an idle time-out.
+    FlagTone = FLAG_OFF;             // reset flag tone.
+    FlagUpdateTime = FLAG_ON;        // setup is over, it becomes time to display time.
 
     /* Reset all timer setup member flags. */
     for (Loop1UInt8 = SETUP_NONE; Loop1UInt8 < SETUP_TIMER_HI_LIMIT; ++Loop1UInt8)
@@ -8368,10 +7767,6 @@ void setup_timer_frame(void)
 
   return;
 }
-
-
-
-
 
 /* $TITLE=setup_timer_variables() */
 /* $PAGE */
@@ -8386,23 +7781,21 @@ void setup_timer_variables(UINT8 FlagButtonSelect)
     if (FlagButtonSelect == FLAG_UP)
     {
       /* We come here because user pressed the "Up" (middle) button while in "timer mode" setup. */
-      ++TimerMode;  // step upward through different timer modes (Off / Count down / Count up).
-      if (TimerMode > TIMER_COUNT_UP) TimerMode = TIMER_OFF;  // if reaching out-of-bound, revert to 0.
+      ++TimerMode; // step upward through different timer modes (Off / Count down / Count up).
+      if (TimerMode > TIMER_COUNT_UP)
+        TimerMode = TIMER_OFF; // if reaching out-of-bound, revert to 0.
     }
     else
     {
       /* We come here because user pressed the "Down" (bottom) button while in "timer mode" setup. */
-      --TimerMode;  // step downward through different timer modes (Count up / Count down / Off).
-      if (TimerMode == 255) TimerMode = TIMER_COUNT_UP;  // if reaching out-of-bound, revert to 2.
+      --TimerMode; // step downward through different timer modes (Count up / Count down / Off).
+      if (TimerMode == 255)
+        TimerMode = TIMER_COUNT_UP; // if reaching out-of-bound, revert to 2.
     }
   }
 
-
-
   /* NOTE: There is no "Minute" or "Second" parameters adjustment for "Count up" timer.
            We assume that a "Count up" timer will logically always start counting from 00m00s. */
-
-
 
   /* Select timer "Minute" parameter. */
   if ((TimerMode == TIMER_COUNT_DOWN) && (FlagSetupTimer[SETUP_TIMER_MINUTE] == FLAG_ON))
@@ -8411,17 +7804,17 @@ void setup_timer_variables(UINT8 FlagButtonSelect)
     {
       /* We come here because user pressed the "Up" (middle) button while in timer "Minutes" parameter setup. */
       ++TimerMinutes;
-      if (TimerMinutes == 60) TimerMinutes = 0;  // if reaching out-of-bound, revert to 0.
+      if (TimerMinutes == 60)
+        TimerMinutes = 0; // if reaching out-of-bound, revert to 0.
     }
     else
     {
       /* We come here because user pressed the "Down" (bottom) button while in timer "Minutes" parameter setup.. */
       --TimerMinutes;
-      if (TimerMinutes == 255) TimerMinutes = 59;  // if reaching out-of-bound, revert to 59.
+      if (TimerMinutes == 255)
+        TimerMinutes = 59; // if reaching out-of-bound, revert to 59.
     }
   }
-
-
 
   /* Select timer "Second" parameter. */
   if ((TimerMode == TIMER_COUNT_DOWN) && (FlagSetupTimer[SETUP_TIMER_SECOND] == FLAG_ON))
@@ -8430,22 +7823,20 @@ void setup_timer_variables(UINT8 FlagButtonSelect)
     {
       /* We come here because user pressed the "Up" (middle) button while in timer "Seconds" parameter setup. */
       ++TimerSeconds;
-      if (TimerSeconds == 60) TimerSeconds = 0;  // if reaching out-of-bound, revert to 0.
+      if (TimerSeconds == 60)
+        TimerSeconds = 0; // if reaching out-of-bound, revert to 0.
     }
     else
     {
       /* We come here because user pressed the "Down" (bottom) button while in timer "Seconds" parameter setup. */
       --TimerSeconds;
-      if (TimerSeconds == 255) TimerSeconds = 59;  // if reaching out-of-bound, revert to 59.
+      if (TimerSeconds == 255)
+        TimerSeconds = 59; // if reaching out-of-bound, revert to 59.
     }
   }
 
   return;
 }
-
-
-
-
 
 /* $TITLE=show_time() */
 /* $PAGE */
@@ -8460,31 +7851,28 @@ void show_time(void)
   UINT8 AmFlag;
   UINT8 PmFlag;
 
-
-
   /* Read the real-time clock IC. */
   Time_RTC = Read_RTC();
 
-  Time_RTC.seconds    = Time_RTC.seconds    & 0x7F;
-  Time_RTC.minutes    = Time_RTC.minutes    & 0x7F;
-  Time_RTC.hour       = Time_RTC.hour       & 0x3F;
-  Time_RTC.dayofweek  = Time_RTC.dayofweek  & 0x07;
+  Time_RTC.seconds = Time_RTC.seconds & 0x7F;
+  Time_RTC.minutes = Time_RTC.minutes & 0x7F;
+  Time_RTC.hour = Time_RTC.hour & 0x3F;
+  Time_RTC.dayofweek = Time_RTC.dayofweek & 0x07;
   Time_RTC.dayofmonth = Time_RTC.dayofmonth & 0x3F;
-  Time_RTC.month      = Time_RTC.month      & 0x1F;
+  Time_RTC.month = Time_RTC.month & 0x1F;
 
-  CurrentHourSetting  = bcd_to_byte(Time_RTC.hour);
-  CurrentMinute       = bcd_to_byte(Time_RTC.minutes);
-  CurrentDayOfMonth   = bcd_to_byte(Time_RTC.dayofmonth);
-  CurrentMonth        = bcd_to_byte(Time_RTC.month);
-  CurrentYearLowPart  = bcd_to_byte(Time_RTC.year);
-
+  CurrentHourSetting = bcd_to_byte(Time_RTC.hour);
+  CurrentMinute = bcd_to_byte(Time_RTC.minutes);
+  CurrentDayOfMonth = bcd_to_byte(Time_RTC.dayofmonth);
+  CurrentMonth = bcd_to_byte(Time_RTC.month);
+  CurrentYearLowPart = bcd_to_byte(Time_RTC.year);
 
   /* Check if we are in 12-hours or 24-hours time format. */
   if (TimeDisplayMode == H12)
   {
     CurrentHour = convert_h24_to_h12(CurrentHourSetting, &AmFlag, &PmFlag);
-    (AmFlag == FLAG_ON) ? (DisplayBuffer[4] |=  (1 << 0)) : (DisplayBuffer[4] &= ~(1 << 0));
-    (PmFlag == FLAG_ON) ? (DisplayBuffer[4] |=  (1 << 1)) : (DisplayBuffer[4] &= ~(1 << 1));
+    (AmFlag == FLAG_ON) ? (DisplayBuffer[4] |= (1 << 0)) : (DisplayBuffer[4] &= ~(1 << 0));
+    (PmFlag == FLAG_ON) ? (DisplayBuffer[4] |= (1 << 1)) : (DisplayBuffer[4] &= ~(1 << 1));
   }
   else
   {
@@ -8495,40 +7883,33 @@ void show_time(void)
   /* When in 12-hour time display format, first digit is not displayed if it is zero. */
   if ((TimeDisplayMode == H12) && (CurrentHour < 10))
   {
-    TimeBuffer[0]  = (' ');                          // hours first digit.
+    TimeBuffer[0] = (' '); // hours first digit.
   }
   else
-    TimeBuffer[0]  = ((CurrentHour / 10) + '0');     // hours first digit.
+    TimeBuffer[0] = ((CurrentHour / 10) + '0'); // hours first digit.
 
-  TimeBuffer[1]  = ((CurrentHour % 10) + '0');       // hours second digit.
-  TimeBuffer[2]  = ((Time_RTC.minutes / 16) + '0');  // minutes first digit.
-  TimeBuffer[3]  = ((Time_RTC.minutes % 16) + '0');  // minutes second digit.
-  SecondCounter  = ((float)Time_RTC.seconds) / 1.5;
-
-
+  TimeBuffer[1] = ((CurrentHour % 10) + '0');      // hours second digit.
+  TimeBuffer[2] = ((Time_RTC.minutes / 16) + '0'); // minutes first digit.
+  TimeBuffer[3] = ((Time_RTC.minutes % 16) + '0'); // minutes second digit.
+  SecondCounter = ((float)Time_RTC.seconds) / 1.5;
 
   /* Display "time of day" if we are not scrolling some data. */
   if (FlagScrollStart == FLAG_OFF)
   {
     CurrentClockMode = MODE_SHOW_TIME;
 
-    fill_display_buffer_4X7(0,  TimeBuffer[0]);
-    fill_display_buffer_4X7(5,  TimeBuffer[1]);
-    fill_display_buffer_4X7(10, 0x3A);  // slim ":"
+    fill_display_buffer_4X7(0, TimeBuffer[0]);
+    fill_display_buffer_4X7(5, TimeBuffer[1]);
+    fill_display_buffer_4X7(10, 0x3A); // slim ":"
     fill_display_buffer_4X7(12, TimeBuffer[2]);
     fill_display_buffer_4X7(17, TimeBuffer[3]);
   }
-
 
   /* Turn ON the weekday indicator. */
   select_weekday(Time_RTC.dayofweek - 1);
 
   return;
 }
-
-
-
-
 
 #ifdef PASSIVE_PIEZO_SUPPORT
 /* $TITLE=sound_callback_ms() */
@@ -8547,18 +7928,17 @@ bool sound_callback_ms(struct repeating_timer *Timer50MSec)
 
   static UINT8 FlagActiveSound;
 
-  static UINT16 DutyCycle = 50;  // initialize PWM (sound wave) duty cycle.
+  static UINT16 DutyCycle = 50; // initialize PWM (sound wave) duty cycle.
   static UINT16 MSeconds;
   static UINT16 MSecCounter;
-
 
   /* If there is an active sound, check if it is completed. */
   if (FlagActiveSound == FLAG_ON)
   {
-    MSecCounter += 50;  // 50 milliseconds more since last callback.
+    MSecCounter += 50; // 50 milliseconds more since last callback.
     if (MSecCounter < MSeconds)
     {
-      /* Current sound not over yet... let it go on . */ 
+      /* Current sound not over yet... let it go on . */
       return TRUE;
     }
     else
@@ -8577,8 +7957,6 @@ bool sound_callback_ms(struct repeating_timer *Timer50MSec)
     }
   }
 
-  
-
   /* Check if there are more sounds to play. Request frequency and duration for next sound. */
   if (sound_unqueue(&Frequency, &MSeconds) == 0xFF)
   {
@@ -8590,8 +7968,6 @@ bool sound_callback_ms(struct repeating_timer *Timer50MSec)
 
     return TRUE;
   }
-
-
 
   /* If frequency is 0 ("SILENT"), we wanted to wait for specified duration without any sound. */
   if (Frequency != SILENT)
@@ -8613,14 +7989,10 @@ bool sound_callback_ms(struct repeating_timer *Timer50MSec)
   }
 
   FlagActiveSound = FLAG_ON;
-  MSecCounter     = 0;
+  MSecCounter = 0;
 
   return TRUE;
 }
-
-
-
-
 
 /* $TITLE=sound_queue() */
 /* $PAGE */
@@ -8650,10 +8022,6 @@ UINT16 sound_queue(UINT16 Frequency, UINT16 MSeconds)
   return 0;
 }
 
-
-
-
-
 /* $TITLE=sound_unqueue() */
 /* $PAGE */
 /* ------------------------------------------------------------------ *\
@@ -8663,26 +8031,23 @@ UINT8 sound_unqueue(UINT16 *Frequency, UINT16 *MSeconds)
 {
   UINT32 CurrentTail;
 
-
   /* Check if the sound queue is empty. */
   if (SoundQueueHead == SoundQueueTail)
   {
     /* In case of empty queue or queue error, return queue head and queue tail instead. */
     *Frequency = SoundQueueHead;
-    *MSeconds  = SoundQueueTail;
+    *MSeconds = SoundQueueTail;
 
     return 0xFF;
   }
-  
 
   /* Extract data for next sound to play. */
   *Frequency = SoundQueue[SoundQueueTail].Freq;
-  *MSeconds  = SoundQueue[SoundQueueTail].MSec;
+  *MSeconds = SoundQueue[SoundQueueTail].MSec;
 
   /* And reset this slot in the sound queue. */
   SoundQueue[SoundQueueTail].Freq = 0x00;
   SoundQueue[SoundQueueTail].MSec = 0x00;
-
 
   if (*MSeconds != 0)
   {
@@ -8690,18 +8055,19 @@ UINT8 sound_unqueue(UINT16 *Frequency, UINT16 *MSeconds)
     ++SoundQueueTail;
 
     /* If reaching out-of-bound, revert to zero. */
-    if (SoundQueueTail >= MAX_SOUND_QUEUE) SoundQueueTail = 0;
+    if (SoundQueueTail >= MAX_SOUND_QUEUE)
+      SoundQueueTail = 0;
 
     return 0;
   }
   else
   {
     /* If this slot was corrupted, make some housekeeping. */
-    CurrentTail = SoundQueueTail;  // keep track of starting position in the queue.
+    CurrentTail = SoundQueueTail; // keep track of starting position in the queue.
 
     /* In case of empty queue or queue error, return queue head and queue tail instead of frequency and duration. */
     *Frequency = SoundQueueHead;
-    *MSeconds  = SoundQueueTail;
+    *MSeconds = SoundQueueTail;
 
     do
     {
@@ -8716,7 +8082,7 @@ UINT8 sound_unqueue(UINT16 *Frequency, UINT16 *MSeconds)
       if (SoundQueueTail == CurrentTail)
       {
         SoundQueueHead = SoundQueueTail;
-        break;  // get out of "do" loop.
+        break; // get out of "do" loop.
       }
     } while (SoundQueue[SoundQueueTail].MSec == 0);
 
@@ -8724,10 +8090,6 @@ UINT8 sound_unqueue(UINT16 *Frequency, UINT16 *MSeconds)
   }
 }
 #endif
-
-
-
-
 
 #ifdef TEST_CODE
 /* $TITLE=test_zone() */
@@ -8742,8 +8104,6 @@ UINT8 sound_unqueue(UINT16 *Frequency, UINT16 *MSeconds)
        turn off Display scrolling when performing tests, so that
              scrolling does not interfere with the tests.
 \* ------------------------------------------------------------------ */
-
-
 
 /* ------------------------------------------------------------------ *\
     === WARNING === WARNING === WARNING === WARNING === WARNING ===
@@ -8765,43 +8125,39 @@ UINT8 sound_unqueue(UINT16 *Frequency, UINT16 *MSeconds)
 \* ------------------------------------------------------------------ */
 void test_zone(UINT8 TestType)
 {
-  UCHAR CharacterBuffer;              // Buffer to temporarily hold a character.
-  UCHAR String[DISPLAY_BUFFER_SIZE];  // string to scroll on clock display.
+  UCHAR CharacterBuffer;             // Buffer to temporarily hold a character.
+  UCHAR String[DISPLAY_BUFFER_SIZE]; // string to scroll on clock display.
 
   UINT LightSetting;
   UINT Status;
   UINT TrigLevel;
-  
+
   UINT8 Dum1UInt8;
   UINT8 Loop1UInt8;
   UINT8 Loop2UInt8;
   UINT8 Loop3UInt8;
-  UINT8 TemperatureF;                 // temperature in Fahrenheit.
+  UINT8 TemperatureF; // temperature in Fahrenheit.
   UINT8 WeekDay;
 
-  UINT16 ColumnInSection;               // Column number relative to a specific "section" of the display.
-  UINT16 ColumnPosition;                // Column number in virtual display buffer where to put the ASCII character.
+  UINT16 ColumnInSection; // Column number relative to a specific "section" of the display.
+  UINT16 ColumnPosition;  // Column number in virtual display buffer where to put the ASCII character.
   UINT16 Dum1UInt16;
   UINT16 Loop1UInt16;
   UINT16 Loop2UInt16;
   UINT16 Loop3UInt16;
-  UINT16 RowNumber;                     // Row number on the display (row number 0 corresponds to indicators).
-  UINT16 SectionNumber;                 // Section number on the display (display is logically divided in section numbers of 8 dots).
-
-
+  UINT16 RowNumber;     // Row number on the display (row number 0 corresponds to indicators).
+  UINT16 SectionNumber; // Section number on the display (display is logically divided in section numbers of 8 dots).
 
   /* Configure the GPIO associated to the three push-buttons of the clock in "input" mode to use them while testing. */
   /* Tests are usually performed before gpio initialization. */
-  gpio_set_dir(SET_BUTTON,  GPIO_IN);
-  gpio_set_dir(UP_BUTTON,   GPIO_IN);
+  gpio_set_dir(SET_BUTTON, GPIO_IN);
+  gpio_set_dir(UP_BUTTON, GPIO_IN);
   gpio_set_dir(DOWN_BUTTON, GPIO_IN);
 
   /* Setup a pull-up on those three GPIOs. */
   gpio_pull_up(SET_BUTTON);
   gpio_pull_up(UP_BUTTON);
   gpio_pull_up(DOWN_BUTTON);
-
-
 
   /* NOTE: Display power supply voltage and clock, so that we
            know we are entering the test function. */
@@ -8813,10 +8169,8 @@ void test_zone(UINT8 TestType)
   tone(10);
   sleep_ms(100);
 
-
   /* Clear framebuffer on entry. */
   clear_framebuffer(0);
-
 
   for (Loop1UInt8 = 0; Loop1UInt8 < 5; ++Loop1UInt8)
   {
@@ -8828,10 +8182,6 @@ void test_zone(UINT8 TestType)
                  END - Display power supply voltage
   \* ---------------------------------------------------------------- */
 
-
-
-
-
   /* ---------------------------------------------------------------- *\
       Display time (clock) for a few seconds before beginning tests.
   \* ---------------------------------------------------------------- */
@@ -8839,20 +8189,14 @@ void test_zone(UINT8 TestType)
   tone(10);
   sleep_ms(100);
 
-
   /* Clear framebuffer on entry. */
   clear_framebuffer(0);
-
 
   show_time();
   sleep_ms(1000);
   /* ---------------------------------------------------------------- *\
                       END - Display time clock
   \* ---------------------------------------------------------------- */
-
-
-
-
 
   /* ---------------------------------------------------------------- *\
        Jump to the specific test number if one has been specified.
@@ -8862,87 +8206,83 @@ void test_zone(UINT8 TestType)
   {
     switch (TestType)
     {
-      case (1):
-        goto Test1;
+    case (1):
+      goto Test1;
       break;
 
-      case (2):
-        goto Test2;
+    case (2):
+      goto Test2;
       break;
 
-      case (3):
-        goto Test3;
+    case (3):
+      goto Test3;
       break;
 
-      case (4):
-        goto Test4;
+    case (4):
+      goto Test4;
       break;
 
-      case (5):
-        goto Test5;
+    case (5):
+      goto Test5;
       break;
 
-      case (6):
-        goto Test6;
+    case (6):
+      goto Test6;
       break;
 
-      case (7):
-        goto Test7;
+    case (7):
+      goto Test7;
       break;
 
-      case (8):
-        goto Test8;
+    case (8):
+      goto Test8;
       break;
 
-      case (9):
-        goto Test9;
+    case (9):
+      goto Test9;
       break;
 
-      case (10):
-        goto Test10;
+    case (10):
+      goto Test10;
       break;
 
-      case (11):
-        goto Test11;
+    case (11):
+      goto Test11;
       break;
 
-      case (12):
-        goto Test12;
+    case (12):
+      goto Test12;
       break;
 
-      case (13):
-        goto Test13;
+    case (13):
+      goto Test13;
       break;
 
-      case (14):
-        goto Test14;
+    case (14):
+      goto Test14;
       break;
 
-      case (15):
-        goto Test15;
+    case (15):
+      goto Test15;
       break;
 
-      case (16):
-        goto Test16;
+    case (16):
+      goto Test16;
       break;
 
-      case (17):
-        goto Test17;
+    case (17):
+      goto Test17;
       break;
 
-      case (18):
-        goto Test18;
+    case (18):
+      goto Test18;
       break;
 
-      default:
-        goto Test1;
+    default:
+      goto Test1;
       break;
     }
   }
-
-
-
-
 
   /* ---------------------------------------------------------------- *\
                Test 1 - Display all 4 X 7 character set.
@@ -8952,50 +8292,42 @@ Test1:
   /* Clear framebuffer on entry. */
   clear_framebuffer(0);
 
-
   /* Tone to announce entering a new test. */
   tone(10);
-
 
   /* Announce test number. */
   scroll_string(24, "Test 1");
   while (ScrollDotCount)
-    sleep_ms(100);  // let the time to complete scrolling.
-
+    sleep_ms(100); // let the time to complete scrolling.
 
   /* Initialize clock mode. */
   CurrentClockMode = MODE_TEST;
 
-
-
-/* Read RTC IC registers. */
+  /* Read RTC IC registers. */
   ds3231_register_read();
-
 
   /* Display RTC registers. */
   sprintf(String, "1: %2.2X   2: %2.2X   3: %2.2X   4: %2.2X   5: %2.2X   6: %2.2X   7: %2.2X",
           Ds3231ReadRegister[0], Ds3231ReadRegister[1], Ds3231ReadRegister[2], Ds3231ReadRegister[3], Ds3231ReadRegister[4], Ds3231ReadRegister[5], Ds3231ReadRegister[6]);
   scroll_string(24, String);
   while (ScrollDotCount)
-    sleep_ms(100);  // let the time to complete scrolling.
+    sleep_ms(100); // let the time to complete scrolling.
 
   sprintf(String, "8: %2.2X   9: %2.2X   10: %2.2X   11: %2.2X   12: %2.2X   13: %2.2X   14: %2.2X",
           Ds3231ReadRegister[7], Ds3231ReadRegister[8], Ds3231ReadRegister[9], Ds3231ReadRegister[10], Ds3231ReadRegister[11], Ds3231ReadRegister[12], Ds3231ReadRegister[13]);
   scroll_string(24, String);
   while (ScrollDotCount)
-    sleep_ms(100);  // let the time to complete scrolling.
+    sleep_ms(100); // let the time to complete scrolling.
 
   return;
-
-
 
   /* Display all 4 X 7 character bitmaps. */
   for (Loop1UInt8 = 0; Loop1UInt8 < 89; ++Loop1UInt8)
   {
     clear_framebuffer(0);
-    fill_display_buffer_4X7( 0, 0x30 + (Loop1UInt8 / 10));
-    fill_display_buffer_4X7( 5, 0x30 + (Loop1UInt8 % 10));
-    fill_display_buffer_4X7(15,        (Loop1UInt8 + 0x2D));
+    fill_display_buffer_4X7(0, 0x30 + (Loop1UInt8 / 10));
+    fill_display_buffer_4X7(5, 0x30 + (Loop1UInt8 % 10));
+    fill_display_buffer_4X7(15, (Loop1UInt8 + 0x2D));
     sleep_ms(2000);
   }
 
@@ -9003,10 +8335,6 @@ Test1:
   /* ---------------------------------------------------------------- *\
              END - Test 1 - Display all 4 X 7 character set.
   \* ---------------------------------------------------------------- */
-
-
-
-
 
   /* ---------------------------------------------------------------- *\
                     Test 2 - Not used for now.
@@ -9016,25 +8344,19 @@ Test2:
   /* Clear framebuffer on entry. */
   clear_framebuffer(0);
 
-
   /* Tone to announce entering a new test. */
   tone(10);
   sleep_ms(100);
 
-
   /* Announce test number. */
   scroll_string(24, "Test 2 not used");
   while (ScrollDotCount)
-    sleep_ms(100);  // let the time to complete scrolling.
+    sleep_ms(100); // let the time to complete scrolling.
 
   return;
   /* ---------------------------------------------------------------- *\
                 END - Test 2 - Not used for now.
   \* ---------------------------------------------------------------- */
-
-
-
-
 
   /* ---------------------------------------------------------------- *\
                    Test 3 - Not used for now.
@@ -9044,25 +8366,19 @@ Test3:
   /* Clear framebuffer on entry. */
   clear_framebuffer(0);
 
-
   /* Tone to announce entering a new test. */
   tone(10);
   sleep_ms(100);
 
-
   /* Announce test number. */
   scroll_string(24, "Test 3 not used");
   while (ScrollDotCount)
-    sleep_ms(100);  // let the time to complete scrolling.
+    sleep_ms(100); // let the time to complete scrolling.
 
   return;
- /* ---------------------------------------------------------------- *\
-                 END - Test 3 - Not used for now.
-  \* ---------------------------------------------------------------- */
-
-
-
-
+  /* ---------------------------------------------------------------- *\
+                  END - Test 3 - Not used for now.
+   \* ---------------------------------------------------------------- */
 
   /* ---------------------------------------------------------------- *\
                   Test 4 - Display brightness tests.
@@ -9072,17 +8388,14 @@ Test4:
   /* Clear framebuffer on entry. */
   clear_framebuffer(0);
 
-
   /* Tone to announce entering a new test. */
   tone(10);
   sleep_ms(100);
 
-
   /* Announce test number. */
   scroll_string(24, "Test 4");
   while (ScrollDotCount)
-    sleep_ms(100);  // let the time to complete scrolling.
-
+    sleep_ms(100); // let the time to complete scrolling.
 
   add_repeating_timer_us(50, timer_callback_us, NULL, &Timer50uSec);
 
@@ -9091,25 +8404,21 @@ Test4:
     Dum1UInt16 = get_ads1015();
     sprintf(String, "%4.4u", AverageLightLevel);
 
-    fill_display_buffer_4X7(1,  String[0]);
-    fill_display_buffer_4X7(6,  String[1]);
+    fill_display_buffer_4X7(1, String[0]);
+    fill_display_buffer_4X7(6, String[1]);
     fill_display_buffer_4X7(11, String[2]);
     fill_display_buffer_4X7(16, String[3]);
     sleep_ms(300);
 
-      
     /* Press the "Top" button to exit the while() loop. */
-    if (gpio_get(SET_BUTTON) == 0) break;
+    if (gpio_get(SET_BUTTON) == 0)
+      break;
   }
-  
+
   return;
   /* ---------------------------------------------------------------- *\
                 END - Test 4 - Display brightness tests.
   \* ---------------------------------------------------------------- */
-
-
-
-
 
   /* ---------------------------------------------------------------- *\
                   Test 5 - Display scrolling tests
@@ -9119,32 +8428,27 @@ Test5:
   /* Clear framebuffer on entry. */
   clear_framebuffer(0);
 
-
   /* Tone to announce entering a new test. */
   tone(10);
   sleep_ms(100);
 
-
   /* Announce test number. */
   scroll_string(24, "Test 5");
   while (ScrollDotCount)
-    sleep_ms(100);  // let the time to complete scrolling.
-
-
+    sleep_ms(100); // let the time to complete scrolling.
 
   /* Fill DisplayBuffer[] with bitmap corresponding to the ASCII string. */
   sprintf(String, "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ");
-  ColumnPosition = 24;  // put the bitmap beginning at position 22 + 2, just beyond the visible clock.
-
-
+  ColumnPosition = 24; // put the bitmap beginning at position 22 + 2, just beyond the visible clock.
 
   /* Transfer the bitmap of each ASCII character to the display buffer. */
   for (Loop1UInt8 = 0; Loop1UInt8 < strlen(String); ++Loop1UInt8)
   {
-    SectionNumber   = ColumnPosition / 8;     // determine the target section number.
-    ColumnInSection = ColumnPosition % 8;     // determine the target column number in this section.
+    SectionNumber = ColumnPosition / 8;   // determine the target section number.
+    ColumnInSection = ColumnPosition % 8; // determine the target column number in this section.
 
-    if (ColumnPosition > (UINT16)DISPLAY_BUFFER_SIZE) break;  // get out of the loop if the string is longer than allowed by display buffer size.
+    if (ColumnPosition > (UINT16)DISPLAY_BUFFER_SIZE)
+      break; // get out of the loop if the string is longer than allowed by display buffer size.
 
     for (RowNumber = 1; RowNumber < 8; ++RowNumber)
     {
@@ -9162,11 +8466,8 @@ Test5:
       }
     }
 
-    ColumnPosition += CharWidth[String[Loop1UInt8] - 0x1E] + 1;  // add 1 space between characters.
+    ColumnPosition += CharWidth[String[Loop1UInt8] - 0x1E] + 1; // add 1 space between characters.
   }
-
-
-
 
   /* ---------------------------------------------------------------- *\
                 Then, scroll the bitmap on the display
@@ -9189,16 +8490,12 @@ Test5:
     sleep_ms(SCROLL_DOT_TIME);
   }
   while (ScrollDotCount)
-    sleep_ms(100);  // let the time to complete scrolling.
+    sleep_ms(100); // let the time to complete scrolling.
 
   return;
   /* ---------------------------------------------------------------- *\
                 END - Test 5 - Display scrolling tests
   \* ---------------------------------------------------------------- */
-
-
-
-
 
   /* ---------------------------------------------------------------- *\
        Test 6 - Scroll all 5 X 7 characters to test variable width
@@ -9209,16 +8506,13 @@ Test6:
   /* Clear framebuffer on entry. */
   clear_framebuffer(0);
 
-
   /* Tone to announce entering a new test. */
   tone(10);
-
 
   /* Announce test number. */
   scroll_string(24, "Test 6");
   while (ScrollDotCount)
-    sleep_ms(100);  // let the time to complete scrolling.
-
+    sleep_ms(100); // let the time to complete scrolling.
 
   /* Scan all ASCII characters that are defined in the bitmap table. */
   for (Loop1UInt8 = 0x1E; Loop1UInt8 <= 0x7F; ++Loop1UInt8)
@@ -9232,10 +8526,10 @@ Test6:
       String[Loop2UInt8] = Loop1UInt8;
     }
 
-    String[17] = 0x00;          // add end-of-string.
-    scroll_string(22, String);  // and scroll the data.
+    String[17] = 0x00;         // add end-of-string.
+    scroll_string(22, String); // and scroll the data.
     while (ScrollDotCount)
-      sleep_ms(100);  // let the time to complete scrolling.
+      sleep_ms(100); // let the time to complete scrolling.
   }
 
   return;
@@ -9243,10 +8537,6 @@ Test6:
     END - Test 6 - Scroll all 5 X 7 characters to test variable width
                         and character spacing.
   \* ---------------------------------------------------------------- */
-
-
-
-
 
   /* ---------------------------------------------------------------- *\
               Test 7 - Verify the 4 X 7 character bitmaps.
@@ -9256,17 +8546,14 @@ Test7:
   /* Clear framebuffer on entry. */
   clear_framebuffer(0);
 
-
   /* Tone to announce entering a new test. */
   tone(10);
   sleep_ms(100);
 
-
   /* Announce test number. */
   scroll_string(24, "Test 7");
   while (ScrollDotCount)
-    sleep_ms(100);  // let the time to complete scrolling.
-
+    sleep_ms(100); // let the time to complete scrolling.
 
   for (Loop1UInt8 = 0x2D; Loop1UInt8 < 0x2D + 53; ++Loop1UInt8)
   {
@@ -9281,10 +8568,6 @@ Test7:
            END - Test 7 - Verify the 4 X 7 character bitmaps.
   \* ---------------------------------------------------------------- */
 
-
-
-
-
   /* ---------------------------------------------------------------- *\
           Test 8 - Display all characters of the 5 X 7 bitmap,
              using three different chunk of scrolling text.
@@ -9294,33 +8577,29 @@ Test8:
   /* Clear framebuffer on entry. */
   clear_framebuffer(0);
 
-
   /* Tone to announce entering a new test. */
   tone(10);
-
 
   /* Announce test number. */
   scroll_string(24, "Test 8");
   while (ScrollDotCount)
-    sleep_ms(100);  // let the time to complete scrolling.
-
-
+    sleep_ms(100); // let the time to complete scrolling.
 
   /* Wipe String[] on entry. */
-  for(Loop1UInt8 = 0; Loop1UInt8 < DISPLAY_BUFFER_SIZE; ++Loop1UInt8)
+  for (Loop1UInt8 = 0; Loop1UInt8 < DISPLAY_BUFFER_SIZE; ++Loop1UInt8)
     String[Loop1UInt8] = 0x00;
 
   /* Scroll first bunch of characters on the display. */
-  String[0]  = 0x1E;
-  String[1]  = 0x1F;
-  String[2]  = 0x20;
-  String[3]  = 0x21;
-  String[4]  = 0x22;
-  String[5]  = 0x23;
-  String[6]  = 0x24;
-  String[7]  = 0x25;
-  String[8]  = 0x26;
-  String[9]  = 0x27;
+  String[0] = 0x1E;
+  String[1] = 0x1F;
+  String[2] = 0x20;
+  String[3] = 0x21;
+  String[4] = 0x22;
+  String[5] = 0x23;
+  String[6] = 0x24;
+  String[7] = 0x25;
+  String[8] = 0x26;
+  String[9] = 0x27;
   String[10] = 0x28;
   String[11] = 0x29;
   String[12] = 0x2A;
@@ -9342,33 +8621,28 @@ Test8:
   scroll_string(24, String);
   sleep_ms(1000);
 
-
-
   /* Clear framebuffer. */
   clear_framebuffer(0);
-
 
   /* Tone to announce entering a new test. */
   tone(10);
   sleep_ms(100);
 
-
   /* Wipe String[] on entry. */
-  for(Loop1UInt8 = 0; Loop1UInt8 < DISPLAY_BUFFER_SIZE; ++Loop1UInt8)
+  for (Loop1UInt8 = 0; Loop1UInt8 < DISPLAY_BUFFER_SIZE; ++Loop1UInt8)
     String[Loop1UInt8] = 0x00;
 
-
   /* Display another bunch of characters on the display. */
-  String[0]  = 0x3A;
-  String[1]  = 0x3B;
-  String[2]  = 0x3C;
-  String[3]  = 0x3D;
-  String[4]  = 0x3E;
-  String[5]  = 0x3F;
-  String[6]  = 0x40;
-  String[7]  = 0x41;
-  String[8]  = 0x42;
-  String[9]  = 0x43;
+  String[0] = 0x3A;
+  String[1] = 0x3B;
+  String[2] = 0x3C;
+  String[3] = 0x3D;
+  String[4] = 0x3E;
+  String[5] = 0x3F;
+  String[6] = 0x40;
+  String[7] = 0x41;
+  String[8] = 0x42;
+  String[9] = 0x43;
   String[10] = 0x44;
   String[11] = 0x45;
   String[12] = 0x46;
@@ -9394,41 +8668,36 @@ Test8:
   String[32] = 0x5A;
   scroll_string(24, String);
   while (ScrollDotCount)
-    sleep_ms(100);  // let the time to complete scrolling.
-
-
+    sleep_ms(100); // let the time to complete scrolling.
 
   /* Clear framebuffer. */
   clear_framebuffer(0);
-
 
   /* Tone to announce entering a new test. */
   tone(10);
   sleep_ms(100);
 
-
   /* Wipe String[] on entry. */
-  for(Loop1UInt8 = 0; Loop1UInt8 < DISPLAY_BUFFER_SIZE; ++Loop1UInt8)
+  for (Loop1UInt8 = 0; Loop1UInt8 < DISPLAY_BUFFER_SIZE; ++Loop1UInt8)
     String[Loop1UInt8] = 0x00;
 
-
   /* Display last bunch of characters. */
-  String[0]  = 0x5B;
-  String[1]  = 0x5C;
-  String[2]  = 0x5D;
-  String[3]  = 0x5E;
-  String[4]  = 0x5F;
-  String[0]  = 0x60;
-  String[0]  = 0x61;
-  String[1]  = 0x62;
-  String[2]  = 0x63;
-  String[3]  = 0x64;
-  String[4]  = 0x65;
-  String[5]  = 0x66;
-  String[6]  = 0x67;
-  String[7]  = 0x68;
-  String[8]  = 0x69;
-  String[9]  = 0x6A;
+  String[0] = 0x5B;
+  String[1] = 0x5C;
+  String[2] = 0x5D;
+  String[3] = 0x5E;
+  String[4] = 0x5F;
+  String[0] = 0x60;
+  String[0] = 0x61;
+  String[1] = 0x62;
+  String[2] = 0x63;
+  String[3] = 0x64;
+  String[4] = 0x65;
+  String[5] = 0x66;
+  String[6] = 0x67;
+  String[7] = 0x68;
+  String[8] = 0x69;
+  String[9] = 0x6A;
   String[10] = 0x6B;
   String[11] = 0x6C;
   String[12] = 0x6D;
@@ -9454,16 +8723,12 @@ Test8:
   String[30] = 0x81;
   scroll_string(24, String);
   while (ScrollDotCount)
-    sleep_ms(100);  // let the time to complete scrolling.
+    sleep_ms(100); // let the time to complete scrolling.
 
   return;
   /* ---------------------------------------------------------------- *\
         END - Test 8 - Display all characters of the 5 X 7 bitmap,
   \* ---------------------------------------------------------------- */
-
-
-
-
 
   /* ---------------------------------------------------------------- *\
                    Test 9 - Tests with indicators.
@@ -9473,18 +8738,14 @@ Test9:
   /* Clear framebuffer on entry. */
   clear_framebuffer(0);
 
-
   /* Tone to announce entering a new test. */
   tone(10);
   sleep_ms(100);
 
-
   /* Announce test number. */
   scroll_string(24, "Test 9");
   while (ScrollDotCount)
-    sleep_ms(100);  // let the time to complete scrolling.
-
-
+    sleep_ms(100); // let the time to complete scrolling.
 
   /* Wait for "Set" (top) button to be pressed... */
   /* Blink the two white LEDs near the buttons to show that we are waiting for "Set" button press,
@@ -9494,9 +8755,8 @@ Test9:
   IndicatorButtonLightsOff;
   sleep_ms(500);
   fill_display_buffer_5X7(2, '>');
-  while (gpio_get(SET_BUTTON));
-
-
+  while (gpio_get(SET_BUTTON))
+    ;
 
   /* Turn On all indicators on the left-side of the display. */
   for (Loop1UInt8 = 0; Loop1UInt8 < 5; ++Loop1UInt8)
@@ -9511,9 +8771,8 @@ Test9:
     IndicatorAlarmOn;
     IndicatorCountUpOn;
     IndicatorHourlyChimeOn;
-    IndicatorAutoLightOn ;
+    IndicatorAutoLightOn;
     IndicatorButtonLightsOn;
-
 
     /* Wait for "Set" (top) button to be pressed... */
     /* Blink the two white LEDs near the buttons to show that we are waiting for "Set" button press,
@@ -9523,8 +8782,8 @@ Test9:
     IndicatorButtonLightsOff;
     sleep_ms(500);
     fill_display_buffer_5X7(2, '>');
-    while (gpio_get(SET_BUTTON));
-
+    while (gpio_get(SET_BUTTON))
+      ;
 
     /* Turn Off all indicators on the left-side of the display. */
     IndicatorScrollOff;
@@ -9540,7 +8799,6 @@ Test9:
     IndicatorAutoLightOff;
     IndicatorButtonLightsOff;
 
-
     /* Wait for "Set" (top) button to be pressed... */
     /* Blink the two white LEDs near the buttons to show that we are waiting for "Set" button press,
        then put a "prompt" on the clock display. */
@@ -9549,16 +8807,14 @@ Test9:
     IndicatorButtonLightsOff;
     sleep_ms(500);
     fill_display_buffer_5X7(2, '>');
-    while (gpio_get(SET_BUTTON));
+    while (gpio_get(SET_BUTTON))
+      ;
   }
 
   return;
   /* ---------------------------------------------------------------- *\
                  END - Test 9 - Tests with indicators.
   \* ---------------------------------------------------------------- */
-
-
-
 
   /* ---------------------------------------------------------------- *\
                    Test 10 - Tests with indicators.
@@ -9575,32 +8831,28 @@ Test10:
   /* Clear framebuffer on entry. */
   clear_framebuffer(0);
 
-
   /* Tone to announce entering a new test. */
   tone(10);
   sleep_ms(100);
 
-
   /* Announce test number. */
   scroll_string(24, "Test 10");
   while (ScrollDotCount)
-    sleep_ms(100);  // let the time to complete scrolling.
-
-
+    sleep_ms(100); // let the time to complete scrolling.
 
   /* Scan all bytes of the clock display matrix. */
   for (Loop1UInt8 = 1; Loop1UInt8 < 24; ++Loop1UInt8)
   {
-    if (Loop1UInt8 == 16) IndicatorButtonLightsOn; // To check two while LEDs indicators.
+    if (Loop1UInt8 == 16)
+      IndicatorButtonLightsOn; // To check two while LEDs indicators.
 
     /* DisplayBuffer[8] and [16] are reserved for indicators bitmap, so they are skipped. */
     if ((Loop1UInt8 == 8) || (Loop1UInt8 == 16))
     {
-      tone(60);  // tone the user to indicate that a byte has been skipped.
+      tone(60); // tone the user to indicate that a byte has been skipped.
       sleep_ms(1200);
       continue;
     }
-
 
     /* Use "OR" so that the indicators remains untouched on the display. */
     /* We also cumulate the dots on the clock display. */
@@ -9635,7 +8887,6 @@ Test10:
     /* Clear framebuffer. */
     clear_framebuffer(0);
 
-
     /* Wait for "Set" (top) button to be pressed... */
     /* Blink the two white LEDs near the buttons to show that we are waiting for "Set" button press,
        then put a "prompt" on the clock display. */
@@ -9643,8 +8894,8 @@ Test10:
     sleep_ms(500);
     IndicatorButtonLightsOff;
     fill_display_buffer_5X7(2, '>');
-    while (gpio_get(SET_BUTTON));
-
+    while (gpio_get(SET_BUTTON))
+      ;
 
     /* Clear framebuffer. */
     clear_framebuffer(0);
@@ -9658,10 +8909,6 @@ Test10:
                 END - Test 10 - Tests with indicators.
   \* ---------------------------------------------------------------- */
 
-
-
-
-
   /* ---------------------------------------------------------------- *\
          Test 11 - Test to visualize variable character width.
   \* ---------------------------------------------------------------- */
@@ -9670,34 +8917,29 @@ Test11:
   /* Clear framebuffer on entry. */
   clear_framebuffer(0);
 
-
   /* Tone to announce entering a new test. */
   tone(10);
   sleep_ms(100);
 
-
   /* Announce test number. */
   scroll_string(24, "Test 2 - not used");
   while (ScrollDotCount)
-    sleep_ms(100);  // let the time to complete scrolling.
-
+    sleep_ms(100); // let the time to complete scrolling.
 
   // Give information to user.
   scroll_string(24, "Variable character width...");
   while (ScrollDotCount)
-    sleep_ms(100);  // let the time to complete scrolling.
+    sleep_ms(100); // let the time to complete scrolling.
 
   /* Put a left frame. */
   for (Loop1UInt8 = 9; Loop1UInt8 < 16; ++Loop1UInt8)
-     DisplayBuffer[Loop1UInt8] |= 0x40;
+    DisplayBuffer[Loop1UInt8] |= 0x40;
   sleep_ms(500);
 
   /* Put a right frame. */
   for (Loop1UInt8 = 17; Loop1UInt8 < 24; ++Loop1UInt8)
     DisplayBuffer[Loop1UInt8] |= 0x10;
   sleep_ms(500);
-
-
 
   /* Now, display each character in between those frames. */
   for (Loop1UInt8 = 0; Loop1UInt8 < 98; ++Loop1UInt8)
@@ -9722,10 +8964,6 @@ Test11:
        END - Test 11 - Test to visualize variable character width.
   \* ---------------------------------------------------------------- */
 
-
-
-
-
   /* ---------------------------------------------------------------- *\
                   Test 12 - Test 5 X 7 character map
   \* ---------------------------------------------------------------- */
@@ -9734,17 +8972,14 @@ Test12:
   /* Clear framebuffer on entry. */
   clear_framebuffer(0);
 
-
   /* Tone to announce entering a new test. */
   tone(10);
   sleep_ms(100);
 
-
   /* Announce test number. */
   scroll_string(24, "Test 12");
   while (ScrollDotCount)
-    sleep_ms(100);  // let the time to complete scrolling.
-
+    sleep_ms(100); // let the time to complete scrolling.
 
   /* Scan all available ASCII characters. */
   for (Loop1UInt8 = 0; Loop1UInt8 < 100; ++Loop1UInt8)
@@ -9756,13 +8991,11 @@ Test12:
     {
       /* We need to reverse bit order of the character bitmap since the left-most column
          on the clock display corresponds to the lowest bit. */
-      DisplayBuffer[8 + RowNumber] = reverse_bits(CharMap[(Loop1UInt8 * 7) + RowNumber -1]);
+      DisplayBuffer[8 + RowNumber] = reverse_bits(CharMap[(Loop1UInt8 * 7) + RowNumber - 1]);
     }
     sleep_ms(500);
   }
   sleep_ms(500);
-
-
 
   /* Wait for "Set" button to be pressed... */
   /* Blink the two white LEDs near the buttons to show that we are waiting for "Set" button press,
@@ -9772,16 +9005,13 @@ Test12:
   IndicatorButtonLightsOff;
   sleep_ms(500);
   fill_display_buffer_5X7(2, '>');
-  while (gpio_get(SET_BUTTON));
+  while (gpio_get(SET_BUTTON))
+    ;
 
   return;
   /* ---------------------------------------------------------------- *\
                 END - Test 12 - Test 5 X 7 character map
   \* ---------------------------------------------------------------- */
-
-
-
-
 
   /* ---------------------------------------------------------------- *\
               Test 13 - Scrolling test with 5 X 7 matrix.
@@ -9791,59 +9021,48 @@ Test13:
   /* Clear framebuffer on entry. */
   clear_framebuffer(0);
 
-
   /* Tone to announce entering a new test. */
   tone(10);
   sleep_ms(100);
 
-
   /* Announce test number. */
   scroll_string(24, "Test 13");
   while (ScrollDotCount)
-    sleep_ms(100);  // let the time to complete scrolling.
-
+    sleep_ms(100); // let the time to complete scrolling.
 
   /* Wipe String[] on entry. */
   for (Loop1UInt8 = 0; Loop1UInt8 < DISPLAY_BUFFER_SIZE; ++Loop1UInt8)
     String[Loop1UInt8] = 0x00;
 
-
-
   sprintf(String, "A");
   scroll_string(22, String);
   while (ScrollDotCount)
-    sleep_ms(100);  // let the time to complete scrolling.
-
+    sleep_ms(100); // let the time to complete scrolling.
 
   sprintf(String, "B");
   scroll_string(22, String);
   while (ScrollDotCount)
-    sleep_ms(100);  // let the time to complete scrolling.
-
+    sleep_ms(100); // let the time to complete scrolling.
 
   sprintf(String, "AA");
   scroll_string(22, String);
   while (ScrollDotCount)
-    sleep_ms(100);  // let the time to complete scrolling.
-
+    sleep_ms(100); // let the time to complete scrolling.
 
   sprintf(String, "BB");
   scroll_string(22, String);
   while (ScrollDotCount)
-    sleep_ms(100);  // let the time to complete scrolling.
-
+    sleep_ms(100); // let the time to complete scrolling.
 
   sprintf(String, "AB");
   scroll_string(22, String);
   while (ScrollDotCount)
-    sleep_ms(100);  // let the time to complete scrolling.
-
+    sleep_ms(100); // let the time to complete scrolling.
 
   sprintf(String, "ABAB");
   scroll_string(22, String);
   while (ScrollDotCount)
-    sleep_ms(100);  // let the time to complete scrolling.
-
+    sleep_ms(100); // let the time to complete scrolling.
 
   /* Wait for "Set" button to be pressed... */
   /* Blink the two white LEDs near the buttons to show that we are waiting for "Set" button press,
@@ -9853,16 +9072,13 @@ Test13:
   IndicatorButtonLightsOff;
   sleep_ms(500);
   fill_display_buffer_5X7(2, '>');
-  while (gpio_get(SET_BUTTON));
+  while (gpio_get(SET_BUTTON))
+    ;
 
   return;
   /* ---------------------------------------------------------------- *\
            END - Test 13 - Scrolling test with 5 X 7 matrix.
   \* ---------------------------------------------------------------- */
-
-
-
-
 
   /* ---------------------------------------------------------------- *\
               Test 14 - Scrolling test with 4 X 7 matrix.
@@ -9872,39 +9088,34 @@ Test14:
   /* Clear framebuffer on entry. */
   clear_framebuffer(0);
 
-
   /* Tone to announce entering a new test. */
   tone(10);
   sleep_ms(100);
 
-
   /* Prevent dots blinking in the clock. */
   CurrentClockMode = MODE_SCROLLING;
-
 
   /* Announce test number. */
   scroll_string(4, "Test 14");
   while (ScrollDotCount)
-    sleep_ms(100);  // let the time to complete scrolling.
+    sleep_ms(100); // let the time to complete scrolling.
 
-
-
-  fill_display_buffer_5X7(5,   'A');
-  fill_display_buffer_5X7(11,  'B');
-  fill_display_buffer_5X7(17,  'C');
-  fill_display_buffer_5X7(23,  'D');
-  fill_display_buffer_5X7(29,  'E');
-  fill_display_buffer_5X7(35,  'F');
-  fill_display_buffer_5X7(41,  'G');
-  fill_display_buffer_5X7(47,  'H');
-  fill_display_buffer_5X7(53,  'I');
-  fill_display_buffer_5X7(59,  'J');
-  fill_display_buffer_5X7(65,  'K');
-  fill_display_buffer_5X7(71,  'L');
-  fill_display_buffer_5X7(77,  'M');
-  fill_display_buffer_5X7(83,  'N');
-  fill_display_buffer_5X7(90,  'O');
-  fill_display_buffer_5X7(96,  'P');
+  fill_display_buffer_5X7(5, 'A');
+  fill_display_buffer_5X7(11, 'B');
+  fill_display_buffer_5X7(17, 'C');
+  fill_display_buffer_5X7(23, 'D');
+  fill_display_buffer_5X7(29, 'E');
+  fill_display_buffer_5X7(35, 'F');
+  fill_display_buffer_5X7(41, 'G');
+  fill_display_buffer_5X7(47, 'H');
+  fill_display_buffer_5X7(53, 'I');
+  fill_display_buffer_5X7(59, 'J');
+  fill_display_buffer_5X7(65, 'K');
+  fill_display_buffer_5X7(71, 'L');
+  fill_display_buffer_5X7(77, 'M');
+  fill_display_buffer_5X7(83, 'N');
+  fill_display_buffer_5X7(90, 'O');
+  fill_display_buffer_5X7(96, 'P');
   fill_display_buffer_5X7(102, 'Q');
   fill_display_buffer_5X7(108, 'R');
   fill_display_buffer_5X7(114, 'S');
@@ -9917,8 +9128,6 @@ Test14:
   fill_display_buffer_5X7(156, 'Z');
   sleep_ms(1000);
 
-
-
   /* ---------------------------------------------------------------- *\
                  Scroll the framebuffer on the display.
   \* ---------------------------------------------------------------- */
@@ -9927,9 +9136,9 @@ Test14:
     /* Scan the 7 rows of data. Row 0 is reserved for "indicators". */
     for (RowNumber = 1; RowNumber < 8; ++RowNumber)
     {
-      CharacterBuffer = DisplayBuffer[RowNumber] & 0x03;  // keep track of the "indicators" status (first 2 bits).
+      CharacterBuffer = DisplayBuffer[RowNumber] & 0x03; // keep track of the "indicators" status (first 2 bits).
 
-      sleep_ms(10);  // value can be increase (up tp 255) to better see scroll movement.
+      sleep_ms(10); // value can be increase (up tp 255) to better see scroll movement.
 
       /* Scan all "sections" of the framebuffer. One section is 8 bits width. */
       for (SectionNumber = 0; SectionNumber < (sizeof(DisplayBuffer) / 8); ++SectionNumber)
@@ -9940,7 +9149,7 @@ Test14:
         else
           DisplayBuffer[(SectionNumber * 8) + RowNumber] = DisplayBuffer[(SectionNumber * 8) + RowNumber] >> 1;
       }
-      DisplayBuffer[RowNumber] = (DisplayBuffer[RowNumber] & (~0x03)) | CharacterBuffer;  // restore the "indicators" status.
+      DisplayBuffer[RowNumber] = (DisplayBuffer[RowNumber] & (~0x03)) | CharacterBuffer; // restore the "indicators" status.
     }
     sleep_ms(100);
   }
@@ -9949,23 +9158,17 @@ Test14:
   show_time();
   sleep_ms(5000);
 
-
-
-
-
   /* Prevent dots blinking in the clock. */
   CurrentClockMode = MODE_SCROLLING;
-
 
   /* Clear framebuffer on entry. */
   clear_framebuffer(0);
 
-
   /* Test the fill_display_buffer_4X7() function for 4 X 7 characters...
      ... first in the "physical" section of the display memory. */
-  fill_display_buffer_4X7( 0, '0');
+  fill_display_buffer_4X7(0, '0');
   sleep_ms(500);
-  fill_display_buffer_4X7( 5, '1');
+  fill_display_buffer_4X7(5, '1');
   sleep_ms(500);
   fill_display_buffer_4X7(10, '2');
   sleep_ms(500);
@@ -9973,29 +9176,22 @@ Test14:
   sleep_ms(500);
   fill_display_buffer_4X7(20, '4');
   sleep_ms(5000);
-  ScrollSecondCounter  = 0;  // delay eventual date display on clock display
-  ScrollDotCount       = 24;
-  FlagScrollStart      = FLAG_ON;
+  ScrollSecondCounter = 0; // delay eventual date display on clock display
+  ScrollDotCount = 24;
+  FlagScrollStart = FLAG_ON;
 
   /* Pause before next test. */
   sleep_ms(5000);
-
-
-
-
 
   /* Tone to announce end of test. */
   tone(10);
   sleep_ms(100);
 
-
   /* Clear framebuffer on entry. */
   clear_framebuffer(0);
 
-
   /* Prevent dots blinking in the clock. */
   CurrentClockMode = MODE_SCROLLING;
-
 
   /* Do the same thing, this time in the virtual section of the display memory. */
   fill_display_buffer_4X7(23, 'A');
@@ -10009,40 +9205,32 @@ Test14:
   fill_display_buffer_4X7(63, 'I');
   ScrollDotCount = 66;
 
-  FlagScrollData  = FLAG_OFF;  // we don't want to fill display buffer with the date before scrolling.
+  FlagScrollData = FLAG_OFF; // we don't want to fill display buffer with the date before scrolling.
   FlagScrollStart = FLAG_ON;
 
   /* Pause before next test. */
   sleep_ms(5000);
 
-
-
-
-
   /* Tone to announce end of test. */
   tone(10);
   sleep_ms(100);
 
-
   /* Clear framebuffer on entry. */
   clear_framebuffer(0);
-
 
   /* Prevent dots blinking in the clock. */
   CurrentClockMode = MODE_SCROLLING;
 
-
   /* Put characters 0 to 9 in framebuffer. */
   for (Loop1UInt8 = 0; Loop1UInt8 <= 9; ++Loop1UInt8)
     fill_display_buffer_4X7((Loop1UInt8 * 6) + 10, Loop1UInt8 + 0x30);
-
 
   /* Then scroll them... */
   for (Loop1UInt8 = 1; Loop1UInt8 < ((strlen(DisplayBuffer) * 6) + 69); ++Loop1UInt8)
   {
     for (Loop2UInt8 = 1; Loop2UInt8 < 8; ++Loop2UInt8)
     {
-      CharacterBuffer = DisplayBuffer[Loop2UInt8] & 0x03;  // keep track of "indicators" status (first 2 bits).
+      CharacterBuffer = DisplayBuffer[Loop2UInt8] & 0x03; // keep track of "indicators" status (first 2 bits).
 
       for (Loop3UInt8 = 0; Loop3UInt8 < sizeof(DisplayBuffer) / 8; ++Loop3UInt8)
       {
@@ -10052,7 +9240,7 @@ Test14:
           DisplayBuffer[(Loop3UInt8 * 8) + Loop2UInt8] = DisplayBuffer[(Loop3UInt8 * 8) + Loop2UInt8] >> 1;
       }
 
-      DisplayBuffer[Loop2UInt8] = (DisplayBuffer[Loop2UInt8] & (~0x03)) | CharacterBuffer;  // restore "indicators" status.
+      DisplayBuffer[Loop2UInt8] = (DisplayBuffer[Loop2UInt8] & (~0x03)) | CharacterBuffer; // restore "indicators" status.
     }
     sleep_ms(SCROLL_DOT_TIME);
   }
@@ -10060,25 +9248,19 @@ Test14:
   /* Pause before next test. */
   sleep_ms(5000);
 
-
-
-
-
   /* Clear framebuffer before next test. */
   clear_framebuffer(0);
-
 
   /* Put characters of the alphabet (+ one extra character to show out-of-bound) in framebuffer. */
   for (Loop1UInt8 = 0; Loop1UInt8 <= 26; ++Loop1UInt8)
     fill_display_buffer_4X7((Loop1UInt8 * 6) + 10, Loop1UInt8 + 0x41);
-
 
   /* Then scroll them... */
   for (Loop1UInt8 = 1; Loop1UInt8 < ((strlen(DisplayBuffer) * 6) + 171); ++Loop1UInt8)
   {
     for (Loop2UInt8 = 1; Loop2UInt8 < 8; ++Loop2UInt8)
     {
-      CharacterBuffer = DisplayBuffer[Loop2UInt8] & 0x03;  // keep track of "indicators" status (first 2 bits).
+      CharacterBuffer = DisplayBuffer[Loop2UInt8] & 0x03; // keep track of "indicators" status (first 2 bits).
 
       for (Loop3UInt8 = 0; Loop3UInt8 < sizeof(DisplayBuffer) / 8; ++Loop3UInt8)
       {
@@ -10088,9 +9270,9 @@ Test14:
           DisplayBuffer[(Loop3UInt8 * 8) + Loop2UInt8] = DisplayBuffer[(Loop3UInt8 * 8) + Loop2UInt8] >> 1;
       }
 
-      DisplayBuffer[Loop2UInt8] = (DisplayBuffer[Loop2UInt8] & (~0x03)) | CharacterBuffer;  // restore "indicators" status.
+      DisplayBuffer[Loop2UInt8] = (DisplayBuffer[Loop2UInt8] & (~0x03)) | CharacterBuffer; // restore "indicators" status.
     }
-    sleep_ms(SCROLL_DOT_TIME);  // time delay to scroll one dot to the left.
+    sleep_ms(SCROLL_DOT_TIME); // time delay to scroll one dot to the left.
   }
   sleep_ms(5000);
 
@@ -10098,10 +9280,6 @@ Test14:
   /* ---------------------------------------------------------------- *\
            END - Test 14 - Scrolling test with 4 X 7 matrix.
   \* ---------------------------------------------------------------- */
-
-
-
-
 
 /* ------------------------------------------------------------------ *\
             Test 15 - Display some info on clock display.
@@ -10111,45 +9289,38 @@ Test15:
   /* Clear framebuffer on entry. */
   clear_framebuffer(0);
 
-
   /* Tone to announce entering a new test. */
   tone(10);
-
 
   /* Announce test number. */
   scroll_string(24, "Test 15");
   while (ScrollDotCount)
-    sleep_ms(100);  // let the time to complete scrolling.
-
+    sleep_ms(100); // let the time to complete scrolling.
 
   sprintf(String, "strlen(DisplayBuffer) = %u", strlen(DisplayBuffer));
   scroll_string(20, String);
   while (ScrollDotCount)
-    sleep_ms(100);  // let the time to complete scrolling.
+    sleep_ms(100); // let the time to complete scrolling.
 
   sprintf(String, "sizeof(DisplayBuffer) = %u", sizeof(DisplayBuffer));
   scroll_string(20, String);
   while (ScrollDotCount)
-    sleep_ms(100);  // let the time to complete scrolling.
+    sleep_ms(100); // let the time to complete scrolling.
 
   sprintf(String, "Value of TRUE = %u", TRUE);
   scroll_string(20, String);
   while (ScrollDotCount)
-    sleep_ms(100);  // let the time to complete scrolling.
+    sleep_ms(100); // let the time to complete scrolling.
 
   sprintf(String, "Value of FALSE = %u", FALSE);
   scroll_string(20, String);
   while (ScrollDotCount)
-    sleep_ms(100);  // let the time to complete scrolling.
+    sleep_ms(100); // let the time to complete scrolling.
 
   return;
 /* ------------------------------------------------------------------ *\
           END - Test 15 - Display some info on clock display.
 \* ------------------------------------------------------------------ */
-
-
-
-
 
 /* ------------------------------------------------------------------ *\
                Test 16 - Turn ON and OFF in sequence
@@ -10160,23 +9331,18 @@ Test16:
   /* Clear framebuffer on entry. */
   clear_framebuffer(0);
 
-
   /* Tone to announce entering a new test. */
   tone(10);
   sleep_ms(100);
 
-
   /* Announce test number. */
   scroll_string(24, "Test 16");
   while (ScrollDotCount)
-    sleep_ms(100);  // let the time to complete scrolling.
-
+    sleep_ms(100); // let the time to complete scrolling.
 
   // Wipe DisplayBuffer on entry.
   for (Loop1UInt8 = 0; Loop1UInt8 < DISPLAY_BUFFER_SIZE; ++Loop1UInt8)
     DisplayBuffer[Loop1UInt8] = 0x00;
-
-
 
   /* Scan all bytes of the visible display buffer. */
   // for (Loop1UChar = 0; Loop1UChar < 24; ++Loop1UChar)
@@ -10193,26 +9359,23 @@ Test16:
     IndicatorButtonLightsOff;
     // sleep_ms(500);
     fill_display_buffer_5X7(2, '>');
-    while (gpio_get(SET_BUTTON));
+    while (gpio_get(SET_BUTTON))
+      ;
 
-
-    ColumnPosition = 1;  // will be auto-incremented in the fill_display_buffer_5X7() function.
+    ColumnPosition = 1; // will be auto-incremented in the fill_display_buffer_5X7() function.
     for (Loop2UInt8 = 0; Loop2UInt8 < strlen(String); ++Loop2UInt8)
     {
-      if (ColumnPosition > (UINT16)DISPLAY_BUFFER_SIZE) break;  // get out of the loop if the string is longer than allowed by display buffer size.
+      if (ColumnPosition > (UINT16)DISPLAY_BUFFER_SIZE)
+        break; // get out of the loop if the string is longer than allowed by display buffer size.
 
       ColumnPosition = fill_display_buffer_5X7(++ColumnPosition, String[Loop2UInt8]);
     }
-    sleep_ms(1000);  // give time for user to read the byte under test.
-
-
+    sleep_ms(1000); // give time for user to read the byte under test.
 
     /* Blank the whole display. */
     for (Loop1UInt8 = 0; Loop1UInt8 < DISPLAY_BUFFER_SIZE; ++Loop1UInt8)
       DisplayBuffer[Loop1UInt8] = 0;
-    sleep_ms(200);  // wait some time before scrolling the dot on the display.
-
-
+    sleep_ms(200); // wait some time before scrolling the dot on the display.
 
     /* Now, test each bit of the byte under test. */
     for (Loop2UInt8 = 0; Loop2UInt8 < 8; ++Loop2UInt8)
@@ -10220,8 +9383,6 @@ Test16:
       DisplayBuffer[Loop1UInt8] = 1 << Loop2UInt8;
       sleep_ms(400);
     }
-
-
 
     /* Blank the whole display again when done with this byte. */
     for (Loop1UInt8 = 0; Loop1UInt8 < DISPLAY_BUFFER_SIZE; ++Loop1UInt8)
@@ -10234,10 +9395,6 @@ Test16:
              each bit of each byte of the DisplayBuffer.
 \* ------------------------------------------------------------------ */
 
-
-
-
-
 /* ------------------------------------------------------------------ *\
           Test 17 - Play with weekday indicators in sequence.
 \* ------------------------------------------------------------------ */
@@ -10246,159 +9403,147 @@ Test17:
   /* Clear framebuffer on entry. */
   clear_framebuffer(0);
 
-
   /* Tone to announce entering a new test. */
   tone(10);
-
 
   /* Announce test number. */
   scroll_string(24, "Test 17");
   while (ScrollDotCount)
-    sleep_ms(100);  // let the time to complete scrolling.
-
+    sleep_ms(100); // let the time to complete scrolling.
 
   // Turn ON, then OFF, each weekday indicator (2 LEDs per indicator).
-  DisplayBuffer[0]  |= (1 << 3) | (1 << 4);       // Monday
+  DisplayBuffer[0] |= (1 << 3) | (1 << 4); // Monday
   sleep_ms(500);
-  DisplayBuffer[0]  &= ~((1 << 3) | (1 << 4));
-  sleep_ms(500);
-
-  DisplayBuffer[0]  |= (1 << 6) | (1 << 7);       // Tuesday
-  sleep_ms(500);
-  DisplayBuffer[0]  &= ~(( 1 << 6) | (1 << 7));
+  DisplayBuffer[0] &= ~((1 << 3) | (1 << 4));
   sleep_ms(500);
 
-  DisplayBuffer[8]  |= (1 << 1) | (1 << 2);       // Wednesday
+  DisplayBuffer[0] |= (1 << 6) | (1 << 7); // Tuesday
   sleep_ms(500);
-  DisplayBuffer[8]  &= ~((1 << 1) | (1 << 2));
-  sleep_ms(500);
-
-  DisplayBuffer[8]  |= (1 << 4) | (1 << 5);       // Thursday
-  sleep_ms(500);
-  DisplayBuffer[8]  &= ~((1 << 4) | (1 << 5));
+  DisplayBuffer[0] &= ~((1 << 6) | (1 << 7));
   sleep_ms(500);
 
-  DisplayBuffer[8]  |= (1 << 7);                  // Friday
-  DisplayBuffer[16] |=  (1 << 0);
+  DisplayBuffer[8] |= (1 << 1) | (1 << 2); // Wednesday
   sleep_ms(500);
-  DisplayBuffer[8]  &=  ~(1 << 7);
-  DisplayBuffer[16] &= ~(1<<0);
+  DisplayBuffer[8] &= ~((1 << 1) | (1 << 2));
   sleep_ms(500);
 
-  DisplayBuffer[16] |= (1 << 2) | (1 << 3);       // Saturday
+  DisplayBuffer[8] |= (1 << 4) | (1 << 5); // Thursday
+  sleep_ms(500);
+  DisplayBuffer[8] &= ~((1 << 4) | (1 << 5));
+  sleep_ms(500);
+
+  DisplayBuffer[8] |= (1 << 7); // Friday
+  DisplayBuffer[16] |= (1 << 0);
+  sleep_ms(500);
+  DisplayBuffer[8] &= ~(1 << 7);
+  DisplayBuffer[16] &= ~(1 << 0);
+  sleep_ms(500);
+
+  DisplayBuffer[16] |= (1 << 2) | (1 << 3); // Saturday
   sleep_ms(500);
   DisplayBuffer[16] &= ~((1 << 2) | (1 << 3));
   sleep_ms(500);
 
-  DisplayBuffer[16] |= (1 << 5) | (1 << 6);       // Sunday
+  DisplayBuffer[16] |= (1 << 5) | (1 << 6); // Sunday
   sleep_ms(500);
   DisplayBuffer[16] &= ~((1 << 5) | (1 << 6));
   sleep_ms(500);
 
-
   // Now do the same with all other display indicators.
-  DisplayBuffer[0] |= 0X03;               // scroll indicator
+  DisplayBuffer[0] |= 0X03; // scroll indicator
   sleep_ms(500);
   DisplayBuffer[0] &= ~0X03;
   sleep_ms(500);
-  DisplayBuffer[1] |= 0X03;               // alarm indicator
+  DisplayBuffer[1] |= 0X03; // alarm indicator
   sleep_ms(500);
   DisplayBuffer[1] &= ~0x03;
   sleep_ms(500);
-  DisplayBuffer[2] |= 0X03;               // count down timer indicator
+  DisplayBuffer[2] |= 0X03; // count down timer indicator
   sleep_ms(500);
   DisplayBuffer[2] &= ~0x03;
   sleep_ms(500);
-  DisplayBuffer[3] |= (1 << 0);           // Farenheit indicator
+  DisplayBuffer[3] |= (1 << 0); // Farenheit indicator
   sleep_ms(500);
   DisplayBuffer[3] &= ~(1 << 0);
   sleep_ms(500);
-  DisplayBuffer[3] |= (1 << 1);           // Celsius indicator
+  DisplayBuffer[3] |= (1 << 1); // Celsius indicator
   sleep_ms(500);
   DisplayBuffer[3] &= ~(1 << 1);
   sleep_ms(500);
-  DisplayBuffer[4] |= (1 << 0);           // AM indicator
+  DisplayBuffer[4] |= (1 << 0); // AM indicator
   sleep_ms(500);
   DisplayBuffer[4] &= ~(1 << 0);
   sleep_ms(500);
-  DisplayBuffer[4] |= (1 << 1);           // PM indicator
+  DisplayBuffer[4] |= (1 << 1); // PM indicator
   sleep_ms(500);
   DisplayBuffer[4] &= ~(1 << 1);
   sleep_ms(500);
-  DisplayBuffer[5] |= 0X03;               // count up timer indicator
+  DisplayBuffer[5] |= 0X03; // count up timer indicator
   sleep_ms(500);
   DisplayBuffer[5] &= ~0x03;
   sleep_ms(500);
-  DisplayBuffer[6] |= 0X03;               // hourly chime indicator
+  DisplayBuffer[6] |= 0X03; // hourly chime indicator
   sleep_ms(500);
   DisplayBuffer[6] &= ~0X03;
   sleep_ms(500);
-  DisplayBuffer[7] |= 0X03;               // auto brightness indicator
+  DisplayBuffer[7] |= 0X03; // auto brightness indicator
   sleep_ms(500);
   DisplayBuffer[7] &= ~0X03;
   sleep_ms(500);
-  DisplayBuffer[0] |= (1 << 2)|(1 << 5);  // two white LEDs near the buttons inside the clock
+  DisplayBuffer[0] |= (1 << 2) | (1 << 5); // two white LEDs near the buttons inside the clock
   sleep_ms(500);
-  DisplayBuffer[0] &= ~((1 << 2)|(1 << 5));
+  DisplayBuffer[0] &= ~((1 << 2) | (1 << 5));
   sleep_ms(500);
-
-
 
   /* Turn ON all weekday indicators, one after the other. */
-  DisplayBuffer[0]  |= (1 << 3) | (1 << 4);  // Monday
+  DisplayBuffer[0] |= (1 << 3) | (1 << 4); // Monday
   sleep_ms(500);
-  DisplayBuffer[0]  |= (1 << 6) | (1 << 7);  // Tuesday
+  DisplayBuffer[0] |= (1 << 6) | (1 << 7); // Tuesday
   sleep_ms(500);
-  DisplayBuffer[8]  |= (1 << 1) | (1 << 2);  // Wednesday
+  DisplayBuffer[8] |= (1 << 1) | (1 << 2); // Wednesday
   sleep_ms(500);
-  DisplayBuffer[8]  |= (1 << 4) | (1 << 5);  // Thursday
+  DisplayBuffer[8] |= (1 << 4) | (1 << 5); // Thursday
   sleep_ms(500);
-  DisplayBuffer[8]  |= (1 << 7);             // Friday
+  DisplayBuffer[8] |= (1 << 7); // Friday
   DisplayBuffer[16] |= (1 << 0);
   sleep_ms(500);
-  DisplayBuffer[16] |= (1 << 2) | (1 << 3);  // Saturday
+  DisplayBuffer[16] |= (1 << 2) | (1 << 3); // Saturday
   sleep_ms(500);
-  DisplayBuffer[16] |= (1 << 5) | (1 << 6);  // Sunday
+  DisplayBuffer[16] |= (1 << 5) | (1 << 6); // Sunday
   sleep_ms(500);
-
-
 
   /* Turn ON all left-side indicators, one after the other. */
-  DisplayBuffer[0] |= 0X03;               // scroll indicator
+  DisplayBuffer[0] |= 0X03; // scroll indicator
   sleep_ms(500);
-  DisplayBuffer[1] |= 0X03;               // alarm indicator
+  DisplayBuffer[1] |= 0X03; // alarm indicator
   sleep_ms(500);
-  DisplayBuffer[2] |= 0X03;               // timer indicator
+  DisplayBuffer[2] |= 0X03; // timer indicator
   sleep_ms(500);
-  DisplayBuffer[3] |= (1 << 0);           // Farenheit indicator
+  DisplayBuffer[3] |= (1 << 0); // Farenheit indicator
   sleep_ms(500);
-  DisplayBuffer[3] |= (1 << 1);           // Celsius indicator
+  DisplayBuffer[3] |= (1 << 1); // Celsius indicator
   sleep_ms(500);
-  DisplayBuffer[4] |= (1 << 0);           // AM indicator
+  DisplayBuffer[4] |= (1 << 0); // AM indicator
   sleep_ms(500);
-  DisplayBuffer[4] |= (1 << 1);           // PM indicator
+  DisplayBuffer[4] |= (1 << 1); // PM indicator
   sleep_ms(500);
-  DisplayBuffer[5] |= 0X03;               // count up indicator ??
+  DisplayBuffer[5] |= 0X03; // count up indicator ??
   sleep_ms(500);
-  DisplayBuffer[6] |= 0X03;               // hourly chime indicator
+  DisplayBuffer[6] |= 0X03; // hourly chime indicator
   sleep_ms(500);
-  DisplayBuffer[7] |= 0X03;               // auto light indicator
+  DisplayBuffer[7] |= 0X03; // auto light indicator
   sleep_ms(500);
-  DisplayBuffer[0] |= (1 << 2)|(1 << 5);  // back light indicator
+  DisplayBuffer[0] |= (1 << 2) | (1 << 5); // back light indicator
   sleep_ms(500);
-
 
   /* Clear DisplayBuffer when done. */
   for (Loop1UInt8 = 0; Loop1UInt8 < DISPLAY_BUFFER_SIZE; ++Loop1UInt8)
     DisplayBuffer[Loop1UInt8] = 0;
   sleep_ms(500);
 
-
   /* Display clock when done. */
   show_time();
   sleep_ms(500);
-
-
 
   /* Do the same thing again, using the defined macros. */
   IndicatorMondayOn;
@@ -10474,12 +9619,10 @@ Test17:
   IndicatorButtonLightsOff;
   sleep_ms(500);
 
-
   /* Clear DisplayBuffer when done. */
   for (Loop1UInt8 = 0; Loop1UInt8 < DISPLAY_BUFFER_SIZE; ++Loop1UInt8)
     DisplayBuffer[Loop1UInt8] = 0;
   sleep_ms(500);
-
 
   /* Display clock when done. */
   show_time();
@@ -10490,10 +9633,6 @@ Test17:
        END - Test 17 - Play with weekday indicators in sequence.
 \* ------------------------------------------------------------------ */
 
-
-
-
-
 /* ------------------------------------------------------------------ *\
        Test 18 - Quick display test with both character formats.
 \* ------------------------------------------------------------------ */
@@ -10502,25 +9641,20 @@ Test18:
   /* Clear framebuffer on entry. */
   clear_framebuffer(0);
 
-
   /* Tone to announce entering a new test. */
   tone(10);
-
 
   /* Announce test number. */
   scroll_string(24, "Test 18");
   while (ScrollDotCount)
-    sleep_ms(100);  // let the time to complete scrolling.
-
+    sleep_ms(100); // let the time to complete scrolling.
 
   /* Quick display test with 4 X 6 character bitmap. */
-  fill_display_buffer_4X7(1,  '1');
-  fill_display_buffer_4X7(6,  '2');
+  fill_display_buffer_4X7(1, '1');
+  fill_display_buffer_4X7(6, '2');
   fill_display_buffer_4X7(11, '3');
   fill_display_buffer_4X7(16, '4');
   sleep_ms(2000);
-
-
 
   /* Clear framebuffer on entry. */
   clear_framebuffer(0);
@@ -10538,15 +9672,11 @@ Test18:
   clear_framebuffer(0);
 
   return;
-/* ------------------------------------------------------------------ *\
-    END - Test 18 - Quick display test with both character formats.
-\* ------------------------------------------------------------------ */
+  /* ------------------------------------------------------------------ *\
+      END - Test 18 - Quick display test with both character formats.
+  \* ------------------------------------------------------------------ */
 }
 #endif
-
-
-
-
 
 /* $TITLE=timer_callback_ms() */
 /* $PAGE */
@@ -10568,16 +9698,12 @@ bool timer_callback_ms(struct repeating_timer *TimerMSec)
   float Temperature;
   float TemperatureF;
 
-
   Dum1UInt8 = 0;
 
-
-  adc_show_count();               // read ambient light from Pico ADC port every 5000 milliseconds (i.e every 5 seconds).
-  evaluate_sound_stop_time();     // evaluate if it is time to stop a sound.
-  evaluate_blinking_time();       // evaluate if it is time to toggle blinking some data on clock display.
-  evaluate_scroll_time();         // evaluate if it is time to scroll one dot to the left on clock display.
-
-
+  adc_show_count();           // read ambient light from Pico ADC port every 5000 milliseconds (i.e every 5 seconds).
+  evaluate_sound_stop_time(); // evaluate if it is time to stop a sound.
+  evaluate_blinking_time();   // evaluate if it is time to toggle blinking some data on clock display.
+  evaluate_scroll_time();     // evaluate if it is time to scroll one dot to the left on clock display.
 
   /* ................................................................ *\
                         Manage "Set" (top) button.
@@ -10594,39 +9720,38 @@ bool timer_callback_ms(struct repeating_timer *TimerMSec)
        "Set" button has just been released and it is a "short press" (between 50 and 300 milliseconds). */
     if ((TopKeyPressTime > 50) && (TopKeyPressTime < 300))
     {
-      IdleNumberOfSeconds = 0;           // reset the number of seconds the system has been idle.
-      evaluate_keyclick_start_time();    // button has just been released, check if we should make a "keyclick tone".
-
+      IdleNumberOfSeconds = 0;        // reset the number of seconds the system has been idle.
+      evaluate_keyclick_start_time(); // button has just been released, check if we should make a "keyclick tone".
 
       /* If we are already in a setup mode, perform housekeeping for current SetupStep and jump on to next SetupStep. */
       switch (SetupSource)
       {
-        case SETUP_SOURCE_ALARM:
-          set_mode_out();
-          FlagSetAlarm = FLAG_ON;
-          ++SetupStep;
-          /* Cleanup will be done in setup_alarm_frame() when done. */
+      case SETUP_SOURCE_ALARM:
+        set_mode_out();
+        FlagSetAlarm = FLAG_ON;
+        ++SetupStep;
+        /* Cleanup will be done in setup_alarm_frame() when done. */
         break;
 
-        case SETUP_SOURCE_CLOCK:
-          set_mode_out();
-          FlagSetClock = FLAG_ON;
-          ++SetupStep;
-          /* Cleanup will be done in setup_clock_frame() when done. */
+      case SETUP_SOURCE_CLOCK:
+        set_mode_out();
+        FlagSetClock = FLAG_ON;
+        ++SetupStep;
+        /* Cleanup will be done in setup_clock_frame() when done. */
         break;
 
-        case SETUP_SOURCE_TIMER:
-          set_mode_out();
-          FlagSetTimer = FLAG_ON;
-          ++SetupStep;
-          /* Cleanup will be done in setup_timer_frame() when done. */
+      case SETUP_SOURCE_TIMER:
+        set_mode_out();
+        FlagSetTimer = FLAG_ON;
+        ++SetupStep;
+        /* Cleanup will be done in setup_timer_frame() when done. */
         break;
 
-        default:
-          /* If not already in a setup mode, "Set" button triggers entering in clock setup mode. */
-          FlagSetClock = FLAG_ON;
-          SetupSource  = SETUP_SOURCE_CLOCK;
-          ++SetupStep;
+      default:
+        /* If not already in a setup mode, "Set" button triggers entering in clock setup mode. */
+        FlagSetClock = FLAG_ON;
+        SetupSource = SETUP_SOURCE_CLOCK;
+        ++SetupStep;
         break;
       }
     }
@@ -10634,22 +9759,19 @@ bool timer_callback_ms(struct repeating_timer *TimerMSec)
     {
       /* If the "Set" (top) button is not pressed, but cumulative time is not zero, it means that the
          "Set" button has just been released and it is a "long press" (longer than 300 milliseconds). */
-      IdleNumberOfSeconds = 0;           // reset the number of seconds the system has been idle.
-      evaluate_keyclick_start_time();    // button has been released, check if we should make a "tone" of "keyclick-type".
-      set_mode_out();                    // housekeeping;
-
+      IdleNumberOfSeconds = 0;        // reset the number of seconds the system has been idle.
+      evaluate_keyclick_start_time(); // button has been released, check if we should make a "tone" of "keyclick-type".
+      set_mode_out();                 // housekeeping;
 
       /* If we are not already in setup mode, enter alarm setup mode. */
-      FlagSetAlarm = FLAG_ON;            // enter alarm setup mode.
-      SetupSource  = SETUP_SOURCE_ALARM;
-      ++SetupStep;                       // process through all alarm setup steps.
+      FlagSetAlarm = FLAG_ON; // enter alarm setup mode.
+      SetupSource = SETUP_SOURCE_ALARM;
+      ++SetupStep; // process through all alarm setup steps.
     }
 
     /* Reset "Set" (top) button cumulative press time. */
     TopKeyPressTime = 0;
   }
-
-
 
   /* ................................................................ *\
                        Manage "Up" (middle) button.
@@ -10666,42 +9788,41 @@ bool timer_callback_ms(struct repeating_timer *TimerMSec)
        "Up" button has just been released and it is a "short press" (between 50 and 300 milliseconds). */
     if ((MiddleKeyPressTime > 50) && (MiddleKeyPressTime < 300))
     {
-      IdleNumberOfSeconds = 0;           // reset the number of seconds the system has been idle.
-      evaluate_keyclick_start_time();    // button has been released, check if we should make a keyclick tone".
-
+      IdleNumberOfSeconds = 0;        // reset the number of seconds the system has been idle.
+      evaluate_keyclick_start_time(); // button has been released, check if we should make a keyclick tone".
 
       /* If we are already in a setup mode, perform housekeeping for current SetupStep and jump on to next SetupStep. */
       switch (SetupSource)
       {
-        case SETUP_SOURCE_ALARM:
-          setup_alarm_variables(FLAG_UP);  // perform alarm settings.
-          set_mode_out();                  // program RTC IC if required.
-          FlagSetAlarm = FLAG_ON;          // make sure main program loop displays new value.
+      case SETUP_SOURCE_ALARM:
+        setup_alarm_variables(FLAG_UP); // perform alarm settings.
+        set_mode_out();                 // program RTC IC if required.
+        FlagSetAlarm = FLAG_ON;         // make sure main program loop displays new value.
         break;
 
-        case SETUP_SOURCE_CLOCK:
-          setup_clock_variables(FLAG_UP);  // perform clock settings.
-          set_mode_out();                  // program RTC IC if required.
-          FlagSetClock = FLAG_ON;          // make sure main program loop displays new value.
+      case SETUP_SOURCE_CLOCK:
+        setup_clock_variables(FLAG_UP); // perform clock settings.
+        set_mode_out();                 // program RTC IC if required.
+        FlagSetClock = FLAG_ON;         // make sure main program loop displays new value.
         break;
 
-        case SETUP_SOURCE_TIMER:
-          setup_timer_variables(FLAG_UP);  // perform timer settings.
-          set_mode_out();                  // housekeeping.
-          FlagSetTimer = FLAG_ON;          // make sure main program loop displays new value.
+      case SETUP_SOURCE_TIMER:
+        setup_timer_variables(FLAG_UP); // perform timer settings.
+        set_mode_out();                 // housekeeping.
+        FlagSetTimer = FLAG_ON;         // make sure main program loop displays new value.
         break;
 
-        default:
-          /* NOTE: Temperature unit toggling has been transferred to the list of clock setup parameters. */
-          /* Blink Night light On / Off and display external temperature if a sensor has been installed by user. */
-          Dum1UInt8 = (1 << 2)|(1 << 5);
-          if (DisplayBuffer[0] & Dum1UInt8)
-            IndicatorButtonLightsOff;
-          else
-            IndicatorButtonLightsOn;
+      default:
+        /* NOTE: Temperature unit toggling has been transferred to the list of clock setup parameters. */
+        /* Blink Night light On / Off and display external temperature if a sensor has been installed by user. */
+        Dum1UInt8 = (1 << 2) | (1 << 5);
+        if (DisplayBuffer[0] & Dum1UInt8)
+          IndicatorButtonLightsOff;
+        else
+          IndicatorButtonLightsOn;
 
-          /* If a DHT22 or a BME280 has been installed by user, display outside parameters. */
-          scroll_queue(TAG_EXT_TEMP);
+        /* If a DHT22 or a BME280 has been installed by user, display outside parameters. */
+        scroll_queue(TAG_EXT_TEMP);
         break;
       }
     }
@@ -10709,28 +9830,27 @@ bool timer_callback_ms(struct repeating_timer *TimerMSec)
     {
       /* If the "Up" (middle) button is not pressed, but cumulative time is not zero, it means that the
          "Up" button has just been released and it is a "long press" (longer than 300 milliseconds). */
-      IdleNumberOfSeconds = 0;           // reset the number of seconds the system has been idle.
-      evaluate_keyclick_start_time();    // button has been released, check if we should make a keyclick tone.
-      set_mode_out();                    // housekeeping;
-
+      IdleNumberOfSeconds = 0;        // reset the number of seconds the system has been idle.
+      evaluate_keyclick_start_time(); // button has been released, check if we should make a keyclick tone.
+      set_mode_out();                 // housekeeping;
 
       /* If we are already in a setup mode, perform housekeeping for current SetupStep and jump on to next SetupStep. */
       switch (SetupSource)
       {
-        case SETUP_SOURCE_ALARM:
-        case SETUP_SOURCE_CLOCK:
-        case SETUP_SOURCE_TIMER:
-          /* If already is some setup mode, then no action. */
+      case SETUP_SOURCE_ALARM:
+      case SETUP_SOURCE_CLOCK:
+      case SETUP_SOURCE_TIMER:
+        /* If already is some setup mode, then no action. */
         break;
 
-        default:
-          /* If we're not already in a setup mode, long press on the "Up" button triggers timer setup mode. */
-          if (SetupStep == SETUP_NONE)
-          {
-            FlagSetTimer = FLAG_ON;
-            SetupSource  = SETUP_SOURCE_TIMER;
-            ++SetupStep;
-          }
+      default:
+        /* If we're not already in a setup mode, long press on the "Up" button triggers timer setup mode. */
+        if (SetupStep == SETUP_NONE)
+        {
+          FlagSetTimer = FLAG_ON;
+          SetupSource = SETUP_SOURCE_TIMER;
+          ++SetupStep;
+        }
         break;
       }
     }
@@ -10738,8 +9858,6 @@ bool timer_callback_ms(struct repeating_timer *TimerMSec)
     /* Reset "Middle" button cumulative press time. */
     MiddleKeyPressTime = 0;
   }
-
-
 
   /* ................................................................ *\
                      Manage "Down" (bottom) button.
@@ -10756,45 +9874,44 @@ bool timer_callback_ms(struct repeating_timer *TimerMSec)
        "Down" button has just been released and it is a "short press" (between 50 and 300 milliseconds). */
     if ((BottomKeyPressTime > 0) && (BottomKeyPressTime < 300))
     {
-      IdleNumberOfSeconds = 0;           // reset the number of seconds the system has been idle.
-      evaluate_keyclick_start_time();    // button has been release, check if we should make a keyclick tone.
-
+      IdleNumberOfSeconds = 0;        // reset the number of seconds the system has been idle.
+      evaluate_keyclick_start_time(); // button has been release, check if we should make a keyclick tone.
 
       /* If we are already in a setup mode, perform housekeeping for current SetupStep and jump on to next SetupStep. */
       switch (SetupSource)
       {
-        case SETUP_SOURCE_ALARM:
-          setup_alarm_variables(FLAG_DOWN);  // perform alarm settings.
-          set_mode_out();
-          FlagSetAlarm = FLAG_ON;
+      case SETUP_SOURCE_ALARM:
+        setup_alarm_variables(FLAG_DOWN); // perform alarm settings.
+        set_mode_out();
+        FlagSetAlarm = FLAG_ON;
         break;
 
-        case SETUP_SOURCE_CLOCK:
-          setup_clock_variables(FLAG_DOWN);  // perform clock settings.
-          set_mode_out();
-          FlagSetClock = FLAG_ON;
+      case SETUP_SOURCE_CLOCK:
+        setup_clock_variables(FLAG_DOWN); // perform clock settings.
+        set_mode_out();
+        FlagSetClock = FLAG_ON;
         break;
 
-        case SETUP_SOURCE_TIMER:
-          setup_timer_variables(FLAG_DOWN);  // perform timer settings.
-          set_mode_out();
-          FlagSetTimer = FLAG_ON;
+      case SETUP_SOURCE_TIMER:
+        setup_timer_variables(FLAG_DOWN); // perform timer settings.
+        set_mode_out();
+        FlagSetTimer = FLAG_ON;
         break;
 
-        default:
-          /* NOTE: Clock display auto-brightness toggling has been Added to the list of clock setup parameters.
-                   Leave a copy of this function here for convenience and quicker access. */
-          /* If we are not in setup mode, toggle the "auto-brightness" On / Off. */
-          if (FlagAutoBrightness == FLAG_ON)
-          {
-            FlagAutoBrightness = FLAG_OFF;
-            IndicatorAutoLightOff;
-          }
-          else
-          {
-            FlagAutoBrightness = FLAG_ON;
-            IndicatorAutoLightOn;
-          }
+      default:
+        /* NOTE: Clock display auto-brightness toggling has been Added to the list of clock setup parameters.
+                 Leave a copy of this function here for convenience and quicker access. */
+        /* If we are not in setup mode, toggle the "auto-brightness" On / Off. */
+        if (FlagAutoBrightness == FLAG_ON)
+        {
+          FlagAutoBrightness = FLAG_OFF;
+          IndicatorAutoLightOff;
+        }
+        else
+        {
+          FlagAutoBrightness = FLAG_ON;
+          IndicatorAutoLightOn;
+        }
         break;
       }
     }
@@ -10802,37 +9919,32 @@ bool timer_callback_ms(struct repeating_timer *TimerMSec)
     {
       /* If the "Down" (bottom) button is not pressed, but cumulative time is not zero, it means that the
          "Down" button has just been released and it is a "long press" (longer than 300 milliseconds). */
-      IdleNumberOfSeconds = 0;           // reset the number of seconds the system has been idle.
-      evaluate_keyclick_start_time();    // button has been released, check if we should make a "tone" of "keyclick-type".
+      IdleNumberOfSeconds = 0;        // reset the number of seconds the system has been idle.
+      evaluate_keyclick_start_time(); // button has been released, check if we should make a "tone" of "keyclick-type".
 
-      set_mode_timeout();                // exit setup mode.
-      set_mode_out();                    // make required housekeeping.
-      SetupSource = SETUP_SOURCE_NONE;   // no more in setup mode.
-      SetupStep   = SETUP_NONE;          // reset SetupStep.
+      set_mode_timeout();              // exit setup mode.
+      set_mode_out();                  // make required housekeeping.
+      SetupSource = SETUP_SOURCE_NONE; // no more in setup mode.
+      SetupStep = SETUP_NONE;          // reset SetupStep.
     }
 
     /* Reset bottom button cumulative press time. */
     BottomKeyPressTime = 0;
   }
 
-
-
   /* ................................................................ *\
                     Increment LED matrix scanned row.
   \* ................................................................ */
   /* Increment row number to scan on clock display (Row0 to Row7). */
   ++RowScanNumber;
-  if (RowScanNumber > 7) RowScanNumber = 0;
+  if (RowScanNumber > 7)
+    RowScanNumber = 0;
 
-
-  
   /* ................................................................ *\
             Disable matrix display while changing column data.
   \* ................................................................ */
   cancel_repeating_timer(&Timer50uSec);
   OE_DISABLE;
-
-
 
   /* ................................................................ *\
                  Change column data on matrix display.
@@ -10841,33 +9953,27 @@ bool timer_callback_ms(struct repeating_timer *TimerMSec)
   for (Loop1UInt8 = 0; Loop1UInt8 < 4; ++Loop1UInt8)
     send_data(DisplayBuffer[8 * Loop1UInt8 + RowScanNumber]);
 
-
-  /* Latch those values to the matrix controler ICs. */ 
+  /* Latch those values to the matrix controler ICs. */
   LE_HIGH;
   LE_LOW;
 
-  
   /* Set A0 address line level. */
   if (RowScanNumber & 0x01)
     A0_HIGH;
   else
     A0_LOW;
 
-  
   /* Set A1 address line level. */
   if (RowScanNumber & 0x02)
     A1_HIGH;
   else
     A1_LOW;
 
-
   /* Set A2 address line level. */
   if (RowScanNumber & 0x04)
     A2_HIGH;
   else
     A2_LOW;
-
-
 
   /* ................................................................ *\
          Restore display after LED matrix data has been changed.
@@ -10876,10 +9982,6 @@ bool timer_callback_ms(struct repeating_timer *TimerMSec)
 
   return TRUE;
 }
-
-
-
-
 
 /* $TITLE=timer_callback_s() */
 /* $PAGE */
@@ -10894,21 +9996,16 @@ bool timer_callback_s(struct repeating_timer *TimerSec)
   UCHAR String[128];
 
   UINT16 LightLevel;
-  UINT8  Loop1UInt8;
-
+  UINT8 Loop1UInt8;
 
   /* Cumulate 60 seconds before updating minute count. */
   ++SecondCounter;
-
-
 
   /* Check if user requested a silence period. */
   if (SilencePeriod != 0)
   {
     --SilencePeriod;
   }
-
-
 
   /* Check if an alarm is currently sounding. */
   if (FlagAlarmBeeping == FLAG_ON)
@@ -10918,24 +10015,22 @@ bool timer_callback_s(struct repeating_timer *TimerSec)
     FlagAlarmBeeping = FLAG_OFF;
   }
 
-
-
   /* ................................................................ *\
                         Check for minute change.
   \* ................................................................ */
   if (SecondCounter == 60)
   {
     ++CurrentMinute;
-    SecondCounter = 0;  // reset second counter.
+    SecondCounter = 0; // reset second counter.
 
     if (CurrentMinute == 60)
     {
-      CurrentMinute = 0;  // reset minute counter.
+      CurrentMinute = 0; // reset minute counter.
       ++CurrentHourSetting;
 
       if (CurrentHourSetting == 24)
       {
-        CurrentHourSetting = 0;  // reset hour counter.
+        CurrentHourSetting = 0; // reset hour counter.
       }
 
       /* Reset flag so that next hourly chime will sound. */
@@ -10947,7 +10042,6 @@ bool timer_callback_s(struct repeating_timer *TimerSec)
       }
     }
 
-
     /* .............................................................. *\
                  Request a "time" update on clock display.
     \* .............................................................. */
@@ -10956,8 +10050,7 @@ bool timer_callback_s(struct repeating_timer *TimerSec)
       /* Request a "time" update (on clock display) if we are not in some setup mode and not scrolling data. */
       FlagUpdateTime = FLAG_ON;
     }
- 
- 
+
     /* .............................................................. *\
                          Check alarm 0 for a match.
     \* .............................................................. */
@@ -10967,12 +10060,11 @@ bool timer_callback_s(struct repeating_timer *TimerSec)
       {
         FlagAlarmBeeping = FLAG_ON;
         gpio_put(BUZZ, 1);
-        FlagToneOn       = FLAG_ON;
-        ToneType         = TONE_ALARM0_TYPE;
-        ToneRepeatCount  = 0;  // initialize tone repeat count when starting.
+        FlagToneOn = FLAG_ON;
+        ToneType = TONE_ALARM0_TYPE;
+        ToneRepeatCount = 0; // initialize tone repeat count when starting.
       }
     }
-
 
     /* .............................................................. *\
                          Check alarm 1 for a match.
@@ -10983,14 +10075,12 @@ bool timer_callback_s(struct repeating_timer *TimerSec)
       {
         FlagAlarmBeeping = FLAG_ON;
         gpio_put(BUZZ, 1);
-        FlagToneOn       = FLAG_ON;
-        ToneType         = TONE_ALARM1_TYPE;
-        ToneRepeatCount  = 0;  // initialize tone repeat count when starting.
+        FlagToneOn = FLAG_ON;
+        ToneType = TONE_ALARM1_TYPE;
+        ToneRepeatCount = 0; // initialize tone repeat count when starting.
       }
     }
   }
-
-
 
   /* ................................................................ *\
                               Hourly chime.
@@ -11016,18 +10106,17 @@ bool timer_callback_s(struct repeating_timer *TimerSec)
   }
 
   if ((SilencePeriod == 0) &&
-     ((HourlyChimeMode == CHIME_ON) ||  // always On
-     ((HourlyChimeMode == CHIME_DAY) && (ChimeTimeOn < ChimeTimeOff) && (CurrentHourSetting >= ChimeTimeOn)   && (CurrentHourSetting <= ChimeTimeOff)) ||  // "normal behavior"  for daytime workers.
-     ((HourlyChimeMode == CHIME_DAY) && (ChimeTimeOff < ChimeTimeOn) && ((CurrentHourSetting >= ChimeTimeOff) || (CurrentHourSetting <= ChimeTimeOn)))))   // "special behavior" for nighttime workers.
+      ((HourlyChimeMode == CHIME_ON) ||                                                                                                                    // always On
+       ((HourlyChimeMode == CHIME_DAY) && (ChimeTimeOn < ChimeTimeOff) && (CurrentHourSetting >= ChimeTimeOn) && (CurrentHourSetting <= ChimeTimeOff)) ||  // "normal behavior"  for daytime workers.
+       ((HourlyChimeMode == CHIME_DAY) && (ChimeTimeOff < ChimeTimeOn) && ((CurrentHourSetting >= ChimeTimeOff) || (CurrentHourSetting <= ChimeTimeOn))))) // "special behavior" for nighttime workers.
   {
     if ((CurrentMinute == 0) && (FlagChimeDone == FLAG_OFF) && (FlagSetupClock[SETUP_MINUTE] == FLAG_OFF))
     {
       gpio_put(BUZZ, 1);
-      FlagToneOn      = FLAG_ON;
-      ToneType        = TONE_CHIME_TYPE;
-      ToneRepeatCount = 0;  // initialize repeat count when starting
-      FlagChimeDone   = FLAG_ON;
-
+      FlagToneOn = FLAG_ON;
+      ToneType = TONE_CHIME_TYPE;
+      ToneRepeatCount = 0; // initialize repeat count when starting
+      FlagChimeDone = FLAG_ON;
 
 #ifdef PASSIVE_PIEZO_SUPPORT
       // Let the time to complete the active buzzer hourly chime.
@@ -11039,14 +10128,12 @@ bool timer_callback_s(struct repeating_timer *TimerSec)
     }
   }
 
-
-
   /* ................................................................ *\
                  Date, temperature and voltage scrolling.
   \* ................................................................ */
   /* Scroll information on clock display every "integer number of times" the SCROLL_PERIOD_MINUTE minutes,
      except if we are currently in some setup mode. For example, if SCROLL_PERIOD_MINUTE is set to 5, data
-     will scroll at xh00, xh05, xh10, etc... 
+     will scroll at xh00, xh05, xh10, etc...
      When changing to exact hour (from xh59 to yh00), scrolling will begin 5 seconds later to give time to user
      to look at the clock when he hears the hourly chime. */
   if (((SecondCounter == 0) && ((CurrentMinute % SCROLL_PERIOD_MINUTE) == 0) && (CurrentMinute != 0)) ||
@@ -11071,15 +10158,13 @@ bool timer_callback_s(struct repeating_timer *TimerSec)
     }
   }
 
-
-
   /* ................................................................ *\
                               Idle time.
   \* ................................................................ */
   /* If we are in some setup mode (clock, timer or alarm), check if it is time to declare a time-out. */
   if (FlagIdleCheck == FLAG_ON)
   {
-    ++IdleNumberOfSeconds;  // one more second added while the system has been idle.
+    ++IdleNumberOfSeconds; // one more second added while the system has been idle.
 
     if (IdleNumberOfSeconds == TIME_OUT_PERIOD)
     {
@@ -11087,14 +10172,12 @@ bool timer_callback_s(struct repeating_timer *TimerSec)
       set_mode_out();         // proceed with what needs to be set and then cleanup as we get out of setup mode.
       SetupStep = SETUP_NONE; // reset setup step.
 
-
       /* If we timed out while setting up an alarm, keep what has been defined so far if alarm status is "Alarm On". */
       if ((AlarmNumber == 0) && (Alarm[AlarmNumber].FlagStatus == FLAG_ON))
       {
         /* Alarm 1 setup. */
         set_alarm1_clock(ALARM_MODE_HOUR_MIN_SEC_MATCHED, 00, Alarm[AlarmNumber].Minute, Alarm[AlarmNumber].Hour, Alarm[AlarmNumber].Day);
       }
-
 
       /* If we timed out while setting up an alarm, keep what has been defined so far if alarm status is "Alarm On". */
       if ((AlarmNumber != 0) && (Alarm[AlarmNumber].FlagStatus == FLAG_ON))
@@ -11105,8 +10188,6 @@ bool timer_callback_s(struct repeating_timer *TimerSec)
     }
   }
 
-
-
   /* ................................................................ *\
                             Count-down timer.
   \* ................................................................ */
@@ -11116,13 +10197,13 @@ bool timer_callback_s(struct repeating_timer *TimerSec)
     if ((TimerSeconds == 0) && (TimerMinutes == 0))
     {
       gpio_put(BUZZ, 1);
-      FlagToneOn            = FLAG_ON;
-      ToneType              = TONE_TIMER_TYPE;
-      ToneRepeatCount       = 0;         // initialize repeat count when starting.
-      SetupSource           = SETUP_SOURCE_NONE;
-      FlagSetTimerCountDown = FLAG_OFF;  // reset count down timer indicator.
-      FlagTimerCountDownEnd = FLAG_ON;   // flag indicating we reached final count of count down timer (0m00).
-      IndicatorCountDownOff;             // turn off "count-down" indicator when done.
+      FlagToneOn = FLAG_ON;
+      ToneType = TONE_TIMER_TYPE;
+      ToneRepeatCount = 0; // initialize repeat count when starting.
+      SetupSource = SETUP_SOURCE_NONE;
+      FlagSetTimerCountDown = FLAG_OFF; // reset count down timer indicator.
+      FlagTimerCountDownEnd = FLAG_ON;  // flag indicating we reached final count of count down timer (0m00).
+      IndicatorCountDownOff;            // turn off "count-down" indicator when done.
     }
     else
     {
@@ -11132,34 +10213,32 @@ bool timer_callback_s(struct repeating_timer *TimerSec)
       --TimerSeconds;
 
       /* We let the timer to go one second below zero so that the last second is accounted for in the laps period. */
-      if (TimerSeconds == 255) TimerSeconds = 0;  // if out-of-bound, revert to zero.
+      if (TimerSeconds == 255)
+        TimerSeconds = 0; // if out-of-bound, revert to zero.
 
       /* If there are more minutes to the count-down. */
       if ((TimerSeconds == 0) && (TimerMinutes != 0))
       {
         --TimerMinutes;
-        TimerSeconds    = 59;
-        TimerShowSecond = 0;  // for display purpose
+        TimerSeconds = 59;
+        TimerShowSecond = 0; // for display purpose
       }
-
 
       /* Update timer on clock display every so many seconds. */
       if ((TimerShowCount % 1) == 0)
       {
-        TimerShowCount  = 0;
+        TimerShowCount = 0;
         TimerShowSecond = TimerSeconds;
       }
     }
   }
-
-
 
   /* ................................................................ *\
                              Count-up timer.
   \* ................................................................ */
   if (FlagSetTimerCountUp == FLAG_ON)
   {
-    ++TimerSeconds;    // one more second for Up timer.
+    ++TimerSeconds; // one more second for Up timer.
     ++TimerShowCount;
 
     /* Add one minute when we reach 60 seconds to the timer. */
@@ -11169,18 +10248,17 @@ bool timer_callback_s(struct repeating_timer *TimerSec)
       ++TimerMinutes;
 
       /* If reaching out-of-bound, revert to zero. */
-      if (TimerMinutes == 60) TimerMinutes = 0;
+      if (TimerMinutes == 60)
+        TimerMinutes = 0;
     }
 
     /* Update timer on the display every so many seconds. */
     if ((TimerShowCount % 1) == 0)
     {
-      TimerShowCount  = 0;
+      TimerShowCount = 0;
       TimerShowSecond = TimerSeconds;
     }
   }
-
-
 
   /* ................................................................ *\
                              Calendar events.
@@ -11197,24 +10275,22 @@ bool timer_callback_s(struct repeating_timer *TimerSec)
         {
           /* Scroll queue is full, beep an alarm (no matter what time it is) and skip that calendar event. */
           gpio_put(BUZZ, 1);
-          FlagToneOn      = FLAG_ON;
-          ToneType        = TONE_ALARM0_TYPE;  // ALARM_TYPE  because something is going wrong...
-          ToneRepeatCount = 0;  // initialize repeat count when starting.
-          break;  // go on with next loop iteration.
+          FlagToneOn = FLAG_ON;
+          ToneType = TONE_ALARM0_TYPE; // ALARM_TYPE  because something is going wrong...
+          ToneRepeatCount = 0;         // initialize repeat count when starting.
+          break;                       // go on with next loop iteration.
         }
-
 
         /* Sounds "event tones" only if we are during "day time" as defined between CHIME_TIME_ON and CHIME_TIME_OFF. */
         if ((SilencePeriod == 0) &&
-           ((HourlyChimeMode == CHIME_ON) ||  // always On
-           ((HourlyChimeMode == CHIME_DAY) && (ChimeTimeOn < ChimeTimeOff) && (CurrentHourSetting >= ChimeTimeOn)   && (CurrentHourSetting <= ChimeTimeOff)) ||  // "normal behavior"  for daytime workers.
-           ((HourlyChimeMode == CHIME_DAY) && (ChimeTimeOff < ChimeTimeOn) && ((CurrentHourSetting >= ChimeTimeOff) || (CurrentHourSetting <= ChimeTimeOn)))))   // "special behavior" for nighttime workers.
+            ((HourlyChimeMode == CHIME_ON) ||                                                                                                                    // always On
+             ((HourlyChimeMode == CHIME_DAY) && (ChimeTimeOn < ChimeTimeOff) && (CurrentHourSetting >= ChimeTimeOn) && (CurrentHourSetting <= ChimeTimeOff)) ||  // "normal behavior"  for daytime workers.
+             ((HourlyChimeMode == CHIME_DAY) && (ChimeTimeOff < ChimeTimeOn) && ((CurrentHourSetting >= ChimeTimeOff) || (CurrentHourSetting <= ChimeTimeOn))))) // "special behavior" for nighttime workers.
         {
           gpio_put(BUZZ, 1);
-          FlagToneOn      = FLAG_ON;
-          ToneType        = TONE_EVENT_TYPE;
-          ToneRepeatCount = 0;  // initialize repeat count when starting.
-
+          FlagToneOn = FLAG_ON;
+          ToneType = TONE_EVENT_TYPE;
+          ToneRepeatCount = 0; // initialize repeat count when starting.
 
 #ifdef PASSIVE_PIEZO_SUPPORT
           if (CalendarEvent[Loop1UInt8].Jingle != 0)
@@ -11228,8 +10304,6 @@ bool timer_callback_s(struct repeating_timer *TimerSec)
     }
   }
 
-
-
   /* ................................................................ *\
                            Daylight Saving Time
   \* ................................................................ */
@@ -11239,34 +10313,32 @@ bool timer_callback_s(struct repeating_timer *TimerSec)
     /* Determine if it is time to adjust for "Daylight Saving Time". */
     switch (DAYLIGHT_SAVING_TIME)
     {
-      case (DST_NORTH_AMERICA):
-        /* Check if it time to change from "Normal Time" to "Daylight Saving Time". */
-        if (CurrentHourSetting == 2)
+    case (DST_NORTH_AMERICA):
+      /* Check if it time to change from "Normal Time" to "Daylight Saving Time". */
+      if (CurrentHourSetting == 2)
+      {
+        if ((FlagDayLightSavingTime == FLAG_OFF) && (CurrentMonth == MAR) && ((get_weekday(Year4Digits, CurrentMonth, CurrentDayOfMonth) == SUN) && ((CurrentDayOfMonth >= 8) || (CurrentDayOfMonth <= 14))))
         {
-          if ((FlagDayLightSavingTime == FLAG_OFF) && (CurrentMonth == MAR) && ((get_weekday(Year4Digits, CurrentMonth, CurrentDayOfMonth) == SUN) && ((CurrentDayOfMonth >= 8) || (CurrentDayOfMonth <= 14))))
-          {
-            CurrentHourSetting = 3;
-            set_hour(CurrentHourSetting);
-            FlagDayLightSavingTime = FLAG_ON;
-          }
-
-          /* Check if it time to change from "Daylight Saving Time" time to "Normal Time". */
-          if ((FlagDayLightSavingTime == FLAG_ON) && (CurrentMonth == NOV) && (get_weekday(Year4Digits, CurrentMonth, CurrentDayOfMonth) == SUN) && ((CurrentDayOfMonth >= 1) || (CurrentDayOfMonth <= 7)))
-          {
-            CurrentHourSetting = 1;
-            set_hour(CurrentHourSetting);
-            FlagDayLightSavingTime = FLAG_OFF;
-          }
+          CurrentHourSetting = 3;
+          set_hour(CurrentHourSetting);
+          FlagDayLightSavingTime = FLAG_ON;
         }
+
+        /* Check if it time to change from "Daylight Saving Time" time to "Normal Time". */
+        if ((FlagDayLightSavingTime == FLAG_ON) && (CurrentMonth == NOV) && (get_weekday(Year4Digits, CurrentMonth, CurrentDayOfMonth) == SUN) && ((CurrentDayOfMonth >= 1) || (CurrentDayOfMonth <= 7)))
+        {
+          CurrentHourSetting = 1;
+          set_hour(CurrentHourSetting);
+          FlagDayLightSavingTime = FLAG_OFF;
+        }
+      }
       break;
 
-      default:
-        /* If "NONE" or invalid choice, perform no action. */
+    default:
+      /* If "NONE" or invalid choice, perform no action. */
       break;
     }
   }
-
-
 
   /* ................................................................ *\
                                Night light.
@@ -11284,7 +10356,6 @@ bool timer_callback_s(struct repeating_timer *TimerSec)
       IndicatorButtonLightsOn;
     }
   }
-
 
   /* Check if it is time to turn Off night light. */
   /* Make a check every minute in case we recently adjusted the time. */
@@ -11304,17 +10375,13 @@ bool timer_callback_s(struct repeating_timer *TimerSec)
 
     if (LightLevel < 295)
       IndicatorButtonLightsOn;
-    
+
     if (LightLevel > 400)
       IndicatorButtonLightsOff;
   }
 
   return TRUE;
 }
-
-
-
-
 
 /* $TITLE=timer_callback_us() */
 /* $PAGE */
@@ -11329,17 +10396,20 @@ bool timer_callback_us(struct repeating_timer *Timer50uSec)
 
   UINT TrigLevel;
 
-
   ++LightSetting;
-  
+
   /* Number of "50 microseconds" period will be skipped before triggering On the display matrix
      for a 50 microseconds period. */
-  if (AverageLightLevel  >= 500) TrigLevel = 0;
-  if ((AverageLightLevel >= 400) && (AverageLightLevel < 500)) TrigLevel = 2;
-  if ((AverageLightLevel >= 275) && (AverageLightLevel < 400)) TrigLevel = 4;
-  if ((AverageLightLevel >= 175) && (AverageLightLevel < 275)) TrigLevel = 8;
-  if (AverageLightLevel  <  175) TrigLevel = 14;
-
+  if (AverageLightLevel >= 500)
+    TrigLevel = 0;
+  if ((AverageLightLevel >= 400) && (AverageLightLevel < 500))
+    TrigLevel = 2;
+  if ((AverageLightLevel >= 275) && (AverageLightLevel < 400))
+    TrigLevel = 4;
+  if ((AverageLightLevel >= 175) && (AverageLightLevel < 275))
+    TrigLevel = 8;
+  if (AverageLightLevel < 175)
+    TrigLevel = 14;
 
   if (DebugBitMask & DEBUG_BRIGHTNESS)
   {
@@ -11348,20 +10418,19 @@ bool timer_callback_us(struct repeating_timer *Timer50uSec)
     {
       /* Prevent scrolling. */
       CurrentClockMode = MODE_TEST;
-  
+
       clear_framebuffer(0);
 
       sprintf(String, "%2.2u", TrigLevel);
-      fill_display_buffer_4X7(6,  String[0]);
+      fill_display_buffer_4X7(6, String[0]);
       fill_display_buffer_4X7(11, String[1]);
     }
   }
 
-  
   if (LightSetting > TrigLevel)
   {
     OE_ENABLE;
-      
+
     LightSetting = 0;
   }
   else
@@ -11371,10 +10440,6 @@ bool timer_callback_us(struct repeating_timer *Timer50uSec)
 
   return true;
 }
-
-
-
-
 
 /* $TITLE=tone() */
 /* $PAGE */
@@ -11392,31 +10457,26 @@ void tone(UINT16 MilliSeconds)
   return;
 }
 
-
-
-
 /* $TITLE=uart_send() */
 /* $PAGE */
 /* ------------------------------------------------------------------ *\
            Send a string to VT101 monitor through Pico UART.
 \* ------------------------------------------------------------------ */
-void uart_send(uart_inst_t *Uart, UINT LineNumber, UCHAR* String)
+void uart_send(uart_inst_t *Uart, UINT LineNumber, UCHAR *String)
 {
   UCHAR LineString[15];
   UCHAR TimeStamp[128];
 
   UINT Loop1UInt;
 
-
   /* Trap special control code for <HOME>. Replace "home" by appropriate control characters for "Home" on a VT101. */
   if (strcmp(String, "home") == 0)
   {
-    String[0] = 0x1B;  // ESC code
+    String[0] = 0x1B; // ESC code
     String[1] = '[';
     String[2] = 'H';
     String[3] = 0x00;
   }
-
 
   /* Trap special control code for <CLS>. Replace "cls" by appropriate control characters for "Clear screen" on a VT101. */
   if (strcmp(String, "cls") == 0)
@@ -11428,7 +10488,6 @@ void uart_send(uart_inst_t *Uart, UINT LineNumber, UCHAR* String)
     String[4] = 0x00;
   }
 
-  
   /* Time stamp will not be sent if first character is a '-' (for title line when starting debug, for example),
      or if first character is a line feed '\r' when we simply want add line spacing in the debug log,
      or if first character is the beginning of a control stream (for example 'Home' or "Clear screen'). */
@@ -11441,8 +10500,6 @@ void uart_send(uart_inst_t *Uart, UINT LineNumber, UCHAR* String)
     for (Loop1UInt = 0; LineString[Loop1UInt] != 0; ++Loop1UInt)
       uart_write_blocking(uart1, &LineString[Loop1UInt], 1);
 
-
-
     /* Retrieve current time stamp. */
     date_stamp(TimeStamp);
 
@@ -11450,7 +10507,6 @@ void uart_send(uart_inst_t *Uart, UINT LineNumber, UCHAR* String)
     for (Loop1UInt = 0; TimeStamp[Loop1UInt] != 0; ++Loop1UInt)
       uart_write_blocking(uart1, &TimeStamp[Loop1UInt], 1);
   }
-
 
   /* Send string through UART. */
   for (Loop1UInt = 0; String[Loop1UInt] != 0; ++Loop1UInt)

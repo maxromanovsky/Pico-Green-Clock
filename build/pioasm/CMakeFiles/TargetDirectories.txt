@@ -1,0 +1,3 @@
+/Users/max/Documents/projects/Pico-Green-Clock/build/pioasm/CMakeFiles/pioasm.dir
+/Users/max/Documents/projects/Pico-Green-Clock/build/pioasm/CMakeFiles/edit_cache.dir
+/Users/max/Documents/projects/Pico-Green-Clock/build/pioasm/CMakeFiles/rebuild_cache.dir
