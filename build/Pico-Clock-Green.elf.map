@@ -1148,9 +1148,9 @@ Discarded input sections
                 0x0000000000000000       0x14 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
  .rodata.__func__.2
                 0x0000000000000000       0x12 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
- .text          0x0000000000000000        0x0 /var/folders/hx/ybfzs61s0_df8jx22m7xnqnr0000gn/T//ccBE1Bx1.o
- .data          0x0000000000000000        0x0 /var/folders/hx/ybfzs61s0_df8jx22m7xnqnr0000gn/T//ccBE1Bx1.o
- .bss           0x0000000000000000        0x0 /var/folders/hx/ybfzs61s0_df8jx22m7xnqnr0000gn/T//ccBE1Bx1.o
+ .text          0x0000000000000000        0x0 /var/folders/hx/ybfzs61s0_df8jx22m7xnqnr0000gn/T//ccuqV7wC.o
+ .data          0x0000000000000000        0x0 /var/folders/hx/ybfzs61s0_df8jx22m7xnqnr0000gn/T//ccuqV7wC.o
+ .bss           0x0000000000000000        0x0 /var/folders/hx/ybfzs61s0_df8jx22m7xnqnr0000gn/T//ccuqV7wC.o
  .data          0x0000000000000000        0x0 /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .bss           0x0000000000000000        0x0 /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .text          0x0000000000000000        0x0 /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-calloc.o)
@@ -1372,7 +1372,7 @@ LOAD /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-non
 .boot2          0x0000000010000000      0x100
                 0x0000000010000000                __boot2_start__ = .
  *(.boot2)
- .boot2         0x0000000010000000      0x100 /var/folders/hx/ybfzs61s0_df8jx22m7xnqnr0000gn/T//ccBE1Bx1.o
+ .boot2         0x0000000010000000      0x100 /var/folders/hx/ybfzs61s0_df8jx22m7xnqnr0000gn/T//ccuqV7wC.o
                 0x0000000010000100                __boot2_end__ = .
                 0x0000000000000001                ASSERT (((__boot2_end__ - __boot2_start__) == 0x100), ERROR: Pico second stage bootloader must be 256 bytes in size)
 
@@ -2409,7 +2409,7 @@ LOAD /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-non
                 0x0000000020000000       0xc0 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
                 0x0000000020000000                ram_vector_table
 
-.data           0x00000000200000c0     0x1730 load address 0x000000001000b6bc
+.data           0x00000000200000c0      0xe40 load address 0x000000001000b6bc
                 0x00000000200000c0                __data_start__ = .
  *(vtable)
  *(.time_critical*)
@@ -2446,516 +2446,517 @@ LOAD /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-non
  .data.AverageLightLevel
                 0x0000000020000338        0x8 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
                 0x0000000020000338                AverageLightLevel
- .data.CalendarEvent
-                0x0000000020000340      0x8fc CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020000340                CalendarEvent
- .data.CharMap  0x0000000020000c3c      0x2bc CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020000c3c                CharMap
+ .data.CharMap  0x0000000020000340      0x2bc CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x0000000020000340                CharMap
  .data.CharWidth
-                0x0000000020000ef8       0x64 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020000ef8                CharWidth
+                0x00000000200005fc       0x64 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x00000000200005fc                CharWidth
  .data.ChimeTimeOff
-                0x0000000020000f5c        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020000f5c                ChimeTimeOff
+                0x0000000020000660        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x0000000020000660                ChimeTimeOff
  .data.ChimeTimeOffDisplay
-                0x0000000020000f5d        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020000f5d                ChimeTimeOffDisplay
+                0x0000000020000661        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x0000000020000661                ChimeTimeOffDisplay
  .data.ChimeTimeOn
-                0x0000000020000f5e        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020000f5e                ChimeTimeOn
+                0x0000000020000662        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x0000000020000662                ChimeTimeOn
  .data.ChimeTimeOnDisplay
-                0x0000000020000f5f        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020000f5f                ChimeTimeOnDisplay
+                0x0000000020000663        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x0000000020000663                ChimeTimeOnDisplay
  .data.CurrentYearCentile
-                0x0000000020000f60        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020000f60                CurrentYearCentile
- *fill*         0x0000000020000f61        0x3 
- .data.DayName  0x0000000020000f64       0xf0 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020000f64                DayName
+                0x0000000020000664        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x0000000020000664                CurrentYearCentile
+ *fill*         0x0000000020000665        0x3 
+ .data.DayName  0x0000000020000668       0xf0 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x0000000020000668                DayName
  .data.FlagAutoBrightness
-                0x0000000020001054        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020001054                FlagAutoBrightness
- *fill*         0x0000000020001055        0x3 
+                0x0000000020000758        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x0000000020000758                FlagAutoBrightness
+ *fill*         0x0000000020000759        0x3 
  .data.FlagFlashing
-                0x0000000020001058       0x14 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020001058                FlagFlashing
+                0x000000002000075c       0x14 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x000000002000075c                FlagFlashing
  .data.FlagScrollEnable
-                0x000000002000106c        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x000000002000106c                FlagScrollEnable
+                0x0000000020000770        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x0000000020000770                FlagScrollEnable
  .data.HourlyChimeMode
-                0x000000002000106d        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x000000002000106d                HourlyChimeMode
+                0x0000000020000771        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x0000000020000771                HourlyChimeMode
  .data.Language
-                0x000000002000106e        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x000000002000106e                Language
- *fill*         0x000000002000106f        0x1 
+                0x0000000020000772        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x0000000020000772                Language
+ *fill*         0x0000000020000773        0x1 
  .data.LightLevel.4
-                0x0000000020001070       0x18 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x0000000020000774       0x18 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
  .data.MonthDays
-                0x0000000020001088       0x18 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020001088                MonthDays
+                0x000000002000078c       0x18 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x000000002000078c                MonthDays
  .data.MonthName
-                0x00000000200010a0      0x186 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x00000000200010a0                MonthName
+                0x00000000200007a4      0x186 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x00000000200007a4                MonthName
  .data.NightLightMode
-                0x0000000020001226        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020001226                NightLightMode
+                0x000000002000092a        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x000000002000092a                NightLightMode
  .data.NightLightTimeOff
-                0x0000000020001227        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020001227                NightLightTimeOff
+                0x000000002000092b        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x000000002000092b                NightLightTimeOff
  .data.NightLightTimeOn
-                0x0000000020001228        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020001228                NightLightTimeOn
+                0x000000002000092c        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x000000002000092c                NightLightTimeOn
  .data.SETUP_AUTO_BRIGHT
-                0x0000000020001229        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020001229                SETUP_AUTO_BRIGHT
+                0x000000002000092d        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x000000002000092d                SETUP_AUTO_BRIGHT
  .data.SETUP_CHIME_TIME_OFF
-                0x000000002000122a        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x000000002000122a                SETUP_CHIME_TIME_OFF
+                0x000000002000092e        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x000000002000092e                SETUP_CHIME_TIME_OFF
  .data.SETUP_CHIME_TIME_ON
-                0x000000002000122b        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x000000002000122b                SETUP_CHIME_TIME_ON
+                0x000000002000092f        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x000000002000092f                SETUP_CHIME_TIME_ON
  .data.SETUP_DAY_OF_MONTH
-                0x000000002000122c        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x000000002000122c                SETUP_DAY_OF_MONTH
+                0x0000000020000930        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x0000000020000930                SETUP_DAY_OF_MONTH
  .data.SETUP_DST
-                0x000000002000122d        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x000000002000122d                SETUP_DST
+                0x0000000020000931        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x0000000020000931                SETUP_DST
  .data.SETUP_HOUR
-                0x000000002000122e        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x000000002000122e                SETUP_HOUR
+                0x0000000020000932        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x0000000020000932                SETUP_HOUR
  .data.SETUP_HOURLY_CHIME
-                0x000000002000122f        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x000000002000122f                SETUP_HOURLY_CHIME
+                0x0000000020000933        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x0000000020000933                SETUP_HOURLY_CHIME
  .data.SETUP_KEYCLICK
-                0x0000000020001230        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020001230                SETUP_KEYCLICK
+                0x0000000020000934        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x0000000020000934                SETUP_KEYCLICK
  .data.SETUP_LANGUAGE
-                0x0000000020001231        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020001231                SETUP_LANGUAGE
+                0x0000000020000935        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x0000000020000935                SETUP_LANGUAGE
  .data.SETUP_MINUTE
-                0x0000000020001232        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020001232                SETUP_MINUTE
+                0x0000000020000936        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x0000000020000936                SETUP_MINUTE
  .data.SETUP_MONTH
-                0x0000000020001233        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020001233                SETUP_MONTH
+                0x0000000020000937        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x0000000020000937                SETUP_MONTH
  .data.SETUP_NIGHT_LIGHT
-                0x0000000020001234        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020001234                SETUP_NIGHT_LIGHT
+                0x0000000020000938        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x0000000020000938                SETUP_NIGHT_LIGHT
  .data.SETUP_NIGHT_LIGHT_TIME_OFF
-                0x0000000020001235        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020001235                SETUP_NIGHT_LIGHT_TIME_OFF
+                0x0000000020000939        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x0000000020000939                SETUP_NIGHT_LIGHT_TIME_OFF
  .data.SETUP_NIGHT_LIGHT_TIME_ON
-                0x0000000020001236        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020001236                SETUP_NIGHT_LIGHT_TIME_ON
+                0x000000002000093a        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x000000002000093a                SETUP_NIGHT_LIGHT_TIME_ON
  .data.SETUP_SCROLLING
-                0x0000000020001237        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020001237                SETUP_SCROLLING
+                0x000000002000093b        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x000000002000093b                SETUP_SCROLLING
  .data.SETUP_TEMP_UNIT
-                0x0000000020001238        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020001238                SETUP_TEMP_UNIT
+                0x000000002000093c        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x000000002000093c                SETUP_TEMP_UNIT
  .data.SETUP_TIME_FORMAT
-                0x0000000020001239        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020001239                SETUP_TIME_FORMAT
+                0x000000002000093d        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x000000002000093d                SETUP_TIME_FORMAT
  .data.SETUP_YEAR
-                0x000000002000123a        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x000000002000123a                SETUP_YEAR
- *fill*         0x000000002000123b        0x1 
+                0x000000002000093e        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x000000002000093e                SETUP_YEAR
+ *fill*         0x000000002000093f        0x1 
  .data.ShortMonth
-                0x000000002000123c       0x9c CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x000000002000123c                ShortMonth
+                0x0000000020000940       0x9c CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x0000000020000940                ShortMonth
  .data.TimeDisplayMode
-                0x00000000200012d8        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x00000000200012d8                TimeDisplayMode
- *fill*         0x00000000200012d9        0x3 
+                0x00000000200009dc        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x00000000200009dc                TimeDisplayMode
+ *fill*         0x00000000200009dd        0x3 
  .data.REG_ADDRESSES
-                0x00000000200012dc       0x11 CMakeFiles/Pico-Clock-Green.dir/Ds3231.c.obj
-                0x00000000200012dc                REG_ADDRESSES
+                0x00000000200009e0       0x11 CMakeFiles/Pico-Clock-Green.dir/Ds3231.c.obj
+                0x00000000200009e0                REG_ADDRESSES
  .data.striped_spin_lock_num
-                0x00000000200012ed        0x1 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
- *fill*         0x00000000200012ee        0x2 
- .data          0x00000000200012f0       0x48 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
-                0x00000000200012f0                irq_handler_chain_slots
-                0x0000000020001320                irq_handler_chain_first_slot
-                0x000000002000132a                irq_handler_chain_remove_tail
+                0x00000000200009f1        0x1 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+ *fill*         0x00000000200009f2        0x2 
+ .data          0x00000000200009f4       0x48 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
+                0x00000000200009f4                irq_handler_chain_slots
+                0x0000000020000a24                irq_handler_chain_first_slot
+                0x0000000020000a2e                irq_handler_chain_remove_tail
  .data.default_alarm_pool
-                0x0000000020001338       0x18 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000020000a3c       0x18 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
  .data.default_alarm_pool_heap
-                0x0000000020001350       0x10 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000020000a54       0x10 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x0000000020000a64        0xc 
  .data.aeabi_bits_funcs
-                0x0000000020001360       0x10 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
-                0x0000000020001360                aeabi_bits_funcs
-                0x0000000020001370                aeabi_bits_funcs_end
+                0x0000000020000a70       0x10 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+                0x0000000020000a70                aeabi_bits_funcs
+                0x0000000020000a80                aeabi_bits_funcs_end
  .data.aeabi_mem_funcs
-                0x0000000020001370       0x10 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-                0x0000000020001370                aeabi_mem_funcs
-                0x0000000020001380                aeabi_mem_funcs_end
+                0x0000000020000a80       0x10 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x0000000020000a80                aeabi_mem_funcs
+                0x0000000020000a90                aeabi_mem_funcs_end
  .data.stdio_uart
-                0x0000000020001380       0x14 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
-                0x0000000020001380                stdio_uart
+                0x0000000020000a90       0x14 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x0000000020000a90                stdio_uart
  .data.i2c0_inst
-                0x0000000020001394        0x8 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
-                0x0000000020001394                i2c0_inst
+                0x0000000020000aa4        0x8 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+                0x0000000020000aa4                i2c0_inst
  .data.i2c1_inst
-                0x000000002000139c        0x8 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
-                0x000000002000139c                i2c1_inst
+                0x0000000020000aac        0x8 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+                0x0000000020000aac                i2c1_inst
  .data._impure_ptr
-                0x00000000200013a4        0x4 /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-impure.o)
-                0x00000000200013a4                _impure_ptr
+                0x0000000020000ab4        0x4 /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-impure.o)
+                0x0000000020000ab4                _impure_ptr
  .data.impure_data
-                0x00000000200013a8      0x428 /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-impure.o)
-                0x00000000200017d0                . = ALIGN (0x4)
+                0x0000000020000ab8      0x428 /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-impure.o)
+                0x0000000020000ee0                . = ALIGN (0x4)
  *(.after_data.*)
-                0x00000000200017d0                . = ALIGN (0x4)
-                0x00000000200017d0                PROVIDE (__mutex_array_start = .)
+                0x0000000020000ee0                . = ALIGN (0x4)
+                0x0000000020000ee0                PROVIDE (__mutex_array_start = .)
  *(SORT_BY_NAME(.mutex_array.*))
  *(.mutex_array)
- .mutex_array   0x00000000200017d0        0x8 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x00000000200017d8                PROVIDE (__mutex_array_end = .)
-                0x00000000200017d8                . = ALIGN (0x4)
-                0x00000000200017d8                PROVIDE (__preinit_array_start = .)
+ .mutex_array   0x0000000020000ee0        0x8 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000020000ee8                PROVIDE (__mutex_array_end = .)
+                0x0000000020000ee8                . = ALIGN (0x4)
+                0x0000000020000ee8                PROVIDE (__preinit_array_start = .)
  *(SORT_BY_NAME(.preinit_array.*))
  .preinit_array.00001
-                0x00000000200017d8        0x4 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x0000000020000ee8        0x4 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
  .preinit_array.00010
-                0x00000000200017dc        0x4 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+                0x0000000020000eec        0x4 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
  .preinit_array.00020
-                0x00000000200017e0        0x4 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000020000ef0        0x4 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
  .preinit_array.00020
-                0x00000000200017e4        0x4 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+                0x0000000020000ef4        0x4 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
  *(.preinit_array)
-                0x00000000200017e8                PROVIDE (__preinit_array_end = .)
-                0x00000000200017e8                . = ALIGN (0x4)
-                0x00000000200017e8                PROVIDE (__init_array_start = .)
+                0x0000000020000ef8                PROVIDE (__preinit_array_end = .)
+                0x0000000020000ef8                . = ALIGN (0x4)
+                0x0000000020000ef8                PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array)
- .init_array    0x00000000200017e8        0x4 /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
- .init_array    0x00000000200017ec        0x4 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
-                0x00000000200017f0                PROVIDE (__init_array_end = .)
-                0x00000000200017f0                . = ALIGN (0x4)
+ .init_array    0x0000000020000ef8        0x4 /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
+ .init_array    0x0000000020000efc        0x4 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
+                0x0000000020000f00                PROVIDE (__init_array_end = .)
+                0x0000000020000f00                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array)
                 [!provide]                        PROVIDE (__fini_array_end = .)
  *(.jcr)
-                0x00000000200017f0                . = ALIGN (0x4)
-                0x00000000200017f0                __data_end__ = .
+                0x0000000020000f00                . = ALIGN (0x4)
+                0x0000000020000f00                __data_end__ = .
 
-.igot.plt       0x00000000200017f0        0x0 load address 0x000000001000cdec
- .igot.plt      0x00000000200017f0        0x0 /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
+.igot.plt       0x0000000020000f00        0x0 load address 0x000000001000c4fc
+ .igot.plt      0x0000000020000f00        0x0 /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
 
 .uninitialized_data
-                0x00000000200017f0        0x0 load address 0x000000001000cdec
-                0x00000000200017f0                . = ALIGN (0x4)
+                0x0000000020000f00        0x0 load address 0x000000001000c4fc
+                0x0000000020000f00                . = ALIGN (0x4)
  *(.uninitialized_data*)
 
-.scratch_x      0x0000000020040000        0x0 load address 0x000000001000cdec
+.scratch_x      0x0000000020040000        0x0 load address 0x000000001000c4fc
                 0x0000000020040000                __scratch_x_start__ = .
  *(.scratch_x.*)
                 0x0000000020040000                . = ALIGN (0x4)
                 0x0000000020040000                __scratch_x_end__ = .
-                0x000000001000cdec                __scratch_x_source__ = LOADADDR (.scratch_x)
+                0x000000001000c4fc                __scratch_x_source__ = LOADADDR (.scratch_x)
 
-.scratch_y      0x0000000020041000        0x0 load address 0x000000001000cdec
+.scratch_y      0x0000000020041000        0x0 load address 0x000000001000c4fc
                 0x0000000020041000                __scratch_y_start__ = .
  *(.scratch_y.*)
                 0x0000000020041000                . = ALIGN (0x4)
                 0x0000000020041000                __scratch_y_end__ = .
-                0x000000001000cdec                __scratch_y_source__ = LOADADDR (.scratch_y)
+                0x000000001000c4fc                __scratch_y_source__ = LOADADDR (.scratch_y)
 
-.bss            0x00000000200017f0     0x1380
-                0x00000000200017f0                . = ALIGN (0x4)
-                0x00000000200017f0                __bss_start__ = .
+.bss            0x0000000020000f00     0x1c7c
+                0x0000000020000f00                . = ALIGN (0x4)
+                0x0000000020000f00                __bss_start__ = .
  *(SORT_BY_ALIGNMENT(SORT_BY_NAME(.bss*)))
  .bss.CumulativeLightLevel.6
-                0x00000000200017f0        0x8 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x0000000020000f00        0x8 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
  .bss.DebugBitMask
-                0x00000000200017f8        0x8 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x00000000200017f8                DebugBitMask
+                0x0000000020000f08        0x8 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x0000000020000f08                DebugBitMask
  .bss.Timer50uSec
-                0x0000000020001800       0x18 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020001800                Timer50uSec
+                0x0000000020000f10       0x18 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x0000000020000f10                Timer50uSec
  .bss.default_alarm_pool_entries
-                0x0000000020001818      0x100 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
- .bss           0x0000000020001918       0x1c /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
- .bss.Alarm     0x0000000020001934        0xa CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020001934                Alarm
- *fill*         0x000000002000193e        0x2 
- .bss.ByteData  0x0000000020001940       0x10 CMakeFiles/Pico-Clock-Green.dir/Ds3231.c.obj
-                0x0000000020001940                ByteData
+                0x0000000020000f28      0x100 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
+ .bss           0x0000000020001028       0x1c /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
+ .bss.Alarm     0x0000000020001044        0xa CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x0000000020001044                Alarm
+ *fill*         0x000000002000104e        0x2 
+ .bss.ByteData  0x0000000020001050       0x10 CMakeFiles/Pico-Clock-Green.dir/Ds3231.c.obj
+                0x0000000020001050                ByteData
+ .bss.CalendarEvent
+                0x0000000020001060      0x8fc CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x0000000020001060                CalendarEvent
  .bss.DisplayBuffer
-                0x0000000020001950       0xf8 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020001950                DisplayBuffer
+                0x000000002000195c       0xf8 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x000000002000195c                DisplayBuffer
  .bss.Ds3231ReadRegister
-                0x0000000020001a48       0x11 CMakeFiles/Pico-Clock-Green.dir/Ds3231.c.obj
-                0x0000000020001a48                Ds3231ReadRegister
- *fill*         0x0000000020001a59        0x3 
+                0x0000000020001a54       0x11 CMakeFiles/Pico-Clock-Green.dir/Ds3231.c.obj
+                0x0000000020001a54                Ds3231ReadRegister
+ *fill*         0x0000000020001a65        0x3 
  .bss.FlagSetupAlarm
-                0x0000000020001a5c        0x6 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020001a5c                FlagSetupAlarm
- *fill*         0x0000000020001a62        0x2 
+                0x0000000020001a68        0x6 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x0000000020001a68                FlagSetupAlarm
+ *fill*         0x0000000020001a6e        0x2 
  .bss.FlagSetupClock
-                0x0000000020001a64       0x13 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020001a64                FlagSetupClock
- *fill*         0x0000000020001a77        0x1 
+                0x0000000020001a70       0x13 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x0000000020001a70                FlagSetupClock
+ *fill*         0x0000000020001a83        0x1 
  .bss.FlagSetupTimer
-                0x0000000020001a78        0x5 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020001a78                FlagSetupTimer
- *fill*         0x0000000020001a7d        0x3 
+                0x0000000020001a84        0x5 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x0000000020001a84                FlagSetupTimer
+ *fill*         0x0000000020001a89        0x3 
  .bss.NextCell.5
-                0x0000000020001a80        0x4 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x0000000020001a8c        0x4 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
  .bss.ScrollQueue
-                0x0000000020001a84       0x4b CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020001a84                ScrollQueue
- *fill*         0x0000000020001acf        0x1 
- .bss.SemSync   0x0000000020001ad0        0x8 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020001ad0                SemSync
+                0x0000000020001a90       0x4b CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x0000000020001a90                ScrollQueue
+ *fill*         0x0000000020001adb        0x1 
+ .bss.SemSync   0x0000000020001adc        0x8 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x0000000020001adc                SemSync
  .bss.SoundQueue
-                0x0000000020001ad8      0xc80 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020001ad8                SoundQueue
+                0x0000000020001ae4      0xc80 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x0000000020001ae4                SoundQueue
  .bss.SystemClock
-                0x0000000020002758        0x4 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020002758                SystemClock
- .bss.Time_RTC  0x000000002000275c        0x7 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x000000002000275c                Time_RTC
- *fill*         0x0000000020002763        0x1 
+                0x0000000020002764        0x4 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x0000000020002764                SystemClock
+ .bss.Time_RTC  0x0000000020002768        0x7 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x0000000020002768                Time_RTC
+ *fill*         0x000000002000276f        0x1 
  .bss.alarm_callbacks
-                0x0000000020002764       0x10 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x0000000020002770       0x10 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
  .bss.boot2_copyout
-                0x0000000020002774      0x100 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+                0x0000000020002780      0x100 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
  .bss.configured_freq
-                0x0000000020002874       0x28 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x0000000020002880       0x28 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
  .bss.default_alarm_pool_entry_ids_high
-                0x000000002000289c       0x10 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x00000000200028a8       0x10 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
  .bss.default_alarm_pool_heap_nodes
-                0x00000000200028ac       0x30 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
- .bss.drivers   0x00000000200028dc        0x4 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- .bss.filter    0x00000000200028e0        0x4 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- .bss.pools     0x00000000200028e4       0x10 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x00000000200028b8       0x30 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
+ .bss.drivers   0x00000000200028e8        0x4 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ .bss.filter    0x00000000200028ec        0x4 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ .bss.pools     0x00000000200028f0       0x10 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
  .bss.retrieved_id
-                0x00000000200028f4        0x8 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
- .bss.sd_table  0x00000000200028fc      0x100 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
-                0x00000000200028fc                sd_table
+                0x0000000020002900        0x8 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
+ .bss.sd_table  0x0000000020002908      0x100 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x0000000020002908                sd_table
  .bss.sf_clz_func
-                0x00000000200029fc        0x4 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
-                0x00000000200029fc                sf_clz_func
- .bss.sf_table  0x0000000020002a00      0x100 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
-                0x0000000020002a00                sf_table
+                0x0000000020002a08        0x4 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x0000000020002a08                sf_clz_func
+ .bss.sf_table  0x0000000020002a0c      0x100 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+                0x0000000020002a0c                sf_table
  .bss.sleep_notifier
-                0x0000000020002b00        0x4 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000020002b0c        0x4 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
  .bss.target_hi
-                0x0000000020002b04       0x10 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x0000000020002b10       0x10 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
  .bss.uart_char_to_line_feed
-                0x0000000020002b14        0x4 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
-                0x0000000020002b14                uart_char_to_line_feed
+                0x0000000020002b20        0x4 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+                0x0000000020002b20                uart_char_to_line_feed
  .bss.uart_instance
-                0x0000000020002b18        0x4 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x0000000020002b24        0x4 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .bss.AmbientLightMSecCounter.7
-                0x0000000020002b1c        0x2 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
- .bss.BottomKeyPressTime
-                0x0000000020002b1e        0x2 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020002b1e                BottomKeyPressTime
- .bss.CountDownPause.3
-                0x0000000020002b20        0x2 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
- .bss.DotBlinkCount
-                0x0000000020002b22        0x2 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020002b22                DotBlinkCount
- .bss.FlashingCount
-                0x0000000020002b24        0x2 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020002b24                FlashingCount
- .bss.MiddleKeyPressTime
-                0x0000000020002b26        0x2 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020002b26                MiddleKeyPressTime
- .bss.PwmChannelNumber
                 0x0000000020002b28        0x2 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020002b28                PwmChannelNumber
- .bss.PwmSliceNumber
+ .bss.BottomKeyPressTime
                 0x0000000020002b2a        0x2 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020002b2a                PwmSliceNumber
- .bss.SilencePeriod
+                0x0000000020002b2a                BottomKeyPressTime
+ .bss.CountDownPause.3
                 0x0000000020002b2c        0x2 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020002b2c                SilencePeriod
- .bss.SoundQueueHead
+ .bss.DotBlinkCount
                 0x0000000020002b2e        0x2 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020002b2e                SoundQueueHead
- .bss.SoundQueueTail
+                0x0000000020002b2e                DotBlinkCount
+ .bss.FlashingCount
                 0x0000000020002b30        0x2 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020002b30                SoundQueueTail
- .bss.TopKeyPressTime
+                0x0000000020002b30                FlashingCount
+ .bss.MiddleKeyPressTime
                 0x0000000020002b32        0x2 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020002b32                TopKeyPressTime
- .bss.Year4Digits
+                0x0000000020002b32                MiddleKeyPressTime
+ .bss.PwmChannelNumber
                 0x0000000020002b34        0x2 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020002b34                Year4Digits
+                0x0000000020002b34                PwmChannelNumber
+ .bss.PwmSliceNumber
+                0x0000000020002b36        0x2 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x0000000020002b36                PwmSliceNumber
+ .bss.SilencePeriod
+                0x0000000020002b38        0x2 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x0000000020002b38                SilencePeriod
+ .bss.SoundQueueHead
+                0x0000000020002b3a        0x2 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x0000000020002b3a                SoundQueueHead
+ .bss.SoundQueueTail
+                0x0000000020002b3c        0x2 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x0000000020002b3c                SoundQueueTail
+ .bss.TopKeyPressTime
+                0x0000000020002b3e        0x2 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x0000000020002b3e                TopKeyPressTime
+ .bss.Year4Digits
+                0x0000000020002b40        0x2 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x0000000020002b40                Year4Digits
  .bss.AlarmNumber
-                0x0000000020002b36        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020002b36                AlarmNumber
- .bss.CurrentClockMode
-                0x0000000020002b37        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020002b37                CurrentClockMode
- .bss.CurrentDayOfMonth
-                0x0000000020002b38        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020002b38                CurrentDayOfMonth
- .bss.CurrentHour
-                0x0000000020002b39        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020002b39                CurrentHour
- .bss.CurrentHourSetting
-                0x0000000020002b3a        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020002b3a                CurrentHourSetting
- .bss.CurrentMinute
-                0x0000000020002b3b        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020002b3b                CurrentMinute
- .bss.CurrentMinuteSetting
-                0x0000000020002b3c        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020002b3c                CurrentMinuteSetting
- .bss.CurrentMonth
-                0x0000000020002b3d        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020002b3d                CurrentMonth
- .bss.CurrentYearLowPart
-                0x0000000020002b3e        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020002b3e                CurrentYearLowPart
- .bss.DaylightSavingTime
-                0x0000000020002b3f        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020002b3f                DaylightSavingTime
- .bss.FlagAlarmBeeping
-                0x0000000020002b40        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020002b40                FlagAlarmBeeping
- .bss.FlagChimeDone
-                0x0000000020002b41        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020002b41                FlagChimeDone
- .bss.FlagDayLightSavingTime
                 0x0000000020002b42        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020002b42                FlagDayLightSavingTime
- .bss.FlagIdleCheck
+                0x0000000020002b42                AlarmNumber
+ .bss.CurrentClockMode
                 0x0000000020002b43        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020002b43                FlagIdleCheck
- .bss.FlagKeyclick
+                0x0000000020002b43                CurrentClockMode
+ .bss.CurrentDayOfMonth
                 0x0000000020002b44        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020002b44                FlagKeyclick
- .bss.FlagPause.2
+                0x0000000020002b44                CurrentDayOfMonth
+ .bss.CurrentHour
                 0x0000000020002b45        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
- .bss.FlagScrollStart
+                0x0000000020002b45                CurrentHour
+ .bss.CurrentHourSetting
                 0x0000000020002b46        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020002b46                FlagScrollStart
- .bss.FlagSetAlarm
+                0x0000000020002b46                CurrentHourSetting
+ .bss.CurrentMinute
                 0x0000000020002b47        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020002b47                FlagSetAlarm
- .bss.FlagSetClock
+                0x0000000020002b47                CurrentMinute
+ .bss.CurrentMinuteSetting
                 0x0000000020002b48        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020002b48                FlagSetClock
- .bss.FlagSetTimer
+                0x0000000020002b48                CurrentMinuteSetting
+ .bss.CurrentMonth
                 0x0000000020002b49        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020002b49                FlagSetTimer
- .bss.FlagSetTimerCountDown
+                0x0000000020002b49                CurrentMonth
+ .bss.CurrentYearLowPart
                 0x0000000020002b4a        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020002b4a                FlagSetTimerCountDown
- .bss.FlagSetTimerCountUp
+                0x0000000020002b4a                CurrentYearLowPart
+ .bss.DaylightSavingTime
                 0x0000000020002b4b        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020002b4b                FlagSetTimerCountUp
- .bss.FlagSetupRTC
+                0x0000000020002b4b                DaylightSavingTime
+ .bss.FlagAlarmBeeping
                 0x0000000020002b4c        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020002b4c                FlagSetupRTC
- .bss.FlagTimerCountDownEnd
+                0x0000000020002b4c                FlagAlarmBeeping
+ .bss.FlagChimeDone
                 0x0000000020002b4d        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020002b4d                FlagTimerCountDownEnd
- .bss.FlagTone  0x0000000020002b4e        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020002b4e                FlagTone
- .bss.FlagToneOn
+                0x0000000020002b4d                FlagChimeDone
+ .bss.FlagDayLightSavingTime
+                0x0000000020002b4e        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x0000000020002b4e                FlagDayLightSavingTime
+ .bss.FlagIdleCheck
                 0x0000000020002b4f        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020002b4f                FlagToneOn
- .bss.FlagUpdateTime
+                0x0000000020002b4f                FlagIdleCheck
+ .bss.FlagKeyclick
                 0x0000000020002b50        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020002b50                FlagUpdateTime
- .bss.IdleNumberOfSeconds
+                0x0000000020002b50                FlagKeyclick
+ .bss.FlagPause.2
                 0x0000000020002b51        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020002b51                IdleNumberOfSeconds
- .bss.LightSetting
+ .bss.FlagScrollStart
                 0x0000000020002b52        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020002b52                LightSetting
- .bss.NightLightTimeOffDisplay
+                0x0000000020002b52                FlagScrollStart
+ .bss.FlagSetAlarm
                 0x0000000020002b53        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020002b53                NightLightTimeOffDisplay
- .bss.NightLightTimeOnDisplay
+                0x0000000020002b53                FlagSetAlarm
+ .bss.FlagSetClock
                 0x0000000020002b54        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020002b54                NightLightTimeOnDisplay
- .bss.RowScanNumber
+                0x0000000020002b54                FlagSetClock
+ .bss.FlagSetTimer
                 0x0000000020002b55        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020002b55                RowScanNumber
- .bss.SETUP_NONE
+                0x0000000020002b55                FlagSetTimer
+ .bss.FlagSetTimerCountDown
                 0x0000000020002b56        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020002b56                SETUP_NONE
- .bss.ScrollDotCount
+                0x0000000020002b56                FlagSetTimerCountDown
+ .bss.FlagSetTimerCountUp
                 0x0000000020002b57        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020002b57                ScrollDotCount
- .bss.ScrollQueueHead
+                0x0000000020002b57                FlagSetTimerCountUp
+ .bss.FlagSetupRTC
                 0x0000000020002b58        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020002b58                ScrollQueueHead
- .bss.ScrollQueueTail
+                0x0000000020002b58                FlagSetupRTC
+ .bss.FlagTimerCountDownEnd
                 0x0000000020002b59        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020002b59                ScrollQueueTail
- .bss.ScrollSecondCounter
-                0x0000000020002b5a        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020002b5a                ScrollSecondCounter
- .bss.ScrollStartCount
+                0x0000000020002b59                FlagTimerCountDownEnd
+ .bss.FlagTone  0x0000000020002b5a        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x0000000020002b5a                FlagTone
+ .bss.FlagToneOn
                 0x0000000020002b5b        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020002b5b                ScrollStartCount
- .bss.SecondCounter
+                0x0000000020002b5b                FlagToneOn
+ .bss.FlagUpdateTime
                 0x0000000020002b5c        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020002b5c                SecondCounter
- .bss.SetupSource
+                0x0000000020002b5c                FlagUpdateTime
+ .bss.IdleNumberOfSeconds
                 0x0000000020002b5d        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020002b5d                SetupSource
- .bss.SetupStep
+                0x0000000020002b5d                IdleNumberOfSeconds
+ .bss.LightSetting
                 0x0000000020002b5e        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020002b5e                SetupStep
- .bss.TemperatureUnit
+                0x0000000020002b5e                LightSetting
+ .bss.NightLightTimeOffDisplay
                 0x0000000020002b5f        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020002b5f                TemperatureUnit
- .bss.TimerMinutes
+                0x0000000020002b5f                NightLightTimeOffDisplay
+ .bss.NightLightTimeOnDisplay
                 0x0000000020002b60        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020002b60                TimerMinutes
- .bss.TimerMode
+                0x0000000020002b60                NightLightTimeOnDisplay
+ .bss.RowScanNumber
                 0x0000000020002b61        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020002b61                TimerMode
- .bss.TimerSeconds
+                0x0000000020002b61                RowScanNumber
+ .bss.SETUP_NONE
                 0x0000000020002b62        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020002b62                TimerSeconds
- .bss.TimerShowCount
+                0x0000000020002b62                SETUP_NONE
+ .bss.ScrollDotCount
                 0x0000000020002b63        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020002b63                TimerShowCount
- .bss.TimerShowSecond
+                0x0000000020002b63                ScrollDotCount
+ .bss.ScrollQueueHead
                 0x0000000020002b64        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020002b64                TimerShowSecond
- .bss.ToneMSecCounter
+                0x0000000020002b64                ScrollQueueHead
+ .bss.ScrollQueueTail
                 0x0000000020002b65        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020002b65                ToneMSecCounter
- .bss.ToneRepeatCount
+                0x0000000020002b65                ScrollQueueTail
+ .bss.ScrollSecondCounter
                 0x0000000020002b66        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020002b66                ToneRepeatCount
- .bss.ToneRepeatCount2.1
+                0x0000000020002b66                ScrollSecondCounter
+ .bss.ScrollStartCount
                 0x0000000020002b67        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
- .bss.ToneType  0x0000000020002b68        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020002b68                ToneType
- .bss.UpId      0x0000000020002b69        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000020002b69                UpId
+                0x0000000020002b67                ScrollStartCount
+ .bss.SecondCounter
+                0x0000000020002b68        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x0000000020002b68                SecondCounter
+ .bss.SetupSource
+                0x0000000020002b69        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x0000000020002b69                SetupSource
+ .bss.SetupStep
+                0x0000000020002b6a        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x0000000020002b6a                SetupStep
+ .bss.TemperatureUnit
+                0x0000000020002b6b        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x0000000020002b6b                TemperatureUnit
+ .bss.TimerMinutes
+                0x0000000020002b6c        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x0000000020002b6c                TimerMinutes
+ .bss.TimerMode
+                0x0000000020002b6d        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x0000000020002b6d                TimerMode
+ .bss.TimerSeconds
+                0x0000000020002b6e        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x0000000020002b6e                TimerSeconds
+ .bss.TimerShowCount
+                0x0000000020002b6f        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x0000000020002b6f                TimerShowCount
+ .bss.TimerShowSecond
+                0x0000000020002b70        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x0000000020002b70                TimerShowSecond
+ .bss.ToneMSecCounter
+                0x0000000020002b71        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x0000000020002b71                ToneMSecCounter
+ .bss.ToneRepeatCount
+                0x0000000020002b72        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x0000000020002b72                ToneRepeatCount
+ .bss.ToneRepeatCount2.1
+                0x0000000020002b73        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+ .bss.ToneType  0x0000000020002b74        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x0000000020002b74                ToneType
+ .bss.UpId      0x0000000020002b75        0x1 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x0000000020002b75                UpId
  .bss.boot2_copyout_valid
-                0x0000000020002b6a        0x1 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
- .bss.claimed   0x0000000020002b6b        0x1 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x0000000020002b76        0x1 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+ .bss.claimed   0x0000000020002b77        0x1 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
  .bss.irq_hander_chain_free_slot_head
-                0x0000000020002b6c        0x1 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x0000000020002b78        0x1 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
  .bss.timer_callbacks_pending
-                0x0000000020002b6d        0x1 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x0000000020002b79        0x1 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
  *(COMMON)
-                0x0000000020002b70                . = ALIGN (0x4)
- *fill*         0x0000000020002b6e        0x2 
-                0x0000000020002b70                __bss_end__ = .
+                0x0000000020002b7c                . = ALIGN (0x4)
+ *fill*         0x0000000020002b7a        0x2 
+                0x0000000020002b7c                __bss_end__ = .
 
-.heap           0x0000000020002b70      0x800
-                0x0000000020002b70                __end__ = .
-                0x0000000020002b70                end = __end__
+.heap           0x0000000020002b7c      0x800
+                0x0000000020002b7c                __end__ = .
+                0x0000000020002b7c                end = __end__
  *(.heap*)
- .heap          0x0000000020002b70      0x800 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
-                0x0000000020003370                __HeapLimit = .
+ .heap          0x0000000020002b7c      0x800 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
+                0x000000002000337c                __HeapLimit = .
 
 .stack1_dummy   0x0000000020040000        0x0
  *(.stack1*)
@@ -2964,8 +2965,8 @@ LOAD /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-non
  *(.stack*)
  .stack         0x0000000020041000      0x800 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
 
-.flash_end      0x000000001000cdec        0x0
-                0x000000001000cdec                __flash_binary_end = .
+.flash_end      0x000000001000c4fc        0x0
+                0x000000001000c4fc                __flash_binary_end = .
                 0x0000000020040000                __StackLimit = (ORIGIN (RAM) + LENGTH (RAM))
                 0x0000000020041000                __StackOneTop = (ORIGIN (SCRATCH_X) + LENGTH (SCRATCH_X))
                 0x0000000020042000                __StackTop = (ORIGIN (SCRATCH_Y) + LENGTH (SCRATCH_Y))
@@ -3025,7 +3026,7 @@ LOAD CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hard
 LOAD CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj
 LOAD CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
 LOAD CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
-LOAD /var/folders/hx/ybfzs61s0_df8jx22m7xnqnr0000gn/T//ccBE1Bx1.o
+LOAD /var/folders/hx/ybfzs61s0_df8jx22m7xnqnr0000gn/T//ccuqV7wC.o
 LOAD /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libstdc++.a
 LOAD /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a
 START GROUP
@@ -3130,7 +3131,7 @@ LOAD linker stubs
  .ARM.attributes
                 0x00000000000006a0       0x2c CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
  .ARM.attributes
-                0x00000000000006cc       0x22 /var/folders/hx/ybfzs61s0_df8jx22m7xnqnr0000gn/T//ccBE1Bx1.o
+                0x00000000000006cc       0x22 /var/folders/hx/ybfzs61s0_df8jx22m7xnqnr0000gn/T//ccuqV7wC.o
  .ARM.attributes
                 0x00000000000006ee       0x1e /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .ARM.attributes
