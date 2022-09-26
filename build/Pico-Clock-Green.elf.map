@@ -1120,9 +1120,9 @@ Discarded input sections
                 0x0000000000000000       0x14 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
  .rodata.__func__.2
                 0x0000000000000000       0x12 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
- .text          0x0000000000000000        0x0 /var/folders/hx/ybfzs61s0_df8jx22m7xnqnr0000gn/T//cc5bZPqJ.o
- .data          0x0000000000000000        0x0 /var/folders/hx/ybfzs61s0_df8jx22m7xnqnr0000gn/T//cc5bZPqJ.o
- .bss           0x0000000000000000        0x0 /var/folders/hx/ybfzs61s0_df8jx22m7xnqnr0000gn/T//cc5bZPqJ.o
+ .text          0x0000000000000000        0x0 /var/folders/hx/ybfzs61s0_df8jx22m7xnqnr0000gn/T//cc2HkP3P.o
+ .data          0x0000000000000000        0x0 /var/folders/hx/ybfzs61s0_df8jx22m7xnqnr0000gn/T//cc2HkP3P.o
+ .bss           0x0000000000000000        0x0 /var/folders/hx/ybfzs61s0_df8jx22m7xnqnr0000gn/T//cc2HkP3P.o
  .data          0x0000000000000000        0x0 /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .bss           0x0000000000000000        0x0 /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .text          0x0000000000000000        0x0 /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-calloc.o)
@@ -1345,11 +1345,11 @@ LOAD /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-non
 .boot2          0x0000000010000000      0x100
                 0x0000000010000000                __boot2_start__ = .
  *(.boot2)
- .boot2         0x0000000010000000      0x100 /var/folders/hx/ybfzs61s0_df8jx22m7xnqnr0000gn/T//cc5bZPqJ.o
+ .boot2         0x0000000010000000      0x100 /var/folders/hx/ybfzs61s0_df8jx22m7xnqnr0000gn/T//cc2HkP3P.o
                 0x0000000010000100                __boot2_end__ = .
                 0x0000000000000001                ASSERT (((__boot2_end__ - __boot2_start__) == 0x100), ERROR: Pico second stage bootloader must be 256 bytes in size)
 
-.text           0x0000000010000100     0x9208
+.text           0x0000000010000100     0x91f8
                 0x0000000010000100                __logical_binary_start = .
  *(.vectors)
  .vectors       0x0000000010000100       0xd4 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
@@ -1527,498 +1527,499 @@ LOAD /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-non
  .text.uart_send
                 0x0000000010003ddc       0xf8 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
                 0x0000000010003ddc                uart_send
- .text.main     0x0000000010003ed4      0x6c8 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+ .text.main     0x0000000010003ed4      0x6b4 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
                 0x0000000010003ed4                main
  .text.timer_callback_s
-                0x000000001000459c      0x67c CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x000000001000459c                timer_callback_s
+                0x0000000010004588      0x67c CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x0000000010004588                timer_callback_s
  .text.bcd_to_byte
-                0x0000000010004c18       0x14 CMakeFiles/Pico-Clock-Green.dir/Ds3231.c.obj
-                0x0000000010004c18                bcd_to_byte
+                0x0000000010004c04       0x14 CMakeFiles/Pico-Clock-Green.dir/Ds3231.c.obj
+                0x0000000010004c04                bcd_to_byte
  .text.dec_to_bcd
-                0x0000000010004c2c       0x1c CMakeFiles/Pico-Clock-Green.dir/Ds3231.c.obj
-                0x0000000010004c2c                dec_to_bcd
+                0x0000000010004c18       0x1c CMakeFiles/Pico-Clock-Green.dir/Ds3231.c.obj
+                0x0000000010004c18                dec_to_bcd
  .text.ds3231_check_alarm_0
-                0x0000000010004c48       0x58 CMakeFiles/Pico-Clock-Green.dir/Ds3231.c.obj
-                0x0000000010004c48                ds3231_check_alarm_0
+                0x0000000010004c34       0x58 CMakeFiles/Pico-Clock-Green.dir/Ds3231.c.obj
+                0x0000000010004c34                ds3231_check_alarm_0
  .text.ds3231_check_alarm_1
-                0x0000000010004ca0       0x58 CMakeFiles/Pico-Clock-Green.dir/Ds3231.c.obj
-                0x0000000010004ca0                ds3231_check_alarm_1
+                0x0000000010004c8c       0x58 CMakeFiles/Pico-Clock-Green.dir/Ds3231.c.obj
+                0x0000000010004c8c                ds3231_check_alarm_1
  .text.ds3231_register_read
-                0x0000000010004cf8       0x44 CMakeFiles/Pico-Clock-Green.dir/Ds3231.c.obj
-                0x0000000010004cf8                ds3231_register_read
+                0x0000000010004ce4       0x44 CMakeFiles/Pico-Clock-Green.dir/Ds3231.c.obj
+                0x0000000010004ce4                ds3231_register_read
  .text.byte_data
-                0x0000000010004d3c       0x28 CMakeFiles/Pico-Clock-Green.dir/Ds3231.c.obj
-                0x0000000010004d3c                byte_data
+                0x0000000010004d28       0x28 CMakeFiles/Pico-Clock-Green.dir/Ds3231.c.obj
+                0x0000000010004d28                byte_data
  .text.Read_RTC
-                0x0000000010004d64       0x54 CMakeFiles/Pico-Clock-Green.dir/Ds3231.c.obj
-                0x0000000010004d64                Read_RTC
+                0x0000000010004d50       0x54 CMakeFiles/Pico-Clock-Green.dir/Ds3231.c.obj
+                0x0000000010004d50                Read_RTC
  .text.set_alarm1_clock
-                0x0000000010004db8      0x108 CMakeFiles/Pico-Clock-Green.dir/Ds3231.c.obj
-                0x0000000010004db8                set_alarm1_clock
+                0x0000000010004da4      0x108 CMakeFiles/Pico-Clock-Green.dir/Ds3231.c.obj
+                0x0000000010004da4                set_alarm1_clock
  .text.set_alarm2_clock
-                0x0000000010004ec0       0x88 CMakeFiles/Pico-Clock-Green.dir/Ds3231.c.obj
-                0x0000000010004ec0                set_alarm2_clock
+                0x0000000010004eac       0x88 CMakeFiles/Pico-Clock-Green.dir/Ds3231.c.obj
+                0x0000000010004eac                set_alarm2_clock
  .text.set_day_of_month
-                0x0000000010004f48       0x2c CMakeFiles/Pico-Clock-Green.dir/Ds3231.c.obj
-                0x0000000010004f48                set_day_of_month
+                0x0000000010004f34       0x2c CMakeFiles/Pico-Clock-Green.dir/Ds3231.c.obj
+                0x0000000010004f34                set_day_of_month
  .text.set_day_of_week
-                0x0000000010004f74       0x2c CMakeFiles/Pico-Clock-Green.dir/Ds3231.c.obj
-                0x0000000010004f74                set_day_of_week
+                0x0000000010004f60       0x2c CMakeFiles/Pico-Clock-Green.dir/Ds3231.c.obj
+                0x0000000010004f60                set_day_of_week
  .text.set_hour
-                0x0000000010004fa0       0x2c CMakeFiles/Pico-Clock-Green.dir/Ds3231.c.obj
-                0x0000000010004fa0                set_hour
+                0x0000000010004f8c       0x2c CMakeFiles/Pico-Clock-Green.dir/Ds3231.c.obj
+                0x0000000010004f8c                set_hour
  .text.set_minute
-                0x0000000010004fcc       0x40 CMakeFiles/Pico-Clock-Green.dir/Ds3231.c.obj
-                0x0000000010004fcc                set_minute
+                0x0000000010004fb8       0x40 CMakeFiles/Pico-Clock-Green.dir/Ds3231.c.obj
+                0x0000000010004fb8                set_minute
  .text.set_month
-                0x000000001000500c       0x2c CMakeFiles/Pico-Clock-Green.dir/Ds3231.c.obj
-                0x000000001000500c                set_month
+                0x0000000010004ff8       0x2c CMakeFiles/Pico-Clock-Green.dir/Ds3231.c.obj
+                0x0000000010004ff8                set_month
  .text.set_year
-                0x0000000010005038       0x2c CMakeFiles/Pico-Clock-Green.dir/Ds3231.c.obj
-                0x0000000010005038                set_year
+                0x0000000010005024       0x2c CMakeFiles/Pico-Clock-Green.dir/Ds3231.c.obj
+                0x0000000010005024                set_year
  .text.gpio_set_function
-                0x0000000010005064       0x30 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-                0x0000000010005064                gpio_set_function
+                0x0000000010005050       0x30 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x0000000010005050                gpio_set_function
  .text.gpio_set_pulls
-                0x0000000010005094       0x34 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-                0x0000000010005094                gpio_set_pulls
+                0x0000000010005080       0x34 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x0000000010005080                gpio_set_pulls
  .text.gpio_set_input_enabled
-                0x00000000100050c8       0x30 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-                0x00000000100050c8                gpio_set_input_enabled
+                0x00000000100050b4       0x30 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x00000000100050b4                gpio_set_input_enabled
  .text.gpio_init
-                0x00000000100050f8       0x16 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-                0x00000000100050f8                gpio_init
- *fill*         0x000000001000510e        0x2 
+                0x00000000100050e4       0x16 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x00000000100050e4                gpio_init
+ *fill*         0x00000000100050fa        0x2 
  .text.hw_claim_lock
-                0x0000000010005110       0x18 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
-                0x0000000010005110                hw_claim_lock
+                0x00000000100050fc       0x18 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+                0x00000000100050fc                hw_claim_lock
  .text.hw_claim_unlock
-                0x0000000010005128       0x14 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
-                0x0000000010005128                hw_claim_unlock
+                0x0000000010005114       0x14 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+                0x0000000010005114                hw_claim_unlock
  .text.hw_claim_or_assert
-                0x000000001000513c       0x32 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
-                0x000000001000513c                hw_claim_or_assert
- *fill*         0x000000001000516e        0x2 
+                0x0000000010005128       0x32 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+                0x0000000010005128                hw_claim_or_assert
+ *fill*         0x000000001000515a        0x2 
  .text.running_on_fpga
-                0x0000000010005170       0x14 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
-                0x0000000010005170                running_on_fpga
+                0x000000001000515c       0x14 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+                0x000000001000515c                running_on_fpga
  .text.spin_locks_reset
-                0x0000000010005184       0x20 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
-                0x0000000010005184                spin_locks_reset
+                0x0000000010005170       0x20 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+                0x0000000010005170                spin_locks_reset
  .text.next_striped_spin_lock_num
-                0x00000000100051a4       0x1c CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
-                0x00000000100051a4                next_striped_spin_lock_num
+                0x0000000010005190       0x1c CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+                0x0000000010005190                next_striped_spin_lock_num
  .text.set_raw_irq_handler_and_unlock
-                0x00000000100051c0       0x28 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x00000000100051ac       0x28 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
  .text.make_branch
-                0x00000000100051e8       0x48 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x00000000100051d4       0x48 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
  .text.insert_branch_and_link
-                0x0000000010005230       0x40 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x000000001000521c       0x40 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
  .text.irq_is_enabled
-                0x0000000010005270       0x18 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x0000000010005270                irq_is_enabled
+                0x000000001000525c       0x18 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x000000001000525c                irq_is_enabled
  .text.irq_set_mask_enabled
-                0x0000000010005288       0x20 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x0000000010005288                irq_set_mask_enabled
+                0x0000000010005274       0x20 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x0000000010005274                irq_set_mask_enabled
  .text.irq_set_enabled
-                0x00000000100052a8        0xe CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x00000000100052a8                irq_set_enabled
- *fill*         0x00000000100052b6        0x2 
+                0x0000000010005294        0xe CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x0000000010005294                irq_set_enabled
+ *fill*         0x00000000100052a2        0x2 
  .text.irq_get_vtable_handler
-                0x00000000100052b8       0x10 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x00000000100052b8                irq_get_vtable_handler
+                0x00000000100052a4       0x10 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x00000000100052a4                irq_get_vtable_handler
  .text.irq_set_exclusive_handler
-                0x00000000100052c8       0x54 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x00000000100052c8                irq_set_exclusive_handler
+                0x00000000100052b4       0x54 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x00000000100052b4                irq_set_exclusive_handler
  .text.irq_remove_handler
-                0x000000001000531c      0x1a8 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x000000001000531c                irq_remove_handler
+                0x0000000010005308      0x1a8 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x0000000010005308                irq_remove_handler
  .text.irq_add_tail_to_free_list
-                0x00000000100054c4       0xf0 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x00000000100054c4                irq_add_tail_to_free_list
+                0x00000000100054b0       0xf0 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x00000000100054b0                irq_add_tail_to_free_list
  .text.irq_init_priorities
-                0x00000000100055b4       0x1c CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x00000000100055b4                irq_init_priorities
+                0x00000000100055a0       0x1c CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x00000000100055a0                irq_init_priorities
  .text.sem_init
-                0x00000000100055d0       0x1e CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_sync/sem.c.obj
-                0x00000000100055d0                sem_init
- *fill*         0x00000000100055ee        0x2 
+                0x00000000100055bc       0x1e CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_sync/sem.c.obj
+                0x00000000100055bc                sem_init
+ *fill*         0x00000000100055da        0x2 
  .text.lock_init
-                0x00000000100055f0       0x10 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
-                0x00000000100055f0                lock_init
+                0x00000000100055dc       0x10 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
+                0x00000000100055dc                lock_init
  .text.repeating_timer_callback
-                0x0000000010005600       0x40 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x00000000100055ec       0x40 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
  .text.alarm_pool_post_alloc_init
-                0x0000000010005640       0x40 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x000000001000562c       0x40 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
  .text.sleep_until_callback
-                0x0000000010005680       0x30 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x000000001000566c       0x30 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
  .text.timer_pool_entry_comparator
-                0x00000000100056b0       0x7c CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x00000000100056b0                timer_pool_entry_comparator
+                0x000000001000569c       0x7c CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x000000001000569c                timer_pool_entry_comparator
  .text.ph_add_child_node
-                0x000000001000572c       0xa4 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010005718       0xa4 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
  .text.ph_merge_nodes
-                0x00000000100057d0       0x3e CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x000000001000580e        0x2 
+                0x00000000100057bc       0x3e CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x00000000100057fa        0x2 
  .text.add_alarm_under_lock
-                0x0000000010005810      0x174 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x00000000100057fc      0x174 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
  .text.alarm_pool_alarm_callback
-                0x0000000010005984      0x328 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010005970      0x328 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
  .text.alarm_pool_init_default
-                0x0000000010005cac       0x38 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x0000000010005cac                alarm_pool_init_default
+                0x0000000010005c98       0x38 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010005c98                alarm_pool_init_default
  .text.alarm_pool_get_default
-                0x0000000010005ce4       0x2c CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x0000000010005ce4                alarm_pool_get_default
+                0x0000000010005cd0       0x2c CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010005cd0                alarm_pool_get_default
  .text.alarm_pool_add_alarm_at
-                0x0000000010005d10      0x170 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x0000000010005d10                alarm_pool_add_alarm_at
+                0x0000000010005cfc      0x170 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010005cfc                alarm_pool_add_alarm_at
  .text.alarm_pool_cancel_alarm
-                0x0000000010005e80       0xf0 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x0000000010005e80                alarm_pool_cancel_alarm
+                0x0000000010005e6c       0xf0 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010005e6c                alarm_pool_cancel_alarm
  .text.alarm_pool_add_repeating_timer_us
-                0x0000000010005f70       0x9c CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x0000000010005f70                alarm_pool_add_repeating_timer_us
+                0x0000000010005f5c       0x9c CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010005f5c                alarm_pool_add_repeating_timer_us
  .text.cancel_repeating_timer
-                0x000000001000600c       0x1a CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x000000001000600c                cancel_repeating_timer
- *fill*         0x0000000010006026        0x2 
+                0x0000000010005ff8       0x1a CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010005ff8                cancel_repeating_timer
+ *fill*         0x0000000010006012        0x2 
  .text.sleep_until
-                0x0000000010006028       0xfc CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x0000000010006028                sleep_until
+                0x0000000010006014       0xfc CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010006014                sleep_until
  .text.sleep_us
-                0x0000000010006124       0x58 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x0000000010006124                sleep_us
+                0x0000000010006110       0x58 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010006110                sleep_us
  .text.sleep_ms
-                0x000000001000617c       0x14 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x000000001000617c                sleep_ms
+                0x0000000010006168       0x14 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010006168                sleep_ms
  .text.hardware_alarm_irq_handler
-                0x0000000010006190       0x8c CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x000000001000617c       0x8c CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
  .text.hardware_alarm_claim
-                0x000000001000621c       0x18 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x000000001000621c                hardware_alarm_claim
+                0x0000000010006208       0x18 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x0000000010006208                hardware_alarm_claim
  .text.time_us_64
-                0x0000000010006234       0x18 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x0000000010006234                time_us_64
+                0x0000000010006220       0x18 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x0000000010006220                time_us_64
  .text.busy_wait_until
-                0x000000001000624c       0x28 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x000000001000624c                busy_wait_until
+                0x0000000010006238       0x28 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x0000000010006238                busy_wait_until
  .text.hardware_alarm_set_callback
-                0x0000000010006274       0x90 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x0000000010006274                hardware_alarm_set_callback
+                0x0000000010006260       0x90 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x0000000010006260                hardware_alarm_set_callback
  .text.hardware_alarm_set_target
-                0x0000000010006304       0xe8 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x0000000010006304                hardware_alarm_set_target
+                0x00000000100062f0       0xe8 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x00000000100062f0                hardware_alarm_set_target
  .text.hardware_alarm_cancel
-                0x00000000100063ec       0x40 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x00000000100063ec                hardware_alarm_cancel
+                0x00000000100063d8       0x40 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x00000000100063d8                hardware_alarm_cancel
  .text.ph_add_child_node
-                0x000000001000642c       0xa4 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x0000000010006418       0xa4 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_util/pheap.c.obj
  .text.ph_merge_nodes
-                0x00000000100064d0       0x3e CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_util/pheap.c.obj
- *fill*         0x000000001000650e        0x2 
+                0x00000000100064bc       0x3e CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+ *fill*         0x00000000100064fa        0x2 
  .text.ph_clear
-                0x0000000010006510       0x70 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x0000000010006510                ph_clear
+                0x00000000100064fc       0x70 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x00000000100064fc                ph_clear
  .text.ph_post_alloc_init
-                0x0000000010006580        0xe CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x0000000010006580                ph_post_alloc_init
- *fill*         0x000000001000658e        0x2 
+                0x000000001000656c        0xe CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x000000001000656c                ph_post_alloc_init
+ *fill*         0x000000001000657a        0x2 
  .text.ph_merge_two_pass
-                0x0000000010006590       0xa8 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x0000000010006590                ph_merge_two_pass
+                0x000000001000657c       0xa8 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x000000001000657c                ph_merge_two_pass
  .text.ph_remove_any_head
-                0x0000000010006638      0x108 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x0000000010006624      0x108 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_util/pheap.c.obj
  .text.ph_remove_head
-                0x0000000010006740       0x14 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x0000000010006740                ph_remove_head
+                0x000000001000672c       0x14 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x000000001000672c                ph_remove_head
  .text.ph_remove_and_free_node
-                0x0000000010006754       0xf8 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x0000000010006754                ph_remove_and_free_node
+                0x0000000010006740       0xf8 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x0000000010006740                ph_remove_and_free_node
  .text.mutex_init
-                0x000000001000684c       0x1a CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
-                0x000000001000684c                mutex_init
+                0x0000000010006838       0x1a CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
+                0x0000000010006838                mutex_init
  .text.recursive_mutex_init
-                0x0000000010006866       0x1e CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
-                0x0000000010006866                recursive_mutex_init
+                0x0000000010006852       0x1e CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
+                0x0000000010006852                recursive_mutex_init
  .text.uart_set_baudrate
-                0x0000000010006884       0x5c CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
-                0x0000000010006884                uart_set_baudrate
+                0x0000000010006870       0x5c CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+                0x0000000010006870                uart_set_baudrate
  .text.uart_set_translate_crlf
-                0x00000000100068e0       0x28 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
-                0x00000000100068e0                uart_set_translate_crlf
+                0x00000000100068cc       0x28 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+                0x00000000100068cc                uart_set_translate_crlf
  .text.uart_init
-                0x0000000010006908       0x80 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
-                0x0000000010006908                uart_init
- .text._exit    0x0000000010006988        0x4 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x0000000010006988                _exit
- .text.exit     0x000000001000698c        0x6 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x000000001000698c                exit
- *fill*         0x0000000010006992        0x2 
+                0x00000000100068f4       0x80 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+                0x00000000100068f4                uart_init
+ .text._exit    0x0000000010006974        0x4 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x0000000010006974                _exit
+ .text.exit     0x0000000010006978        0x6 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x0000000010006978                exit
+ *fill*         0x000000001000697e        0x2 
  .text.__assert_func
-                0x0000000010006994       0x3c CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x0000000010006994                __assert_func
+                0x0000000010006980       0x3c CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x0000000010006980                __assert_func
  .text.runtime_init
-                0x00000000100069d0       0xf8 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x00000000100069d0                runtime_init
- .text.panic    0x0000000010006ac8       0x30 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x0000000010006ac8                panic
+                0x00000000100069bc       0xf8 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x00000000100069bc                runtime_init
+ .text.panic    0x0000000010006ab4       0x30 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x0000000010006ab4                panic
  .text.clock_configure
-                0x0000000010006af8      0x104 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
-                0x0000000010006af8                clock_configure
+                0x0000000010006ae4      0x104 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x0000000010006ae4                clock_configure
  .text.clocks_init
-                0x0000000010006bfc      0x100 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
-                0x0000000010006bfc                clocks_init
+                0x0000000010006be8      0x100 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x0000000010006be8                clocks_init
  .text.clock_get_hz
-                0x0000000010006cfc        0xc CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
-                0x0000000010006cfc                clock_get_hz
+                0x0000000010006ce8        0xc CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x0000000010006ce8                clock_get_hz
  .text.pll_init
-                0x0000000010006d08      0x140 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
-                0x0000000010006d08                pll_init
+                0x0000000010006cf4      0x140 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+                0x0000000010006cf4                pll_init
  .text.watchdog_start_tick
-                0x0000000010006e48       0x10 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
-                0x0000000010006e48                watchdog_start_tick
+                0x0000000010006e34       0x10 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+                0x0000000010006e34                watchdog_start_tick
  .text.xosc_init
-                0x0000000010006e58       0x28 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
-                0x0000000010006e58                xosc_init
+                0x0000000010006e44       0x28 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+                0x0000000010006e44                xosc_init
  .text._out_buffer
-                0x0000000010006e80        0x8 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x0000000010006e6c        0x8 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._out_null
-                0x0000000010006e88        0x2 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x0000000010006e74        0x2 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._out_fct
-                0x0000000010006e8a        0xe CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .text._atoi    0x0000000010006e98       0x24 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x0000000010006e76        0xe CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .text._atoi    0x0000000010006e84       0x24 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._out_rev
-                0x0000000010006ebc       0xae CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x0000000010006ea8       0xae CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._ntoa_format
-                0x0000000010006f6a      0x112 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x0000000010006f56      0x112 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._ntoa_long
-                0x000000001000707c       0xbc CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x0000000010007068       0xbc CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._ntoa_long_long
-                0x0000000010007138       0xe2 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- *fill*         0x000000001000721a        0x2 
- .text._etoa    0x000000001000721c      0x414 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .text._ftoa    0x0000000010007630      0x354 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x0000000010007124       0xe2 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ *fill*         0x0000000010007206        0x2 
+ .text._etoa    0x0000000010007208      0x414 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .text._ftoa    0x000000001000761c      0x354 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._vsnprintf
-                0x0000000010007984      0x624 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x0000000010007970      0x624 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text.__wrap_sprintf
-                0x0000000010007fa8       0x28 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
-                0x0000000010007fa8                __wrap_sprintf
+                0x0000000010007f94       0x28 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x0000000010007f94                __wrap_sprintf
  .text.vfctprintf
-                0x0000000010007fd0       0x20 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
-                0x0000000010007fd0                vfctprintf
- .text          0x0000000010007ff0       0x10 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+                0x0000000010007fbc       0x20 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x0000000010007fbc                vfctprintf
+ .text          0x0000000010007fdc       0x10 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
  .text.rom_func_lookup
-                0x0000000010008000       0x10 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x0000000010008000                rom_func_lookup
+                0x0000000010007fec       0x10 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x0000000010007fec                rom_func_lookup
  .text.rom_data_lookup
-                0x0000000010008010       0x10 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x0000000010008010                rom_data_lookup
+                0x0000000010007ffc       0x10 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x0000000010007ffc                rom_data_lookup
  .text.rom_funcs_lookup
-                0x0000000010008020       0x36 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x0000000010008020                rom_funcs_lookup
- *fill*         0x0000000010008056        0x2 
+                0x000000001000800c       0x36 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x000000001000800c                rom_funcs_lookup
+ *fill*         0x0000000010008042        0x2 
  .text.__wrap___aeabi_idiv
-                0x0000000010008058       0x50 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
-                0x0000000010008058                __wrap___aeabi_idivmod
-                0x0000000010008058                divmod_s32s32
-                0x0000000010008058                div_s32s32
-                0x0000000010008058                __wrap___aeabi_idiv
-                0x0000000010008060                divmod_s32s32_unsafe
-                0x000000001000808c                divmod_s32s32_savestate
+                0x0000000010008044       0x50 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+                0x0000000010008044                __wrap___aeabi_idivmod
+                0x0000000010008044                divmod_s32s32
+                0x0000000010008044                div_s32s32
+                0x0000000010008044                __wrap___aeabi_idiv
+                0x000000001000804c                divmod_s32s32_unsafe
+                0x0000000010008078                divmod_s32s32_savestate
  .text.__wrap___aeabi_uidiv
-                0x00000000100080a8       0x4c CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
-                0x00000000100080a8                __wrap___aeabi_uidiv
-                0x00000000100080a8                __wrap___aeabi_uidivmod
-                0x00000000100080a8                div_u32u32
-                0x00000000100080a8                divmod_u32u32
-                0x00000000100080b0                divmod_u32u32_unsafe
-                0x00000000100080d8                divmod_u32u32_savestate
+                0x0000000010008094       0x4c CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+                0x0000000010008094                __wrap___aeabi_uidiv
+                0x0000000010008094                __wrap___aeabi_uidivmod
+                0x0000000010008094                div_u32u32
+                0x0000000010008094                divmod_u32u32
+                0x000000001000809c                divmod_u32u32_unsafe
+                0x00000000100080c4                divmod_u32u32_savestate
  .text.__wrap___aeabi_ldiv
-                0x00000000100080f4      0x434 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
-                0x00000000100080f4                __wrap___aeabi_ldivmod
-                0x00000000100080f4                div_s64s64
-                0x00000000100080f4                divmod_s64s64
-                0x000000001000812c                divmod_u64u64
-                0x000000001000812c                div_u64u64
-                0x000000001000812c                __wrap___aeabi_uldivmod
-                0x000000001000813c                divmod_u64u64_savestate
-                0x0000000010008164                divmod_s64s64_unsafe
-                0x00000000100081ec                divmod_u64u64_unsafe
+                0x00000000100080e0      0x434 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+                0x00000000100080e0                __wrap___aeabi_ldivmod
+                0x00000000100080e0                div_s64s64
+                0x00000000100080e0                divmod_s64s64
+                0x0000000010008118                divmod_u64u64
+                0x0000000010008118                div_u64u64
+                0x0000000010008118                __wrap___aeabi_uldivmod
+                0x0000000010008128                divmod_u64u64_savestate
+                0x0000000010008150                divmod_s64s64_unsafe
+                0x00000000100081d8                divmod_u64u64_unsafe
  .text.__wrap___aeabi_darithmetic
-                0x0000000010008528       0x60 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x0000000010008528                __wrap___aeabi_drsub
-                0x000000001000852e                __wrap___aeabi_dsub
-                0x0000000010008538                __wrap___aeabi_dadd
-                0x0000000010008542                __wrap___aeabi_ddiv
-                0x0000000010008576                __wrap___aeabi_dmul
+                0x0000000010008514       0x60 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000010008514                __wrap___aeabi_drsub
+                0x000000001000851a                __wrap___aeabi_dsub
+                0x0000000010008524                __wrap___aeabi_dadd
+                0x000000001000852e                __wrap___aeabi_ddiv
+                0x0000000010008562                __wrap___aeabi_dmul
  .text.__wrap___aeabi_cdcmple
-                0x0000000010008588       0x6c CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x0000000010008588                __wrap___aeabi_cdrcmple
-                0x0000000010008598                __wrap___aeabi_cdcmple
-                0x0000000010008598                __wrap___aeabi_cdcmpeq
+                0x0000000010008574       0x6c CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000010008574                __wrap___aeabi_cdrcmple
+                0x0000000010008584                __wrap___aeabi_cdcmple
+                0x0000000010008584                __wrap___aeabi_cdcmpeq
  .text.__wrap___aeabi_dcmplt
-                0x00000000100085f4        0xc CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x00000000100085f4                __wrap___aeabi_dcmplt
+                0x00000000100085e0        0xc CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x00000000100085e0                __wrap___aeabi_dcmplt
  .text.__wrap___aeabi_dcmple
-                0x0000000010008600       0x10 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x0000000010008600                __wrap___aeabi_dcmple
+                0x00000000100085ec       0x10 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x00000000100085ec                __wrap___aeabi_dcmple
  .text.__wrap___aeabi_dcmpge
-                0x0000000010008610       0x10 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x0000000010008610                __wrap___aeabi_dcmpge
+                0x00000000100085fc       0x10 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x00000000100085fc                __wrap___aeabi_dcmpge
  .text.__wrap___aeabi_dcmpgt
-                0x0000000010008620        0xa CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x0000000010008620                __wrap___aeabi_dcmpgt
+                0x000000001000860c        0xa CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x000000001000860c                __wrap___aeabi_dcmpgt
  .text.__wrap___aeabi_dcmpun
-                0x000000001000862a       0x1c CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x000000001000862a                __wrap___aeabi_dcmpun
- *fill*         0x0000000010008646        0x2 
+                0x0000000010008616       0x1c CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000010008616                __wrap___aeabi_dcmpun
+ *fill*         0x0000000010008632        0x2 
  .text.__wrap___aeabi_i2d
-                0x0000000010008648       0x38 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x0000000010008648                __wrap___aeabi_ui2d
-                0x0000000010008650                __wrap___aeabi_i2d
+                0x0000000010008634       0x38 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000010008634                __wrap___aeabi_ui2d
+                0x000000001000863c                __wrap___aeabi_i2d
  .text.__wrap___aeabi_d2iz
-                0x0000000010008680       0x48 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x0000000010008680                __wrap___aeabi_d2iz
-                0x0000000010008680                double2int_z
+                0x000000001000866c       0x48 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x000000001000866c                __wrap___aeabi_d2iz
+                0x000000001000866c                double2int_z
  .text.__wrap___aeabi_d2uiz
-                0x00000000100086c8       0x10 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x00000000100086c8                double2uint
-                0x00000000100086c8                __wrap___aeabi_d2uiz
+                0x00000000100086b4       0x10 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x00000000100086b4                double2uint
+                0x00000000100086b4                __wrap___aeabi_d2uiz
  .text.__wrap___aeabi_d2f
-                0x00000000100086d8       0x10 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x00000000100086d8                __wrap___aeabi_d2f
+                0x00000000100086c4       0x10 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x00000000100086c4                __wrap___aeabi_d2f
  .text.missing_double_func_shim
-                0x00000000100086e8        0xc CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x00000000100086d4        0xc CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
  .text.__aeabi_double_init
-                0x00000000100086f4       0xcc CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
-                0x00000000100086f4                __aeabi_double_init
+                0x00000000100086e0       0xcc CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x00000000100086e0                __aeabi_double_init
  .text.double_table_shim_on_use_helper
-                0x00000000100087c0       0x34 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x00000000100087c0                double_table_shim_on_use_helper
+                0x00000000100087ac       0x34 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x00000000100087ac                double_table_shim_on_use_helper
  .text.__aeabi_lmul
-                0x00000000100087f4       0x32 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
-                0x00000000100087f4                __wrap___aeabi_lmul
- *fill*         0x0000000010008826        0x2 
+                0x00000000100087e0       0x32 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+                0x00000000100087e0                __wrap___aeabi_lmul
+ *fill*         0x0000000010008812        0x2 
  .text.__wrap___aeabi_farithmetic
-                0x0000000010008828       0x48 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
-                0x0000000010008828                __wrap___aeabi_frsub
-                0x000000001000882e                __wrap___aeabi_fsub
-                0x0000000010008834                __wrap___aeabi_fadd
-                0x000000001000883a                __wrap___aeabi_fdiv
-                0x0000000010008862                __wrap___aeabi_fmul
+                0x0000000010008814       0x48 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+                0x0000000010008814                __wrap___aeabi_frsub
+                0x000000001000881a                __wrap___aeabi_fsub
+                0x0000000010008820                __wrap___aeabi_fadd
+                0x0000000010008826                __wrap___aeabi_fdiv
+                0x000000001000884e                __wrap___aeabi_fmul
  .text.__wrap___aeabi_ui2f
-                0x0000000010008870        0xa CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
-                0x0000000010008870                __wrap___aeabi_ui2f
- *fill*         0x000000001000887a        0x2 
+                0x000000001000885c        0xa CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+                0x000000001000885c                __wrap___aeabi_ui2f
+ *fill*         0x0000000010008866        0x2 
  .text.__wrap___aeabi_i2f
-                0x000000001000887c       0x44 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
-                0x000000001000887c                __wrap___aeabi_i2f
+                0x0000000010008868       0x44 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+                0x0000000010008868                __wrap___aeabi_i2f
  .text.__wrap___aeabi_f2uiz
-                0x00000000100088c0        0xc CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
-                0x00000000100088c0                __wrap___aeabi_f2uiz
+                0x00000000100088ac        0xc CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+                0x00000000100088ac                __wrap___aeabi_f2uiz
  .text.__wrap___aeabi_f2d
-                0x00000000100088cc        0xc CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
-                0x00000000100088cc                __wrap___aeabi_f2d
+                0x00000000100088b8        0xc CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+                0x00000000100088b8                __wrap___aeabi_f2d
  .text.missing_float_func_shim
-                0x00000000100088d8        0xc CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+                0x00000000100088c4        0xc CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
  .text.__aeabi_float_init
-                0x00000000100088e4       0x88 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
-                0x00000000100088e4                __aeabi_float_init
- .text          0x000000001000896c       0x10 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-                0x000000001000896c                __aeabi_mem_init
- .text.memset   0x000000001000897c        0xc CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-                0x000000001000897c                __wrap_memset
- .text.memcpy   0x0000000010008988        0xc CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-                0x0000000010008988                __wrap___aeabi_memcpy
-                0x0000000010008988                __wrap_memcpy
+                0x00000000100088d0       0x88 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+                0x00000000100088d0                __aeabi_float_init
+ .text          0x0000000010008958       0x10 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x0000000010008958                __aeabi_mem_init
+ .text.memset   0x0000000010008968        0xc CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x0000000010008968                __wrap_memset
+ .text.memcpy   0x0000000010008974        0xc CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x0000000010008974                __wrap___aeabi_memcpy
+                0x0000000010008974                __wrap_memcpy
  .text.stdio_out_chars_no_crlf
-                0x0000000010008994        0xe CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- *fill*         0x00000000100089a2        0x2 
+                0x0000000010008980        0xe CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ *fill*         0x000000001000898e        0x2 
  .text.stdio_out_chars_crlf
-                0x00000000100089a4       0x80 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000010008990       0x80 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdio_stack_buffer_flush
-                0x0000000010008a24       0x44 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000010008a10       0x44 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdio_buffered_printer
-                0x0000000010008a68       0x20 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000010008a54       0x20 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdout_serialize_begin
-                0x0000000010008a88       0x30 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x0000000010008a88                stdout_serialize_begin
+                0x0000000010008a74       0x30 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000010008a74                stdout_serialize_begin
  .text.stdout_serialize_end
-                0x0000000010008ab8       0x10 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x0000000010008ab8                stdout_serialize_end
+                0x0000000010008aa4       0x10 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000010008aa4                stdout_serialize_end
  .text.stdio_put_string
-                0x0000000010008ac8       0x98 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000010008ab4       0x98 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdio_set_driver_enabled
-                0x0000000010008b60       0x2c CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x0000000010008b60                stdio_set_driver_enabled
+                0x0000000010008b4c       0x2c CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000010008b4c                stdio_set_driver_enabled
  .text.stdio_flush
-                0x0000000010008b8c       0x20 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x0000000010008b8c                stdio_flush
+                0x0000000010008b78       0x20 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000010008b78                stdio_flush
  .text.__wrap_puts
-                0x0000000010008bac       0x1e CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x0000000010008bac                __wrap_puts
- *fill*         0x0000000010008bca        0x2 
+                0x0000000010008b98       0x1e CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000010008b98                __wrap_puts
+ *fill*         0x0000000010008bb6        0x2 
  .text.__wrap_vprintf
-                0x0000000010008bcc       0x44 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x0000000010008bcc                __wrap_vprintf
+                0x0000000010008bb8       0x44 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000010008bb8                __wrap_vprintf
  .text.__wrap_printf
-                0x0000000010008c10       0x18 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x0000000010008c10                __wrap_printf
+                0x0000000010008bfc       0x18 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000010008bfc                __wrap_printf
  .text.stdio_init_all
-                0x0000000010008c28        0x8 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x0000000010008c28                stdio_init_all
+                0x0000000010008c14        0x8 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000010008c14                stdio_init_all
  .text.stdio_uart_out_chars
-                0x0000000010008c30       0x74 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x0000000010008c1c       0x74 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .text.stdio_uart_in_chars
-                0x0000000010008ca4       0x58 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
-                0x0000000010008ca4                stdio_uart_in_chars
+                0x0000000010008c90       0x58 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x0000000010008c90                stdio_uart_in_chars
  .text.stdio_uart_init_full
-                0x0000000010008cfc       0x3c CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
-                0x0000000010008cfc                stdio_uart_init_full
+                0x0000000010008ce8       0x3c CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x0000000010008ce8                stdio_uart_init_full
  .text.stdio_uart_init
-                0x0000000010008d38       0x28 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
-                0x0000000010008d38                stdio_uart_init
+                0x0000000010008d24       0x28 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x0000000010008d24                stdio_uart_init
  .text.i2c_write_blocking_internal
-                0x0000000010008d60      0x140 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+                0x0000000010008d4c      0x140 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
  .text.i2c_read_blocking_internal
-                0x0000000010008ea0       0xe6 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
- *fill*         0x0000000010008f86        0x2 
+                0x0000000010008e8c       0xe6 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+ *fill*         0x0000000010008f72        0x2 
  .text.i2c_set_baudrate
-                0x0000000010008f88       0xf0 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
-                0x0000000010008f88                i2c_set_baudrate
+                0x0000000010008f74       0xf0 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+                0x0000000010008f74                i2c_set_baudrate
  .text.i2c_init
-                0x0000000010009078       0x58 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
-                0x0000000010009078                i2c_init
+                0x0000000010009064       0x58 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+                0x0000000010009064                i2c_init
  .text.i2c_write_blocking
-                0x00000000100090d0       0x18 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
-                0x00000000100090d0                i2c_write_blocking
+                0x00000000100090bc       0x18 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+                0x00000000100090bc                i2c_write_blocking
  .text.i2c_read_blocking
-                0x00000000100090e8       0x18 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
-                0x00000000100090e8                i2c_read_blocking
+                0x00000000100090d4       0x18 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+                0x00000000100090d4                i2c_read_blocking
  .text.adc_init
-                0x0000000010009100       0x34 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj
-                0x0000000010009100                adc_init
+                0x00000000100090ec       0x34 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj
+                0x00000000100090ec                adc_init
  .text._retrieve_unique_id_on_boot
-                0x0000000010009134       0x10 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
+                0x0000000010009120       0x10 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
  .text.pico_get_unique_board_id
-                0x0000000010009144       0x10 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
-                0x0000000010009144                pico_get_unique_board_id
+                0x0000000010009130       0x10 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
+                0x0000000010009130                pico_get_unique_board_id
  .text.flash_get_unique_id
-                0x0000000010009154       0x46 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
-                0x0000000010009154                flash_get_unique_id
- *fill*         0x000000001000919a        0x2 
- .text.srand    0x000000001000919c       0x14 /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-rand.o)
-                0x000000001000919c                srand
- .text          0x00000000100091b0       0x88 /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-strcmp.o)
-                0x00000000100091b0                strcmp
- .text.strlen   0x0000000010009238       0x5c /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-strlen-stub.o)
-                0x0000000010009238                strlen
+                0x0000000010009140       0x46 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+                0x0000000010009140                flash_get_unique_id
+ *fill*         0x0000000010009186        0x2 
+ .text.srand    0x0000000010009188       0x14 /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-rand.o)
+                0x0000000010009188                srand
+ .text          0x000000001000919c       0x88 /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-strcmp.o)
+                0x000000001000919c                strcmp
+ .text.strlen   0x0000000010009224       0x5c /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-strlen-stub.o)
+                0x0000000010009224                strlen
  *(.fini)
- .fini          0x0000000010009294        0x4 /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crti.o
-                0x0000000010009294                _fini
- .fini.__stub   0x0000000010009298       0x70 linker stubs
+ .fini          0x0000000010009280        0x4 /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crti.o
+                0x0000000010009280                _fini
+ *fill*         0x0000000010009284        0x4 
+ .fini.__stub   0x0000000010009288       0x70 linker stubs
  *crtbegin.o(.ctors)
  *crtbegin?.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
@@ -2030,311 +2031,311 @@ LOAD /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-non
  *(SORT_BY_NAME(.dtors.*))
  *(.dtors)
  *(.eh_frame*)
- .eh_frame      0x0000000010009308        0x0 /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
-                0x0000000010009308                . = ALIGN (0x4)
+ .eh_frame      0x00000000100092f8        0x0 /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
+                0x00000000100092f8                . = ALIGN (0x4)
 
-.glue_7         0x0000000010009308        0x0
- .glue_7        0x0000000010009308        0x0 linker stubs
+.glue_7         0x00000000100092f8        0x0
+ .glue_7        0x00000000100092f8        0x0 linker stubs
 
-.glue_7t        0x0000000010009308        0x0
- .glue_7t       0x0000000010009308        0x0 linker stubs
+.glue_7t        0x00000000100092f8        0x0
+ .glue_7t       0x00000000100092f8        0x0 linker stubs
 
-.vfp11_veneer   0x0000000010009308        0x0
- .vfp11_veneer  0x0000000010009308        0x0 linker stubs
+.vfp11_veneer   0x00000000100092f8        0x0
+ .vfp11_veneer  0x00000000100092f8        0x0 linker stubs
 
-.v4_bx          0x0000000010009308        0x0
- .v4_bx         0x0000000010009308        0x0 linker stubs
+.v4_bx          0x00000000100092f8        0x0
+ .v4_bx         0x00000000100092f8        0x0 linker stubs
 
-.iplt           0x0000000010009308        0x0
- .iplt          0x0000000010009308        0x0 /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
+.iplt           0x00000000100092f8        0x0
+ .iplt          0x00000000100092f8        0x0 /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
 
-.rodata         0x0000000010009308     0x18d8
+.rodata         0x00000000100092f8     0x18d8
  *(EXCLUDE_FILE(*libm.a: *libc.a:*lib_a-mem*.o *libgcc.a:) .rodata*)
  .rodata.date_stamp.str1.4
-                0x0000000010009308       0x2b CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
- *fill*         0x0000000010009333        0x1 
+                0x00000000100092f8       0x2b CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+ *fill*         0x0000000010009323        0x1 
  .rodata.timer_callback_us.str1.4
-                0x0000000010009334        0x6 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
- *fill*         0x000000001000933a        0x2 
+                0x0000000010009324        0x6 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+ *fill*         0x000000001000932a        0x2 
  .rodata.get_date_string.str1.4
-                0x000000001000933c       0x49 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
- *fill*         0x0000000010009385        0x3 
+                0x000000001000932c       0x49 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+ *fill*         0x0000000010009375        0x3 
  .rodata.get_date_string
-                0x0000000010009388       0x80 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x0000000010009378       0x80 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
  .rodata.get_month_days
-                0x0000000010009408       0x68 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x00000000100093f8       0x68 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
  .rodata.get_pico_temperature.str1.4
-                0x0000000010009470       0x11 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
- *fill*         0x0000000010009481        0x3 
+                0x0000000010009460       0x11 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+ *fill*         0x0000000010009471        0x3 
  .rodata.get_voltage.str1.4
-                0x0000000010009484        0xc CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x0000000010009474        0xc CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
  .rodata.get_weekday
-                0x0000000010009490       0x1c CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x0000000010009480       0x1c CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
  .rodata.process_scroll_queue.str1.4
-                0x00000000100094ac      0x18f CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x000000001000949c      0x18f CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
                                         0x193 (size before relaxing)
- *fill*         0x000000001000963b        0x1 
+ *fill*         0x000000001000962b        0x1 
  .rodata.process_scroll_queue
-                0x000000001000963c       0x34 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x000000001000962c       0x34 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
  .rodata.select_weekday
-                0x0000000010009670       0x2c CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x0000000010009660       0x2c CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
  .rodata.uart_send.str1.4
-                0x000000001000969c       0x12 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
- *fill*         0x00000000100096ae        0x2 
+                0x000000001000968c       0x12 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+ *fill*         0x000000001000969e        0x2 
  .rodata.main.str1.4
-                0x00000000100096b0      0x148 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x00000000100096a0      0x148 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
  .rodata.timer_callback_s.str1.4
-                0x00000000100097f8       0x96 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
- *fill*         0x000000001000988e        0x2 
+                0x00000000100097e8       0x96 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+ *fill*         0x000000001000987e        0x2 
  .rodata.CharacterMap
-                0x0000000010009890      0x24d CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
-                0x0000000010009890                CharacterMap
- *fill*         0x0000000010009add        0x3 
- .rodata        0x0000000010009ae0        0x3 CMakeFiles/Pico-Clock-Green.dir/Ds3231.c.obj
- *fill*         0x0000000010009ae3        0x1 
+                0x0000000010009880      0x24d CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+                0x0000000010009880                CharacterMap
+ *fill*         0x0000000010009acd        0x3 
+ .rodata        0x0000000010009ad0        0x3 CMakeFiles/Pico-Clock-Green.dir/Ds3231.c.obj
+ *fill*         0x0000000010009ad3        0x1 
  .rodata.make_branch.str1.4
-                0x0000000010009ae4       0x6b CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x0000000010009b4f        0x1 
+                0x0000000010009ad4       0x6b CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x0000000010009b3f        0x1 
  .rodata.insert_branch_and_link.str1.4
-                0x0000000010009b50       0x10 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x0000000010009b40       0x10 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
  .rodata.irq_set_exclusive_handler.str1.4
-                0x0000000010009b60       0x36 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x0000000010009b96        0x2 
+                0x0000000010009b50       0x36 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x0000000010009b86        0x2 
  .rodata.irq_add_shared_handler.str1.4
-                0x0000000010009b98       0xd9 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x0000000010009c71        0x3 
+                0x0000000010009b88       0xd9 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x0000000010009c61        0x3 
  .rodata.irq_remove_handler.str1.4
-                0x0000000010009c74       0x2a CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x0000000010009c9e        0x2 
+                0x0000000010009c64       0x2a CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x0000000010009c8e        0x2 
  .rodata.irq_add_tail_to_free_list.str1.4
-                0x0000000010009ca0       0x3a CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x0000000010009cda        0x2 
+                0x0000000010009c90       0x3a CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x0000000010009cca        0x2 
  .rodata.__func__.0
-                0x0000000010009cdc       0x1a CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x0000000010009cf6        0x2 
+                0x0000000010009ccc       0x1a CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x0000000010009ce6        0x2 
  .rodata.__func__.1
-                0x0000000010009cf8       0x17 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x0000000010009d0f        0x1 
+                0x0000000010009ce8       0x17 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x0000000010009cff        0x1 
  .rodata.__func__.2
-                0x0000000010009d10       0x13 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x0000000010009d23        0x1 
+                0x0000000010009d00       0x13 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x0000000010009d13        0x1 
  .rodata.__func__.3
-                0x0000000010009d24        0xc CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x0000000010009d14        0xc CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
  .rodata.__func__.4
-                0x0000000010009d30        0xf CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x0000000010009d3f        0x1 
+                0x0000000010009d20        0xf CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x0000000010009d2f        0x1 
  .rodata.__func__.6
-                0x0000000010009d40       0x1a CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x0000000010009d5a        0x2 
+                0x0000000010009d30       0x1a CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x0000000010009d4a        0x2 
  .rodata.repeating_timer_callback.str1.4
-                0x0000000010009d5c       0x49 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x0000000010009da5        0x3 
+                0x0000000010009d4c       0x49 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x0000000010009d95        0x3 
  .rodata.alarm_pool_dump_key.str1.4
-                0x0000000010009da8       0x33 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x0000000010009ddb        0x1 
+                0x0000000010009d98       0x33 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x0000000010009dcb        0x1 
  .rodata.ph_add_child_node.str1.4
-                0x0000000010009ddc       0x92 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x0000000010009e6e        0x2 
+                0x0000000010009dcc       0x92 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x0000000010009e5e        0x2 
  .rodata.add_alarm_under_lock.str1.4
-                0x0000000010009e70       0x28 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010009e60       0x28 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
                                          0x2b (size before relaxing)
  .rodata.alarm_pool_alarm_callback.str1.4
-                0x0000000010009e98       0xe2 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x0000000010009f7a        0x2 
+                0x0000000010009e88       0xe2 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x0000000010009f6a        0x2 
  .rodata.alarm_pool_get_default.str1.4
-                0x0000000010009f7c       0x21 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x0000000010009f9d        0x3 
+                0x0000000010009f6c       0x21 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x0000000010009f8d        0x3 
  .rodata.alarm_pool_cancel_alarm.str1.4
-                0x0000000010009fa0       0x27 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x0000000010009fc7        0x1 
+                0x0000000010009f90       0x27 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x0000000010009fb7        0x1 
  .rodata.sleep_until.str1.4
-                0x0000000010009fc8       0x4d CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x000000001000a015        0x3 
+                0x0000000010009fb8       0x4d CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x000000001000a005        0x3 
  .rodata.__func__.0
-                0x000000001000a018       0x19 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x000000001000a031        0x3 
+                0x000000001000a008       0x19 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x000000001000a021        0x3 
  .rodata.__func__.1
-                0x000000001000a034       0x18 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x000000001000a024       0x18 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
  .rodata.__func__.10
-                0x000000001000a04c       0x15 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x000000001000a061        0x3 
+                0x000000001000a03c       0x15 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x000000001000a051        0x3 
  .rodata.__func__.11
-                0x000000001000a064       0x1a CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x000000001000a07e        0x2 
+                0x000000001000a054       0x1a CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x000000001000a06e        0x2 
  .rodata.__func__.12
-                0x000000001000a080        0xa CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x000000001000a08a        0x2 
+                0x000000001000a070        0xa CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x000000001000a07a        0x2 
  .rodata.__func__.3
-                0x000000001000a08c       0x17 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x000000001000a0a3        0x1 
+                0x000000001000a07c       0x17 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x000000001000a093        0x1 
  .rodata.__func__.4
-                0x000000001000a0a4       0x12 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x000000001000a0b6        0x2 
+                0x000000001000a094       0x12 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x000000001000a0a6        0x2 
  .rodata.__func__.5
-                0x000000001000a0b8        0xd CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x000000001000a0c5        0x3 
+                0x000000001000a0a8        0xd CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x000000001000a0b5        0x3 
  .rodata.__func__.6
-                0x000000001000a0c8       0x12 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x000000001000a0da        0x2 
+                0x000000001000a0b8       0x12 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x000000001000a0ca        0x2 
  .rodata.__func__.7
-                0x000000001000a0dc        0xf CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x000000001000a0eb        0x1 
+                0x000000001000a0cc        0xf CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x000000001000a0db        0x1 
  .rodata.__func__.8
-                0x000000001000a0ec        0xc CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x000000001000a0dc        0xc CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
  .rodata.__func__.9
-                0x000000001000a0f8       0x15 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x000000001000a10d        0x3 
+                0x000000001000a0e8       0x15 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x000000001000a0fd        0x3 
  .rodata.hardware_alarm_claim.str1.4
-                0x000000001000a110       0x22 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- *fill*         0x000000001000a132        0x2 
+                0x000000001000a100       0x22 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ *fill*         0x000000001000a122        0x2 
  .rodata.hardware_alarm_set_target.str1.4
-                0x000000001000a134       0x63 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- *fill*         0x000000001000a197        0x1 
+                0x000000001000a124       0x63 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ *fill*         0x000000001000a187        0x1 
  .rodata.__func__.0
-                0x000000001000a198       0x1a CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x000000001000a188       0x1a CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
  .rodata.ph_add_child_node.str1.4
-                0x000000001000a1b2       0x92 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_util/pheap.c.obj
- *fill*         0x000000001000a1b2        0x2 
+                0x000000001000a1a2       0x92 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+ *fill*         0x000000001000a1a2        0x2 
  .rodata.ph_remove_any_head.str1.4
-                0x000000001000a1b4       0x8c CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x000000001000a1a4       0x8c CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_util/pheap.c.obj
  .rodata.ph_remove_and_free_node.str1.4
-                0x000000001000a240       0x1e CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x000000001000a230       0x1e CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_util/pheap.c.obj
                                          0x26 (size before relaxing)
- *fill*         0x000000001000a25e        0x2 
+ *fill*         0x000000001000a24e        0x2 
  .rodata.__func__.0
-                0x000000001000a260       0x18 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x000000001000a250       0x18 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_util/pheap.c.obj
  .rodata.__func__.1
-                0x000000001000a278       0x13 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_util/pheap.c.obj
- *fill*         0x000000001000a28b        0x1 
+                0x000000001000a268       0x13 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+ *fill*         0x000000001000a27b        0x1 
  .rodata.__func__.2
-                0x000000001000a28c       0x12 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_util/pheap.c.obj
- *fill*         0x000000001000a29e        0x2 
+                0x000000001000a27c       0x12 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+ *fill*         0x000000001000a28e        0x2 
  .rodata.__func__.3
-                0x000000001000a2a0        0xc CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x000000001000a290        0xc CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_util/pheap.c.obj
  .rodata.str1.4
-                0x000000001000a2ac       0x89 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
+                0x000000001000a29c       0x89 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
                                          0xe9 (size before relaxing)
- *fill*         0x000000001000a335        0x3 
+ *fill*         0x000000001000a325        0x3 
  .rodata.__func__.1
-                0x000000001000a338        0xb CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
- *fill*         0x000000001000a343        0x1 
+                0x000000001000a328        0xb CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
+ *fill*         0x000000001000a333        0x1 
  .rodata.__assert_func.str1.4
-                0x000000001000a344       0x3f CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x000000001000a334       0x3f CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
                                          0x43 (size before relaxing)
- *fill*         0x000000001000a383        0x1 
+ *fill*         0x000000001000a373        0x1 
  .rodata.runtime_init.str1.4
-                0x000000001000a384       0x5f CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
- *fill*         0x000000001000a3e3        0x1 
+                0x000000001000a374       0x5f CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+ *fill*         0x000000001000a3d3        0x1 
  .rodata.panic.str1.4
-                0x000000001000a3e4       0x12 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
- *fill*         0x000000001000a3f6        0x2 
+                0x000000001000a3d4       0x12 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+ *fill*         0x000000001000a3e6        0x2 
  .rodata.__func__.1
-                0x000000001000a3f8        0xd CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
- *fill*         0x000000001000a405        0x3 
+                0x000000001000a3e8        0xd CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+ *fill*         0x000000001000a3f5        0x3 
  .rodata.clock_configure.str1.4
-                0x000000001000a408       0x55 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
- *fill*         0x000000001000a45d        0x3 
+                0x000000001000a3f8       0x55 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+ *fill*         0x000000001000a44d        0x3 
  .rodata.__func__.1
-                0x000000001000a460       0x10 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x000000001000a450       0x10 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
  .rodata.pll_init.str1.4
-                0x000000001000a470      0x137 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
- *fill*         0x000000001000a5a7        0x1 
+                0x000000001000a460      0x137 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+ *fill*         0x000000001000a597        0x1 
  .rodata.__func__.0
-                0x000000001000a5a8        0x9 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
- *fill*         0x000000001000a5b1        0x3 
+                0x000000001000a598        0x9 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+ *fill*         0x000000001000a5a1        0x3 
  .rodata._ftoa.str1.4
-                0x000000001000a5b4       0x15 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- *fill*         0x000000001000a5c9        0x3 
+                0x000000001000a5a4       0x15 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ *fill*         0x000000001000a5b9        0x3 
  .rodata._vsnprintf
-                0x000000001000a5cc      0x1e0 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- *fill*         0x000000001000a7ac        0x4 
+                0x000000001000a5bc      0x1e0 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ *fill*         0x000000001000a79c        0x4 
  .rodata.pow10.0
-                0x000000001000a7b0       0x50 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x000000001000a7a0       0x50 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .rodata.missing_double_func_shim.str1.4
-                0x000000001000a800       0x18 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x000000001000a7f0       0x18 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
  .rodata.__aeabi_double_init.str1.4
-                0x000000001000a818       0xa6 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
- *fill*         0x000000001000a8be        0x2 
+                0x000000001000a808       0xa6 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+ *fill*         0x000000001000a8ae        0x2 
  .rodata.__func__.0
-                0x000000001000a8c0       0x14 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x000000001000a8b0       0x14 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
  .rodata.missing_float_func_shim.str1.4
-                0x000000001000a8d4        0x1 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+                0x000000001000a8c4        0x1 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
  .rodata.__aeabi_float_init.str1.4
-                0x000000001000a8d4       0x78 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+                0x000000001000a8c4       0x78 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
  .rodata.__func__.0
-                0x000000001000a94c       0x13 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
- *fill*         0x000000001000a95f        0x1 
+                0x000000001000a93c       0x13 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+ *fill*         0x000000001000a94f        0x1 
  .rodata.str1.4
-                0x000000001000a960       0x40 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x000000001000a950       0x40 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
                                          0x48 (size before relaxing)
  .rodata.__bi_44
-                0x000000001000a9a0        0xc CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x000000001000a990        0xc CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_75
-                0x000000001000a9ac        0xc CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x000000001000a99c        0xc CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_81
-                0x000000001000a9b8        0xc CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x000000001000a9a8        0xc CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.crlf_str.3
-                0x000000001000a9c4        0x2 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- *fill*         0x000000001000a9c6        0x2 
+                0x000000001000a9b4        0x2 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ *fill*         0x000000001000a9b6        0x2 
  .rodata.str1.4
-                0x000000001000a9c8       0x2c CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x000000001000a9b8       0x2c CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .rodata.__bi_28.4
-                0x000000001000a9f4        0xc CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x000000001000a9e4        0xc CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .rodata.__bi_29.5
-                0x000000001000aa00        0x8 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x000000001000a9f0        0x8 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .rodata.i2c_set_baudrate.str1.4
-                0x000000001000aa08       0x5b CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
- *fill*         0x000000001000aa63        0x1 
+                0x000000001000a9f8       0x5b CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+ *fill*         0x000000001000aa53        0x1 
  .rodata.__func__.0
-                0x000000001000aa64       0x11 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
- *fill*         0x000000001000aa75        0x3 
+                0x000000001000aa54       0x11 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+ *fill*         0x000000001000aa65        0x3 
  .rodata.str1.4
-                0x000000001000aa78      0x156 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
- *fill*         0x000000001000abce        0x2 
+                0x000000001000aa68      0x156 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+ *fill*         0x000000001000abbe        0x2 
  .rodata.__func__.0
-                0x000000001000abd0        0xd CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
-                0x000000001000abe0                . = ALIGN (0x4)
- *fill*         0x000000001000abdd        0x3 
+                0x000000001000abc0        0xd CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+                0x000000001000abd0                . = ALIGN (0x4)
+ *fill*         0x000000001000abcd        0x3 
  *(SORT_BY_ALIGNMENT(SORT_BY_NAME(.flashdata*)))
-                0x000000001000abe0                . = ALIGN (0x4)
+                0x000000001000abd0                . = ALIGN (0x4)
 
-.rel.dyn        0x000000001000abe0        0x0
- .rel.iplt      0x000000001000abe0        0x0 /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
+.rel.dyn        0x000000001000abd0        0x0
+ .rel.iplt      0x000000001000abd0        0x0 /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x000000001000abe0                __exidx_start = .
+                0x000000001000abd0                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x000000001000abe0                __exidx_end = .
-                0x000000001000abe0                . = ALIGN (0x4)
-                0x000000001000abe0                __binary_info_start = .
+                0x000000001000abd0                __exidx_end = .
+                0x000000001000abd0                . = ALIGN (0x4)
+                0x000000001000abd0                __binary_info_start = .
 
-.binary_info    0x000000001000abe0       0x24
+.binary_info    0x000000001000abd0       0x24
  *(.binary_info.keep.*)
  .binary_info.keep.__bi_ptr22
-                0x000000001000abe0        0x4 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x000000001000abd0        0x4 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr30
-                0x000000001000abe4        0x4 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x000000001000abd4        0x4 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr38
-                0x000000001000abe8        0x4 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x000000001000abd8        0x4 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr44
-                0x000000001000abec        0x4 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x000000001000abdc        0x4 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr50
-                0x000000001000abf0        0x4 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x000000001000abe0        0x4 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr75
-                0x000000001000abf4        0x4 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x000000001000abe4        0x4 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr81
-                0x000000001000abf8        0x4 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x000000001000abe8        0x4 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  *(.binary_info.*)
  .binary_info.__bi_ptr28
-                0x000000001000abfc        0x4 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x000000001000abec        0x4 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .binary_info.__bi_ptr29
-                0x000000001000ac00        0x4 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
-                0x000000001000ac04                __binary_info_end = .
-                0x000000001000ac04                . = ALIGN (0x4)
-                0x000000001000ac04                __etext = .
+                0x000000001000abf0        0x4 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x000000001000abf4                __binary_info_end = .
+                0x000000001000abf4                . = ALIGN (0x4)
+                0x000000001000abf4                __etext = .
 
 .ram_vector_table
                 0x0000000020000000       0xc0
@@ -2343,7 +2344,7 @@ LOAD /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-non
                 0x0000000020000000       0xc0 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
                 0x0000000020000000                ram_vector_table
 
-.data           0x00000000200000c0      0xe40 load address 0x000000001000ac04
+.data           0x00000000200000c0      0xe40 load address 0x000000001000abf4
                 0x00000000200000c0                __data_start__ = .
  *(vtable)
  *(.time_critical*)
@@ -2567,27 +2568,27 @@ LOAD /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-non
                 0x0000000020000f00                . = ALIGN (0x4)
                 0x0000000020000f00                __data_end__ = .
 
-.igot.plt       0x0000000020000f00        0x0 load address 0x000000001000ba44
+.igot.plt       0x0000000020000f00        0x0 load address 0x000000001000ba34
  .igot.plt      0x0000000020000f00        0x0 /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
 
 .uninitialized_data
-                0x0000000020000f00        0x0 load address 0x000000001000ba44
+                0x0000000020000f00        0x0 load address 0x000000001000ba34
                 0x0000000020000f00                . = ALIGN (0x4)
  *(.uninitialized_data*)
 
-.scratch_x      0x0000000020040000        0x0 load address 0x000000001000ba44
+.scratch_x      0x0000000020040000        0x0 load address 0x000000001000ba34
                 0x0000000020040000                __scratch_x_start__ = .
  *(.scratch_x.*)
                 0x0000000020040000                . = ALIGN (0x4)
                 0x0000000020040000                __scratch_x_end__ = .
-                0x000000001000ba44                __scratch_x_source__ = LOADADDR (.scratch_x)
+                0x000000001000ba34                __scratch_x_source__ = LOADADDR (.scratch_x)
 
-.scratch_y      0x0000000020041000        0x0 load address 0x000000001000ba44
+.scratch_y      0x0000000020041000        0x0 load address 0x000000001000ba34
                 0x0000000020041000                __scratch_y_start__ = .
  *(.scratch_y.*)
                 0x0000000020041000                . = ALIGN (0x4)
                 0x0000000020041000                __scratch_y_end__ = .
-                0x000000001000ba44                __scratch_y_source__ = LOADADDR (.scratch_y)
+                0x000000001000ba34                __scratch_y_source__ = LOADADDR (.scratch_y)
 
 .bss            0x0000000020000f00     0x1c7c
                 0x0000000020000f00                . = ALIGN (0x4)
@@ -2898,8 +2899,8 @@ LOAD /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-non
  *(.stack*)
  .stack         0x0000000020041000      0x800 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
 
-.flash_end      0x000000001000ba44        0x0
-                0x000000001000ba44                __flash_binary_end = .
+.flash_end      0x000000001000ba34        0x0
+                0x000000001000ba34                __flash_binary_end = .
                 0x0000000020040000                __StackLimit = (ORIGIN (RAM) + LENGTH (RAM))
                 0x0000000020041000                __StackOneTop = (ORIGIN (SCRATCH_X) + LENGTH (SCRATCH_X))
                 0x0000000020042000                __StackTop = (ORIGIN (SCRATCH_Y) + LENGTH (SCRATCH_Y))
@@ -2959,7 +2960,7 @@ LOAD CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hard
 LOAD CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj
 LOAD CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
 LOAD CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
-LOAD /var/folders/hx/ybfzs61s0_df8jx22m7xnqnr0000gn/T//cc5bZPqJ.o
+LOAD /var/folders/hx/ybfzs61s0_df8jx22m7xnqnr0000gn/T//cc2HkP3P.o
 LOAD /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libstdc++.a
 LOAD /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a
 START GROUP
@@ -3062,7 +3063,7 @@ LOAD linker stubs
  .ARM.attributes
                 0x000000000000067e       0x2c CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
  .ARM.attributes
-                0x00000000000006aa       0x22 /var/folders/hx/ybfzs61s0_df8jx22m7xnqnr0000gn/T//cc5bZPqJ.o
+                0x00000000000006aa       0x22 /var/folders/hx/ybfzs61s0_df8jx22m7xnqnr0000gn/T//cc2HkP3P.o
  .ARM.attributes
                 0x00000000000006cc       0x1e /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .ARM.attributes
@@ -3107,45 +3108,45 @@ LOAD linker stubs
  .comment       0x0000000000000049       0x4a CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
  .comment       0x0000000000000049       0x4a CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
 
-.debug_info     0x0000000000000000    0x20117
- .debug_info    0x0000000000000000     0x7890 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
- .debug_info    0x0000000000007890     0x114d CMakeFiles/Pico-Clock-Green.dir/Ds3231.c.obj
- .debug_info    0x00000000000089dd     0x16d7 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
- .debug_info    0x000000000000a0b4      0x6bb CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
- .debug_info    0x000000000000a76f      0x1e3 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
- .debug_info    0x000000000000a952      0x58e CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
- .debug_info    0x000000000000aee0     0x1c49 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- .debug_info    0x000000000000cb29     0x1407 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_sync/sem.c.obj
- .debug_info    0x000000000000df30      0x1a4 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
- .debug_info    0x000000000000e0d4     0x3b3b CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
- .debug_info    0x0000000000011c0f     0x1134 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- .debug_info    0x0000000000012d43     0x120c CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_util/pheap.c.obj
- .debug_info    0x0000000000013f4f     0x2022 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
- .debug_info    0x0000000000015f71      0xb65 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
- .debug_info    0x0000000000016ad6      0xa87 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
- .debug_info    0x000000000001755d      0xf63 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
- .debug_info    0x00000000000184c0      0x54a CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
- .debug_info    0x0000000000018a0a      0x4ee CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
- .debug_info    0x0000000000018ef8      0x1d8 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
- .debug_info    0x00000000000190d0     0x1a5f CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .debug_info    0x000000000001ab2f       0x22 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
- .debug_info    0x000000000001ab51      0x27c CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
- .debug_info    0x000000000001adcd       0x22 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
- .debug_info    0x000000000001adef       0x22 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
- .debug_info    0x000000000001ae11      0x2fb CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
- .debug_info    0x000000000001b10c       0x26 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
- .debug_info    0x000000000001b132       0x26 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
- .debug_info    0x000000000001b158       0x22 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
- .debug_info    0x000000000001b17a      0x2d8 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
- .debug_info    0x000000000001b452       0x22 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
- .debug_info    0x000000000001b474       0x22 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
- .debug_info    0x000000000001b496      0x2f6 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
- .debug_info    0x000000000001b78c     0x12ee CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- .debug_info    0x000000000001ca7a      0xc57 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
- .debug_info    0x000000000001d6d1     0x15f4 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
- .debug_info    0x000000000001ecc5      0x2d9 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj
- .debug_info    0x000000000001ef9e      0x257 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
- .debug_info    0x000000000001f1f5      0xf22 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+.debug_info     0x0000000000000000    0x200d0
+ .debug_info    0x0000000000000000     0x7849 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+ .debug_info    0x0000000000007849     0x114d CMakeFiles/Pico-Clock-Green.dir/Ds3231.c.obj
+ .debug_info    0x0000000000008996     0x16d7 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+ .debug_info    0x000000000000a06d      0x6bb CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+ .debug_info    0x000000000000a728      0x1e3 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+ .debug_info    0x000000000000a90b      0x58e CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+ .debug_info    0x000000000000ae99     0x1c49 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ .debug_info    0x000000000000cae2     0x1407 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_sync/sem.c.obj
+ .debug_info    0x000000000000dee9      0x1a4 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
+ .debug_info    0x000000000000e08d     0x3b3b CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
+ .debug_info    0x0000000000011bc8     0x1134 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ .debug_info    0x0000000000012cfc     0x120c CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+ .debug_info    0x0000000000013f08     0x2022 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
+ .debug_info    0x0000000000015f2a      0xb65 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+ .debug_info    0x0000000000016a8f      0xa87 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+ .debug_info    0x0000000000017516      0xf63 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+ .debug_info    0x0000000000018479      0x54a CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+ .debug_info    0x00000000000189c3      0x4ee CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+ .debug_info    0x0000000000018eb1      0x1d8 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+ .debug_info    0x0000000000019089     0x1a5f CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .debug_info    0x000000000001aae8       0x22 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+ .debug_info    0x000000000001ab0a      0x27c CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+ .debug_info    0x000000000001ad86       0x22 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+ .debug_info    0x000000000001ada8       0x22 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+ .debug_info    0x000000000001adca      0x2fb CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+ .debug_info    0x000000000001b0c5       0x26 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+ .debug_info    0x000000000001b0eb       0x26 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+ .debug_info    0x000000000001b111       0x22 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+ .debug_info    0x000000000001b133      0x2d8 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+ .debug_info    0x000000000001b40b       0x22 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+ .debug_info    0x000000000001b42d       0x22 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
+ .debug_info    0x000000000001b44f      0x2f6 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+ .debug_info    0x000000000001b745     0x12ee CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ .debug_info    0x000000000001ca33      0xc57 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+ .debug_info    0x000000000001d68a     0x15f4 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+ .debug_info    0x000000000001ec7e      0x2d9 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj
+ .debug_info    0x000000000001ef57      0x257 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
+ .debug_info    0x000000000001f1ae      0xf22 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
 
 .debug_abbrev   0x0000000000000000     0x52a4
  .debug_abbrev  0x0000000000000000      0x4ce CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
@@ -3333,45 +3334,45 @@ LOAD linker stubs
  .debug_ranges  0x0000000000003a30       0x38 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
  .debug_ranges  0x0000000000003a68       0x58 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
 
-.debug_line     0x0000000000000000    0x1531b
- .debug_line    0x0000000000000000     0x56c9 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
- .debug_line    0x00000000000056c9      0x775 CMakeFiles/Pico-Clock-Green.dir/Ds3231.c.obj
- .debug_line    0x0000000000005e3e      0xcac CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
- .debug_line    0x0000000000006aea      0x48f CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
- .debug_line    0x0000000000006f79      0x2a0 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
- .debug_line    0x0000000000007219      0x48b CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
- .debug_line    0x00000000000076a4     0x1042 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- .debug_line    0x00000000000086e6      0xa88 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_sync/sem.c.obj
- .debug_line    0x000000000000916e      0x22e CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
- .debug_line    0x000000000000939c     0x1909 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
- .debug_line    0x000000000000aca5      0xaf6 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- .debug_line    0x000000000000b79b      0x8b4 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_util/pheap.c.obj
- .debug_line    0x000000000000c04f     0x105a CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
- .debug_line    0x000000000000d0a9      0x737 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
- .debug_line    0x000000000000d7e0      0x843 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
- .debug_line    0x000000000000e023      0x9b2 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
- .debug_line    0x000000000000e9d5      0x56e CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
- .debug_line    0x000000000000ef43      0x419 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
- .debug_line    0x000000000000f35c      0x2bd CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
- .debug_line    0x000000000000f619     0x1266 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .debug_line    0x000000000001087f      0x145 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
- .debug_line    0x00000000000109c4      0x247 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
- .debug_line    0x0000000000010c0b      0x2ce CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
- .debug_line    0x0000000000010ed9      0x41e CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
- .debug_line    0x00000000000112f7      0x378 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
- .debug_line    0x000000000001166f       0x8f CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
- .debug_line    0x00000000000116fe       0x95 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
- .debug_line    0x0000000000011793      0x3cd CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
- .debug_line    0x0000000000011b60      0x340 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
- .debug_line    0x0000000000011ea0       0xbf CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
- .debug_line    0x0000000000011f5f       0xd0 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
- .debug_line    0x000000000001202f      0x1cf CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
- .debug_line    0x00000000000121fe      0xd55 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- .debug_line    0x0000000000012f53      0x85f CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
- .debug_line    0x00000000000137b2      0xca1 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
- .debug_line    0x0000000000014453      0x303 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj
- .debug_line    0x0000000000014756      0x3c8 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
- .debug_line    0x0000000000014b1e      0x7fd CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+.debug_line     0x0000000000000000    0x15316
+ .debug_line    0x0000000000000000     0x56c4 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj
+ .debug_line    0x00000000000056c4      0x775 CMakeFiles/Pico-Clock-Green.dir/Ds3231.c.obj
+ .debug_line    0x0000000000005e39      0xcac CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+ .debug_line    0x0000000000006ae5      0x48f CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+ .debug_line    0x0000000000006f74      0x2a0 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+ .debug_line    0x0000000000007214      0x48b CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+ .debug_line    0x000000000000769f     0x1042 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ .debug_line    0x00000000000086e1      0xa88 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_sync/sem.c.obj
+ .debug_line    0x0000000000009169      0x22e CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
+ .debug_line    0x0000000000009397     0x1909 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/time.c.obj
+ .debug_line    0x000000000000aca0      0xaf6 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ .debug_line    0x000000000000b796      0x8b4 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+ .debug_line    0x000000000000c04a     0x105a CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
+ .debug_line    0x000000000000d0a4      0x737 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+ .debug_line    0x000000000000d7db      0x843 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+ .debug_line    0x000000000000e01e      0x9b2 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+ .debug_line    0x000000000000e9d0      0x56e CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+ .debug_line    0x000000000000ef3e      0x419 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+ .debug_line    0x000000000000f357      0x2bd CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+ .debug_line    0x000000000000f614     0x1266 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .debug_line    0x000000000001087a      0x145 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+ .debug_line    0x00000000000109bf      0x247 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+ .debug_line    0x0000000000010c06      0x2ce CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+ .debug_line    0x0000000000010ed4      0x41e CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+ .debug_line    0x00000000000112f2      0x378 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+ .debug_line    0x000000000001166a       0x8f CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+ .debug_line    0x00000000000116f9       0x95 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+ .debug_line    0x000000000001178e      0x3cd CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+ .debug_line    0x0000000000011b5b      0x340 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+ .debug_line    0x0000000000011e9b       0xbf CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+ .debug_line    0x0000000000011f5a       0xd0 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
+ .debug_line    0x000000000001202a      0x1cf CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+ .debug_line    0x00000000000121f9      0xd55 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ .debug_line    0x0000000000012f4e      0x85f CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+ .debug_line    0x00000000000137ad      0xca1 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+ .debug_line    0x000000000001444e      0x303 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj
+ .debug_line    0x0000000000014751      0x3c8 CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
+ .debug_line    0x0000000000014b19      0x7fd CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
 
 .debug_str      0x0000000000000000     0x4fd0
  .debug_str     0x0000000000000000     0x1bf0 CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj

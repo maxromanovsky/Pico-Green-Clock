@@ -237,6 +237,7 @@
 // #define STARTUP_BUZZ
 // #define MATRIX_TEST
 // #define FW_VER_DISPLAY
+// #define SCROLL_STARTUP_INFO
 
 /* Make selective choices of some options for release version. */
 #define RELEASE_VERSION
@@ -1266,7 +1267,7 @@ int main(void)
   /* ---------------------------------------------------------------- *\
          Turn On Green Clock's white LEDs (night light) on entry.
   \* ---------------------------------------------------------------- */
-  IndicatorButtonLightsOn;
+  IndicatorButtonLightsOff;
 
   /* ---------------------------------------------------------------- *\
                   Initialize scroll queue on entry.
@@ -1639,6 +1640,7 @@ int main(void)
   }
 #endif
 
+#ifdef SCROLL_STARTUP_INFO
   /* ---------------------------------------------------------------- *\
                     Scroll Pico unique identifier
            NOTE: Scroll queue will be processed when entering
@@ -1666,6 +1668,7 @@ int main(void)
                       the main program loop below.
   \* ---------------------------------------------------------------- */
   scroll_queue(TAG_PICO_TEMP);
+#endif
 
 #ifdef PASSIVE_PIEZO_SUPPORT
   /* ---------------------------------------------------------------- *\
@@ -1695,6 +1698,8 @@ int main(void)
   gpio_set_irq_enabled_with_callback(IR_RX, GPIO_IRQ_EDGE_FALL | GPIO_IRQ_EDGE_RISE, true, (gpio_irq_callback_t)&isr_signal_trap);
   IrStepCount = 0;
 #endif
+
+  show_time();
 
   /* Main program loop... will loop forever. */
   while (TRUE)
