@@ -1043,28 +1043,28 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "ELF2UF2Build::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ELF2UF2Build-Debug-01354015daecd132aa57.json",
+					"jsonFile" : "target-ELF2UF2Build-Debug-2f2cd4d2758ae835ff05.json",
 					"name" : "ELF2UF2Build",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "Pico-Clock-Green::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Pico-Clock-Green-Debug-cdae2f3e594ae12bcf32.json",
+					"jsonFile" : "target-Pico-Clock-Green-Debug-427d6691a18b6dccf013.json",
 					"name" : "Pico-Clock-Green",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 61,
 					"id" : "PioasmBuild::@29db30da11e86cddb3e0",
-					"jsonFile" : "target-PioasmBuild-Debug-341e47d6565149a2d2d0.json",
+					"jsonFile" : "target-PioasmBuild-Debug-93ef942884c1619e5cf1.json",
 					"name" : "PioasmBuild",
 					"projectIndex" : 1
 				},
 				{
 					"directoryIndex" : 43,
 					"id" : "bs2_default::@bc554eaed616d198a22d",
-					"jsonFile" : "target-bs2_default-Debug-6f87fc2b5a24db29a205.json",
+					"jsonFile" : "target-bs2_default-Debug-8bb7cf85145227c8ebc6.json",
 					"name" : "bs2_default",
 					"projectIndex" : 1
 				},

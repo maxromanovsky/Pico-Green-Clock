@@ -236,7 +236,7 @@
 #define RELEASE_VERSION
 
 /* Firmware version. */
-#define FIRMWARE_VERSION "5.01"
+#define FIRMWARE_VERSION "5.02W"
 
 /* Specify the file containing the remote control protocol to be used. */
 #define REMOTE_FILENAME "memorex.cpp"
@@ -265,12 +265,12 @@
 #endif
 
 /* Night light default values. "AUTO" is based on ambient light reading to turn night light On or Off. */
-#define NIGHT_LIGHT_DEFAULT NIGHT_LIGHT_ON // choices are NIGHT_LIGHT_OFF / NIGHT_LIGHT_ON / NIGHT_LIGHT_NIGHT / NIGHT_LIGHT_AUTO
-#define NIGHT_LIGHT_TIME_ON 21             // if "NIGHT_LIGHT_NIGHT", LEDs will turn On  at this time (in the evening).
-#define NIGHT_LIGHT_TIME_OFF 8             // if "NIGHT_LIGHT_NIGHT", LEDs will turn Off at this time (in the morning).
+#define NIGHT_LIGHT_DEFAULT NIGHT_LIGHT_OFF // choices are NIGHT_LIGHT_OFF / NIGHT_LIGHT_ON / NIGHT_LIGHT_NIGHT / NIGHT_LIGHT_AUTO
+#define NIGHT_LIGHT_TIME_ON 21              // if "NIGHT_LIGHT_NIGHT", LEDs will turn On  at this time (in the evening).
+#define NIGHT_LIGHT_TIME_OFF 8              // if "NIGHT_LIGHT_NIGHT", LEDs will turn Off at this time (in the morning).
 
 /* Hourly chime default values. */
-#define CHIME_DEFAULT CHIME_DAY // choices are CHIME_OFF / CHIME_ON / CHIME_DAY
+#define CHIME_DEFAULT CHIME_OFF // choices are CHIME_OFF / CHIME_ON / CHIME_DAY
 #define CHIME_TIME_ON 9         // if "CHIME_DAY", "hourly chime" and "calendar event" will sound beginning at this time (in the morning).
 #define CHIME_TIME_OFF 21       // if "CHIME_DAY", "hourly chime" and "calendar event" will sound for the last time at this time (in the evening).
 /* NOTE: See also revision history above about "night time workers" support for hourly chime. */
@@ -806,7 +806,7 @@ UINT16 FlashingCount = 0;               // cumulate number of milliseconds befor
 UCHAR GetAddHigh = 0x11;
 UCHAR GetAddLow = 0x12;
 
-UINT8 HourlyChimeMode = CHIME_DEFAULT; // chime mode (Off / On / Day).
+UINT8 HourlyChimeMode = CHIME_OFF; // chime mode (Off / On / Day).
 
 UINT8 IdleNumberOfSeconds;         // keep track of the number of seconds the system has been idle.
 UINT64 InitialValue[MAX_READINGS]; // initial timer value when receiving edge change from remote control.
@@ -1385,6 +1385,8 @@ int main(void)
 #endif
 
   /* Test active buzzer... Four short tones to indicate we are entering the main Green Clock firmware. */
+
+#ifdef STARTUP_BUZZ
   tone(10);
   sleep_ms(100);
   tone(10);
@@ -1393,7 +1395,9 @@ int main(void)
   sleep_ms(100);
   tone(10);
   sleep_ms(300);
+#endif
 
+#ifdef MATRIX_TEST
   /* ---------------------------------------------------------------- *\
                       Test clock LED matrix.
   \* ---------------------------------------------------------------- */
@@ -1403,6 +1407,8 @@ int main(void)
            Make some pixel animation on entry (just for fun).
   \* ---------------------------------------------------------------- */
   pixel_twinkling(3);
+#endif
+
   clear_framebuffer(0);
 
   /* ---------------------------------------------------------------- *\
@@ -1534,11 +1540,13 @@ int main(void)
   /* Clear framebuffer on entry. */
   clear_framebuffer(0);
 
+#ifdef FW_VER_DISPLAY
   /* ---------------------------------------------------------------- *\
                         Scroll firmware version.
   \* ---------------------------------------------------------------- */
   sprintf(String, "Pico Green Clock - Firmware Version %s", FIRMWARE_VERSION);
   scroll_string(24, String);
+#endif
 
   /* ---------------------------------------------------------------- *\
         Special message if sound has been cut-off at compile-time.

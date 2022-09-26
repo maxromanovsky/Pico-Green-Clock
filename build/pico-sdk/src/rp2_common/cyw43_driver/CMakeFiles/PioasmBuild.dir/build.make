@@ -44,10 +44,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/local/Cellar/cmake/3.24.0/bin/cmake
+CMAKE_COMMAND = /usr/local/Cellar/cmake/3.24.2/bin/cmake
 
 # The command to remove a file.
-RM = /usr/local/Cellar/cmake/3.24.0/bin/cmake -E rm -f
+RM = /usr/local/Cellar/cmake/3.24.2/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -77,9 +77,9 @@ pico-sdk/src/rp2_common/cyw43_driver/CMakeFiles/PioasmBuild-complete: pico-sdk/s
 pico-sdk/src/rp2_common/cyw43_driver/CMakeFiles/PioasmBuild-complete: pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-build
 pico-sdk/src/rp2_common/cyw43_driver/CMakeFiles/PioasmBuild-complete: pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-install
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/max/Documents/projects/Pico-Green-Clock/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Completed 'PioasmBuild'"
-	cd /Users/max/Documents/projects/Pico-Green-Clock/build/pico-sdk/src/rp2_common/cyw43_driver && /usr/local/Cellar/cmake/3.24.0/bin/cmake -E make_directory /Users/max/Documents/projects/Pico-Green-Clock/build/pico-sdk/src/rp2_common/cyw43_driver/CMakeFiles
-	cd /Users/max/Documents/projects/Pico-Green-Clock/build/pico-sdk/src/rp2_common/cyw43_driver && /usr/local/Cellar/cmake/3.24.0/bin/cmake -E touch /Users/max/Documents/projects/Pico-Green-Clock/build/pico-sdk/src/rp2_common/cyw43_driver/CMakeFiles/PioasmBuild-complete
-	cd /Users/max/Documents/projects/Pico-Green-Clock/build/pico-sdk/src/rp2_common/cyw43_driver && /usr/local/Cellar/cmake/3.24.0/bin/cmake -E touch /Users/max/Documents/projects/Pico-Green-Clock/build/pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-done
+	cd /Users/max/Documents/projects/Pico-Green-Clock/build/pico-sdk/src/rp2_common/cyw43_driver && /usr/local/Cellar/cmake/3.24.2/bin/cmake -E make_directory /Users/max/Documents/projects/Pico-Green-Clock/build/pico-sdk/src/rp2_common/cyw43_driver/CMakeFiles
+	cd /Users/max/Documents/projects/Pico-Green-Clock/build/pico-sdk/src/rp2_common/cyw43_driver && /usr/local/Cellar/cmake/3.24.2/bin/cmake -E touch /Users/max/Documents/projects/Pico-Green-Clock/build/pico-sdk/src/rp2_common/cyw43_driver/CMakeFiles/PioasmBuild-complete
+	cd /Users/max/Documents/projects/Pico-Green-Clock/build/pico-sdk/src/rp2_common/cyw43_driver && /usr/local/Cellar/cmake/3.24.2/bin/cmake -E touch /Users/max/Documents/projects/Pico-Green-Clock/build/pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-done
 
 pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-build: pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-configure
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/max/Documents/projects/Pico-Green-Clock/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Performing build step for 'PioasmBuild'"
@@ -89,34 +89,34 @@ pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-co
 pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-configure: pico-sdk/src/rp2_common/cyw43_driver/pioasm/tmp/PioasmBuild-cache-Debug.cmake
 pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-configure: pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-patch
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/max/Documents/projects/Pico-Green-Clock/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Performing configure step for 'PioasmBuild'"
-	cd /Users/max/Documents/projects/Pico-Green-Clock/build/pioasm && /usr/local/Cellar/cmake/3.24.0/bin/cmake "-GUnix Makefiles" -C/Users/max/Documents/projects/Pico-Green-Clock/build/pico-sdk/src/rp2_common/cyw43_driver/pioasm/tmp/PioasmBuild-cache-Debug.cmake /Users/max/pico/pico-sdk/tools/pioasm
-	cd /Users/max/Documents/projects/Pico-Green-Clock/build/pioasm && /usr/local/Cellar/cmake/3.24.0/bin/cmake -E touch /Users/max/Documents/projects/Pico-Green-Clock/build/pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-configure
+	cd /Users/max/Documents/projects/Pico-Green-Clock/build/pioasm && /usr/local/Cellar/cmake/3.24.2/bin/cmake "-GUnix Makefiles" -C/Users/max/Documents/projects/Pico-Green-Clock/build/pico-sdk/src/rp2_common/cyw43_driver/pioasm/tmp/PioasmBuild-cache-Debug.cmake /Users/max/pico/pico-sdk/tools/pioasm
+	cd /Users/max/Documents/projects/Pico-Green-Clock/build/pioasm && /usr/local/Cellar/cmake/3.24.2/bin/cmake -E touch /Users/max/Documents/projects/Pico-Green-Clock/build/pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-configure
 
 pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-download: pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-source_dirinfo.txt
 pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-download: pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-mkdir
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/max/Documents/projects/Pico-Green-Clock/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "No download step for 'PioasmBuild'"
-	cd /Users/max/Documents/projects/Pico-Green-Clock/build/pico-sdk/src/rp2_common/cyw43_driver && /usr/local/Cellar/cmake/3.24.0/bin/cmake -E echo_append
-	cd /Users/max/Documents/projects/Pico-Green-Clock/build/pico-sdk/src/rp2_common/cyw43_driver && /usr/local/Cellar/cmake/3.24.0/bin/cmake -E touch /Users/max/Documents/projects/Pico-Green-Clock/build/pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-download
+	cd /Users/max/Documents/projects/Pico-Green-Clock/build/pico-sdk/src/rp2_common/cyw43_driver && /usr/local/Cellar/cmake/3.24.2/bin/cmake -E echo_append
+	cd /Users/max/Documents/projects/Pico-Green-Clock/build/pico-sdk/src/rp2_common/cyw43_driver && /usr/local/Cellar/cmake/3.24.2/bin/cmake -E touch /Users/max/Documents/projects/Pico-Green-Clock/build/pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-download
 
 pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-install: pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/max/Documents/projects/Pico-Green-Clock/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "No install step for 'PioasmBuild'"
-	cd /Users/max/Documents/projects/Pico-Green-Clock/build/pioasm && /usr/local/Cellar/cmake/3.24.0/bin/cmake -E echo_append
-	cd /Users/max/Documents/projects/Pico-Green-Clock/build/pioasm && /usr/local/Cellar/cmake/3.24.0/bin/cmake -E touch /Users/max/Documents/projects/Pico-Green-Clock/build/pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-install
+	cd /Users/max/Documents/projects/Pico-Green-Clock/build/pioasm && /usr/local/Cellar/cmake/3.24.2/bin/cmake -E echo_append
+	cd /Users/max/Documents/projects/Pico-Green-Clock/build/pioasm && /usr/local/Cellar/cmake/3.24.2/bin/cmake -E touch /Users/max/Documents/projects/Pico-Green-Clock/build/pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-install
 
 pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-mkdir:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/max/Documents/projects/Pico-Green-Clock/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Creating directories for 'PioasmBuild'"
-	cd /Users/max/Documents/projects/Pico-Green-Clock/build/pico-sdk/src/rp2_common/cyw43_driver && /usr/local/Cellar/cmake/3.24.0/bin/cmake -Dcfgdir= -P /Users/max/Documents/projects/Pico-Green-Clock/build/pico-sdk/src/rp2_common/cyw43_driver/pioasm/tmp/PioasmBuild-mkdirs.cmake
-	cd /Users/max/Documents/projects/Pico-Green-Clock/build/pico-sdk/src/rp2_common/cyw43_driver && /usr/local/Cellar/cmake/3.24.0/bin/cmake -E touch /Users/max/Documents/projects/Pico-Green-Clock/build/pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-mkdir
+	cd /Users/max/Documents/projects/Pico-Green-Clock/build/pico-sdk/src/rp2_common/cyw43_driver && /usr/local/Cellar/cmake/3.24.2/bin/cmake -Dcfgdir= -P /Users/max/Documents/projects/Pico-Green-Clock/build/pico-sdk/src/rp2_common/cyw43_driver/pioasm/tmp/PioasmBuild-mkdirs.cmake
+	cd /Users/max/Documents/projects/Pico-Green-Clock/build/pico-sdk/src/rp2_common/cyw43_driver && /usr/local/Cellar/cmake/3.24.2/bin/cmake -E touch /Users/max/Documents/projects/Pico-Green-Clock/build/pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-mkdir
 
 pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-patch: pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-update
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/max/Documents/projects/Pico-Green-Clock/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "No patch step for 'PioasmBuild'"
-	cd /Users/max/Documents/projects/Pico-Green-Clock/build/pico-sdk/src/rp2_common/cyw43_driver && /usr/local/Cellar/cmake/3.24.0/bin/cmake -E echo_append
-	cd /Users/max/Documents/projects/Pico-Green-Clock/build/pico-sdk/src/rp2_common/cyw43_driver && /usr/local/Cellar/cmake/3.24.0/bin/cmake -E touch /Users/max/Documents/projects/Pico-Green-Clock/build/pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-patch
+	cd /Users/max/Documents/projects/Pico-Green-Clock/build/pico-sdk/src/rp2_common/cyw43_driver && /usr/local/Cellar/cmake/3.24.2/bin/cmake -E echo_append
+	cd /Users/max/Documents/projects/Pico-Green-Clock/build/pico-sdk/src/rp2_common/cyw43_driver && /usr/local/Cellar/cmake/3.24.2/bin/cmake -E touch /Users/max/Documents/projects/Pico-Green-Clock/build/pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-patch
 
 pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-update: pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-download
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/max/Documents/projects/Pico-Green-Clock/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "No update step for 'PioasmBuild'"
-	cd /Users/max/Documents/projects/Pico-Green-Clock/build/pico-sdk/src/rp2_common/cyw43_driver && /usr/local/Cellar/cmake/3.24.0/bin/cmake -E echo_append
-	cd /Users/max/Documents/projects/Pico-Green-Clock/build/pico-sdk/src/rp2_common/cyw43_driver && /usr/local/Cellar/cmake/3.24.0/bin/cmake -E touch /Users/max/Documents/projects/Pico-Green-Clock/build/pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-update
+	cd /Users/max/Documents/projects/Pico-Green-Clock/build/pico-sdk/src/rp2_common/cyw43_driver && /usr/local/Cellar/cmake/3.24.2/bin/cmake -E echo_append
+	cd /Users/max/Documents/projects/Pico-Green-Clock/build/pico-sdk/src/rp2_common/cyw43_driver && /usr/local/Cellar/cmake/3.24.2/bin/cmake -E touch /Users/max/Documents/projects/Pico-Green-Clock/build/pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-update
 
 PioasmBuild: pico-sdk/src/rp2_common/cyw43_driver/CMakeFiles/PioasmBuild
 PioasmBuild: pico-sdk/src/rp2_common/cyw43_driver/CMakeFiles/PioasmBuild-complete

@@ -21,7 +21,7 @@ CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_util/dat
  /Users/max/Documents/projects/Pico-Green-Clock/build/generated/pico_base/pico/version.h \
  /Users/max/pico/pico-sdk/src/common/pico_base/include/pico/config.h \
  /Users/max/Documents/projects/Pico-Green-Clock/build/generated/pico_base/pico/config_autogen.h \
- /Users/max/pico/pico-sdk/src/boards/include/boards/pico.h \
+ /Users/max/pico/pico-sdk/src/boards/include/boards/pico_w.h \
  /Users/max/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
  /Users/max/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
  /Users/max/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \

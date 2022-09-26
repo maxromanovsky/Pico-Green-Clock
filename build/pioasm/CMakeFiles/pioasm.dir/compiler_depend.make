@@ -11,8 +11,8 @@ CMakeFiles/pioasm.dir/ada_output.cpp.o: /Users/max/pico/pico-sdk/tools/pioasm/ad
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__mbstate_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/wchar.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/stddef.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/stddef.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/__stddef_max_align_t.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/stddef.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__nullptr \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/wchar.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types.h \
@@ -44,7 +44,7 @@ CMakeFiles/pioasm.dir/ada_output.cpp.o: /Users/max/pico/pico-sdk/tools/pioasm/ad
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_ct_rune_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_rune_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_wchar_t.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/stdarg.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/stdarg.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_stdio.h \
@@ -117,7 +117,7 @@ CMakeFiles/pioasm.dir/ada_output.cpp.o: /Users/max/pico/pico-sdk/tools/pioasm/ad
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_uid_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/resource.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/stdint.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/stdint.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/stdint.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/stdint.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types/_uint8_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types/_uint16_t.h \
@@ -183,7 +183,7 @@ CMakeFiles/pioasm.dir/ada_output.cpp.o: /Users/max/pico/pico-sdk/tools/pioasm/ad
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/ratio \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/climits \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/limits.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/limits.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/limits.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/limits.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/machine/limits.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/i386/limits.h \
@@ -436,8 +436,8 @@ CMakeFiles/pioasm.dir/c_sdk_output.cpp.o: /Users/max/pico/pico-sdk/tools/pioasm/
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__mbstate_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/wchar.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/stddef.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/stddef.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/__stddef_max_align_t.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/stddef.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__nullptr \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/wchar.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types.h \
@@ -469,7 +469,7 @@ CMakeFiles/pioasm.dir/c_sdk_output.cpp.o: /Users/max/pico/pico-sdk/tools/pioasm/
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_ct_rune_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_rune_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_wchar_t.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/stdarg.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/stdarg.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_stdio.h \
@@ -542,7 +542,7 @@ CMakeFiles/pioasm.dir/c_sdk_output.cpp.o: /Users/max/pico/pico-sdk/tools/pioasm/
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_uid_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/resource.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/stdint.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/stdint.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/stdint.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/stdint.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types/_uint8_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types/_uint16_t.h \
@@ -608,7 +608,7 @@ CMakeFiles/pioasm.dir/c_sdk_output.cpp.o: /Users/max/pico/pico-sdk/tools/pioasm/
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/ratio \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/climits \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/limits.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/limits.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/limits.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/limits.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/machine/limits.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/i386/limits.h \
@@ -916,7 +916,7 @@ CMakeFiles/pioasm.dir/gen/lexer.cpp.o: /Users/max/pico/pico-sdk/tools/pioasm/gen
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_uid_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/resource.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/stdint.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/stdint.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/stdint.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/stdint.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types/_uint8_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types/_uint16_t.h \
@@ -938,7 +938,7 @@ CMakeFiles/pioasm.dir/gen/lexer.cpp.o: /Users/max/pico/pico-sdk/tools/pioasm/gen
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_dev_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_mode_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/limits.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/limits.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/limits.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/limits.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/machine/limits.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/i386/limits.h \
@@ -954,12 +954,12 @@ CMakeFiles/pioasm.dir/gen/lexer.cpp.o: /Users/max/pico/pico-sdk/tools/pioasm/gen
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__mbstate_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/wchar.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/stddef.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/stddef.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/__stddef_max_align_t.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/stddef.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__nullptr \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/wchar.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_mbstate_t.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/stdarg.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/stdarg.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/time.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_clock_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_time_t.h \
@@ -1305,8 +1305,8 @@ CMakeFiles/pioasm.dir/gen/parser.cpp.o: /Users/max/pico/pico-sdk/tools/pioasm/ge
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__mbstate_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/wchar.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/stddef.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/stddef.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/__stddef_max_align_t.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/stddef.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__nullptr \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/wchar.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types.h \
@@ -1338,7 +1338,7 @@ CMakeFiles/pioasm.dir/gen/parser.cpp.o: /Users/max/pico/pico-sdk/tools/pioasm/ge
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_ct_rune_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_rune_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_wchar_t.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/stdarg.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/stdarg.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_stdio.h \
@@ -1398,7 +1398,7 @@ CMakeFiles/pioasm.dir/gen/parser.cpp.o: /Users/max/pico/pico-sdk/tools/pioasm/ge
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_uid_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/resource.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/stdint.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/stdint.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/stdint.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/stdint.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types/_uint8_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types/_uint16_t.h \
@@ -1479,7 +1479,7 @@ CMakeFiles/pioasm.dir/gen/parser.cpp.o: /Users/max/pico/pico-sdk/tools/pioasm/ge
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/ratio \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/climits \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/limits.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/limits.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/limits.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/limits.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/machine/limits.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/i386/limits.h \
@@ -1744,8 +1744,8 @@ CMakeFiles/pioasm.dir/hex_output.cpp.o: /Users/max/pico/pico-sdk/tools/pioasm/he
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__mbstate_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/wchar.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/stddef.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/stddef.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/__stddef_max_align_t.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/stddef.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__nullptr \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/wchar.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types.h \
@@ -1777,7 +1777,7 @@ CMakeFiles/pioasm.dir/hex_output.cpp.o: /Users/max/pico/pico-sdk/tools/pioasm/he
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_ct_rune_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_rune_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_wchar_t.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/stdarg.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/stdarg.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_stdio.h \
@@ -1848,7 +1848,7 @@ CMakeFiles/pioasm.dir/hex_output.cpp.o: /Users/max/pico/pico-sdk/tools/pioasm/he
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_uid_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/resource.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/stdint.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/stdint.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/stdint.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/stdint.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types/_uint8_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types/_uint16_t.h \
@@ -1914,7 +1914,7 @@ CMakeFiles/pioasm.dir/hex_output.cpp.o: /Users/max/pico/pico-sdk/tools/pioasm/he
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/ratio \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/climits \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/limits.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/limits.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/limits.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/limits.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/machine/limits.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/i386/limits.h \
@@ -2167,8 +2167,8 @@ CMakeFiles/pioasm.dir/main.cpp.o: /Users/max/pico/pico-sdk/tools/pioasm/main.cpp
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__mbstate_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/wchar.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/stddef.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/stddef.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/__stddef_max_align_t.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/stddef.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__nullptr \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/wchar.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types.h \
@@ -2200,7 +2200,7 @@ CMakeFiles/pioasm.dir/main.cpp.o: /Users/max/pico/pico-sdk/tools/pioasm/main.cpp
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_ct_rune_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_rune_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_wchar_t.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/stdarg.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/stdarg.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_stdio.h \
@@ -2259,7 +2259,7 @@ CMakeFiles/pioasm.dir/main.cpp.o: /Users/max/pico/pico-sdk/tools/pioasm/main.cpp
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_uid_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/resource.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/stdint.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/stdint.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/stdint.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/stdint.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types/_uint8_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types/_uint16_t.h \
@@ -2340,7 +2340,7 @@ CMakeFiles/pioasm.dir/main.cpp.o: /Users/max/pico/pico-sdk/tools/pioasm/main.cpp
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/ratio \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/climits \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/limits.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/limits.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/limits.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/limits.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/machine/limits.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/i386/limits.h \
@@ -2632,15 +2632,15 @@ CMakeFiles/pioasm.dir/pio_assembler.cpp.o: /Users/max/pico/pico-sdk/tools/pioasm
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__mbstate_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/wchar.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/stddef.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/stddef.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/__stddef_max_align_t.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/stddef.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__nullptr \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/wchar.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_mbstate_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_ct_rune_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_rune_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_wchar_t.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/stdarg.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/stdarg.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/time.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_clock_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_time_t.h \
@@ -2692,7 +2692,7 @@ CMakeFiles/pioasm.dir/pio_assembler.cpp.o: /Users/max/pico/pico-sdk/tools/pioasm
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_uid_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/resource.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/stdint.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/stdint.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/stdint.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/stdint.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types/_uint8_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types/_uint16_t.h \
@@ -2807,7 +2807,7 @@ CMakeFiles/pioasm.dir/pio_assembler.cpp.o: /Users/max/pico/pico-sdk/tools/pioasm
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/ratio \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/climits \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/limits.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/limits.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/limits.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/limits.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/machine/limits.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/i386/limits.h \
@@ -3033,8 +3033,8 @@ CMakeFiles/pioasm.dir/pio_disassembler.cpp.o: /Users/max/pico/pico-sdk/tools/pio
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__mbstate_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/wchar.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/stddef.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/stddef.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/__stddef_max_align_t.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/stddef.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__nullptr \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/wchar.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types.h \
@@ -3066,7 +3066,7 @@ CMakeFiles/pioasm.dir/pio_disassembler.cpp.o: /Users/max/pico/pico-sdk/tools/pio
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_ct_rune_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_rune_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_wchar_t.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/stdarg.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/stdarg.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_stdio.h \
@@ -3141,7 +3141,7 @@ CMakeFiles/pioasm.dir/pio_disassembler.cpp.o: /Users/max/pico/pico-sdk/tools/pio
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_uid_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/resource.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/stdint.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/stdint.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/stdint.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/stdint.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types/_uint8_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types/_uint16_t.h \
@@ -3206,7 +3206,7 @@ CMakeFiles/pioasm.dir/pio_disassembler.cpp.o: /Users/max/pico/pico-sdk/tools/pio
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/ratio \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/climits \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/limits.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/limits.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/limits.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/limits.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/machine/limits.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/i386/limits.h \
@@ -3452,8 +3452,8 @@ CMakeFiles/pioasm.dir/python_output.cpp.o: /Users/max/pico/pico-sdk/tools/pioasm
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__mbstate_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/wchar.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/stddef.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/stddef.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/__stddef_max_align_t.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/stddef.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__nullptr \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/wchar.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types.h \
@@ -3485,7 +3485,7 @@ CMakeFiles/pioasm.dir/python_output.cpp.o: /Users/max/pico/pico-sdk/tools/pioasm
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_ct_rune_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_rune_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_wchar_t.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/stdarg.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/stdarg.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_stdio.h \
@@ -3560,7 +3560,7 @@ CMakeFiles/pioasm.dir/python_output.cpp.o: /Users/max/pico/pico-sdk/tools/pioasm
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_uid_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/resource.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/stdint.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/stdint.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/stdint.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/stdint.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types/_uint8_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types/_uint16_t.h \
@@ -3625,7 +3625,7 @@ CMakeFiles/pioasm.dir/python_output.cpp.o: /Users/max/pico/pico-sdk/tools/pioasm
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/ratio \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/climits \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/limits.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/limits.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/limits.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/limits.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/machine/limits.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/i386/limits.h \
@@ -3875,6 +3875,8 @@ CMakeFiles/pioasm.dir/python_output.cpp.o: /Users/max/pico/pico-sdk/tools/pioasm
 
 /Users/max/pico/pico-sdk/tools/pioasm/pio_assembler.cpp:
 
+/Users/max/pico/pico-sdk/tools/pioasm/hex_output.cpp:
+
 /Users/max/pico/pico-sdk/tools/pioasm/gen/parser.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/gethostuuid.h:
@@ -3892,6 +3894,8 @@ CMakeFiles/pioasm.dir/python_output.cpp.o: /Users/max/pico/pico-sdk/tools/pioasm
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/sstream:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/iomanip:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/deque:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/stack:
 
@@ -4087,6 +4091,8 @@ CMakeFiles/pioasm.dir/python_output.cpp.o: /Users/max/pico/pico-sdk/tools/pioasm
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/min.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/inplace_merge.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/includes.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/bitset:
@@ -4096,6 +4102,8 @@ CMakeFiles/pioasm.dir/python_output.cpp.o: /Users/max/pico/pico-sdk/tools/pioasm
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/generate_n.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/for_each_n.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/for_each.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/find_if.h:
 
@@ -4115,12 +4123,6 @@ CMakeFiles/pioasm.dir/python_output.cpp.o: /Users/max/pico/pico-sdk/tools/pioasm
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/fill_n.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_key_t.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__utility/declval.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/equal_range.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/remove_copy_if.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/count_if.h:
@@ -4130,14 +4132,6 @@ CMakeFiles/pioasm.dir/python_output.cpp.o: /Users/max/pico/pico-sdk/tools/pioasm
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/copy_n.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/unwrap_iter.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__bsd_locale_defaults.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/replace_if.h:
-
-/Users/max/pico/pico-sdk/tools/pioasm/gen/parser.hpp:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/clamp.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/half_positive.h:
 
@@ -4161,6 +4155,14 @@ CMakeFiles/pioasm.dir/python_output.cpp.o: /Users/max/pico/pico-sdk/tools/pioasm
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__memory/uninitialized_algorithms.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/malloc/_malloc.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/xlocale.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/string_view:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__memory/temporary_buffer.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__iterator/wrap_iter.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__iterator/size.h:
@@ -4177,6 +4179,8 @@ CMakeFiles/pioasm.dir/python_output.cpp.o: /Users/max/pico/pico-sdk/tools/pioasm
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/set_symmetric_difference.h:
 
+/Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/stdarg.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__iterator/next.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/upper_bound.h:
@@ -4188,12 +4192,6 @@ CMakeFiles/pioasm.dir/python_output.cpp.o: /Users/max/pico/pico-sdk/tools/pioasm
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__memory/allocator.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__iterator/istreambuf_iterator.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/string_view:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/malloc/_malloc.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/xlocale.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/partition_copy.h:
 
@@ -4259,6 +4257,8 @@ CMakeFiles/pioasm.dir/python_output.cpp.o: /Users/max/pico/pico-sdk/tools/pioasm
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_pthread/_pthread_once_t.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_pthread/_pthread_cond_t.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__split_buffer:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/pthread/sched.h:
@@ -4275,10 +4275,6 @@ CMakeFiles/pioasm.dir/python_output.cpp.o: /Users/max/pico/pico-sdk/tools/pioasm
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/partial_sort_copy.h:
 
-/Users/max/pico/pico-sdk/tools/pioasm/hex_output.cpp:
-
-/Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/stdint.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/syslimits.h:
 
 /Users/max/pico/pico-sdk/tools/pioasm/main.cpp:
@@ -4291,9 +4287,17 @@ CMakeFiles/pioasm.dir/python_output.cpp.o: /Users/max/pico/pico-sdk/tools/pioasm
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/limits.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__utility/forward.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/ctime:
 
-/Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/limits.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__bsd_locale_defaults.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/replace_if.h:
+
+/Users/max/pico/pico-sdk/tools/pioasm/gen/parser.hpp:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/clamp.h:
+
+/Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/limits.h:
 
 /Users/max/pico/pico-sdk/tools/pioasm/output_format.h:
 
@@ -4427,9 +4431,15 @@ CMakeFiles/pioasm.dir/python_output.cpp.o: /Users/max/pico/pico-sdk/tools/pioasm
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_timeval.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types/_uintmax_t.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/is_partitioned.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types/_uintmax_t.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_key_t.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/equal_range.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__utility/declval.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_id_t.h:
 
@@ -4583,6 +4593,8 @@ CMakeFiles/pioasm.dir/python_output.cpp.o: /Users/max/pico/pico-sdk/tools/pioasm
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__undef_macros:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/Availability.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/runetype.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_rune_t.h:
@@ -4593,7 +4605,7 @@ CMakeFiles/pioasm.dir/python_output.cpp.o: /Users/max/pico/pico-sdk/tools/pioasm
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_sigaltstack.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/Availability.h:
+/Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/stddef.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_pthread/_pthread_mutex_t.h:
 
@@ -4641,6 +4653,8 @@ CMakeFiles/pioasm.dir/python_output.cpp.o: /Users/max/pico/pico-sdk/tools/pioasm
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/alloca.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__utility/forward.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__tree:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__utility/as_const.h:
@@ -4650,14 +4664,6 @@ CMakeFiles/pioasm.dir/python_output.cpp.o: /Users/max/pico/pico-sdk/tools/pioasm
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_size_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_stdio.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/errno.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/for_each.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/deque:
-
-/Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/stdarg.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/AvailabilityVersions.h:
 
@@ -4715,23 +4721,15 @@ CMakeFiles/pioasm.dir/python_output.cpp.o: /Users/max/pico/pico-sdk/tools/pioasm
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/push_heap.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_pthread/_pthread_cond_t.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/errno.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__memory/temporary_buffer.h:
-
-/Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/stddef.h:
+/Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/stdint.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_off_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_u_int32_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/mach/i386/_structs.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/ctime:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/inplace_merge.h:
-
-/Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/__stddef_max_align_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/wctype.h:
 
@@ -4754,6 +4752,8 @@ CMakeFiles/pioasm.dir/python_output.cpp.o: /Users/max/pico/pico-sdk/tools/pioasm
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/chrono:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/stdio.h:
+
+/Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/__stddef_max_align_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/pthread/qos.h:
 

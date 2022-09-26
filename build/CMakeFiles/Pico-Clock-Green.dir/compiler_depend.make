@@ -44,7 +44,7 @@ CMakeFiles/Pico-Clock-Green.dir/Ds3231.c.obj: /Users/max/Documents/projects/Pico
   generated/pico_base/pico/version.h \
   /Users/max/pico/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /Users/max/pico/pico-sdk/src/boards/include/boards/pico.h \
+  /Users/max/pico/pico-sdk/src/boards/include/boards/pico_w.h \
   /Users/max/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /Users/max/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /Users/max/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -128,7 +128,7 @@ CMakeFiles/Pico-Clock-Green.dir/Pico-Clock-Green.c.obj: /Users/max/Documents/pro
   generated/pico_base/pico/version.h \
   /Users/max/pico/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /Users/max/pico/pico-sdk/src/boards/include/boards/pico.h \
+  /Users/max/pico/pico-sdk/src/boards/include/boards/pico_w.h \
   /Users/max/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /Users/max/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /Users/max/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -217,7 +217,7 @@ CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_sync/cri
   generated/pico_base/pico/version.h \
   /Users/max/pico/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /Users/max/pico/pico-sdk/src/boards/include/boards/pico.h \
+  /Users/max/pico/pico-sdk/src/boards/include/boards/pico_w.h \
   /Users/max/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /Users/max/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /Users/max/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -255,7 +255,7 @@ CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_sync/loc
   generated/pico_base/pico/version.h \
   /Users/max/pico/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /Users/max/pico/pico-sdk/src/boards/include/boards/pico.h \
+  /Users/max/pico/pico-sdk/src/boards/include/boards/pico_w.h \
   /Users/max/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /Users/max/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /Users/max/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -294,7 +294,7 @@ CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_sync/mut
   generated/pico_base/pico/version.h \
   /Users/max/pico/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /Users/max/pico/pico-sdk/src/boards/include/boards/pico.h \
+  /Users/max/pico/pico-sdk/src/boards/include/boards/pico_w.h \
   /Users/max/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /Users/max/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /Users/max/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -333,7 +333,7 @@ CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_sync/sem
   generated/pico_base/pico/version.h \
   /Users/max/pico/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /Users/max/pico/pico-sdk/src/boards/include/boards/pico.h \
+  /Users/max/pico/pico-sdk/src/boards/include/boards/pico_w.h \
   /Users/max/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /Users/max/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /Users/max/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -399,7 +399,7 @@ CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/tim
   generated/pico_base/pico/version.h \
   /Users/max/pico/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /Users/max/pico/pico-sdk/src/boards/include/boards/pico.h \
+  /Users/max/pico/pico-sdk/src/boards/include/boards/pico_w.h \
   /Users/max/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /Users/max/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /Users/max/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -443,7 +443,7 @@ CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_time/tim
   generated/pico_base/pico/version.h \
   /Users/max/pico/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /Users/max/pico/pico-sdk/src/boards/include/boards/pico.h \
+  /Users/max/pico/pico-sdk/src/boards/include/boards/pico_w.h \
   /Users/max/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /Users/max/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /Users/max/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -479,7 +479,7 @@ CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_util/dat
   generated/pico_base/pico/version.h \
   /Users/max/pico/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /Users/max/pico/pico-sdk/src/boards/include/boards/pico.h \
+  /Users/max/pico/pico-sdk/src/boards/include/boards/pico_w.h \
   /Users/max/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /Users/max/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /Users/max/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -553,7 +553,7 @@ CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_util/phe
   generated/pico_base/pico/version.h \
   /Users/max/pico/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /Users/max/pico/pico-sdk/src/boards/include/boards/pico.h \
+  /Users/max/pico/pico-sdk/src/boards/include/boards/pico_w.h \
   /Users/max/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /Users/max/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /Users/max/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -597,7 +597,7 @@ CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/common/pico_util/que
   generated/pico_base/pico/version.h \
   /Users/max/pico/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /Users/max/pico/pico-sdk/src/boards/include/boards/pico.h \
+  /Users/max/pico/pico-sdk/src/boards/include/boards/pico_w.h \
   /Users/max/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /Users/max/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /Users/max/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -634,7 +634,7 @@ CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_
   generated/pico_base/pico/version.h \
   /Users/max/pico/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /Users/max/pico/pico-sdk/src/boards/include/boards/pico.h \
+  /Users/max/pico/pico-sdk/src/boards/include/boards/pico_w.h \
   /Users/max/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /Users/max/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /Users/max/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -683,7 +683,7 @@ CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_
   generated/pico_base/pico/version.h \
   /Users/max/pico/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /Users/max/pico/pico-sdk/src/boards/include/boards/pico.h \
+  /Users/max/pico/pico-sdk/src/boards/include/boards/pico_w.h \
   /Users/max/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /Users/max/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /Users/max/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -716,7 +716,7 @@ CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_
   generated/pico_base/pico/version.h \
   /Users/max/pico/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /Users/max/pico/pico-sdk/src/boards/include/boards/pico.h \
+  /Users/max/pico/pico-sdk/src/boards/include/boards/pico_w.h \
   /Users/max/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /Users/max/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /Users/max/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -771,7 +771,7 @@ CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_
   generated/pico_base/pico/version.h \
   /Users/max/pico/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /Users/max/pico/pico-sdk/src/boards/include/boards/pico.h \
+  /Users/max/pico/pico-sdk/src/boards/include/boards/pico_w.h \
   /Users/max/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /Users/max/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /Users/max/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -809,7 +809,7 @@ CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_
   generated/pico_base/pico/version.h \
   /Users/max/pico/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /Users/max/pico/pico-sdk/src/boards/include/boards/pico.h \
+  /Users/max/pico/pico-sdk/src/boards/include/boards/pico_w.h \
   /Users/max/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /Users/max/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /Users/max/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -852,7 +852,7 @@ CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_
   generated/pico_base/pico/version.h \
   /Users/max/pico/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /Users/max/pico/pico-sdk/src/boards/include/boards/pico.h \
+  /Users/max/pico/pico-sdk/src/boards/include/boards/pico_w.h \
   /Users/max/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /Users/max/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /Users/max/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -899,7 +899,7 @@ CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_
   generated/pico_base/pico/version.h \
   /Users/max/pico/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /Users/max/pico/pico-sdk/src/boards/include/boards/pico.h \
+  /Users/max/pico/pico-sdk/src/boards/include/boards/pico_w.h \
   /Users/max/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /Users/max/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /Users/max/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -943,7 +943,7 @@ CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_
   generated/pico_base/pico/version.h \
   /Users/max/pico/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /Users/max/pico/pico-sdk/src/boards/include/boards/pico.h \
+  /Users/max/pico/pico-sdk/src/boards/include/boards/pico_w.h \
   /Users/max/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /Users/max/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /Users/max/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -984,7 +984,7 @@ CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_
   generated/pico_base/pico/version.h \
   /Users/max/pico/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /Users/max/pico/pico-sdk/src/boards/include/boards/pico.h \
+  /Users/max/pico/pico-sdk/src/boards/include/boards/pico_w.h \
   /Users/max/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /Users/max/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /Users/max/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -1018,7 +1018,7 @@ CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_
   generated/pico_base/pico/version.h \
   /Users/max/pico/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /Users/max/pico/pico-sdk/src/boards/include/boards/pico.h \
+  /Users/max/pico/pico-sdk/src/boards/include/boards/pico_w.h \
   /Users/max/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /Users/max/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /Users/max/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -1058,7 +1058,7 @@ CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_
   generated/pico_base/pico/version.h \
   /Users/max/pico/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /Users/max/pico/pico-sdk/src/boards/include/boards/pico.h \
+  /Users/max/pico/pico-sdk/src/boards/include/boards/pico_w.h \
   /Users/max/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /Users/max/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /Users/max/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -1102,7 +1102,7 @@ CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_
   generated/pico_base/pico/version.h \
   /Users/max/pico/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /Users/max/pico/pico-sdk/src/boards/include/boards/pico.h \
+  /Users/max/pico/pico-sdk/src/boards/include/boards/pico_w.h \
   /Users/max/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /Users/max/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /Users/max/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -1158,7 +1158,7 @@ CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_
   generated/pico_base/pico/version.h \
   /Users/max/pico/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /Users/max/pico/pico-sdk/src/boards/include/boards/pico.h \
+  /Users/max/pico/pico-sdk/src/boards/include/boards/pico_w.h \
   /Users/max/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /Users/max/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /Users/max/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -1193,7 +1193,7 @@ CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/hardware_
   generated/pico_base/pico/version.h \
   /Users/max/pico/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /Users/max/pico/pico-sdk/src/boards/include/boards/pico.h \
+  /Users/max/pico/pico-sdk/src/boards/include/boards/pico_w.h \
   /Users/max/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /Users/max/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /Users/max/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -1232,7 +1232,7 @@ CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_boot
   generated/pico_base/pico/version.h \
   /Users/max/pico/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /Users/max/pico/pico-sdk/src/boards/include/boards/pico.h \
+  /Users/max/pico/pico-sdk/src/boards/include/boards/pico_w.h \
   /Users/max/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /Users/max/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /Users/max/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -1274,7 +1274,7 @@ CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_doub
   generated/pico_base/pico/version.h \
   /Users/max/pico/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /Users/max/pico/pico-sdk/src/boards/include/boards/pico.h \
+  /Users/max/pico/pico-sdk/src/boards/include/boards/pico_w.h \
   /Users/max/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /Users/max/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /Users/max/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -1347,7 +1347,7 @@ CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_floa
   generated/pico_base/pico/version.h \
   /Users/max/pico/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /Users/max/pico/pico-sdk/src/boards/include/boards/pico.h \
+  /Users/max/pico/pico-sdk/src/boards/include/boards/pico_w.h \
   /Users/max/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /Users/max/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /Users/max/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -1433,7 +1433,7 @@ CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_mall
   generated/pico_base/pico/version.h \
   /Users/max/pico/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /Users/max/pico/pico-sdk/src/boards/include/boards/pico.h \
+  /Users/max/pico/pico-sdk/src/boards/include/boards/pico_w.h \
   /Users/max/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /Users/max/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /Users/max/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -1464,7 +1464,7 @@ CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_plat
   generated/pico_base/pico/version.h \
   /Users/max/pico/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /Users/max/pico/pico-sdk/src/boards/include/boards/pico.h \
+  /Users/max/pico/pico-sdk/src/boards/include/boards/pico_w.h \
   /Users/max/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /Users/max/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /Users/max/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -1524,7 +1524,7 @@ CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_prin
   generated/pico_base/pico/version.h \
   /Users/max/pico/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /Users/max/pico/pico-sdk/src/boards/include/boards/pico.h \
+  /Users/max/pico/pico-sdk/src/boards/include/boards/pico_w.h \
   /Users/max/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /Users/max/pico/pico-sdk/src/common/pico_base/include/pico/error.h \
   /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/lib/gcc/arm-none-eabi/10.3.1/include/float.h
@@ -1570,7 +1570,7 @@ CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_runt
   generated/pico_base/pico/version.h \
   /Users/max/pico/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /Users/max/pico/pico-sdk/src/boards/include/boards/pico.h \
+  /Users/max/pico/pico-sdk/src/boards/include/boards/pico_w.h \
   /Users/max/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /Users/max/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /Users/max/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -1626,7 +1626,7 @@ CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stan
   generated/pico_base/pico/version.h \
   /Users/max/pico/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /Users/max/pico/pico-sdk/src/boards/include/boards/pico.h \
+  /Users/max/pico/pico-sdk/src/boards/include/boards/pico_w.h \
   /Users/max/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /Users/max/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /Users/max/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -1707,7 +1707,7 @@ CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdi
   generated/pico_base/pico/version.h \
   /Users/max/pico/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /Users/max/pico/pico-sdk/src/boards/include/boards/pico.h \
+  /Users/max/pico/pico-sdk/src/boards/include/boards/pico_w.h \
   /Users/max/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /Users/max/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /Users/max/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -1755,7 +1755,7 @@ CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdi
   generated/pico_base/pico/version.h \
   /Users/max/pico/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /Users/max/pico/pico-sdk/src/boards/include/boards/pico.h \
+  /Users/max/pico/pico-sdk/src/boards/include/boards/pico_w.h \
   /Users/max/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /Users/max/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /Users/max/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -1807,7 +1807,7 @@ CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_stdl
   generated/pico_base/pico/version.h \
   /Users/max/pico/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /Users/max/pico/pico-sdk/src/boards/include/boards/pico.h \
+  /Users/max/pico/pico-sdk/src/boards/include/boards/pico_w.h \
   /Users/max/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /Users/max/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /Users/max/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -1866,7 +1866,7 @@ CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_uniq
   generated/pico_base/pico/version.h \
   /Users/max/pico/pico-sdk/src/common/pico_base/include/pico/config.h \
   generated/pico_base/pico/config_autogen.h \
-  /Users/max/pico/pico-sdk/src/boards/include/boards/pico.h \
+  /Users/max/pico/pico-sdk/src/boards/include/boards/pico_w.h \
   /Users/max/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
   /Users/max/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
   /Users/max/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
@@ -2040,10 +2040,6 @@ CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_uniq
 
 /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/sys/_timeval.h:
 
-/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio.h:
-
-/Users/max/pico/pico-sdk/src/boards/include/boards/pico.h:
-
 /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/machine/time.h:
 
 /Users/max/pico/pico-sdk/src/rp2_common/hardware_gpio/include/hardware/gpio.h:
@@ -2061,6 +2057,12 @@ CMakeFiles/Pico-Clock-Green.dir/Users/max/pico/pico-sdk/src/rp2_common/pico_uniq
 /Users/max/pico/pico-sdk/src/rp2_common/hardware_timer/include/hardware/timer.h:
 
 /Users/max/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/uart.h:
+
+/usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/newlib.h:
+
+/Users/max/pico/pico-sdk/src/common/pico_base/include/pico/assert.h:
+
+/Users/max/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/intctrl.h:
 
 /Users/max/pico/pico-sdk/src/rp2_common/hardware_irq/include/hardware/irq.h:
 
@@ -2170,6 +2172,8 @@ generated/pico_base/pico/config_autogen.h:
 
 /Users/max/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/sio.h:
 
+/Users/max/pico/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio.h:
+
 /Users/max/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c:
 
 /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/sys/cdefs.h:
@@ -2248,11 +2252,7 @@ generated/pico_base/pico/version.h:
 
 /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/_newlib_version.h:
 
-/Users/max/pico/pico-sdk/src/common/pico_base/include/pico/assert.h:
-
-/Users/max/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/intctrl.h:
-
-/usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/newlib.h:
+/Users/max/pico/pico-sdk/src/boards/include/boards/pico_w.h:
 
 /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/sys/features.h:
 

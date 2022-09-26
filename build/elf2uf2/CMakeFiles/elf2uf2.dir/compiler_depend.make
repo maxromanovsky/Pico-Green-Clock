@@ -45,15 +45,15 @@ CMakeFiles/elf2uf2.dir/main.cpp.o: /Users/max/pico/pico-sdk/tools/elf2uf2/main.c
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__mbstate_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/wchar.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/stddef.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/stddef.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/__stddef_max_align_t.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/stddef.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/__stddef_max_align_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__nullptr \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/wchar.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_mbstate_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_ct_rune_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_rune_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_wchar_t.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/stdarg.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/stdarg.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/time.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_clock_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_time_t.h \
@@ -108,7 +108,7 @@ CMakeFiles/elf2uf2.dir/main.cpp.o: /Users/max/pico/pico-sdk/tools/elf2uf2/main.c
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_uid_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/resource.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/stdint.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/stdint.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/stdint.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/stdint.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types/_uint8_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types/_uint16_t.h \
@@ -212,7 +212,7 @@ CMakeFiles/elf2uf2.dir/main.cpp.o: /Users/max/pico/pico-sdk/tools/elf2uf2/main.c
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/ratio \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/climits \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/limits.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/limits.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/limits.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/limits.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/machine/limits.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/i386/limits.h \
@@ -367,8 +367,6 @@ CMakeFiles/elf2uf2.dir/main.cpp.o: /Users/max/pico/pico-sdk/tools/elf2uf2/main.c
 
 /Users/max/pico/pico-sdk/src/common/boot_uf2/include/boot/uf2.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/cstdarg:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/vector:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/transform.h:
@@ -435,6 +433,8 @@ CMakeFiles/elf2uf2.dir/main.cpp.o: /Users/max/pico/pico-sdk/tools/elf2uf2/main.c
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/min.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/inplace_merge.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/includes.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/generate.h:
@@ -442,6 +442,8 @@ CMakeFiles/elf2uf2.dir/main.cpp.o: /Users/max/pico/pico-sdk/tools/elf2uf2/main.c
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/generate_n.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/for_each_n.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/for_each.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/find_if.h:
 
@@ -453,8 +455,6 @@ CMakeFiles/elf2uf2.dir/main.cpp.o: /Users/max/pico/pico-sdk/tools/elf2uf2/main.c
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/fill_n.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/equal_range.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/count_if.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/unique_copy.h:
@@ -464,10 +464,6 @@ CMakeFiles/elf2uf2.dir/main.cpp.o: /Users/max/pico/pico-sdk/tools/elf2uf2/main.c
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/copy_if.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/unwrap_iter.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/replace_if.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/clamp.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/half_positive.h:
 
@@ -496,6 +492,8 @@ CMakeFiles/elf2uf2.dir/main.cpp.o: /Users/max/pico/pico-sdk/tools/elf2uf2/main.c
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/assert.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__memory/uninitialized_algorithms.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__memory/temporary_buffer.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__functional/binder1st.h:
 
@@ -531,6 +529,10 @@ CMakeFiles/elf2uf2.dir/main.cpp.o: /Users/max/pico/pico-sdk/tools/elf2uf2/main.c
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/errno.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/partial_sort_copy.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/syslimits.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__functional/unary_negate.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/i386/_limits.h:
@@ -538,6 +540,12 @@ CMakeFiles/elf2uf2.dir/main.cpp.o: /Users/max/pico/pico-sdk/tools/elf2uf2/main.c
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/i386/limits.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/machine/limits.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/replace_if.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/clamp.h:
+
+/Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/limits.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/adjacent_find.h:
 
@@ -563,6 +571,10 @@ CMakeFiles/elf2uf2.dir/main.cpp.o: /Users/max/pico/pico-sdk/tools/elf2uf2/main.c
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__iterator/reverse_iterator.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/__wctype.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__iterator/projected.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__iterator/prev.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__iterator/move_iterator.h:
@@ -572,6 +584,8 @@ CMakeFiles/elf2uf2.dir/main.cpp.o: /Users/max/pico/pico-sdk/tools/elf2uf2/main.c
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/partition_copy.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__iterator/front_insert_iterator.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__iterator/erase_if_container.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/sort.h:
 
@@ -638,6 +652,8 @@ CMakeFiles/elf2uf2.dir/main.cpp.o: /Users/max/pico/pico-sdk/tools/elf2uf2/main.c
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__iterator/common_iterator.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__functional/bind.h:
+
+/Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/stdarg.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/machine/signal.h:
 
@@ -732,16 +748,6 @@ CMakeFiles/elf2uf2.dir/main.cpp.o: /Users/max/pico/pico-sdk/tools/elf2uf2/main.c
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types/_intmax_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types/_uint16_t.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/__wctype.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__iterator/projected.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/partial_sort_copy.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/syslimits.h:
-
-/Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/stdint.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__memory/construct_at.h:
 
@@ -843,6 +849,10 @@ CMakeFiles/elf2uf2.dir/main.cpp.o: /Users/max/pico/pico-sdk/tools/elf2uf2/main.c
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/type_traits:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/equal_range.h:
+
+/Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/stdint.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_off_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__functional/is_transparent.h:
@@ -856,6 +866,8 @@ CMakeFiles/elf2uf2.dir/main.cpp.o: /Users/max/pico/pico-sdk/tools/elf2uf2/main.c
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__bits:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/Availability.h:
+
+/Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/stddef.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/lower_bound.h:
 
@@ -967,6 +979,10 @@ CMakeFiles/elf2uf2.dir/main.cpp.o: /Users/max/pico/pico-sdk/tools/elf2uf2/main.c
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_u_int64_t.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/cstdarg:
+
+/Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/__stddef_max_align_t.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/stdio.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__mbstate_t.h:
@@ -1001,15 +1017,9 @@ CMakeFiles/elf2uf2.dir/main.cpp.o: /Users/max/pico/pico-sdk/tools/elf2uf2/main.c
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_int16_t.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__iterator/erase_if_container.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_rsize_t.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__memory/temporary_buffer.h:
-
-/Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/stddef.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/for_each.h:
-
-/Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/stdarg.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/cdefs.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/set:
 
@@ -1018,14 +1028,6 @@ CMakeFiles/elf2uf2.dir/main.cpp.o: /Users/max/pico/pico-sdk/tools/elf2uf2/main.c
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__memory/pointer_safety.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_u_int8_t.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_rsize_t.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/cdefs.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__algorithm/inplace_merge.h:
-
-/Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/__stddef_max_align_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/mach/i386/_structs.h:
 
@@ -1060,8 +1062,6 @@ CMakeFiles/elf2uf2.dir/main.cpp.o: /Users/max/pico/pico-sdk/tools/elf2uf2/main.c
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/pthread.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/alloca.h:
-
-/Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/limits.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__utility/forward.h:
 

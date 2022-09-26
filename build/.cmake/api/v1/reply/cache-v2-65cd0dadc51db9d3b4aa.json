@@ -231,7 +231,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "0"
+			"value" : "2"
 		},
 		{
 			"name" : "CMAKE_COLOR_MAKEFILE",
@@ -259,7 +259,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/usr/local/Cellar/cmake/3.24.0/bin/cmake"
+			"value" : "/usr/local/Cellar/cmake/3.24.2/bin/cmake"
 		},
 		{
 			"name" : "CMAKE_CPACK_COMMAND",
@@ -271,7 +271,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/usr/local/Cellar/cmake/3.24.0/bin/cpack"
+			"value" : "/usr/local/Cellar/cmake/3.24.2/bin/cpack"
 		},
 		{
 			"name" : "CMAKE_CTEST_COMMAND",
@@ -283,7 +283,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/usr/local/Cellar/cmake/3.24.0/bin/ctest"
+			"value" : "/usr/local/Cellar/cmake/3.24.2/bin/ctest"
 		},
 		{
 			"name" : "CMAKE_CXX_COMPILER",
@@ -1031,7 +1031,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/usr/local/Cellar/cmake/3.24.0/share/cmake"
+			"value" : "/usr/local/Cellar/cmake/3.24.2/share/cmake"
 		},
 		{
 			"name" : "CMAKE_SHARED_LINKER_FLAGS",
@@ -1347,7 +1347,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "pico"
+			"value" : "pico_w"
 		},
 		{
 			"name" : "PICO_BOARD_HEADER_DIRS",
@@ -1458,6 +1458,18 @@
 			"value" : "OFF"
 		},
 		{
+			"name" : "PICO_CYW43_SUPPORTED",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Try to add support for PICO_CYW43"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "1"
+		},
+		{
 			"name" : "PICO_DEFAULT_BOOT_STAGE2",
 			"properties" : 
 			[
@@ -1491,7 +1503,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : " /Users/max/pico/pico-sdk/src/rp2_common/cmsis /Users/max/pico/pico-sdk/src/rp2040/hardware_regs /Users/max/pico/pico-sdk/src/rp2_common/cmsis /Users/max/pico/pico-sdk/src/rp2040/hardware_regs"
+			"value" : " /Users/max/pico/pico-sdk/src/rp2_common/cmsis /Users/max/pico/pico-sdk/src/rp2040/hardware_regs /Users/max/pico/pico-sdk/src/rp2_common/cmsis /Users/max/pico/pico-sdk/src/rp2040/hardware_regs /Users/max/pico/pico-sdk/src/rp2_common/cmsis /Users/max/pico/pico-sdk/src/rp2040/hardware_regs /Users/max/pico/pico-sdk/src/rp2_common/cmsis /Users/max/pico/pico-sdk/src/rp2040/hardware_regs /Users/max/pico/pico-sdk/src/rp2_common/cmsis /Users/max/pico/pico-sdk/src/rp2040/hardware_regs /Users/max/pico/pico-sdk/src/rp2_common/cmsis /Users/max/pico/pico-sdk/src/rp2040/hardware_regs /Users/max/pico/pico-sdk/src/rp2_common/cmsis /Users/max/pico/pico-sdk/src/rp2040/hardware_regs /Users/max/pico/pico-sdk/src/rp2_common/cmsis /Users/max/pico/pico-sdk/src/rp2040/hardware_regs /Users/max/pico/pico-sdk/src/rp2_common/cmsis /Users/max/pico/pico-sdk/src/rp2040/hardware_regs /Users/max/pico/pico-sdk/src/rp2_common/cmsis /Users/max/pico/pico-sdk/src/rp2040/hardware_regs /Users/max/pico/pico-sdk/src/rp2_common/cmsis /Users/max/pico/pico-sdk/src/rp2040/hardware_regs"
 		},
 		{
 			"name" : "PICO_DOXYGEN_PATHS",
