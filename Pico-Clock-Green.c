@@ -232,6 +232,12 @@
            according to user needs. It can be found below,
            just above the "Global variables declaration / definition".
 \* ================================================================== */
+
+// CUSTOM config
+// #define STARTUP_BUZZ
+// #define MATRIX_TEST
+// #define FW_VER_DISPLAY
+
 /* Make selective choices of some options for release version. */
 #define RELEASE_VERSION
 
