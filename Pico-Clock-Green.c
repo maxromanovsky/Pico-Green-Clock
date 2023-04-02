@@ -278,14 +278,16 @@
 
 /* While in development mode, we may want to disable NTP update, for example while testing Summer Time handling algorithm. */
 // #define NTP_ENABLE  /// WARNING: This #define is not supported for now. Use "#define PICO_W" below instead to enable NTP for now.
-#define NETWORK_NAME     "MyNetworkName"  /// for those with a development environment, you can enter your SSID and password below, run the Firmware until the
-#define NETWORK_PASSWORD "MyPassword"     /// first date scrolling (credentials will be saved to flash), then erase the credentials and put comment on both lines.
+// #define NETWORK_NAME     "MyNetworkName"  /// for those with a development environment, you can enter your SSID and password below, run the Firmware until the
+// #define NETWORK_PASSWORD "MyPassword"     /// first date scrolling (credentials will be saved to flash), then erase the credentials and put comment on both lines.
+
+#define NETWORK_COUNTRY CYW43_COUNTRY_POLAND
 
 /* If a Pico W is used, librairies for Wi-Fi and NTP synchronization will be merged in the executable. If PICO_W is not defined, NTP is automatically disabled. */
-// #define PICO_W  ///
+#define PICO_W  ///
 
 /* Flag to handle automatically the daylight saving time. List of countries are given in the User Guide. */
-#define DST_COUNTRY DST_NORTH_AMERICA
+#define DST_COUNTRY DST_EUROPE
 
 /* Release or Developer Version: Make selective choices or options. */
 #define RELEASE_VERSION  ///
@@ -298,7 +300,12 @@
 #ifdef RELEASE_VERSION
 #warning Built as RELEASE_VERSION
 /* Specify the filename of calendar events to merge with this version of firmware. */
-#define CALENDAR_FILENAME "CalendarEventsGeneric.cpp"
+//todo: All config goes here
+#define CALENDAR_FILENAME "CalendarEventsNone.cpp"
+#define SOUND_DISABLED
+#define QUICK_START
+// #define SCROLL_PERIOD_MINUTE 5
+
 #endif  // RELEASE_VERSION
 /* ----------------------------------------------------------------------------------------------------------------------- *\
                                            End of setup specific to RELEASE version.
@@ -317,7 +324,7 @@
 #warning Built as DEVELOPER_VERSION
 
 /* Specify the filename of calendar events to merge with this version of firmware. */
-#define CALENDAR_FILENAME "CalendarEventsAndre.cpp"
+#define CALENDAR_FILENAME "CalendarEventsNone.cpp"
 
 /* Conditional compile to allow a quicker power-up sequence by-passing some device tests. */
 // #define QUICK_START  ///
@@ -327,14 +334,14 @@
 
 /* If SOUND_DISABLED is commented out below, it allows turning Off <<< ABSOLUTELY ALL SOUNDS >>> from the Green Clock.
    (For example, during development phase, if your wife is sleeping while you work late in the night as was my case - smile). */
-// #define SOUND_DISABLED  ///
+#define SOUND_DISABLED  ///
 #ifdef SOUND_DISABLED
 #warning Built with SOUND DISABLED
 #endif  // SOUND_DISABLED
 
 /* Flag to include test code in the executable (conditional compile). Tests can be run before falling in normal clock ("time display") mode.
    Keeping the comment sign on the #define below will exclude test code and make the executable smaller. */
-#define TEST_CODE
+// #define TEST_CODE
 
 /* Loop at the beginning of the code until a USB CDC connection has been established. Quick beeps will be heard during waiting so that user
    is aware of what's going on. */
@@ -420,12 +427,12 @@
 #define MAX_ALARM_RING_TIME 3600 // (in seconds) alarm will be automatically shut Off after ringing for one hour (3600 seconds).
 
 /* Night light default values. "AUTO" is based on ambient light reading to turn night light On or Off. */
-#define NIGHT_LIGHT_DEFAULT   NIGHT_LIGHT_AUTO  // choices are NIGHT_LIGHT_OFF / NIGHT_LIGHT_ON / NIGHT_LIGHT_NIGHT / NIGHT_LIGHT_AUTO
+#define NIGHT_LIGHT_DEFAULT   NIGHT_LIGHT_OFF  // choices are NIGHT_LIGHT_OFF / NIGHT_LIGHT_ON / NIGHT_LIGHT_NIGHT / NIGHT_LIGHT_AUTO
 #define NIGHT_LIGHT_TIME_ON   21                // if "NIGHT_LIGHT_NIGHT", LEDs will turn On  at this time (in the evening).
 #define NIGHT_LIGHT_TIME_OFF   8                // if "NIGHT_LIGHT_NIGHT", LEDs will turn Off at this time (in the morning).
 
 /* Hourly chime default values. */
-#define CHIME_DEFAULT  CHIME_DAY         // choices are CHIME_OFF / CHIME_ON / CHIME_DAY
+#define CHIME_DEFAULT  CHIME_OFF         // choices are CHIME_OFF / CHIME_ON / CHIME_DAY
 #define CHIME_TIME_ON          9         // if "CHIME_DAY", "hourly chime" and "calendar event" will sound beginning at this time (in the morning).
 #define CHIME_TIME_OFF        21         // if "CHIME_DAY", "hourly chime" and "calendar event" will sound for the last time at this time (in the evening).
 #define CHIME_HALF_HOUR  FLAG_ON         // if "FLAG_ON", will sound a "double-beep" on half-hour (every xxh30), compliant to chime settings above.
@@ -1198,7 +1205,7 @@ UCHAR MonthName[3][13][10] =
 UCHAR ShortMonth[3][13][4] =
 {
   {{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}},
-  {{}, {"JAN"}, {"FEB"}, {"MAR"}, {"APR"}, {"MAY"}, {"JUN"}, {"JUL"}, {"AUG"}, {"SEP"}, {"OCT"}, {"NOV"}, {"DEC"}},
+  {{}, {"Jan"}, {"Feb"}, {"Mar"}, {"Apr"}, {"May"}, {"Jun"}, {"Jul"}, {"Aug"}, {"Sep"}, {"Oct"}, {"Nov"}, {"Dec"}},
   {{}, {"JAN"}, {"FEV"}, {"MAR"}, {"AVR"}, {"MAI"}, {"JUN"}, {"JUL"}, {"AOU"}, {"SEP"}, {"OCT"}, {"NOV"}, {"DEC"}}
 };
 
@@ -1212,7 +1219,7 @@ UCHAR DayName[3][8][10] =
 UCHAR ShortDay[3][8][10] =
 {
   {{}, {}, {}, {}, {}, {}, {}, {}},
-  {{}, {"SUN"}, {"MON"}, {"TUE"}, {"WED"}, {"THU"}, {"FRI"}, {"SAT"}},
+  {{}, {"Sun"}, {"Mon"}, {"Tue"}, {"Wed"}, {"Thu"}, {"Fri"}, {"Sat"}},
   {{}, {"DIM"}, {"LUN"}, {"MAR"}, {"MER"}, {"JEU"}, {"VEN"}, {"SAM"}}
 };
 
@@ -2023,7 +2030,7 @@ int main(void)
   NTPData.FlagNTPSuccess = FLAG_OFF;  // will be turned On after successful NTP answer.
 
   /* Initialize the CYW43 architecture (CYW43 driver and lwIP stack). */
-  init_cyw43(CYW43_COUNTRY_WORLDWIDE);
+  init_cyw43(NETWORK_COUNTRY);
   #endif  // PICO_W
 
 
@@ -2110,9 +2117,13 @@ int main(void)
       FlashConfig.Alarm[Loop1UInt8].FlagStatus = FLAG_OFF;
     sprintf(FlashConfig.SSID,     ".;.;.;.;.;.;.;.;.;.;.;.;.;.;.;.;.;.;.;.");                                // write specific footprint to flash memory.
     sprintf(FlashConfig.Password, ".:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.");  // write specific footprint to flash memory.
+    #ifdef NETWORK_NAME
     sprintf(&FlashConfig.SSID[4],     NETWORK_NAME);
+    #endif
+    
+    #ifdef NETWORK_PASSWORD
     sprintf(&FlashConfig.Password[4], NETWORK_PASSWORD);
-
+    #endif
 
     if (DebugBitMask & DEBUG_FLASH)
     {
@@ -2121,6 +2132,16 @@ int main(void)
     }
   }
   /*** One-time FlashConfig writes may be inserted below... ***/
+    // Uncomment if Wi-Fi credentials need to be changed
+    #ifdef NETWORK_NAME
+    sprintf(&FlashConfig.SSID[4],     NETWORK_NAME);
+    #endif
+    
+    #ifdef NETWORK_PASSWORD
+    sprintf(&FlashConfig.Password[4], NETWORK_PASSWORD);
+    flash_save_config();
+    #endif
+    
   /***/
 
 
@@ -2612,12 +2633,12 @@ int main(void)
   \* ------------------------------------------------------------------------------------------------------------------------ */
 
 
+#ifndef QUICK_START
   /* ---------------------------------------------------------------- *\
                         Scroll firmware version.
   \* ---------------------------------------------------------------- */
   sprintf(String, "Pico Green Clock - Firmware Version %s    ", FIRMWARE_VERSION);
   scroll_string(24, String);
-
  
   /* ---------------------------------------------------------------- *\
         Special message if sound has been cut-off at compile-time.
@@ -2718,7 +2739,7 @@ int main(void)
     bme280_compute_calib_param();
   }
   #endif // BME280_SUPPORT
-
+#endif
 
 
   #ifndef QUICK_START
@@ -5529,8 +5550,14 @@ UINT8 flash_read_config(void)
 
   sprintf(FlashConfig.SSID,     ".;.;.;.;.;.;.;.;.;.;.;.;.;.;.;.;.;.;.;.");                                // write specific footprint to flash memory.
   sprintf(FlashConfig.Password, ".:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.:.");  // write specific footprint to flash memory.
-  sprintf(&FlashConfig.SSID[4],     "MyNetworkName");
-  sprintf(&FlashConfig.Password[4], "MyPassword");
+  
+  #ifdef NETWORK_NAME
+  sprintf(&FlashConfig.SSID[4],     NETWORK_NAME);
+  #endif
+  
+  #ifdef NETWORK_PASSWORD
+  sprintf(&FlashConfig.Password[4], NETWORK_PASSWORD);
+  #endif
 
   /* Make provision for future parameters. */
   for (Loop1UInt16 = 0; Loop1UInt16 < sizeof(FlashConfig.Reserved2); ++Loop1UInt16)
@@ -5833,9 +5860,10 @@ void get_date_string(UCHAR *String)
   if (FlashConfig.Language == ENGLISH)
   {
     /* DayOfWeek and month name. */
-    sprintf(String, "%s %s", DayName[FlashConfig.Language][CurrentDayOfWeek], MonthName[FlashConfig.Language][DumMonth]);
+    sprintf(String, "%s %s", ShortDay[FlashConfig.Language][CurrentDayOfWeek], ShortMonth[FlashConfig.Language][DumMonth]);
 
     /* Find suffix to add to day-of-month. */
+    #ifdef LANG_SUFFIX
     switch (DumDayOfMonth)
     {
       case (1):
@@ -5861,6 +5889,10 @@ void get_date_string(UCHAR *String)
 
     /* DayOfMonth and its suffix, then the 4-digits year. */
     sprintf(&String[strlen(String)], " %X%s %2.2u%2.2u ", Time_RTC.dayofmonth, Suffix, FlashConfig.CurrentYearCentile, CurrentYearLowPart);
+    #else
+    /* DayOfMonth, then the 2-digits year. */
+    sprintf(&String[strlen(String)], " %X '%2.2u ", Time_RTC.dayofmonth, CurrentYearLowPart);
+    #endif
   }
 
   if (FlashConfig.Language == FRENCH)
@@ -6374,7 +6406,7 @@ int init_gpio(void)
   /* Initialize UART0 used to send information to a VT-101 type monitor for debugging purposes. */
   gpio_set_function(UART_TX_PIN, GPIO_FUNC_UART);
   gpio_set_function(UART_RX_PIN, GPIO_FUNC_UART);
-  uart_init(uart0, 921600);
+  uart_init(uart0, 115200);
   uart_set_format(uart0, 8, 1, UART_PARITY_NONE);
 
   /* If "SOUND_DISABLED" is defined, absolutely no sound will be made by the clock. */
@@ -16393,7 +16425,7 @@ bool timer_callback_s(struct repeating_timer *TimerSec)
         /* We reached the time to trigger periodic scrolling and we are in time display mode. */
         scroll_queue(TAG_DATE);
         #ifdef RELEASE_VERSION
-        scroll_queue(TAG_DS3231_TEMP);
+        // scroll_queue(TAG_DS3231_TEMP);
         #ifdef PICO_W
         scroll_queue(TAG_NTP_ERRORS);
         #endif  // PICO_W
